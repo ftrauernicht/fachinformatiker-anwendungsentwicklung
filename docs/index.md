@@ -42,6 +42,9 @@ im README.
 ## Mitmachen
 
 Fehler gefunden? Etwas fehlt? Ein
-[Issue](https://github.com/ftrauernicht/fachinformatiker-anwendungsentwicklung/issues)
-oder ein Pull Request sind willkommen — auch für Kleinigkeiten. Wie das geht, steht in
-[CONTRIBUTING.md](https://github.com/ftrauernicht/fachinformatiker-anwendungsentwicklung/blob/main/CONTRIBUTING.md).
+[Issue](https://github.com/ftrauernicht/fachinformatiker-anwendungsentwicklung/issues/new/choose)
+oder ein Pull Request sind willkommen — auch für Kleinigkeiten. Wie das geht, steht im
+[Repository unter „Mitmachen"](https://github.com/ftrauernicht/fachinformatiker-anwendungsentwicklung#mitmachen).
+
+Über jeder Seite steht ein Stift-Symbol. Es öffnet genau diese Datei im GitHub-Editor —
+von dort sind es zwei Klicks bis zum Pull Request.

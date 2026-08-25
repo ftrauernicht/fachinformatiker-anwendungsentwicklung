@@ -182,18 +182,31 @@ def check_footnotes(pages: list[Page]) -> list[Finding]:
 
 
 def check_duplicate_headings(pages: list[Page]) -> list[Finding]:
+    """Zwei gleichnamige Überschriften unter derselben Elternüberschrift.
+
+    „Vorteile“ darf in mehreren Kapiteln stehen — das ist normal. Stehen zwei
+    davon aber unter derselben Elternüberschrift, ist der zweite Anker -1 und
+    jede Umsortierung bricht ihn still.
+    """
     findings = []
     for page in pages:
-        groups: dict[str, list[tuple[int, str]]] = {}
+        stack: list[tuple[int, str]] = []
+        groups: dict[tuple, list[tuple[int, str]]] = {}
         for line, _slug, base, text in page.headings:
-            groups.setdefault(base, []).append((line, text))
+            level = next(len(m.group(1)) for m in [HEADING.match(page.text.splitlines()[line - 1])] if m)
+            while stack and stack[-1][0] >= level:
+                stack.pop()
+            parent = tuple(name for _level, name in stack)
+            groups.setdefault(parent + (base,), []).append((line, text))
+            stack.append((level, base))
         for spots in groups.values():
             if len(spots) > 1:
                 where = ", ".join(str(line) for line, _ in spots)
                 findings.append(Finding(
                     "warning", page.rel, spots[1][0],
-                    f"Überschrift „{spots[0][1]}“ kommt mehrfach vor (Zeilen {where}); "
-                    "die Anker heißen dadurch -1, -2 und brechen beim Umsortieren"))
+                    f"Überschrift „{spots[0][1]}“ steht mehrfach unter derselben "
+                    f"Elternüberschrift (Zeilen {where}); der zweite Anker heißt -1 "
+                    "und bricht beim Umsortieren"))
     return findings
 
 

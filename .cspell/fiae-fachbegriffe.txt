@@ -226,3 +226,26 @@ rücknehmbar
 verbindungsorientiert
 versioniert
 lastigen
+
+# --- Spickzettel ---------------------------------------------------------
+APIPA
+Broadcastadresse
+Hostbereich
+Hostroute
+Hostzahl
+Klauselreihenfolge
+MTBF
+MTTR
+Präfixtabelle
+SVERWEIS
+WVERWEIS
+XVERWEIS
+ZÄHLENWENN
+ZÄHLENWENNS
+SUMMEWENN
+SUMMEWENNS
+MITTELWERTWENN
+WENNFEHLER
+Summenbereich
+Prüfbereich
+prüfungstypisch

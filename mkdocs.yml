@@ -144,6 +144,7 @@ nav:
       - Glossar: de/glossar.md
   - English:
       - Overview: en/index.md
+      - Network technology: en/01-network-technology.md
       - Virtualization: en/02-virtualization.md
       - Databases: en/03-databases.md
       - Software development: en/04-software-development.md

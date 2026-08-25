@@ -34,10 +34,12 @@ Pfade), 21 interne Links zeigten ins Leere, zwei Quellenangaben waren tot und ü
 Rechtschreibfehler standen im Text — bis hin zu `UNTION ALL` in einem SQL-Beispiel und
 einem doppelten Inhaltsverzeichnis auf einer Seite.
 
-**Es bleibt funktionierend.** Vier GitHub-Workflows prüfen bei jeder Änderung Formatierung,
-Rechtschreibung, Links, Anker, Fußnoten und ob deutsche und englische Fassung noch
-dieselben Seiten haben. Einmal pro Woche läuft zusätzlich eine Prüfung aller externen
-Links gegen den Hauptzweig — verrottete Quellen fallen so auf, bevor jemand danach sucht.
+**Es bleibt funktionierend.** Fünf GitHub-Workflows prüfen bei jeder Änderung
+Formatierung, Rechtschreibung, Links, Anker, Fußnoten, Commit-Nachrichten und ob deutsche
+und englische Fassung noch dieselben Seiten haben. Einmal pro Woche läuft zusätzlich eine
+Prüfung aller externen Links gegen den Hauptzweig — verrottete Quellen fallen so auf,
+bevor jemand danach sucht. Ein weiterer Lauf beobachtet das Original und meldet, wenn es
+dort doch wieder Commits gibt.
 
 **Es ist durchsuchbar.** Die
 [Website](https://ftrauernicht.github.io/fachinformatiker-anwendungsentwicklung/) hat eine
@@ -50,6 +52,13 @@ Kopie im Repository — mit Urheber und Lizenz in den
 [Bildnachweisen](docs/bildnachweise.md). Die übrigen elf Abbildungen sind durch eigene
 [Mermaid](https://mermaid.js.org/)-Diagramme ersetzt, die im Markdown stehen und sich
 korrigieren lassen wie jeder andere Text.
+
+**Vier Kapitel mehr, und eins übersetzt.** Zustands-, Aktivitäts-, Sequenz- und
+Objektdiagramm standen seit 2023 als Ankündigung ohne Link im Inhaltsverzeichnis — sie
+sind jetzt geschrieben, mit Beispiel und mit dem, was in der Prüfung Punkte kostet. Die
+Netzwerktechnik gibt es erstmals auch auf Englisch; dabei sind fünf fachliche Fehler
+aufgefallen und korrigiert worden, darunter die Behauptung, RAID 0 erhöhe die
+Ausfallsicherheit.
 
 **Ein Kapitel pro Datei, ein Titel pro Kapitel.** Vorher begann jede Seite mit der
 Überschrift „Table of Content" — ein Website-Generator hätte jede einzelne Seite so
@@ -65,7 +74,7 @@ docs/
 ├── assets/img/           alle Bilder, thematisch sortiert
 ├── de/                   deutsche Fassung (maßgeblich)
 │   ├── 01-netzwerktechnik.md … 09-cloud-computing.md
-│   ├── diagramme/        PAP, Struktogramm, Klassen-, Use-Case-, ER-Diagramm
+│   ├── diagramme/        neun Notationen von PAP bis Objektdiagramm
 │   └── glossar.md        Begriffe ohne festes Kapitel
 └── en/                   englische Fassung (maschinell übersetzt)
 
@@ -75,13 +84,15 @@ tools/
 ```
 
 Die Nummern in den Dateinamen sorgen dafür, dass die Reihenfolge auch beim Blättern durch
-den Ordner auf GitHub stimmt. In den Adressen der Website tauchen sie nicht auf.
+den Ordner auf GitHub stimmt. Der Adressbaum der Website entspricht bewusst dem Dateibaum
+des Repositories — dadurch stimmt jeder relative Pfad an beiden Orten, auch in rohem HTML,
+das MkDocs sonst nicht umschreibt.
 
 ## Themen
 
 | # | Deutsch | English |
 |---|---|---|
-| 01 | [Netzwerktechnik](docs/de/01-netzwerktechnik.md) | *Übersetzung fehlt noch* |
+| 01 | [Netzwerktechnik](docs/de/01-netzwerktechnik.md) | [Network technology](docs/en/01-network-technology.md) |
 | 02 | [Virtualisierung](docs/de/02-virtualisierung.md) | [Virtualization](docs/en/02-virtualization.md) |
 | 03 | [Datenbanken](docs/de/03-datenbanken.md) | [Databases](docs/en/03-databases.md) |
 | 04 | [Softwareentwicklung](docs/de/04-softwareentwicklung.md) | [Software development](docs/en/04-software-development.md) |

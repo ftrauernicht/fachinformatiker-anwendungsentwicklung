@@ -16,7 +16,7 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 
 | # | Topic | Keywords |
 |---|---|---|
-| 01 | Network technology | *translation pending* |
+| 01 | [Network technology](01-network-technology.md) | OSI model, TCP/IP, subnetting, RAID, DNS, DHCP |
 | 02 | [Virtualization](02-virtualization.md) | Hypervisor, containers, Docker |
 | 03 | [Databases](03-databases.md) | Normal forms, SQL, ERM, anomalies, ACID |
 | 04 | [Software development](04-software-development.md) | Web, HTTP status codes, OOP |

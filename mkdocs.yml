@@ -137,6 +137,10 @@ nav:
           - Klassendiagramm: de/diagramme/03-klassendiagramm.md
           - Anwendungsfalldiagramm: de/diagramme/04-anwendungsfalldiagramm.md
           - Entity-Relationship-Modell: de/diagramme/05-entity-relationship-modell.md
+          - Zustandsdiagramm: de/diagramme/06-zustandsdiagramm.md
+          - Aktivitätsdiagramm: de/diagramme/07-aktivitaetsdiagramm.md
+          - Sequenzdiagramm: de/diagramme/08-sequenzdiagramm.md
+          - Objektdiagramm: de/diagramme/09-objektdiagramm.md
       - Glossar: de/glossar.md
   - English:
       - Overview: en/index.md

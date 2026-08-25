@@ -30,6 +30,10 @@ Die in der Prüfung relevanten Notationen liegen in [`diagramme/`](diagramme/ind
 - [Klassendiagramm](diagramme/03-klassendiagramm.md)
 - [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md)
 - [Entity-Relationship-Modell](diagramme/05-entity-relationship-modell.md)
+- [Zustandsdiagramm](diagramme/06-zustandsdiagramm.md)
+- [Aktivitätsdiagramm](diagramme/07-aktivitaetsdiagramm.md)
+- [Sequenzdiagramm](diagramme/08-sequenzdiagramm.md)
+- [Objektdiagramm](diagramme/09-objektdiagramm.md)
 
 ## Nachschlagen
 

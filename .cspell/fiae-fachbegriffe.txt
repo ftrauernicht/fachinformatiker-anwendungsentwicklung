@@ -174,3 +174,10 @@ Paritätsprüfung
 Jinoyoko
 Fusunshi
 GodDevourer
+
+# --- neue Diagrammkapitel ------------------------------------------------
+Attributwerte
+Instanznamen
+Multiplizitäten
+Sequenzdiagramm
+Servicedesk

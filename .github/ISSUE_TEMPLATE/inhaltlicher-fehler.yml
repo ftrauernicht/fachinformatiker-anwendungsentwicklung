@@ -1,0 +1,49 @@
+name: Inhaltlicher Fehler
+description: Etwas in der Sammlung ist fachlich falsch oder missverständlich.
+title: "[Inhalt]: "
+labels: ["inhalt"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du dir die Mühe machst. Auch kleine Korrekturen sind willkommen —
+        gerade in einer Prüfungssammlung ist eine falsche Aussage teuer.
+
+  - type: input
+    id: seite
+    attributes:
+      label: Welche Seite?
+      description: Pfad oder Link, gern mit Abschnitt.
+      placeholder: docs/de/03-datenbanken.md, Abschnitt „2. Normalform"
+    validations:
+      required: true
+
+  - type: textarea
+    id: falsch
+    attributes:
+      label: Was steht dort, und was stimmt daran nicht?
+    validations:
+      required: true
+
+  - type: textarea
+    id: richtig
+    attributes:
+      label: Wie müsste es richtig heißen?
+      description: Wenn du es schon weißt. Wenn nicht, lass das Feld leer — der Hinweis allein hilft auch.
+
+  - type: input
+    id: quelle
+    attributes:
+      label: Quelle
+      description: >-
+        Woher weißt du es? Ein Link auf Wikipedia, das BSI, eine Norm oder ein Lehrbuch
+        reicht völlig. Ohne Beleg lässt sich schwer entscheiden, welche von zwei
+        Darstellungen die richtige ist.
+
+  - type: checkboxes
+    id: sprachen
+    attributes:
+      label: Betrifft
+      options:
+        - label: die deutsche Fassung
+        - label: die englische Fassung

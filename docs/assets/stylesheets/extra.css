@@ -1,0 +1,34 @@
+/* Jede Kapitelseite trägt ein handgeschriebenes Inhaltsverzeichnis. Auf
+   github.com ist das nötig, weil GitHub keins erzeugt. Auf dieser Website
+   steht rechts bereits eines — beide zusammen sind das Erste, was ein Leser
+   sieht, und doppelt.
+
+   Deshalb wird der handgeschriebene Block hier ausgeblendet. Die Anker sind
+   feststehend: "## Inhaltsverzeichnis" und "## Table of contents". */
+.md-typeset h2#inhaltsverzeichnis,
+.md-typeset h2#table-of-contents,
+.md-typeset h2#inhaltsverzeichnis + ul,
+.md-typeset h2#table-of-contents + ul {
+  display: none;
+}
+
+/* … und der zugehörige Eintrag in der rechten Spalte. Material schreibt dort
+   vollständige Adressen hin, deshalb $= statt = . */
+.md-nav--secondary .md-nav__item:has(> a[href$="#inhaltsverzeichnis"]),
+.md-nav--secondary .md-nav__item:has(> a[href$="#table-of-contents"]) {
+  display: none;
+}
+
+/* Mermaid-Diagramme mittig statt linksbündig — sie sind schmaler als der
+   Textkörper und stehen sonst verloren am Rand. */
+.md-typeset .mermaid {
+  text-align: center;
+}
+
+/* Notationssymbole in Aufzählungen (ERM, PAP) sind Einzelzeichen und werden
+   sonst über die volle Textbreite gezogen. */
+.md-typeset li > img {
+  vertical-align: middle;
+  max-height: 6rem;
+  width: auto;
+}

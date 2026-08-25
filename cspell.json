@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "de,de-DE,en,en-GB",
+  "import": [
+    "@cspell/dict-de-de/cspell-ext.json"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "site/**",
+    ".venv/**",
+    "venv/**",
+    ".git/**",
+    "package-lock.json",
+    "docs/assets/**"
+  ],
+  "ignoreRegExpList": [
+    "Urls",
+    "HexValues",
+    "href",
+    "/`[^`]*`/",
+    "/```[\\s\\S]*?```/",
+    "/<[^>]+>/",
+    "/\\]\\([^)]+\\)/"
+  ],
+  "dictionaries": [
+    "fiae-fachbegriffe"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "fiae-fachbegriffe",
+      "path": "./.cspell/fiae-fachbegriffe.txt",
+      "addWords": true,
+      "description": "Fachbegriffe, Abkuerzungen und Eigennamen aus der FIAE-Pruefung"
+    }
+  ]
+}

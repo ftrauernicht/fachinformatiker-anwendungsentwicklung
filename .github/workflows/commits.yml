@@ -1,0 +1,71 @@
+name: Commit-Nachrichten prüfen
+
+# In diesem Repository werden ausschließlich Conventional Commits benutzt.
+# Das ist keine Förmlichkeit: die Historie ist bei einer Textsammlung die
+# einzige Stelle, an der steht, warum eine Aussage geändert wurde. Ein
+# "update" oder "fix stuff" macht sie wertlos.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  format:
+    name: Betreffzeilen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Jede Betreffzeile im Pull Request prüfen
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -uo pipefail
+          pattern='^(feat|fix|docs|style|refactor|test|ci|chore)(\([a-z0-9 .-]+\))?!?: .{1,}$'
+          failed=0
+
+          while IFS= read -r subject; do
+            [ -z "$subject" ] && continue
+            # Merge-Commits kommen von GitHub und tragen kein Präfix
+            case "$subject" in "Merge "*) continue ;; esac
+
+            if printf '%s' "$subject" | grep -qE "$pattern"; then
+              echo "  ok      $subject"
+            else
+              echo "  FEHLER  $subject"
+              failed=1
+            fi
+          done < <(git log --format=%s "${BASE}..${HEAD}")
+
+          if [ "$failed" -ne 0 ]; then
+            cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## Commit-Nachricht entspricht nicht dem Format
+
+          Erwartet wird [Conventional Commits](https://www.conventionalcommits.org/de/):
+
+          ```text
+          <typ>(<bereich>): <was sich ändert>
+          ```
+
+          Typen: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `ci`,
+          `chore`. Der Bereich ist freiwillig und benennt meist das Kapitel
+          oder die Sprache.
+
+          Beispiele:
+
+          ```text
+          fix(content): correct the normal form example
+          feat(de): add the state diagram chapter
+          docs: describe the repository layout
+          ```
+
+          Umbenennen lässt sich das mit `git rebase -i` und `reword`.
+          EOF
+            exit 1
+          fi

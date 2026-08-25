@@ -1,0 +1,49 @@
+name: Fehlendes Thema
+description: Ein Thema fehlt in der Sammlung oder ist zu knapp.
+title: "[Thema]: "
+labels: ["inhalt", "neues thema"]
+body:
+  - type: input
+    id: thema
+    attributes:
+      label: Welches Thema?
+      placeholder: Zustandsdiagramm, Sortierverfahren, Netzplan-Rückwärtsrechnung …
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kapitel
+    attributes:
+      label: Wo würde es hingehören?
+      options:
+        - Netzwerktechnik
+        - Virtualisierung
+        - Datenbanken
+        - Softwareentwicklung
+        - IT-Schutz und -Sicherheit
+        - IT-Service-Management
+        - Projektmanagement
+        - Politik und Wirtschaft
+        - Cloud Computing
+        - Diagramme
+        - Glossar
+        - Neues Kapitel
+    validations:
+      required: true
+
+  - type: textarea
+    id: warum
+    attributes:
+      label: Warum gehört es in die Prüfungsvorbereitung?
+      description: >-
+        Kam es in einer Prüfung dran? Steht es im Rahmenlehrplan? Hat ein Ausbilder
+        darauf hingewiesen? Das hilft bei der Entscheidung, wie ausführlich es werden muss.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: mitmachen
+    attributes:
+      label: Mitmachen
+      options:
+        - label: Ich würde den Abschnitt selbst schreiben.

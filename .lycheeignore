@@ -1,0 +1,14 @@
+# Adressen, die ein Prüfer nicht sinnvoll abfragen kann.
+
+# Wikimedia drosselt automatisierte Zugriffe und antwortet dann mit 429.
+# Die Dateien liegen ohnehin als Kopie im Repository; hier stehen nur noch die
+# Belegseiten in den Bildnachweisen.
+^https://commons\.wikimedia\.org/wiki/File:
+
+# Beispieladressen aus den Kapiteln, die es nicht gibt und nicht geben soll.
+^https?://(www\.)?(example|beispiel)\.(com|de|org)
+^https?://localhost
+^https?://127\.0\.0\.1
+
+# Die eigene Website existiert erst nach dem ersten Deploy.
+^https://ftrauernicht\.github\.io/

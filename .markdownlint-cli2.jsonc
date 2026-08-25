@@ -1,0 +1,69 @@
+{
+  // Regelwerk für markdownlint-cli2.  Prüfen: npm run lint:md
+  // Das meiste automatisch reparieren: npm run lint:md:fix
+  "globs": ["**/*.md"],
+  "ignores": [
+    "node_modules/**",
+    "site/**",
+    ".github/pull_request_template.md",
+    ".venv/**",
+    "venv/**",
+    ".github/ISSUE_TEMPLATE/**"
+  ],
+  "config": {
+    "default": true,
+
+    // Fließtext wird nicht umbrochen. Ein Zeilenumbruch mitten im Satz macht
+    // jeden späteren Diff unlesbar, weil sich der ganze Absatz verschiebt.
+    "MD013": false,
+
+    // Bilder mit fester Breite und Zeilenumbrüche in Aufzählungen brauchen HTML.
+    "MD033": {
+      "allowed_elements": [
+        "a", "b", "br", "details", "div", "img", "kbd", "strong", "sub", "summary", "sup",
+        "table", "tbody", "td", "th", "thead", "tr"
+      ]
+    },
+
+    // „Vorteile" und „Nachteile" tauchen zwangsläufig unter mehreren Kapiteln
+    // auf. Verboten bleibt nur, dass zwei Geschwister gleich heißen.
+    "MD024": { "siblings_only": true },
+
+    // Die Überschriften in den Prüfungsfragen sind Aufgabenstellungen und enden
+    // deshalb auf Punkt oder Fragezeichen. Ein Doppelpunkt am Ende einer
+    // Kapitelüberschrift ist ebenfalls gewollt.
+    "MD026": false,
+
+    // Nummerierte Listen dürfen durchzählen oder überall 1. schreiben.
+    "MD029": { "style": "one_or_ordered" },
+
+    // In Codeblöcken sind Tabs Teil des Beispiels.
+    "MD010": { "code_blocks": false },
+
+    // SQL-Beispiele zeigen Anweisung und Ergebnis zusammen.
+    "MD014": false,
+
+    // Fette Zeilen wie **C#** beschriften den folgenden Codeblock. Als
+    // Überschrift stünden sie im Inhaltsverzeichnis, wo sie nichts zu suchen haben.
+    "MD036": false,
+
+    // markdownlint bildet Anker anders als GitHub und MkDocs und meldet
+    // Überschriften mit Doppelpunkt ("1:1 Beziehung") fälschlich als kaputt.
+    // Anker prüft stattdessen tools/check_content.py.
+    "MD051": false,
+
+    // Einheitliche Schreibweisen
+    "MD004": { "style": "dash" },
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" },
+    // Der Rumpf einer MkDocs-Material-Admonition ist eingerückt; markdownlint
+    // hält ihn für einen eingerückten Codeblock.
+    "MD046": false,
+    "MD048": { "style": "backtick" },
+    "MD035": { "style": "---" },
+
+    // Jede Seite beginnt mit genau einer H1, die ihren Titel trägt.
+    "MD025": true,
+    "MD041": true
+  }
+}

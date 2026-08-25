@@ -343,9 +343,9 @@ Manche Konfigurationen vergeben IP-Adressen abhängig von der MAC-Adresse, das h
 - Subnetzmaske/Netzwerkmaske
 - Default-Gateway
 - Nameserver
-- Proxy-Konfig via [WPAD](/Begriffe.md/#wpad-web-proxy-audodiscovery-protocol)
+- Proxy-Konfig via [WPAD](glossar.md#wpad-web-proxy-autodiscovery-protocol)
 - Time- und NTP-Server
-- DNS-Server, DNS Context und [DNS](/Begriffe.md/#dns-domain-name-system) Tree
+- DNS-Server, DNS Context und [DNS](glossar.md#dns-domain-name-system) Tree
 - Sekundärer DNS-Server
 - WINS-Server (für MS Windows Clients)
 
@@ -421,7 +421,7 @@ VPNs sind Punkt-zu-Punkt verbindungen über ein privates oder ein öffentliches 
 
 <br>
 <a href="https://de.wikipedia.org/wiki/OSI-Modell#Die_sieben_Schichten">
-  <img title="Die Sieben Schichten" src="./img/OSI/OSI.png">
+  <img title="Die Sieben Schichten" src="../assets/img/osi/osi-model.png">
 </a>
 
 [^1]: https://www.techtarget.com/searchstorage/tip/Key-differences-in-software-RAID-vs-hardware-RAID

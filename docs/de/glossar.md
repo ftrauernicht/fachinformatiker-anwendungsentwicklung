@@ -69,7 +69,7 @@
 <br>
 
 ## HTTP/S
-Siehe [HTTP/S](/Softwareentwicklung.md/#https)
+Siehe [HTTP/S](04-softwareentwicklung.md#https)
 
 # Architektur
 
@@ -90,10 +90,10 @@ Siehe [HTTP/S](/Softwareentwicklung.md/#https)
 ## XSL
 
 ## HTML - Hypertext Markup Language
-Siehe [HTML](/Softwareentwicklung.md/#html---hypertext-markup-language)
+Siehe [HTML](04-softwareentwicklung.md#html---hypertext-markup-language)
 
 ### DOM - Document Object Model
-Siehe [DOM](/Softwareentwicklung.md/#dom---document-object-model)
+Siehe [DOM](04-softwareentwicklung.md#dom---document-object-model)
 
 # UML (Unified Modelling Language)
 
@@ -141,7 +141,7 @@ Sandbox ist die englischsprachige Bezeichnung für Sandkiste oder Sandkasten und
 
 # Netzwerke
 ## LAN (Local Area Network)
-Siehe [LAN](/Netzwerktechnik.md/#lan-local-area-network)
+Siehe [LAN](01-netzwerktechnik.md#lan-local-area-network)
 
 ## WAN (Wide Area Network)
 WAN bezieht sich auf ein Computernetzwerk, das sich über größere geografische Entfernung erstreckt. Ein WAN umfasst in der Regel mehrere LANs, die miteinander verbunden sin, um eine weitreichende Kommunikation zu ermöglichen. Es verwendet verschiedene Kommunikationstechnologien und Übertragungsmedien wie Telefonleitungen, Glasfaserkabel, Satellitenverbindung oder drahtlose Verbindung, um die Datenübertragung zwischen den Standorten zu ermöglichen.
@@ -150,7 +150,7 @@ WAN bezieht sich auf ein Computernetzwerk, das sich über größere geografische
 MAN bezieht sich auf ein Computernetzwerk, das eine Stadt oder eine Metropolregion abdeckt.
 
 ## WLAN (Wireless Local Area Network)
-Siehe [WLAN](/Netzwerktechnik.md/#wlan-wireless-local-area-network)
+Siehe [WLAN](01-netzwerktechnik.md#wlan-wireless-local-area-network)
 
 ## NIC (Network Interface Controller)
 [^6]<br>
@@ -161,7 +161,7 @@ Die NIC ist die Netzwerkkarte oder auch Netzwerkadapter eines Computers.
 Classless Inter-Domain Routing beschreibt ein Verfahren zur effizienteren Nutzung des bestehenden 32-Bit-IP-Adress-Raumes für IPv4.
 
 ## DHCP (Dynamic Host Protocol)
-Siehe [DHCP](/Netzwerktechnik.md/#dhcp)
+Siehe [DHCP](01-netzwerktechnik.md#dhcp)
 
 ## WPAD (Web Proxy Autodiscovery Protocol)
 [^9]<br>
@@ -172,13 +172,13 @@ Das Web Proxy Auto-Discovery Protocol ist ein Protokoll, mit dem Web-Clients zu 
 Das Domain Name System, ist ein hierarchisches unterteiltes Bezeichnungssystem in einem meist IP-basierten Netz zur Beantwortung von Anfragen zu Domain-Namen (Namenauflösung)
 
 # Virtualisierung
-Siehe [Virtualisierung](/Virtualisierung.md)
+Siehe [Virtualisierung](02-virtualisierung.md)
 
 # Turing-Test
 Mit dem Turing Test lässt sich definieren ob eine Maschine ein gleichwertiges Denkvermögen eines Menschen hätte. Beim Testen soll ein Mensch mit zwei Parteien kommunizieren wobei eine Partei ein anderer Mensch ist und eine Partei eine Maschine. Lässt sich nach intensiven Befragen nicht feststellen welcher der beiden Partein die Maschine ist, hat die Maschine den Turing-Test bestanden.
 
 # OSI/ISO Schichten Modell
-Siehe [OSI](/Netzwerktechnik.md/#osi-schichten-modell)
+Siehe [OSI](01-netzwerktechnik.md#osi-schichten-modell)
 
 [^1]: https://de.wikipedia.org/wiki/Sandbox
 [^2]: https://de.wikipedia.org/wiki/SOAP

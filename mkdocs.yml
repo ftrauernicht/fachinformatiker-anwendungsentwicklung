@@ -1,0 +1,155 @@
+site_name: Fachinformatiker Anwendungsentwicklung
+site_description: >-
+  Themensammlung für die Abschlussprüfung Teil 2 im Ausbildungsberuf
+  Fachinformatiker/-in für Anwendungsentwicklung — auf Deutsch und Englisch.
+site_url: https://ftrauernicht.github.io/fachinformatiker-anwendungsentwicklung/
+site_author: Frank Trauernicht
+copyright: >-
+  Fortführung von <a href="https://github.com/LakayFTW/exam-prep-fiae-2023">LakayFTW/exam-prep-fiae-2023</a>.
+  Kein offizielles Dokument der IHK.
+
+repo_url: https://github.com/ftrauernicht/fachinformatiker-anwendungsentwicklung
+repo_name: ftrauernicht/fachinformatiker-anwendungsentwicklung
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+# Die Dateinamen tragen Nummern, damit die Reihenfolge auch beim Blättern auf
+# github.com stimmt. In den URLs haben sie nichts verloren, deshalb setzt die
+# Navigation unten sprechende Titel.
+use_directory_urls: true
+
+theme:
+  name: material
+  language: de
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Zu dunkler Darstellung wechseln
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Zu heller Darstellung wechseln
+
+plugins:
+  - search:
+      lang:
+        - de
+        - en
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Link zu diesem Abschnitt
+      toc_depth: 4
+      # Python-Markdown bildet Anker anders als GitHub: aus " - " wird ein
+      # einzelner Bindestrich statt dreier. Damit ein Link, der auf github.com
+      # funktioniert, auch auf der Website funktioniert, wird GitHubs Verfahren
+      # nachgebildet.
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  alternate:
+    - name: Deutsch
+      link: /fachinformatiker-anwendungsentwicklung/de/
+      lang: de
+    - name: English
+      link: /fachinformatiker-anwendungsentwicklung/en/
+      lang: en
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ftrauernicht
+      name: ftrauernicht auf GitHub
+
+nav:
+  - Start: index.md
+  - Deutsch:
+      - Übersicht: de/index.md
+      - Netzwerktechnik: de/01-netzwerktechnik.md
+      - Virtualisierung: de/02-virtualisierung.md
+      - Datenbanken: de/03-datenbanken.md
+      - Softwareentwicklung: de/04-softwareentwicklung.md
+      - IT-Sicherheit: de/05-it-sicherheit.md
+      - IT-Service-Management: de/06-it-service-management.md
+      - Projektmanagement: de/07-projektmanagement.md
+      - Politik und Wirtschaft: de/08-politik-und-wirtschaft.md
+      - Cloud Computing: de/09-cloud-computing.md
+      - Diagramme:
+          - Übersicht: de/diagramme/index.md
+          - Programmablaufplan: de/diagramme/01-programmablaufplan.md
+          - Struktogramm: de/diagramme/02-struktogramm.md
+          - Klassendiagramm: de/diagramme/03-klassendiagramm.md
+          - Anwendungsfalldiagramm: de/diagramme/04-anwendungsfalldiagramm.md
+          - Entity-Relationship-Modell: de/diagramme/05-entity-relationship-modell.md
+      - Glossar: de/glossar.md
+  - English:
+      - Overview: en/index.md
+      - Virtualization: en/02-virtualization.md
+      - Databases: en/03-databases.md
+      - Software development: en/04-software-development.md
+      - IT security: en/05-it-security.md
+      - IT service management: en/06-it-service-management.md
+      - Project management: en/07-project-management.md
+      - Politics and economy: en/08-politics-and-economy.md
+      - Cloud computing: en/09-cloud-computing.md
+      - Diagrams:
+          - Overview: en/diagrams/index.md
+          - Flowchart: en/diagrams/01-flowchart.md
+          - Nassi-Shneiderman diagram: en/diagrams/02-nassi-shneiderman-diagram.md
+          - Class diagram: en/diagrams/03-class-diagram.md
+          - Use case diagram: en/diagrams/04-use-case-diagram.md
+          - Entity-relationship model: en/diagrams/05-entity-relationship-model.md
+  - Bildnachweise: bildnachweise.md
+
+validation:
+  # Ein Link, der ins Leere zeigt, soll den Build abbrechen und nicht bloß eine
+  # Zeile ins Protokoll schreiben, die niemand liest.
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+  nav:
+    omitted_files: info

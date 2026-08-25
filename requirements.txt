@@ -1,0 +1,7 @@
+# Werkzeuge für die Website. Installieren:
+#   python -m venv .venv && .venv/Scripts/pip install -r requirements.txt
+#   mkdocs serve
+#
+# Feste Versionen, damit ein Build von heute in einem Jahr noch dasselbe
+# Ergebnis liefert. Dependabot hebt sie an, die CI prüft den Build dazu.
+mkdocs-material==9.7.7

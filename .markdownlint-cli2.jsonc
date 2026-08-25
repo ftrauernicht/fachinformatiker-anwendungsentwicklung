@@ -5,6 +5,8 @@
   "ignores": [
     "node_modules/**",
     "site/**",
+    ".venv/**",
+    "venv/**",
     ".github/ISSUE_TEMPLATE/**"
   ],
   "config": {
@@ -51,7 +53,9 @@
     "MD004": { "style": "dash" },
     "MD049": { "style": "asterisk" },
     "MD050": { "style": "asterisk" },
-    "MD046": { "style": "fenced" },
+    // Der Rumpf einer MkDocs-Material-Admonition ist eingerückt; markdownlint
+    // hält ihn für einen eingerückten Codeblock.
+    "MD046": false,
     "MD048": { "style": "backtick" },
     "MD035": { "style": "---" },
 

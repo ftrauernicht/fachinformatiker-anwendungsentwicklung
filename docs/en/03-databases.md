@@ -7,21 +7,21 @@
   - [Document-Oriented Databases](#document-oriented-databases)
 - [Normal Forms](#normal-forms)
   - [1st Normal Form](#1st-normal-form)
-    - [Explanation](#explanation)
-    - [Example](#example)
-    - [Possible Errors](#possible-errors)
+    - [Explanation of the 1st normal form](#explanation-of-the-1st-normal-form)
+    - [Example of the 1st normal form](#example-of-the-1st-normal-form)
+    - [Possible errors without the 1st normal form](#possible-errors-without-the-1st-normal-form)
       - [Insertion Anomaly](#insertion-anomaly)
-      - [Update Anomaly](#update-anomaly)
+      - [Update anomaly without the 1st normal form](#update-anomaly-without-the-1st-normal-form)
       - [Deletion Anomaly](#deletion-anomaly)
   - [2nd Normal Form](#2nd-normal-form)
-    - [Explanation](#explanation-1)
-    - [Example](#example-1)
-    - [Possible Errors](#possible-errors-1)
-      - [Update Anomaly](#update-anomaly-1)
+    - [Explanation of the 2nd normal form](#explanation-of-the-2nd-normal-form)
+    - [Example of the 2nd normal form](#example-of-the-2nd-normal-form)
+    - [Possible errors without the 2nd normal form](#possible-errors-without-the-2nd-normal-form)
+      - [Update anomaly without the 2nd normal form](#update-anomaly-without-the-2nd-normal-form)
   - [3rd Normal Form](#3rd-normal-form)
-    - [Explanation](#explanation-2)
-    - [Example](#example-2)
-    - [Possible Errors](#possible-errors-2)
+    - [Explanation of the 3rd normal form](#explanation-of-the-3rd-normal-form)
+    - [Example of the 3rd normal form](#example-of-the-3rd-normal-form)
+    - [Possible errors without the 3rd normal form](#possible-errors-without-the-3rd-normal-form)
 - [Relationships](#relationships)
   - [1:1 Relationship](#11-relationship)
   - [1:n Relationship](#1n-relationship)
@@ -69,11 +69,11 @@ Currently common normal forms include:
 
 ### 1st Normal Form
 
-#### Explanation
+#### Explanation of the 1st normal form
 
 Every attribute of the relation must have an atomic value range, and the relation must be free of repetitions. That means, only one value per data field is allowed.
 
-#### Example
+#### Example of the 1st normal form
 
 **0th Normal Form**
 <br>
@@ -98,7 +98,7 @@ The result could look like this:
 </a>
 <br>
 
-#### Possible Errors
+#### Possible errors without the 1st normal form
 
 ##### Insertion Anomaly
 
@@ -106,7 +106,7 @@ The result could look like this:
 2. An entry with a different student name is made to the same matriculation number.
 3. Entering a student who has not yet chosen a subject causes null values in the subject number, but since this is part of the primary key, it must not be. It violates integrity.
 
-##### Update Anomaly
+##### Update anomaly without the 1st normal form
 
 1. If the name of the professor changes, this must be done in all rows.
 2. New examiners are assigned to individual exam subjects. Everywhere.
@@ -117,11 +117,11 @@ The result could look like this:
 
 ### 2nd Normal Form
 
-#### Explanation
+#### Explanation of the 2nd normal form
 
 A relation is in the second normal form if the first normal form is achieved and no non-key attribute is functionally dependent on a proper subset of a candidate key.
 
-#### Example
+#### Example of the 2nd normal form
 
 We need to split the table from the first normal form example because neither the student's name nor the exam subject's name fully depends on the primary key. The attribute Note fully depends on the primary key and remains in the relation.<br>
 So the following relations result in the second normal form.
@@ -134,19 +134,19 @@ So the following relations result in the second normal form.
 
 In all resulting relations, all non-primary key attributes are fully functionally dependent on the respective primary keys.
 
-#### Possible Errors
+#### Possible errors without the 2nd normal form
 
-##### Update Anomaly
+##### Update anomaly without the 2nd normal form
 
 1. If the name of the professor changes, this must be done in all rows.
 
 ### 3rd Normal Form
 
-#### Explanation
+#### Explanation of the 3rd normal form
 
 A relation is in the third normal form if the second normal form is satisfied and there are no dependencies between non-key attributes. Such dependencies are also referred to as transitive dependencies. Furthermore, attributes that are only indirectly dependent on the primary key must be moved to a new relation. This eliminates redundant data.
 
-#### Example
+#### Example of the 3rd normal form
 
 In the 3rd normal form, the dependency of the professor on the exam subject must be resolved.
 
@@ -156,7 +156,7 @@ In the 3rd normal form, the dependency of the professor on the exam subject must
 </a>
 <br>
 
-#### Possible Errors
+#### Possible errors without the 3rd normal form
 
 - No errors known.
 

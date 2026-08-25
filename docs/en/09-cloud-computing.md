@@ -5,18 +5,18 @@
 - [Key Characteristics (NIST - National Institute of Standards and Technology)](#key-characteristics-nist---national-institute-of-standards-and-technology)
 - [Layers](#layers)
   - [IaaS - Infrastructure as a Service](#iaas---infrastructure-as-a-service)
-    - [Advantages](#advantages)
-    - [Examples](#examples)
+    - [Advantages of IaaS](#advantages-of-iaas)
+    - [Examples of IaaS](#examples-of-iaas)
   - [PaaS - Platform as a Service](#paas---platform-as-a-service)
-    - [Advantages](#advantages-1)
-    - [Examples](#examples-1)
+    - [Advantages of PaaS](#advantages-of-paas)
+    - [Examples of PaaS](#examples-of-paas)
   - [SaaS - Software as a Service](#saas---software-as-a-service)
     - [Organizational Forms of Cloud](#organizational-forms-of-cloud)
       - [Private Cloud](#private-cloud)
       - [Public Cloud](#public-cloud)
       - [Hybrid Cloud](#hybrid-cloud)
-    - [Advantages](#advantages-2)
-    - [Disadvantages](#disadvantages)
+    - [Advantages of SaaS](#advantages-of-saas)
+    - [Disadvantages of SaaS](#disadvantages-of-saas)
 - [SaaS - Software as a Service -- General](#saas---software-as-a-service----general)
   - [Comparison of License Models](#comparison-of-license-models)
     - [Traditional Software License Model](#traditional-software-license-model)
@@ -55,12 +55,12 @@
 
 IaaS forms the lowest layer in cloud computing, also known as the cloud foundation. Here, IT services such as computing power, storage space, and networks are offered, essentially comprising the basic infrastructure. Users are free to design their own virtual PC clusters, but they are responsible for selecting, installing, operating, and managing the software themselves.
 
-#### Advantages
+#### Advantages of IaaS
 
 - Scalability, i.e., cloud services can be dynamically adjusted according to usage and demand.
 - Example -> Storage space can be expanded or reduced at any time.
 
-#### Examples
+#### Examples of IaaS
 
 - GoGrid
 - Linode
@@ -69,13 +69,13 @@ IaaS forms the lowest layer in cloud computing, also known as the cloud foundati
 
 PaaS is a layer above the infrastructure, offering IT services for developing and integrating application software and components. The cloud service provides a programming interface or access to a software environment. In this environment, the developer can create application software and offer it via cloud services. However, the customer does not have access to the underlying layers (OS, hardware).
 
-#### Advantages
+#### Advantages of PaaS
 
 - No administrative overhead
 - Automatic scaling
 - Usage-based billing
 
-#### Examples
+#### Examples of PaaS
 
 - Microsoft's Windows Azure
 - Google's App Engine
@@ -114,7 +114,7 @@ Two forms are distinguished:
 
 This refers to a scenario where a company operates its own private cloud and additionally uses a public cloud for failover strategies or to handle peak loads.
 
-#### Advantages
+#### Advantages of SaaS
 
 - Lower costs, as only usage, not hardware/software, needs to be paid for
 - Scalability
@@ -123,7 +123,7 @@ This refers to a scenario where a company operates its own private cloud and add
 - Location independence
 - Simplicity
 
-#### Disadvantages
+#### Disadvantages of SaaS
 
 - Mandatory internet access, as data is only available online.
 - Data security

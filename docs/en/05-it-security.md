@@ -18,11 +18,11 @@
     - [Contracts](#contracts)
 - [Symmetric Encryption](#symmetric-encryption)
   - [Methods](#methods)
-  - [Advantages](#advantages)
-  - [Disadvantages](#disadvantages)
+  - [Advantages of symmetric encryption](#advantages-of-symmetric-encryption)
+  - [Disadvantages of symmetric encryption](#disadvantages-of-symmetric-encryption)
 - [Asymmetric Encryption](#asymmetric-encryption)
-  - [Advantages](#advantages-1)
-  - [Disadvantages](#disadvantages-1)
+  - [Advantages of asymmetric encryption](#advantages-of-asymmetric-encryption)
+  - [Disadvantages of asymmetric encryption](#disadvantages-of-asymmetric-encryption)
 - [2FA - Two-Factor Authentication](#2fa---two-factor-authentication)
   - [Examples of 2FA](#examples-of-2fa)
   - [Authenticating (the user proves who they are)](#authenticating-the-user-proves-who-they-are)
@@ -269,12 +269,12 @@ In Symmetric Encryption, both parties use the same key, which is responsible for
 
 These methods are very fast even for large amounts of data.
 
-### Advantages
+### Advantages of symmetric encryption
 
 - Simple key management since only one key is needed for encryption and decryption.
 - High speed for encryption and decryption.
 
-### Disadvantages
+### Disadvantages of symmetric encryption
 
 - Only one key for encryption and decryption, key must not fall into unauthorized hands.
 - Key must be transmitted securely.
@@ -284,14 +284,14 @@ These methods are very fast even for large amounts of data.
 
 Asymmetric Encryption is also known as Public-Key Encryption. Here, there are not only one but two keys, this so-called key pair consists of a private key and a public key. With the private key, data is decrypted or a digital signature is generated. With the public key, data can be encrypted and generated signatures can be verified for their authenticity. This method is very slow and therefore only suitable for small amounts of data.
 
-### Advantages
+### Advantages of asymmetric encryption
 
 - Relatively high security.
 - Not as many keys needed as with symmetric encryption methods, thus less effort in keeping the key secret.
 - No key distribution problem, as public key is accessible to everyone without issues.
 - Possibility of authentication through electronic signatures (digital signatures).
 
-### Disadvantages
+### Disadvantages of asymmetric encryption
 
 - Works very slowly, approximately 10,000 times slower than symmetric encryption.
 - Large required key length.

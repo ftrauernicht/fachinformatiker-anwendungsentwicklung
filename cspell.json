@@ -8,6 +8,8 @@
   "ignorePaths": [
     "node_modules/**",
     "site/**",
+    ".venv/**",
+    "venv/**",
     ".git/**",
     "package-lock.json",
     "docs/assets/**"

@@ -5,18 +5,18 @@
 - [Wesentliche Eigenschaften (NIST - National Institute of Standards and Technology)](#wesentliche-eigenschaften-nist---national-institute-of-standards-and-technology)
 - [Schichten](#schichten)
   - [IaaS - Infrastructure as a Service](#iaas---infrastructure-as-a-service)
-    - [Vorteile](#vorteile)
-    - [Beispiele](#beispiele)
+    - [Vorteile von IaaS](#vorteile-von-iaas)
+    - [Beispiele für IaaS](#beispiele-für-iaas)
   - [PaaS - Platform as a Service](#paas---platform-as-a-service)
-    - [Vorteile](#vorteile-1)
-    - [Beispiele](#beispiele-1)
+    - [Vorteile von PaaS](#vorteile-von-paas)
+    - [Beispiele für PaaS](#beispiele-für-paas)
   - [SaaS - Software as a Service](#saas---software-as-a-service)
     - [Organisationsformen der Cloud](#organisationsformen-der-cloud)
       - [Private Cloud](#private-cloud)
       - [Public Cloud](#public-cloud)
       - [Hybrid Cloud](#hybrid-cloud)
-    - [Vorteile](#vorteile-2)
-    - [Nachteile](#nachteile)
+    - [Vorteile von SaaS](#vorteile-von-saas)
+    - [Nachteile von SaaS](#nachteile-von-saas)
 - [SaaS - Software as a Service -- Allgemein](#saas---software-as-a-service----allgemein)
   - [Vergleich Lizenzmodelle](#vergleich-lizenzmodelle)
     - [Traditionelle Software-Lizenzmodell](#traditionelle-software-lizenzmodell)
@@ -55,12 +55,12 @@
 
 Das IaaS bildet die unterste Schicht im Cloud-Computing, es wird auch die Cloud-Foundation genannt. Hier werden IT-Leistungen wie Rechenleistung, Speicherplatz und Netzwerke angeboten, es umfasst quasi die Basisinfrastruktur. Nutzer gestalten sich frei ihre eigenen virtuellen PC-Cluster, sie sind aber für die Auswahl, Installation, Betrieb und Funktionen der Software selbst verantwortlich.
 
-#### Vorteile
+#### Vorteile von IaaS
 
 - Skalierbarkeit, d.H. die Cloud Dienste können je nach Nutzungsgrad und Bedarf dynamisch angepasst werden.
 - Beispiel -> Speicherplatz kann jederzeit erweitert oder verkleinert werden.
 
-#### Beispiele
+#### Beispiele für IaaS
 
 - GoGrid
 - Linode
@@ -69,13 +69,13 @@ Das IaaS bildet die unterste Schicht im Cloud-Computing, es wird auch die Cloud-
 
 PaaS liegt eine Schicht über der Infrastruktur, hier werden IT-Leistungen angeboten mit denen sich Anwendungssoftware und Komponenten entwickeln und integrieren lassen. Dabei stellt der Cloud Service eine Programmschnittstelle bzw. einen Zugang zu einer Softwareumgebung zur Verfügung. Darin kann der Entwickler Anwendungssoftware erstellen und über Cloud Dienste anbieten. Der Kunde hat aber keine Zugriffe auf die darunterliegenden Schichten (BS, Hardware)
 
-#### Vorteile
+#### Vorteile von PaaS
 
 - Keinen Administrationsaufwand
 - Automatische Skalierung
 - Verbrauchsgenaue Abrechnung
 
-#### Beispiele
+#### Beispiele für PaaS
 
 - Windows Azure von MS
 - App Engine von Google
@@ -114,7 +114,7 @@ Es wird hierbei zwischen Zwei Formen unterschieden:
 
 Darunter versteht man, dass ein Unternehmen eine eigene Private Cloud betreibt und zusätzlich als Failoverstrategie oder für Belastungsspitzen eine Public Cloud verwendet.
 
-#### Vorteile
+#### Vorteile von SaaS
 
 - Geringe Kosten, da nur die Nutzung und nicht die Hardware/Software gezahlt werden muss
 - Skalierbarkeit
@@ -123,7 +123,7 @@ Darunter versteht man, dass ein Unternehmen eine eigene Private Cloud betreibt u
 - Ortsunabhängigkeit
 - Einfachheit
 
-#### Nachteile
+#### Nachteile von SaaS
 
 - Zwingender Nutzzugang, da die Daten nur Online verfügbar sind.
 - Sicherheit der Daten

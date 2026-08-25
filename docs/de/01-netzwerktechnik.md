@@ -10,17 +10,17 @@
   - [Host Raid](#host-raid)
   - [Verschiedene Raid Stufen](#verschiedene-raid-stufen)
     - [RAID 0: Striping - Beschleunigung ohne Redundanz](#raid-0-striping---beschleunigung-ohne-redundanz)
-      - [Vorteile](#vorteile)
-      - [Nachteile](#nachteile)
-      - [Anwendung](#anwendung)
+      - [Vorteile von RAID 0](#vorteile-von-raid-0)
+      - [Nachteile von RAID 0](#nachteile-von-raid-0)
+      - [Anwendung von RAID 0](#anwendung-von-raid-0)
     - [RAID 1: Mirroring - Spiegelung](#raid-1-mirroring---spiegelung)
-      - [Vorteile](#vorteile-1)
-      - [Nachteile](#nachteile-1)
-      - [Anwendung](#anwendung-1)
+      - [Vorteile von RAID 1](#vorteile-von-raid-1)
+      - [Nachteile von RAID 1](#nachteile-von-raid-1)
+      - [Anwendung von RAID 1](#anwendung-von-raid-1)
     - [RAID 5: Leistung + Parität, Block-Level Striping mit verteilter Paritätsinformation](#raid-5-leistung--parität-block-level-striping-mit-verteilter-paritätsinformation)
-      - [Vorteile](#vorteile-2)
-      - [Nachteile](#nachteile-2)
-      - [Anwendung](#anwendung-2)
+      - [Vorteile von RAID 5](#vorteile-von-raid-5)
+      - [Nachteile von RAID 5](#nachteile-von-raid-5)
+      - [Anwendung von RAID 5](#anwendung-von-raid-5)
     - [RAID 01: Verbundsraid (Raid 1 über mehrere Raid 0)](#raid-01-verbundsraid-raid-1-über-mehrere-raid-0)
     - [RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)](#raid-10-verbundsraid-raid-0-über-mehrere-raid-1)
 - [Speichersysteme](#speichersysteme)
@@ -41,11 +41,11 @@
   - [Konzept](#konzept)
   - [DHCP-Server](#dhcp-server)
     - [Statische Zuordnung](#statische-zuordnung)
-      - [Vorteil](#vorteil)
-      - [Nachteil](#nachteil)
+      - [Vorteil der statischen Zuordnung](#vorteil-der-statischen-zuordnung)
+      - [Nachteil der statischen Zuordnung](#nachteil-der-statischen-zuordnung)
     - [Automatische Zuordnung](#automatische-zuordnung)
-      - [Vorteil](#vorteil-1)
-      - [Nachteil](#nachteil-1)
+      - [Vorteil der automatischen Zuordnung](#vorteil-der-automatischen-zuordnung)
+      - [Nachteil der automatischen Zuordnung](#nachteil-der-automatischen-zuordnung)
     - [Dynamische Zuordnung](#dynamische-zuordnung)
   - [DHCP-Nachrichten](#dhcp-nachrichten)
   - [Mögliche Zuweisung / Einstellung die ein DHCP dem Client zuweisen kann](#mögliche-zuweisung--einstellung-die-ein-dhcp-dem-client-zuweisen-kann)
@@ -109,19 +109,19 @@ Man spricht von Host-RAID, da die RAID-Funktionen von der Firmware bzw. den Trei
 Die Null in RAID 0 steht für die Null-Daten-Redundanz. Daher gehört RAID 0 eigentlich nicht zu den RAID-Systemen, da es eher ein schnelles Array of Independent Disks ist. Hier bei werden zwei oder mehrere Platten zu einem großen logischen Laufwerk zusammengeschaltet. Hier werden die Daten meist in Blöcke der Größe 64 oder 128 kB (Stripe = Streifen) unterteilt, daher kommt auch die Bezeichnung Striping.
 Bei RAID 0 empfiehlt es sich zwei gleich große Platten zu verwenden, da sich die Gesamtgröße des RAID nach der kleinsten Platte mal Anzahl der Platten richtet.
 
-##### Vorteile
+##### Vorteile von RAID 0
 
 - Steigerung des Datendurchsatzes, da die Platten-Zugriffe in höherem Maße parallel ablaufen.
 - Gilt aber nur bei sequenziellem Datentransfer.
 
-##### Nachteile
+##### Nachteile von RAID 0
 
 - Fällt eine Platte aus, so sind die Daten nutzlos, denn von jeder gespeicherten Datei ist nur noch die Hälfte lesbar.
 - Fehlt ein Teil einer Datei, so kann der Rest nicht wiederhergestellt werden, somit wird in RAID 0 keine Datensicherung gewährleistet.
 - Die Ausfallsicherheit liegt höher als bei einer einzelnen Platte, d.H. sie steigt mit jeder zusätzlichen Platte.
 - Für den Klassischen Server-Betrieb ungeeignet.
 
-##### Anwendung
+##### Anwendung von RAID 0
 
 - Wenn besonders große Datenmengen in kurzer Zeit gelesen werden soll und die Datensicherheit irrelevant ist.
 - Für temporäre Dateien, wie die Windows-Auslagerungsdatei oder Swap-Funktion von Linux.
@@ -136,20 +136,20 @@ Darstellung Raid 0:<br>
 RAID 1 ist der Verbund von zwei Platte, wobei auf allen Festplatten die gleichen Daten gespeichert werden (Spiegelung). Somit ist volle Redundanz geboten.
 Die Platten müssen paarweise vorhanden sein und die Kapazität richtet sich auch hier nach der kleinsten Platte. Beim Beschreiben ist das RAID nur so schnell wie die langsamste Platte.
 
-##### Vorteile
+##### Vorteile von RAID 1
 
 - Bei Ausfall einer Platte kann ohne Daten- und mit geringen Geschwindigkeitsverlust weiter gearbeitet werden.
 - Das bietet eine hohe Ausfall- und Datensicherheit.
 - Ein RAID 1-System kann beim Lesen auf mehr als einer Platte zugreifen und gleichzeitig verschiedene Sektoren von verschiedenen Platten einlesen, was die Leseleistung erhöht.
 
-##### Nachteile
+##### Nachteile von RAID 1
 
 - Keine richtige Steigerung des Datendurchsatzes.
 - Es entsteht keine Datensicherung, da z.B. versehentliche oder fehlerhafte Schreiboperationen auf allen Platten genutzt werden.
 - Das Setup ist teuer, da immer der doppelte Preis gezahlt werden muss bei einfacher Speicherung.
 - Zwei Platten mit 500GB ergeben zwar 1TB aber da RAID 1 die Daten spiegelt, steht nur die Hälfte zur Verfügung.
 
-##### Anwendung
+##### Anwendung von RAID 1
 
 - Eher für kleine Server, da man große Datenmengen besser mit höheren RAID-Leveln speichert.
 
@@ -163,20 +163,20 @@ Darstellung RAID 1:<br>
 Wie bei RAID 0 werden die Daten in Blöcke (Stripesets) zerlegt. Zusätzlich wird ein Bereich auf jeder Platte für Prüfnummern (Parity) verwendet, damit nachträglich Fehler beseitigt werden können. Die Parity wird mithilfe einer XOR-Operation bitweise berechnet. Dabei werden Datenblöcke von 64kB geteilt und aus diesen beiden Blöcken wird die Parity-Info gebildet, also einem dritten Block von 64kB. Für diese Art von RAID werden 3 Festplatten benötigt.
 RAID 5 anders als bei RAID 4 speichert die Parity-Bits und die Teil-Infos auf allen drei Platten verteilt.
 
-##### Vorteile
+##### Vorteile von RAID 5
 
 - Steigerung des Datendurchsatzes
 - Datensicherheit
 - Relativ geringe Kosten (Dennoch: Es werden mindestens 3 Platten benötigt)
 - Bei Ausfall einer Platte können die Daten während des Betriebes dank der Paritätsinfo wiederhergestellt werden.
 
-##### Nachteile
+##### Nachteile von RAID 5
 
 - Es darf nicht mehr als eine Platte ausfallen, da die Daten sonst verloren sind.
 - Schreibgeschwindigkeit ist geringer, da vor jedem Schreibzugriff erst die Paritätsinfo ausgelesen und danach neu erstellt werden müssen.
 - Kapazitätsverlust durch die Speicherung von Paritätsinfos. Bei einer Plattengröße von 500GB und drei Platten, hätte man 1,5TB - 500GB = 1TB Speicher.
 
-##### Anwendung
+##### Anwendung von RAID 5
 
 - Für große Datenmengen mit kleinen Dateien, wegen der geringeren Schreibgeschwindigkeit.
 
@@ -343,11 +343,11 @@ Es gibt drei verschiedene Betriebsmodi eines DHCP-Servers:
 
 In diesem Modi lassen sich IP-Adressen einer bestimmten MAC-Adresse zuordnen. Die Adressen werden den MAC-Adressen auf unbestimmte Zeit zugeteilt.
 
-##### Vorteil
+##### Vorteil der statischen Zuordnung
 
 Eine statische Zuordnung kann dann von Vorteil sein, wenn Netzwerkdienste über eine bestimmte Adresse erreichbar sein sollen. Auch Portfreigaben von einem Router zu einem Client benötigen in der Regel eine feste IP-Adresse.
 
-##### Nachteil
+##### Nachteil der statischen Zuordnung
 
 Dabei kann das Problem auftreten, dass keine weiteren Clients dem Netzwerk zugeteilt werden können, da alle Adressen fest vergeben sind. Das kann unter manchen Sicherheitsaspekten problematisch sein.
 
@@ -355,11 +355,11 @@ Dabei kann das Problem auftreten, dass keine weiteren Clients dem Netzwerk zuget
 
 Bei der Automatischen Zuordnung werden am DHCP-Server Bereiche von IP-Adressen (range) definiert. Neue Clients erhalten dabei IP-Adressen welche den MAC-Adressen zugeordnet werden, das wird in einer Tabelle festgehalten. Im Unterschied zur dynamischen Zuordnung werden automatische Adressen fest vergeben und nicht entfernt.
 
-##### Vorteil
+##### Vorteil der automatischen Zuordnung
 
 Der Vorteil darin liegt, dass IP-Adressen immer dem gleichen Host zugeordnet sind und keinem anderem Host zugeordnet werden können.
 
-##### Nachteil
+##### Nachteil der automatischen Zuordnung
 
 Der Nachteil darin besteht, dass neue Clients keine IP-Adresse erhalten wenn der gesamte Adressbereich bereits vergeben ist, auch wenn IP-Adressen nicht mehr aktiv genutzt werden.
 

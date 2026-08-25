@@ -4,11 +4,15 @@
   "private": true,
   "description": "Werkzeuge zur Qualitaetssicherung der Pruefungsvorbereitung FIAE",
   "scripts": {
-    "lint:md": "markdownlint-cli2 \"**/*.md\"",
-    "lint:md:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
     "lint:spell": "cspell --no-progress --show-suggestions \"**/*.md\"",
     "check:content": "python tools/check_content.py",
-    "check": "npm run lint:md && npm run lint:spell && npm run check:content"
+    "check:toc": "python tools/build_toc.py --check",
+    "build:toc": "python tools/build_toc.py",
+    "docs:serve": "mkdocs serve",
+    "docs:build": "mkdocs build --strict",
+    "check": "npm run lint:md && npm run lint:spell && npm run check:toc && npm run check:content"
   },
   "devDependencies": {
     "@cspell/dict-de-de": "^4.1.1",

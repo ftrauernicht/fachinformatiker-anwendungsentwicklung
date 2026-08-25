@@ -18,11 +18,11 @@
     - [Verträge](#verträge)
 - [Symmetrische Verschlüsselung](#symmetrische-verschlüsselung)
   - [Verfahren](#verfahren)
-  - [Vorteile](#vorteile)
-  - [Nachteile](#nachteile)
+  - [Vorteile der symmetrischen Verschlüsselung](#vorteile-der-symmetrischen-verschlüsselung)
+  - [Nachteile der symmetrischen Verschlüsselung](#nachteile-der-symmetrischen-verschlüsselung)
 - [Asymmetrische Verschlüsselung](#asymmetrische-verschlüsselung)
-  - [Vorteile](#vorteile-1)
-  - [Nachteile](#nachteile-1)
+  - [Vorteile der asymmetrischen Verschlüsselung](#vorteile-der-asymmetrischen-verschlüsselung)
+  - [Nachteile der asymmetrischen Verschlüsselung](#nachteile-der-asymmetrischen-verschlüsselung)
 - [2FA - 2 Faktor Authentifizierung](#2fa---2-faktor-authentifizierung)
   - [Beispiele 2FA](#beispiele-2fa)
   - [Authentisieren](#authentisieren)
@@ -270,12 +270,12 @@ In der Symmetrischen Verschlüsselung verwenden beide Teilnehmer den gleichen Sc
 
 Diese Verfahren sind auch bei großen Datenmengen sehr schnell.
 
-### Vorteile
+### Vorteile der symmetrischen Verschlüsselung
 
 - Einfaches Schlüsselmanagement da nur ein Schlüssel für Ent- und Verschlüsselung gebraucht wird.
 - Hohe Geschwindigkeit für Ent- und Verschlüsselung.
 
-### Nachteile
+### Nachteile der symmetrischen Verschlüsselung
 
 - Nur ein Schlüssel für Ver- und Entschlüsselung, Schlüssel darf nicht in unbefugte Hände gelangen.
 - Schlüssel muss über einen sicheren Weg übermittelt werden.
@@ -285,14 +285,14 @@ Diese Verfahren sind auch bei großen Datenmengen sehr schnell.
 
 Die Asymmetrische Verschlüsselung wird auch Public-Key-Verfahren genannt. Hier gibt es nicht nur einen Schlüssel sondern gleich zwei, dieses sogenannte Schlüsselpaar setzt sich aus einem privaten Schlüssel (Private Key) und einem öffentlichen Schlüssel (Public Key) zusammen. Mit dem Private Key, werden Daten Entschlüsselt oder eine digitale Signatur erzeugt. Mit dem Public Key kann man Daten verschlüsseln und erzeugte Signaturen auf ihren Authentizität überprüfen. Dieses Verfahren ist sehr langsam und eignet sich daher nur für kleine Datenmengen.
 
-### Vorteile
+### Vorteile der asymmetrischen Verschlüsselung
 
 - Relativ hohe Sicherheit.
 - Es werden nicht so viele Schlüssel benötigt, wie bei einem symmetrischen Verschlüsselungsverfahren, somit weniger Aufwand der Geheimhaltung des Schlüssels.
 - Kein Schlüsselverteilungsproblem, da Public Key für jeden ohne Probleme zu erreichen ist.
 - Möglichkeit der Authentifikation durch elektronische Unterschriften (digitale Signaturen).
 
-### Nachteile
+### Nachteile der asymmetrischen Verschlüsselung
 
 - Arbeiten sehr langsam ca. 10000 Mal langsamer als symmetrische.
 - Große benötigte Schlüssellänge.

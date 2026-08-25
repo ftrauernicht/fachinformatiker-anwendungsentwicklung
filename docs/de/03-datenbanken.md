@@ -7,21 +7,21 @@
   - [Dokumentenorientierte Datenbanken](#dokumentenorientierte-datenbanken)
 - [Normalformen](#normalformen)
   - [1. Normalform](#1-normalform)
-    - [Erläuterung](#erläuterung)
-    - [Beispiel](#beispiel)
-    - [Mögliche Fehler](#mögliche-fehler)
+    - [Erläuterung der 1. Normalform](#erläuterung-der-1-normalform)
+    - [Beispiel zur 1. Normalform](#beispiel-zur-1-normalform)
+    - [Mögliche Fehler ohne 1. Normalform](#mögliche-fehler-ohne-1-normalform)
       - [Einfüge-Anomalie](#einfüge-anomalie)
-      - [Änderungs-Anomalie](#änderungs-anomalie)
+      - [Änderungs-Anomalie ohne 1. Normalform](#änderungs-anomalie-ohne-1-normalform)
       - [Lösch-Anomalie](#lösch-anomalie)
   - [2. Normalform](#2-normalform)
-    - [Erläuterung](#erläuterung-1)
-    - [Beispiel](#beispiel-1)
-    - [Mögliche Fehler](#mögliche-fehler-1)
-      - [Änderungs-Anomalie](#änderungs-anomalie-1)
+    - [Erläuterung der 2. Normalform](#erläuterung-der-2-normalform)
+    - [Beispiel zur 2. Normalform](#beispiel-zur-2-normalform)
+    - [Mögliche Fehler ohne 2. Normalform](#mögliche-fehler-ohne-2-normalform)
+      - [Änderungs-Anomalie ohne 2. Normalform](#änderungs-anomalie-ohne-2-normalform)
   - [3. Normalform](#3-normalform)
-    - [Erläuterung](#erläuterung-2)
-    - [Beispiel](#beispiel-2)
-    - [Mögliche Fehler](#mögliche-fehler-2)
+    - [Erläuterung der 3. Normalform](#erläuterung-der-3-normalform)
+    - [Beispiel zur 3. Normalform](#beispiel-zur-3-normalform)
+    - [Mögliche Fehler ohne 3. Normalform](#mögliche-fehler-ohne-3-normalform)
 - [Beziehungen](#beziehungen)
   - [1:1 Beziehung](#11-beziehung)
   - [1:n Beziehung](#1n-beziehung)
@@ -69,12 +69,12 @@ Zurzeit gebräuchliche Normalformen sind:
 
 ### 1. Normalform
 
-#### Erläuterung
+#### Erläuterung der 1. Normalform
 
 Jedes **Attribut** der **Relation** muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungen sein.<br>
 Das heißt, dass pro Datenfeld nur maximal ein Wert enthalten sein darf.
 
-#### Beispiel
+#### Beispiel zur 1. Normalform
 
 **0. Normalform**
 <br>
@@ -99,7 +99,7 @@ Das Ergebnis könnte so aussehen:
 </a>
 <br>
 
-#### Mögliche Fehler
+#### Mögliche Fehler ohne 1. Normalform
 
 ##### Einfüge-Anomalie
 
@@ -107,7 +107,7 @@ Das Ergebnis könnte so aussehen:
 2. Zur selben Matrikelnummer erfolgt ein Eintrag mit anderem Studentennamen.
 3. Der Eintrag eines Studenten, der noch kein Prüfungsfach gewählt hat, liefert Nullwerte in der Prüfungsfachnummer, da dies aber Teil des Primärschlüssels ist, darf dies nicht sein. Es verletzt die Integrität.
 
-##### Änderungs-Anomalie
+##### Änderungs-Anomalie ohne 1. Normalform
 
 1. Wenn der Name des Professors sich ändert, muss dies in allen Zeilen geschehen.
 2. Den einzelnen Prüfungsfächern werde neue Prüfer zugeordnet. Überall.
@@ -118,11 +118,11 @@ Das Ergebnis könnte so aussehen:
 
 ### 2. Normalform
 
-#### Erläuterung
+#### Erläuterung der 2. Normalform
 
 Eine Relation ist dann in der zweiten Normalform wenn die erste Normalform erreicht wurde und kein Nichtprimärattribut funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt.
 
-#### Beispiel
+#### Beispiel zur 2. Normalform
 
 Wir müssen die Tabelle aus dem Beispiel der ersten Normalform aufteilen, da weder der Name des Studenten noch die Bezeichnung des Prüfungsfachs voll vom Primärschlüssel abhängig sind. Das Attribut Note ist voll vom Primärschlüssel abhängig und bleibt in der Relation.<br>
 So ergibt sich folgende Relationen in der zweiten Normalform.
@@ -135,20 +135,20 @@ So ergibt sich folgende Relationen in der zweiten Normalform.
 
 In allen entstandenen Relationen sind alle Nicht-Primärschlüssel-Attribute voll funktional abhängig von den jeweiligen Primärschlüsseln.
 
-#### Mögliche Fehler
+#### Mögliche Fehler ohne 2. Normalform
 
-##### Änderungs-Anomalie
+##### Änderungs-Anomalie ohne 2. Normalform
 
 1. Wenn der Name des Professors sich ändert, muss dies in allen Zeilen geschehen.
 
 ### 3. Normalform
 
-#### Erläuterung
+#### Erläuterung der 3. Normalform
 
 Eine Relation befindet sich in der dritten Normalform, wenn die zweite Normalform erfüllt ist und keine Abhängigkeiten der Nichtschlüssel-Attribute untereinander bestehen. Solche Abhängigkeiten bezeichnet man auch als **transitive** Abhängigkeiten. Weiterhin müssen alle Nichtschlüssel voll funktional abhängig vom Schlüsselattribut sein.
 <br>
 
-#### Beispiel
+#### Beispiel zur 3. Normalform
 
 Durch die Überführung in die zweite Normalform haben wir Redundanzen weitgehend beseitigt, jedoch fällt auf, dass das Attribut "ProfName" mehrmals vorkommt. obwohl mit ProfNr der Name des Professors schon gegeben wäre. Dies können wir mit der Überführung in die dritte Normalform beseitigen.
 
@@ -158,7 +158,7 @@ Durch die Überführung in die zweite Normalform haben wir Redundanzen weitgehen
 </a>
 <br>
 
-#### Mögliche Fehler
+#### Mögliche Fehler ohne 3. Normalform
 
 Nun sind alle Anomalien / Redundanzen beseitigt.
 

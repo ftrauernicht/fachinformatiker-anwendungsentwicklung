@@ -57,13 +57,6 @@
   - [Anwendungsbereiche für VPN](#anwendungsbereiche-für-vpn)
   - [Ist ein VPN sicher? Nein! Welche Maßnahmen können den VPN-Tunnel sicher machen?](#ist-ein-vpn-sicher-nein-welche-maßnahmen-können-den-vpn-tunnel-sicher-machen)
 - [OSI Schichten Modell](#osi-schichten-modell)
-  - [Schicht 1 - Bitübertragungsschicht (Physical Layer)](#schicht-1---bitübertragungsschicht-physical-layer)
-  - [Schicht 2 - Sicherungsschicht (Data Link Layer)](#schicht-2---sicherungsschicht-data-link-layer)
-  - [Schicht 3 - Vermittlungsschicht (Network Layer)](#schicht-3---vermittlungsschicht-network-layer)
-  - [Schicht 4 - Transportschicht (Transport Layer)](#schicht-4---transportschicht-transport-layer)
-  - [Schicht 5 - Sitzungsschicht (Session Layer)](#schicht-5---sitzungsschicht-session-layer)
-  - [Schicht 6 - Darstellungsschicht (Presentation Layer)](#schicht-6---darstellungsschicht-presentation-layer)
-  - [Schicht 7 - Anwendungsschicht (Application Layer)](#schicht-7---anwendungsschicht-application-layer)
 
 ## Software und Hardware Raid
 
@@ -118,7 +111,7 @@ Bei RAID 0 empfiehlt es sich zwei gleich große Platten zu verwenden, da sich di
 
 - Fällt eine Platte aus, so sind die Daten nutzlos, denn von jeder gespeicherten Datei ist nur noch die Hälfte lesbar.
 - Fehlt ein Teil einer Datei, so kann der Rest nicht wiederhergestellt werden, somit wird in RAID 0 keine Datensicherung gewährleistet.
-- Die Ausfallsicherheit liegt höher als bei einer einzelnen Platte, d.H. sie steigt mit jeder zusätzlichen Platte.
+- Die Ausfallwahrscheinlichkeit steigt mit jeder zusätzlichen Platte: der Verbund ist verloren, sobald **eine** Platte ausfällt. Bei zwei Platten ist ein Ausfall also etwa doppelt so wahrscheinlich wie bei einer einzelnen.
 - Für den Klassischen Server-Betrieb ungeeignet.
 
 ##### Anwendung von RAID 0
@@ -187,7 +180,7 @@ Darstellung RAID 5:<br>
 
 #### RAID 01: Verbundsraid (Raid 1 über mehrere Raid 0)
 
-RAID 01 ist eine Kombination aus RAID 0 und 1, also Striping und Mirroring. Es sind mindestens drei Festplatten erforderlich. Die Daten werden in Blöcke (Stripesets) zerlegt und dann auf mehrere RAID 0 verteilt, somit werden die Eigenschaften Sicherheit und höherer Datendurchsatz kombiniert.
+RAID 01 ist eine Kombination aus RAID 0 und 1, also Striping und Mirroring. Es sind mindestens vier Festplatten erforderlich. Die Daten werden zuerst in Blöcke (Stripesets) zerlegt und über je zwei Platten zu einem RAID 0 verteilt; zwei solcher RAID 0 werden anschließend gespiegelt. Damit sind Sicherheit und höherer Datendurchsatz kombiniert.
 
 Darstellung RAID 01<br>
 <a href="https://de.wikipedia.org/wiki/RAID">
@@ -279,7 +272,7 @@ Folgende Adressbereiche wurden aus dem öffentlichen Adressraum ausgespart für 
 
 - Netzadressenbereich:
   - 10.0.0.0 bis 10.255.255.255
-  - 172.16.0.0 bis 172.16.255.255
+  - 172.16.0.0 bis 172.31.255.255
   - 192.168.0.0 bis 192.168.255.255
 - Netzklassen:
   - Klasse A -> 1 privates Netz mit 16.777.216 Adressen (10.0.0.0/8)
@@ -322,10 +315,10 @@ WLAN basiert auf dem Standard IEEE 802.11 und verwendet Funkwellen, um Daten zwi
 ## DHCP
 
 [^10]<br>
-Das Dynamic Host Protocol (DHCP) ist ein Kommunikationsprotokoll. Durch einen Server können Clients die richtige Netzwerkkonfiguration erhalten.
+Das Dynamic Host Configuration Protocol (DHCP) ist ein Kommunikationsprotokoll. Durch einen Server können Clients die richtige Netzwerkkonfiguration erhalten.
 DHCP ist eine Erweiterung des Bootstrap-Protokolls (BOOTP)
 
-Die Länge eines DHCP-Pakets beträgt 32 Bit.
+Der feste Teil eines DHCP-Pakets ist 236 Byte lang, dazu kommen die Optionen. Die Felder im Kopf sind an 32 Bit ausgerichtet — daher stammt die verbreitete, falsche Angabe, ein DHCP-Paket sei 32 Bit lang.
 
 DHCP ist in RFC 2131 und 2132 definiert.
 
@@ -335,7 +328,7 @@ Mit DHCP können Clients ohne manuelle Konfiguration der Netzwerkschnittstelle i
 
 ### DHCP-Server
 
-Der DHCP-Server wird wie alle gängigen Netzwerkdienste als Hintergrundprozess (Dienst oder Daemon) gestartet und wartet über UDP-Port 67 auf Anfragen von Clients.
+Der DHCP-Server wird wie alle gängigen Netzwerkdienste als Hintergrundprozess (Dienst oder Daemon) gestartet und wartet über UDP-Port 67 auf Anfragen von Clients. Der Client empfängt die Antworten auf UDP-Port 68.
 
 Es gibt drei verschiedene Betriebsmodi eines DHCP-Servers:
 
@@ -417,7 +410,7 @@ Manche Konfigurationen vergeben IP-Adressen abhängig von der MAC-Adresse, das h
   - Proxyfilter
   - Contentfilter
 - Firewallarten
-  - Person Firewall (Desktop Firewall)
+  - Personal Firewall (Desktop Firewall)
   - Externe Firewall (Netzwerk- oder Hardware Firewall)
 - Firewalltechnologien
   - Paketfilter-Firewall
@@ -431,7 +424,7 @@ Manche Konfigurationen vergeben IP-Adressen abhängig von der MAC-Adresse, das h
 
 ## VPN (Virtual Private Network)
 
-VPNs sind Punkt-zu-Punkt Verbindungen über ein privates oder ein öffentliches Netzwerk, z.B. über das Internet. Dabei werden die Verbindungen durch einen öffentlichen ISP (Internet Service Provider) bereitgestellt. Zur Übertragung im Internet wird ein sogenannter Tunnel erzeugt. Um einen virtuellen Anruf bei einem virtuellen Port auf einem VPN-Server zu tätigen, werden spezielle TCP/IP-basierte Protokolle, so genannte Tunnelprodukte verwendet.
+VPNs sind Punkt-zu-Punkt Verbindungen über ein privates oder ein öffentliches Netzwerk, z.B. über das Internet. Dabei werden die Verbindungen durch einen öffentlichen ISP (Internet Service Provider) bereitgestellt. Zur Übertragung im Internet wird ein sogenannter Tunnel erzeugt. Um einen virtuellen Anruf bei einem virtuellen Port auf einem VPN-Server zu tätigen, werden spezielle TCP/IP-basierte Protokolle, so genannte Tunnelprotokolle verwendet.
 
 ### Eigenschaften von VPN
 
@@ -444,7 +437,7 @@ VPNs sind Punkt-zu-Punkt Verbindungen über ein privates oder ein öffentliches 
 
 - VPN Tunneling kann man auf OSI-Schicht 2 oder OSI-Schicht 3 realisieren.
   - OSI-Schicht 2 (Sicherungsschicht, Data Link Layer)
-    - Vertreter des Layer-2-Tunneling sind die Protokolle PPTP (Point to Pont Tunneling Protokoll), L2F (Layer 2 Forwarding) und L2TP (Layer 2 Tunneling Protocol)
+    - Vertreter des Layer-2-Tunneling sind die Protokolle PPTP (Point-to-Point Tunneling Protocol), L2F (Layer 2 Forwarding) und L2TP (Layer 2 Tunneling Protocol)
   - OSI-Schicht 3 (Vermittlungsschicht, Network Layer)
     - IPSec
 
@@ -471,19 +464,23 @@ VPNs sind Punkt-zu-Punkt Verbindungen über ein privates oder ein öffentliches 
 
 [^11]<br>
 
-### Schicht 1 - Bitübertragungsschicht (Physical Layer)
+| # | Schicht | Aufgabe | Einheit | Geräte und Protokolle |
+|---|---|---|---|---|
+| 7 | Anwendungsschicht (Application Layer) | Schnittstelle zur Anwendung | Daten | HTTP, FTP, SMTP, DNS |
+| 6 | Darstellungsschicht (Presentation Layer) | Zeichensatz, Verschlüsselung, Kompression | Daten | TLS, ASCII, JPEG |
+| 5 | Sitzungsschicht (Session Layer) | Auf- und Abbau von Sitzungen, Synchronisation | Daten | NetBIOS, RPC |
+| 4 | Transportschicht (Transport Layer) | Ende-zu-Ende-Verbindung, Portnummern | Segment | TCP, UDP |
+| 3 | Vermittlungsschicht (Network Layer) | Wegwahl zwischen Netzen, logische Adressen | Paket | IP, ICMP, Router |
+| 2 | Sicherungsschicht (Data Link Layer) | Fehlererkennung, physische Adressen | Frame | Ethernet, MAC, Switch, Bridge |
+| 1 | Bitübertragungsschicht (Physical Layer) | Signale auf dem Medium | Bit | Kabel, Hub, Repeater |
 
-### Schicht 2 - Sicherungsschicht (Data Link Layer)
+Eselsbrücke, von Schicht 7 nach 1 gelesen: *Alle Deutschen Schüler trinken verschiedene
+Sorten Bier.* Die Anfangsbuchstaben stehen für Anwendung, Darstellung, Sitzung, Transport,
+Vermittlung, Sicherung, Bitübertragung.
 
-### Schicht 3 - Vermittlungsschicht (Network Layer)
-
-### Schicht 4 - Transportschicht (Transport Layer)
-
-### Schicht 5 - Sitzungsschicht (Session Layer)
-
-### Schicht 6 - Darstellungsschicht (Presentation Layer)
-
-### Schicht 7 - Anwendungsschicht (Application Layer)
+Was die Prüfung meist wissen will: auf welcher Schicht arbeitet ein bestimmtes Gerät?
+Hub und Repeater auf 1, Switch und Bridge auf 2, Router auf 3. Eine Firewall kann je nach
+Bauart auf 3, 4 oder 7 arbeiten.
 
 <br>
 <a href="https://de.wikipedia.org/wiki/OSI-Modell#Die_sieben_Schichten">

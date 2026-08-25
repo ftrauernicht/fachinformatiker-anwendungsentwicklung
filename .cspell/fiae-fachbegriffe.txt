@@ -181,3 +181,6 @@ Instanznamen
 Multiplizitäten
 Sequenzdiagramm
 Servicedesk
+Bitübertragung
+Eselsbrücke
+Portnummern

@@ -113,14 +113,19 @@ werden, sonst kann die Paritätsprüfung sie nicht zuordnen.
 [Conventional Commits](https://www.conventionalcommits.org/de/):
 
 ```text
-fix(content): Normalform-Beispiel korrigiert
-feat(de): Zustandsdiagramm ergänzt
-docs(readme): Aufbau beschrieben
+fix(content): correct the normal form example
+feat(de): add the state diagram chapter
+docs: describe the repository layout
 ```
 
-Gebräuchlich sind `feat`, `fix`, `docs`, `refactor`, `chore`, `ci`, `build`. Als Scope
-eignet sich das Kapitel oder die Sprache. Ein Satz zum *Warum* im Rumpf ist mehr wert als
-eine Aufzählung dessen, was der Diff ohnehin zeigt.
+Verwendet werden `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `ci` und `chore`.
+Die Betreffzeile steht im Imperativ und klein geschrieben. Der Scope ist freiwillig; hier
+sind `de`, `en`, `content`, `site`, `tooling` und `images` gebräuchlich, weil sich die
+Historie damit sinnvoll filtern lässt.
+
+Ein Satz zum *Warum* im Rumpf ist mehr wert als eine Aufzählung dessen, was der Diff
+ohnehin zeigt. Bei einer Textsammlung ist die Historie die einzige Stelle, an der steht,
+warum eine Aussage geändert wurde.
 
 ## Herkunft und Lizenz
 

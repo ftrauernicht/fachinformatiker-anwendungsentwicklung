@@ -33,6 +33,10 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 - [Class diagram](diagrams/03-class-diagram.md)
 - [Use case diagram](diagrams/04-use-case-diagram.md)
 - [Entity-relationship model](diagrams/05-entity-relationship-model.md)
+- [State diagram](diagrams/06-state-diagram.md)
+- [Activity diagram](diagrams/07-activity-diagram.md)
+- [Sequence diagram](diagrams/08-sequence-diagram.md)
+- [Object diagram](diagrams/09-object-diagram.md)
 
 ## Sources
 

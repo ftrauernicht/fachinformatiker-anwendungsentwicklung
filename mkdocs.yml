@@ -159,6 +159,10 @@ nav:
           - Class diagram: en/diagrams/03-class-diagram.md
           - Use case diagram: en/diagrams/04-use-case-diagram.md
           - Entity-relationship model: en/diagrams/05-entity-relationship-model.md
+          - State diagram: en/diagrams/06-state-diagram.md
+          - Activity diagram: en/diagrams/07-activity-diagram.md
+          - Sequence diagram: en/diagrams/08-sequence-diagram.md
+          - Object diagram: en/diagrams/09-object-diagram.md
   - Bildnachweise: bildnachweise.md
 
 validation:

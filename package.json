@@ -11,10 +11,11 @@
     "check:toc": "python tools/build_toc.py --check",
     "build:toc": "python tools/build_toc.py",
     "docs:serve": "mkdocs serve",
-    "docs:build": "mkdocs build --strict",
+    "docs:build": "mkdocs build --strict && python tools/check_site.py",
     "check": "npm run lint:md && npm run lint:spell && npm run check:toc && npm run check:glossary && npm run check:content",
     "build:glossary": "python tools/build_glossary.py",
-    "check:glossary": "python tools/build_glossary.py --check"
+    "check:glossary": "python tools/build_glossary.py --check",
+    "check:site": "python tools/check_site.py"
   },
   "devDependencies": {
     "@cspell/dict-de-de": "^4.1.1",

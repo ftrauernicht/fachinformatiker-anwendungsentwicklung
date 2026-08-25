@@ -73,20 +73,8 @@ jobs:
 
       # --strict prüft nur Markdown-Links. Rohes HTML sieht es nicht, und genau
       # dort lauert der Fehler, den man beim Bauen nicht bemerkt: MkDocs
-      # schreibt relative Pfade in <img src="…"> nicht um. Deshalb wird die
-      # fertige Website noch einmal offline durchgesehen — jede Datei, auf die
-      # eine Seite zeigt, muss auch dort liegen.
-      #
-      # Ausgenommen sind die Pfade der Sprachumschaltung. Sie beginnen an der
-      # Wurzel der veröffentlichten Website; für eine Prüfung im Dateisystem
-      # gibt es diese Wurzel nicht.
+      # schreibt relative Pfade in <img src="…"> nicht um. Die Website baut dann
+      # fehlerfrei und zeigt trotzdem keine Bilder. Genau so ist es hier einmal
+      # passiert — deshalb wird die fertige Website noch einmal durchgesehen.
       - name: Verweise in der gebauten Website
-        uses: lycheeverse/lychee-action@v2
-        with:
-          args: >-
-            --offline
-            --no-progress
-            --include-fragments
-            --exclude "^/fachinformatiker-anwendungsentwicklung/"
-            "site/**/*.html"
-          fail: true
+        run: python tools/check_site.py --format github

@@ -48,7 +48,7 @@ Das ist derselbe Satz Prüfungen, den die CI fährt:
 | `npm run check:toc` | ob die Inhaltsverzeichnisse noch zu den Überschriften passen |
 | `npm run check:glossary` | ob das Stichwortverzeichnis im Glossar noch stimmt |
 | `npm run check:content` | Links, Anker, Fußnoten, ungenutzte Bilder, Sprachparität |
-| `npm run docs:build` | ob die Website ohne kaputten Link baut |
+| `npm run docs:build` | ob die Website baut und in der fertigen Website jeder Verweis ein Ziel hat |
 
 Wenn `check:toc` oder `check:glossary` meckern, helfen `npm run build:toc` und
 `npm run build:glossary` — beide Verzeichnisse werden aus den Überschriften neu erzeugt und

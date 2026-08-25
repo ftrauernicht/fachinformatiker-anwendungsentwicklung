@@ -1,0 +1,69 @@
+name: Prüfen
+
+# Jeder Push und jeder Pull Request laufen durch dieselben Prüfungen wie
+# "npm run check" lokal. Was hier durchgeht, ist auf github.com und auf der
+# Website unfallfrei darstellbar.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown:
+    name: Markdown und Rechtschreibung
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Formatierung (markdownlint)
+        run: npm run lint:md
+
+      - name: Rechtschreibung (cspell)
+        run: npm run lint:spell
+
+  content:
+    name: Inhaltsprüfung
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Inhaltsverzeichnisse aktuell?
+        run: python tools/build_toc.py --check
+
+      - name: Links, Anker, Fußnoten, Bilder, Sprachparität
+        run: python tools/check_content.py --format github
+
+  site:
+    name: Website baut
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # --strict bricht ab, sobald ein interner Link oder Anker ins Leere zeigt.
+      - run: mkdocs build --strict

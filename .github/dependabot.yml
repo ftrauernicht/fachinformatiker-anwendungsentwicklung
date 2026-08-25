@@ -1,0 +1,38 @@
+version: 2
+
+# Die Prüfwerkzeuge sollen nicht veralten. Alles monatlich, gesammelt in je
+# einem Pull Request pro Ökosystem — bei einem Doku-Repository ist ein
+# wöchentlicher Schwall Rauschen.
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      werkzeuge:
+        patterns: ["*"]
+    commit-message:
+      prefix: chore
+      include: scope
+
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      mkdocs:
+        patterns: ["*"]
+    commit-message:
+      prefix: build
+      include: scope
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci
+      include: scope

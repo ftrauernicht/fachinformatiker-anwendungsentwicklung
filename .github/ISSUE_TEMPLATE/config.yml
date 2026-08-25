@@ -1,0 +1,10 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Frage zur Prüfung selbst
+    url: https://www.ihk.de/
+    about: >-
+      Was in deiner Prüfung drankommt, weiß nur deine IHK. Diese Sammlung ist privat
+      und kein offizielles Dokument.
+  - name: Das ursprüngliche Repository
+    url: https://github.com/LakayFTW/exam-prep-fiae-2023
+    about: Diese Sammlung ist ein Fork davon. Dort liegt der fachliche Ursprung.

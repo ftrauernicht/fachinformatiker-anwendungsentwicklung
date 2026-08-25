@@ -1,0 +1,78 @@
+name: Upstream beobachten
+
+# Diese Sammlung ist ein Fork. Das Original wird seit September 2024 nicht mehr
+# gepflegt — aber "nicht mehr" ist keine Zusage. Falls dort doch wieder etwas
+# passiert, soll das hier auffallen, ohne dass jemand daran denken muss.
+#
+# Der Job merged nichts. Er legt ein Issue an, damit die Übernahme eine
+# bewusste Entscheidung bleibt; die Dateistruktur hier unterscheidet sich zu
+# stark für einen automatischen Merge.
+on:
+  schedule:
+    - cron: "43 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  UPSTREAM: LakayFTW/exam-prep-fiae-2023
+  UPSTREAM_BRANCH: main
+
+jobs:
+  check:
+    name: Gibt es neue Commits im Original?
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Neue Commits ermitteln
+        id: compare
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git remote add upstream "https://github.com/${UPSTREAM}.git"
+          git fetch --quiet upstream "${UPSTREAM_BRANCH}"
+
+          # Alles, was im Original liegt und hier noch in keinem Commit steckt.
+          new=$(git log --oneline HEAD.."upstream/${UPSTREAM_BRANCH}" || true)
+          if [ -z "$new" ]; then
+            echo "Nichts Neues im Original."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "Im Original [\`${UPSTREAM}\`](https://github.com/${UPSTREAM}) liegen Commits,"
+            echo "die hier noch nicht angekommen sind:"
+            echo
+            echo '```'
+            echo "$new"
+            echo '```'
+            echo
+            echo "Die Dateistruktur unterscheidet sich inzwischen (\`docs/de\`, \`docs/en\`"
+            echo "statt \`GER\`, \`ENG\`), ein \`git merge upstream/main\` wird also"
+            echo "Konflikte werfen. Sinnvoller ist, die inhaltliche Änderung anzusehen"
+            echo "und von Hand zu übernehmen:"
+            echo
+            echo '```bash'
+            echo "git remote add upstream https://github.com/${UPSTREAM}.git"
+            echo "git fetch upstream"
+            echo "git log -p HEAD..upstream/${UPSTREAM_BRANCH} -- GER ENG"
+            echo '```'
+          } > upstream-report.md
+
+      - name: Issue anlegen oder fortschreiben
+        if: steps.compare.outputs.found == 'true'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Das Original hat neue Commits
+          content-filepath: upstream-report.md
+          labels: |
+            wartung
+            upstream

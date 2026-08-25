@@ -53,6 +53,12 @@ Kopie im Repository — mit Urheber und Lizenz in den
 [Mermaid](https://mermaid.js.org/)-Diagramme ersetzt, die im Markdown stehen und sich
 korrigieren lassen wie jeder andere Text.
 
+**Etwas zum Üben.** 86 Prüfungsfragen mit eingeklappten Antworten, thematisch sortiert,
+und fünf Spickzettel für die letzten Tage — Subnetting-Tabelle, SQL-Klauseln, sämtliche
+UML-Symbole, die Formeln zu Break-even, Netzplan und Verfügbarkeit, dazu die
+Excel-Funktionen, nach denen 2023 in GA2 gefragt wurde. Das Glossar hat ein
+Stichwortverzeichnis über alle Kapitel bekommen, erzeugt aus den Überschriften.
+
 **Vier Kapitel mehr, und eins übersetzt.** Zustands-, Aktivitäts-, Sequenz- und
 Objektdiagramm standen seit 2023 als Ankündigung ohne Link im Inhaltsverzeichnis — sie
 sind jetzt geschrieben, mit Beispiel und mit dem, was in der Prüfung Punkte kostet. Die
@@ -75,12 +81,15 @@ docs/
 ├── de/                   deutsche Fassung (maßgeblich)
 │   ├── 01-netzwerktechnik.md … 09-cloud-computing.md
 │   ├── diagramme/        neun Notationen von PAP bis Objektdiagramm
-│   └── glossar.md        Begriffe ohne festes Kapitel
+│   ├── pruefungsfragen/  86 Fragen mit eingeklappten Antworten
+│   ├── spickzettel/      Tabellen und Formeln zum Wiederholen
+│   └── glossar.md        Begriffe ohne festes Kapitel, plus Stichwortverzeichnis
 └── en/                   englische Fassung (maschinell übersetzt)
 
 tools/
 ├── check_content.py      Links, Anker, Fußnoten, Bilder, Sprachparität
-└── build_toc.py          Inhaltsverzeichnisse erzeugen und prüfen
+├── build_toc.py          Inhaltsverzeichnisse erzeugen und prüfen
+└── build_glossary.py     Stichwortverzeichnis erzeugen und prüfen
 ```
 
 Die Nummern in den Dateinamen sorgen dafür, dass die Reihenfolge auch beim Blättern durch
@@ -102,7 +111,12 @@ das MkDocs sonst nicht umschreibt.
 | 08 | [Politik und Wirtschaft](docs/de/08-politik-und-wirtschaft.md) | [Politics and economy](docs/en/08-politics-and-economy.md) |
 | 09 | [Cloud Computing](docs/de/09-cloud-computing.md) | [Cloud computing](docs/en/09-cloud-computing.md) |
 | — | [Diagramme](docs/de/diagramme/index.md) | [Diagrams](docs/en/diagrams/index.md) |
+| — | [Prüfungsfragen](docs/de/pruefungsfragen/index.md) | — |
+| — | [Spickzettel](docs/de/spickzettel/index.md) | — |
 | — | [Glossar](docs/de/glossar.md) | — |
+
+Prüfungsfragen und Spickzettel gibt es bewusst nur auf Deutsch: die Prüfung ist auf
+Deutsch, und geprüft wird genau diese Begrifflichkeit.
 
 ## Mitmachen
 

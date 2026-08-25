@@ -21,7 +21,7 @@
   - [DevOps](#devops)
   - [SAFe](#safe)
 - [IT Service Managementarten](#it-service-managementarten)
-- [Service Lebenszyklus nach ITILv4](#service-lebenszyklus-nach-itilv4)
+- [Service-Lebenszyklus nach ITIL v3](#service-lebenszyklus-nach-itil-v3)
   - [Strategy:](#strategy)
   - [Design:](#design)
   - [Transition:](#transition)
@@ -55,9 +55,15 @@ Die Bereitstellung und Kontrolle von Services unterliegt nicht nur der IT Branch
 Ein Prozess ist ein geregelter Ablauf von folgenden Aktivitäten.
 Es besitzt immer ein definiertes Ende und auch einen definierten Startpunkt. Es folgt nach dem EVA Prinzip, dass durch das Einbringen gewünschter Anforderungen eine Folge an geregelten Schritten eintritt, um ein erhofftes Ergebnis zu erhalten.
 
-<a href="https://qualitaetsmanagement.me/prozessmanagement/prozess/">
-  <img src="https://qualitaetsmanagement.me/wp-content/uploads/2022/11/071122_Der-Prozess-einfach-erklaert_Logo.jpg" width="500" title="Einfacher Prozessablauf" / alt="Einfacher Prozessablauf">
-</a>
+```mermaid
+flowchart LR
+    S(( )) --> E["Eingabe<br>Anforderung"]
+    E --> V["Verarbeitung<br>geregelte Folge von Aktivitäten"]
+    V --> A["Ausgabe<br>Ergebnis"]
+    A --> Z(( ))
+```
+
+*Ein Prozess nach dem EVA-Prinzip: definierter Start, geregelter Ablauf, definiertes Ende.*
 
 &nbsp;
 
@@ -70,9 +76,20 @@ Eine Reihung an Prozessen wird Prozesskette bezeichnet.
 
 Der Verlauf von mehreren Prozessen und deren Bedingungen, welche Wege eingeschlagen werden können, lassen sich in einem Ereignisgesteuerten Prozesskettenmodell(EPK Modell) darstellen.
 
-<a href="http://de.processorientation.com/?p=668">
-  <img src="https://imgs.search.brave.com/cWfLjTeeyPGmUGqsetbAOSxnWbtjExyPyiHlccT1uLw/rs:fit:766:1024:1/g:ce/aHR0cDovL2RlLnBy/b2Nlc3NvcmllbnRh/dGlvbi5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTIvMDEv/RVBLX0JlaXNwaWVs/LTc2NngxMDI0LnBu/Zw" width="400" title="Einfache Ereignisprozesskette" alt="Einfache Ereignisprozesskette">
-</a>
+```mermaid
+flowchart TD
+    E1{{Bestellung ist eingegangen}} --> F1[Bestellung prüfen]
+    F1 --> X((XOR))
+    X --> E2{{Bestellung ist vollständig}}
+    X --> E3{{Bestellung ist unvollständig}}
+    E2 --> F2[Ware versenden]
+    E3 --> F3[Beim Kunden nachfragen]
+    F2 --> E4{{Ware ist versandt}}
+    F3 --> E5{{Rückfrage ist gestellt}}
+```
+
+*Ereignisgesteuerte Prozesskette: Sechsecke sind Ereignisse, Rechtecke sind Funktionen,
+der Kreis ist ein Konnektor. Ereignis und Funktion wechseln sich immer ab.*
 
 &nbsp;
 
@@ -231,11 +248,20 @@ Beim Anbieten und Verfolgen der Services im Unternehmen gibt es verschiedene spe
 
 [^7]
 
-## Service Lebenszyklus nach ITILv4
+## Service-Lebenszyklus nach ITIL v3
 
-<a href="https://de.education-wiki.com/9403688-itil-service-lifecycle">
-  <img src="https://cdn.education-wiki.com/img/project-management-basics/9403688/itil-service-lifecycle-2.png.webp" width="300" title="Phasenaufbau nach ITILv4" alt="Phasenaufbau nach ITILv4">
-</a>
+```mermaid
+flowchart LR
+    S[Service Strategy] --> D[Service Design]
+    D --> T[Service Transition]
+    T --> O[Service Operation]
+    O --> I[Continual Service Improvement]
+    I --> S
+```
+
+*Die fünf Phasen des Service-Lebenszyklus. Sie stammen aus ITIL v3 beziehungsweise
+ITIL 2011. ITIL 4 hat den Lebenszyklus 2019 durch das Service Value System mit der
+Service Value Chain ersetzt — in Prüfungsaufgaben taucht meist noch der Lebenszyklus auf.*
 
 &nbsp;
 
@@ -293,9 +319,17 @@ Die Darstellung wird allgemein für alle Services verwendet und bietet Kunden ei
 
 &nbsp;
 
-<a href="https://www.i-doit.com/blog/imac-r-d-serviceorientiertes-it-lifecycle-management/">
-  <img src="https://www.i-doit.com/hs-fs/hubfs/imac-r-d-1600x900-1.jpg?width=550&height=309&name=imac-r-d-1600x900-1.jpg" title="IMAC/R/D Lifecycle" width="500" alt="IMAC/R/D Lifecycle">
-</a>
+```mermaid
+flowchart LR
+    I[Install] --> M[Move]
+    M --> A[Add]
+    A --> C[Change]
+    C --> R[Remove]
+    R --> D[Dispose]
+```
+
+*IMAC/R/D ordnet jede Kundenanfrage genau einer Phase des Lebenszyklus eines
+Arbeitsmittels zu.*
 
 &nbsp;
 
@@ -397,9 +431,22 @@ Auch sind Strafandrohungen enthalten wenn eine SLA nicht eingehalten wurde, wie 
 
 Das Kernstück des Incident Managements ist die Behebung von jeglichen Zwischenfällen, welche auf unterschiedlichster Weise den Ablauf der Unternehmensprozesse negativ beeinflussen kann.
 
-<a href="https://advisera.com/20000academy/knowledgebase/itil-incident-management-separate-roles-different-support-levels/">
-  <img src="https://imgs.search.brave.com/2OIwiEv6-3r--ZBh5UE3uFIUlgPMcGRYAW1dzkGeJ9w/rs:fit:600:401:1/g:ce/aHR0cHM6Ly9hZHZp/c2VyYS5jb20vd3At/Y29udGVudC91cGxv/YWRzL3NpdGVzLzYv/MjAxNS8wNy9JVElM/X3JvbGVfc2VwYXJh/dGlvbi5wbmc" width="500" title="Incident Management" alt="Incident Management">
-</A>
+```mermaid
+flowchart TD
+    U[Meldende Person] --> S["Single Point of Contact<br>First-Level-Support"]
+    S --> K[Kategorisieren nach Software, Hardware, Netzwerk]
+    K --> P[Priorisieren nach Dringlichkeit und Auswirkung]
+    P --> DB{Lösung in der Known-Error-Database?}
+    DB -->|ja| L[Störung beheben und protokollieren]
+    DB -->|nein| Z[Second-Level-Support]
+    Z --> Z3{Gelöst?}
+    Z3 -->|ja| L
+    Z3 -->|nein| T["Third-Level-Support<br>Hersteller, Entwicklung"]
+    T --> L
+```
+
+*Eskalationsweg im Incident Management. Quelle der ursprünglichen Darstellung:
+[Advisera](https://advisera.com/20000academy/knowledgebase/itil-incident-management-separate-roles-different-support-levels/).*
 
 &nbsp;
 

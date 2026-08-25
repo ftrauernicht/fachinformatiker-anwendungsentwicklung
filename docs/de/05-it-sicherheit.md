@@ -80,9 +80,18 @@ Bei der Schutzbedarfsanalyse wird anhand der eingesetzten Informationstechnik un
 
 <br>
 
-<a href="https://tetfolio.fu-berlin.de/web/ii_555094:9">
-  <img src="https://tetfolio.fu-berlin.de/IMPAL/659400.gif" width="500" title="Struktur eine Schutzbedarfanalyse" alt="Struktur eine Schutzbedarfanalyse">
-</a>
+```mermaid
+flowchart TD
+    A[Zu schützende Daten erfassen] --> B[Daten zu Datengruppen zusammenfassen]
+    B --> C["Schlimmste denkbare Folgen abschätzen<br>Vertraulichkeit · Integrität · Verfügbarkeit"]
+    C --> D{Einstufung des Schutzbedarfs}
+    D -->|normal| E[IT-Grundschutz genügt]
+    D -->|hoch| F[Verfahrensspezifische Risikoanalyse]
+    D -->|sehr hoch| F
+```
+
+*Ablauf der Schutzbedarfsanalyse. Quelle des ursprünglichen Schaubilds:
+[FU Berlin](https://tetfolio.fu-berlin.de/web/ii_555094:9).*
 
 <br>
 

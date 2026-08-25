@@ -79,9 +79,18 @@ Protection needs analysis evaluates the appropriateness of data protection based
 
 <br>
 
-<a href="https://tetfolio.fu-berlin.de/web/ii_555094:9">
-  <img src="https://tetfolio.fu-berlin.de/IMPAL/659400.gif" width="500" title="Structure of a protection needs analysis" alt="Structure of a protection needs analysis">
-</a>
+```mermaid
+flowchart TD
+    A[Identify data to be protected] --> B[Group data into data groups]
+    B --> C["Estimate worst possible consequences<br>confidentiality · integrity · availability"]
+    C --> D{Classify the protection need}
+    D -->|normal| E[Baseline IT protection is sufficient]
+    D -->|high| F[Procedure-specific risk analysis]
+    D -->|very high| F
+```
+
+*The steps of a protection needs analysis. Source of the original diagram:
+[FU Berlin](https://tetfolio.fu-berlin.de/web/ii_555094:9).*
 
 <br>
 

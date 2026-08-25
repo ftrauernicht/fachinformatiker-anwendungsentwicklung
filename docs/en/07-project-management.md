@@ -28,9 +28,15 @@
 
 ## The Project Management Triangle
 
-<a href="https://www.crossgo.com/de/produkt/projektmanagement">
-    <img src="https://www.crossgo.com/site/produkt/Produktunterseiten/Projektmanagement/image-thumb**213**auto_6dd6ff1f382fe8df728890e87d4acf32/Magisches%20Dreieck_Projektmanagment.png" width="300" title="The Project Management Triangle" alt="The Project Management Triangle">
-</a>
+```mermaid
+flowchart TD
+    Z[Time] --- Q[Quality / scope]
+    Z --- K[Cost]
+    K --- Q
+```
+
+*The project management triangle: the three quantities depend on each other. Changing
+one of them inevitably changes at least one of the other two.*
 
 [^1]
 
@@ -82,9 +88,19 @@ A network diagram forms the basis for scheduling and has the following functions
 - It visualizes the critical path and thus the activities that can endanger the planned project end.
 - It represents possible buffers or reserves in the schedule.
 
-<a href="https://t2informatik.de/wissen-kompakt/netzplan/">
-    <img src="https://t2informatik.de/wp-content/uploads/2018/02/netzplan-wissen-kompakt-t2informatik.jpg" width="500" title="Main Functions of a Network Diagram" alt="Main Functions of a Network Diagram">
-</a>
+```mermaid
+flowchart LR
+    Start(( )) --> A["A · 5 days"]
+    A --> B["B · 3 days"]
+    A --> C["C · 7 days"]
+    B --> D["D · 2 days"]
+    C --> D
+    D --> E["E · 4 days"]
+    E --> Ende(( ))
+```
+
+*The critical path is A → C → D → E, taking 18 days. Activity B has three days of
+float: it may slip by three days without endangering the project end date.*
 
 [^2]
 
@@ -96,11 +112,19 @@ A network diagram is a tool from graph theory that consists of nodes and arrows.
 - An event is a defined, describable state in the project process.
 - An precedence relationship defines the logical - i.e., technical, and personnel - and the temporal dependency between individual activities; it always exists between exactly two nodes.
 
-<a href="https://t2informatik.de/wissen-kompakt/netzplan/">
-    <img src="https://t2informatik.de/wp-content/uploads/2018/02/vorgangsknoten-wissen-kompakt.jpg" width="500" title="Elements of a Network Diagram" alt="Elements of a Network Diagram">
-</a>
+| | | |
+|---|---|---|
+| **ES** earliest start | **D** duration | **EF** earliest finish |
+| **No.** activity number | **Activity name** | |
+| **LS** latest start | **TF** total float · **FF** free float | **LF** latest finish |
+
+Calculation rules:
+
+- Forward pass: `EF = ES + D`; the ES of an activity is the largest EF of its predecessors
+- Backward pass: `LS = LF - D`; the LF of an activity is the smallest LS of its successors
+- `TF = LS - ES`; an activity with `TF = 0` lies on the critical path
 
 ## Gantt Chart
 
-[^1]:(<https://www.crossgo.com/de/produkt/projektmanagement>)
-[^2]:(<https://t2informatik.de/wissen-kompakt/netzplan/>)
+[^1]: <https://www.crossgo.com/de/produkt/projektmanagement>
+[^2]: <https://t2informatik.de/wissen-kompakt/netzplan/>

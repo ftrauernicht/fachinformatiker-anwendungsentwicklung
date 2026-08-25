@@ -28,9 +28,15 @@
 
 ## Das Magische Dreieck des Projektmanagements
 
-<a href="https://www.crossgo.com/de/produkt/projektmanagement">
-    <img src="https://www.crossgo.com/site/produkt/Produktunterseiten/Projektmanagement/image-thumb**213**auto_6dd6ff1f382fe8df728890e87d4acf32/Magisches%20Dreieck_Projektmanagment.png" width="300" title="Das Magische Dreieck des Projektmanagements" alt="Das Magische Dreieck des Projektmanagements">
-</a>
+```mermaid
+flowchart TD
+    Z[Zeit] --- Q[Qualität / Leistungsumfang]
+    Z --- K[Kosten]
+    K --- Q
+```
+
+*Das magische Dreieck: die drei Größen hängen voneinander ab. Wer eine davon
+verändert, verändert zwangsläufig mindestens eine der beiden anderen.*
 
 [^1]
 
@@ -82,9 +88,19 @@ Ein Netzplan bildet die Grundlage für die Terminplanung und hat folgende Funkti
 - er visualisiert den kritischen Pfad und somit die Vorgänge, die das geplante Projektende gefährden können.
 - er stellt mögliche Puffer bzw. Reserven in der Terminplanung dar.
 
-<a href="https://t2informatik.de/wissen-kompakt/netzplan/">
-    <img src="https://t2informatik.de/wp-content/uploads/2018/02/netzplan-wissen-kompakt-t2informatik.jpg" width="500" title="Hauptfunktionen eines Netzplans" alt="Hauptfunktionen eines Netzplans">
-</a>
+```mermaid
+flowchart LR
+    Start(( )) --> A["A · 5 Tage"]
+    A --> B["B · 3 Tage"]
+    A --> C["C · 7 Tage"]
+    B --> D["D · 2 Tage"]
+    C --> D
+    D --> E["E · 4 Tage"]
+    E --> Ende(( ))
+```
+
+*Der kritische Pfad ist A → C → D → E mit 18 Tagen. Vorgang B hat drei Tage Puffer:
+er darf sich um drei Tage verschieben, ohne das Projektende zu gefährden.*
 
 [^2]
 
@@ -96,11 +112,19 @@ Ein Netzplan ist ein Mittel aus der Graphentheorie, das aus Knoten und Pfeilen b
 - Ein Ereignis ist ein festgelegter, beschreibbarer Zustand im Projektablauf.
 - Mit einer Anordnungsbeziehung wird die logische - also fachliche, technische und personelle - und die zeitliche Abhängigkeit zwischen einzelnen Vorgängen festgelegt; sie besteht immer zwischen genau zwei Knoten.
 
-<a href="https://t2informatik.de/wissen-kompakt/netzplan/">
-    <img src="https://t2informatik.de/wp-content/uploads/2018/02/vorgangsknoten-wissen-kompakt.jpg" width="500" title="Elemente des Netzplans" alt="Elemente des Netzplans">
-</a>
+| | | |
+|---|---|---|
+| **FAZ** frühester Anfangszeitpunkt | **D** Dauer | **FEZ** frühester Endzeitpunkt |
+| **Nr.** Vorgangsnummer | **Vorgangsbezeichnung** | |
+| **SAZ** spätester Anfangszeitpunkt | **GP** Gesamtpuffer · **FP** freier Puffer | **SEZ** spätester Endzeitpunkt |
+
+Rechenregeln:
+
+- Vorwärtsrechnung: `FEZ = FAZ + D`, der FAZ eines Vorgangs ist der größte FEZ seiner Vorgänger
+- Rückwärtsrechnung: `SAZ = SEZ - D`, der SEZ eines Vorgangs ist der kleinste SAZ seiner Nachfolger
+- `GP = SAZ - FAZ`, ein Vorgang mit `GP = 0` liegt auf dem kritischen Pfad
 
 ## Gantt-Diagramm
 
-[^1]:(<https://www.crossgo.com/de/produkt/projektmanagement>)
-[^2]:(<https://t2informatik.de/wissen-kompakt/netzplan/>)
+[^1]: <https://www.crossgo.com/de/produkt/projektmanagement>
+[^2]: <https://t2informatik.de/wissen-kompakt/netzplan/>

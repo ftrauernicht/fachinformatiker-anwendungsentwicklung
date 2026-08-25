@@ -21,7 +21,7 @@
   - [DevOps](#devops)
   - [SAFe](#safe)
 - [Types of IT Service Management](#types-of-it-service-management)
-- [Service Lifecycle according to ITILv4](#service-lifecycle-according-to-itilv4)
+- [Service lifecycle according to ITIL v3](#service-lifecycle-according-to-itil-v3)
   - [Strategy:](#strategy)
   - [Design:](#design)
   - [Transition:](#transition)
@@ -209,7 +209,7 @@ In offering and tracking services within the company, various specialized areas 
 
 [^7]
 
-## Service Lifecycle according to ITILv4
+## Service lifecycle according to ITIL v3
 
 ![Phases according to ITILv4](https://cdn.education-wiki.com/img/project-management-basics/9403688/itil-service-lifecycle-2.png.webp)
 
@@ -365,9 +365,22 @@ An SLA contains individual service levels with factors of quality and time. Meas
 
 The core of Incident Management is the resolution of any incidents that can negatively impact the flow of business processes in various ways.
 
-<a href="https://advisera.com/20000academy/knowledgebase/itil-incident-management-separate-roles-different-support-levels/">
-  <img src="https://imgs.search.brave.com/2OIwiEv6-3r--ZBh5UE3uFIUlgPMcGRYAW1dzkGeJ9w/rs:fit:600:401:1/g:ce/aHR0cHM6Ly9hZHZp/c2VyYS5jb20vd3At/Y29udGVudC91cGxv/YWRzL3NpdGVzLzYv/MjAxNS8wNy9JVElM/X3JvbGVfc2VwYXJh/dGlvbi5wbmc" width="500" title="Incident Management" alt="Incident Management">
-</A>
+```mermaid
+flowchart TD
+    U[Reporting person] --> S["Single point of contact<br>first-level support"]
+    S --> K[Categorise as software, hardware or network]
+    K --> P[Prioritise by urgency and impact]
+    P --> DB{Solution in the known error database?}
+    DB -->|yes| L[Resolve the incident and log it]
+    DB -->|no| Z[Second-level support]
+    Z --> Z3{Resolved?}
+    Z3 -->|yes| L
+    Z3 -->|no| T["Third-level support<br>vendor, development"]
+    T --> L
+```
+
+*Escalation path in incident management. Source of the original diagram:
+[Advisera](https://advisera.com/20000academy/knowledgebase/itil-incident-management-separate-roles-different-support-levels/).*
 
 &nbsp;
 

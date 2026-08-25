@@ -1,5 +1,7 @@
-# Table of Content
-- [Table of Content](#table-of-content)
+# Databases
+
+## Table of contents
+
 - [Types of Databases](#types-of-databases)
   - [Relational Databases](#relational-databases)
   - [Document-Oriented Databases](#document-oriented-databases)
@@ -43,19 +45,21 @@
   - [Deleting records (DELETE)](#deleting-records-delete)
   - [SQL Data Types](#sql-data-types)
 
----
-<br>
+## Types of Databases
 
-# Types of Databases
-## Relational Databases
+### Relational Databases
+
 Relational databases consist of tables, each table has columns and rows. In such a database, relationships can be formed using primary and foreign keys.
 
-## Document-Oriented Databases
+### Document-Oriented Databases
+
 In a document-oriented database, data is not stored in tables as in relational databases but in documents. Such a document is a structured data source presented in a specific format, often as JSON (JavaScript Object Notation) or as XML (eXtensible Markup Language).
 
-# Normal Forms
+## Normal Forms
+
 [^2] [^1]<br>
 Currently common normal forms include:
+
 - 1st Normal Form (1NF)
 - 2nd Normal Form (2NF)
 - 3rd Normal Form (3NF)
@@ -63,15 +67,18 @@ Currently common normal forms include:
 - 4th Normal Form (4NF) [Not discussed here]
 - 5th Normal Form (5NF) [Not discussed here]
 
-## 1st Normal Form
-### Explanation
+### 1st Normal Form
+
+#### Explanation
+
 Every attribute of the relation must have an atomic value range, and the relation must be free of repetitions. That means, only one value per data field is allowed.
 
-### Example
-__0th Normal Form__
+#### Example
+
+**0th Normal Form**
 <br>
 <a href="https://info-wsf.de/Normalformen/">
-  <img title="0th Normal Form" src="../assets/img/normal-forms/0nf.png">
+  <img title="0th Normal Form" src="../assets/img/normal-forms/0nf.png" alt="0th Normal Form">
 </a>
 <br>
 In the above example, multiple data are stored in one data field. This is also called the 0th Normal Form or NF² (Non-First-Normal-Form).<br>
@@ -80,111 +87,134 @@ In the definition, it says "...maximum one value...", which allows you to enter 
 <br>
 
 There are two ways to eliminate multiple attributes:
+
 1. The multiple attribute is broken down into multiple single attributes within the record, i.e., the record gets more attributes.
 2. If the multiple attribute contains a list of type-matching data, each value in the list is assigned its own record.
 
 The result could look like this:
 <br>
 <a href="https://info-wsf.de/Normalformen/">
-  <img title="1st Normal Form" src="../assets/img/normal-forms/1nf.png">
+  <img title="1st Normal Form" src="../assets/img/normal-forms/1nf.png" alt="1st Normal Form">
 </a>
 <br>
 
-### Possible Errors
-#### Insertion Anomaly
+#### Possible Errors
+
+##### Insertion Anomaly
+
 1. Another entry with a different exam subject is made to the existing exam number.
 2. An entry with a different student name is made to the same matriculation number.
 3. Entering a student who has not yet chosen a subject causes null values in the subject number, but since this is part of the primary key, it must not be. It violates integrity.
 
-#### Update Anomaly
-4. If the name of the professor changes, this must be done in all rows.
-5. New examiners are assigned to individual exam subjects. Everywhere.
+##### Update Anomaly
 
-#### Deletion Anomaly
+1. If the name of the professor changes, this must be done in all rows.
+2. New examiners are assigned to individual exam subjects. Everywhere.
+
+##### Deletion Anomaly
+
 - Some data may be lost when a tuple is deleted.
 
-## 2nd Normal Form
-### Explanation
+### 2nd Normal Form
+
+#### Explanation
+
 A relation is in the second normal form if the first normal form is achieved and no non-key attribute is functionally dependent on a proper subset of a candidate key.
 
-### Example
+#### Example
+
 We need to split the table from the first normal form example because neither the student's name nor the exam subject's name fully depends on the primary key. The attribute Note fully depends on the primary key and remains in the relation.<br>
 So the following relations result in the second normal form.
 
 <br>
 <a href="https://info-wsf.de/Normalformen/">
-  <img title="2nd Normal Form" src="../assets/img/normal-forms/2nf.png">
+  <img title="2nd Normal Form" src="../assets/img/normal-forms/2nf.png" alt="2nd Normal Form">
 </a>
 <br>
 
 In all resulting relations, all non-primary key attributes are fully functionally dependent on the respective primary keys.
 
-### Possible Errors
-#### Update Anomaly
-4. If the name of the professor changes, this must be done in all rows.
+#### Possible Errors
 
-## 3rd Normal Form
-### Explanation
+##### Update Anomaly
+
+1. If the name of the professor changes, this must be done in all rows.
+
+### 3rd Normal Form
+
+#### Explanation
+
 A relation is in the third normal form if the second normal form is satisfied and there are no dependencies between non-key attributes. Such dependencies are also referred to as transitive dependencies. Furthermore, attributes that are only indirectly dependent on the primary key must be moved to a new relation. This eliminates redundant data.
 
-### Example
+#### Example
+
 In the 3rd normal form, the dependency of the professor on the exam subject must be resolved.
 
 <br>
 <a href="https://info-wsf.de/Normalformen/">
-  <img title="3rd Normal Form" src="../assets/img/normal-forms/3nf.png">
+  <img title="3rd Normal Form" src="../assets/img/normal-forms/3nf.png" alt="3rd Normal Form">
 </a>
 <br>
 
-### Possible Errors
+#### Possible Errors
+
 - No errors known.
 
-# Relationships
+## Relationships
+
 [^3]
-## 1:1 Relationship
+
+### 1:1 Relationship
+
 In a **"one-to-one" relationship in relational databases**, each record in table A is associated with exactly one record in table B and vice versa. This type of relationship should be avoided in modeling because most of the information related in this way can be in a table. A 1:1 relationship is only used to split a table due to its complexity or to isolate part of the table for access rights reasons.
 
-<img title="1:1" src="../assets/img/erm/cardinality-1-1.png">
+<img title="1:1" src="../assets/img/erm/cardinality-1-1.png" alt="1:1">
 
-## 1:n Relationship
+### 1:n Relationship
+
 A **"one to many" relationship in relational databases** is the most common type of relationship in a database. In a **1:many relationship**, a record in table A can have multiple matching records in table B, but a record in table B never has more than one record in table A associated with it.
 
-<img title="1:n" src="../assets/img/erm/cardinality-1-n.png">
+<img title="1:n" src="../assets/img/erm/cardinality-1-n.png" alt="1:n">
 
-## n:m Relationship
+### n:m Relationship
+
 With **"many-to-many" relationships in relational databases**, each record in table A can have multiple matching records in table B, and vice versa. This relationship can only be realized via a third table, a connection table C. The connection table C usually only contains the foreign keys of the other two tables (A/B). The primary key of the connection table is formed from these two foreign keys. It follows that an m:n relationship is actually two 1:n relationships.
 
-<img title="m:n" src="../assets/img/erm/cardinality-m-n.png">
+<img title="m:n" src="../assets/img/erm/cardinality-m-n.png" alt="m:n">
 
-# SQL
+## SQL
+
 [^4]
 Structured Query Language (SQL) is a standard computer language for relational database management and data manipulation. Some of the key elements of SQL include:
 
-## Language Elements
-- Data Definition Language (DDL): 
+### Language Elements
+
+- Data Definition Language (DDL):
   - Used to define the structure of the database.
-- Data Manipulation Language (DML): 
+- Data Manipulation Language (DML):
   - Used to manipulate data within the database.
 - Data Query Language (DQL):
   - Used to query the database for information.
 - Data Control Language (DCL):
   - Used to control access to data within the database.
 - Transaction Control Language (TCL):
-   - Transaction control commands.
+  - Transaction control commands.
 
 The term SQL refers to the English word “query”.
 
-## SELECT queries
+### SELECT queries
+
 Example database:
 <a href="https://de.wikipedia.org/wiki/SQL">
-   <img title="Database example" src="../assets/img/databases/sql-example.png">
+   <img title="Database example" src="../assets/img/databases/sql-example.png" alt="Database example">
 </a>
 
-### Simple query
+#### Simple query
 
 ```sql
 SELECT * FROM student;
 ```
+
 Result:
 
 |MatrNr|Name|
@@ -195,11 +225,12 @@ Result:
 
 lists all columns and all rows of the `Student` table.
 
-### Query with column selection(,)
+#### Query with column selection(,)
 
 ```sql
 SELECT LectureNo, Title FROM Lecture;
 ```
+
 Result:
 
 |LectureNo|Title|
@@ -210,11 +241,12 @@ Result:
 
 lists all columns `LectureNo` and `Title` of all rows of the table `Lecture`.
 
-### Query with unique values (DISTINCT)
+#### Query with unique values (DISTINCT)
 
 ```sql
 SELECT DISTINCT MatrNr FROM listenes;
 ```
+
 Result:
 
 |MatrNr|
@@ -224,11 +256,12 @@ Result:
 
 only lists different entries of the column `MatrNr` from the table `listenes`. This shows the matriculation numbers of all students who have at least one lecture, whereby matriculation numbers that occur multiple times are only displayed once.
 
-### Query with rename (AS)
+#### Query with rename (AS)
 
 ```sql
 SELECT MatrNr AS MatriculationNumber, name FROM student;
 ```
+
 Result:
 
 |MatriculationNumber|name|
@@ -239,11 +272,12 @@ Result:
 
 lists the columns `MatrNr` and `Name` of all rows of the table `Student`. `MatrNr` is listed as the `MatriculationNumber` in the display result.
 
-### Query with filter (WHERE)
+#### Query with filter (WHERE)
 
 ```sql
 SELECT PrelNR, Title FROM Lecture WHERE Title = 'ET';
 ```
+
 Result:
 
 |TemplateNumber|Title|
@@ -252,11 +286,12 @@ Result:
 
 lists the `VorlNr` and `Title` of all those rows in the table whose title is `ET`.
 
-### Query with filter by content (WHERE ... LIKE ...)
+#### Query with filter by content (WHERE ... LIKE ...)
 
 ```sql
 SELECT Name FROM Student WHERE Name LIKE 'F%';
 ```
+
 Result:
 
 |Name|
@@ -266,7 +301,7 @@ Result:
 
 lists the names of all students whose name begins with `F`. `LIKE` can be used with different wildcards: `_` stands for any single character, `%` stands for any character string.
 
-### Query with filter and sorting (ORDER BY)
+#### Query with filter and sorting (ORDER BY)
 
 ```sql
 SELECT firstName, lastName, streetNumber, zipCode, city FROM Student WHERE zipCode = '20095' ORDER BY name;
@@ -274,7 +309,7 @@ SELECT firstName, lastName, streetNumber, zipCode, city FROM Student WHERE zipCo
 
 ist the `firstName`, `name`, `streetNumber`, `zipCode` and `city` of all students from the specified zip code area in ascending order by `name`.
 
-### Query with joined tables (, and INNER JOIN)
+#### Query with joined tables (, and INNER JOIN)
 
 ```sql
 SELECT Lecture.LectureNo, Lecture.Title, Professor.PersNo, Professor.Name FROM Professor, Lecture WHERE Professor.PersNo = Lecture.PersNo;
@@ -296,6 +331,7 @@ Tables can be linked not only via key fields, but also via any fields, as the fo
 ```sql
 SELECT Lecture.Title, Professor.Name FROM Professor, Lecture WHERE Professor.Name <> Lecture.Title;
 ```
+
 Result:
 
 |Title|Name|
@@ -312,7 +348,7 @@ Result:
 
 The result contains the combinations of all professors and all lectures where the name of the professor differs from the title of the lecture - that is simply all of them (no lecture is named like a professor)
 
-### Left outer join (LEFT OUTER JOIN)
+#### Left outer join (LEFT OUTER JOIN)
 
 ```sql
 SELECT Professor.PersNo, Professor.Name, Lecture.LectureNo, Lecture.Title FROM Professor LEFT OUTER JOIN Lecture ON Professor.PersNr = Lecture.PersNo;
@@ -332,7 +368,7 @@ The same can be achieved using a subquery:
 SELECT Professor.PersNo, Professor.Name FROM Professor WHERE NOT EXISTS (SELECT * FROM Lecture WHERE PersNo = Professor.PersNo);
 ```
 
-### Grouping of Aggregate Functions (GROUP BY)
+#### Grouping of Aggregate Functions (GROUP BY)
 
 ```sql
 SELECT Professor.PersNo, Professor.Name, COUNT(Vorlesung.PersNo) AS Count FROM Professor LEFT OUTER JOIN Lecture ON Professor.PersNo = Vorlesung.PersNo GROUP BY Professor.Name, Professor.PersNo;
@@ -342,7 +378,7 @@ Counts the number of lectures per professor using the aggregate function `COUNT`
 
 Note: `COUNT(Professor.PersNo)` or `COUNT(*)` would be incorrect (NULL values should not be counted).
 
-### Summary of a SELECT
+#### Summary of a SELECT
 
 **Explanation:**
 
@@ -374,13 +410,13 @@ Note: `COUNT(Professor.PersNo)` or `COUNT(*)` would be incorrect (NULL values sh
 - **INTERSECT:**
   - Returns the intersection of two result sets. Duplicate result tuples are removed.
 
-## INSERT queries (Inserting records)
+### INSERT queries (Inserting records)
 
 ```sql
 INSERT INTO Lecture (LectureNo, Title, PersNo) VALUES (1000, 'Software Development 1', 12);
 ```
 
-## Updating records (UPDATE)
+### Updating records (UPDATE)
 
 ```sql
 UPDATE Lecture SET LectureNo = LectureNo + 1000, PersNo = 20 WHERE PersNo = 15;
@@ -388,7 +424,7 @@ UPDATE Lecture SET LectureNo = LectureNo + 1000, PersNo = 20 WHERE PersNo = 15;
 
 Changes all records where PersNo has the value 15. The value of `LectureNo` is increased by 1000 and the value of PersNo is set to 20.
 
-## Deleting records (DELETE)
+### Deleting records (DELETE)
 
 ```sql
 DELETE FROM Lecture WHERE PersNo = 12;
@@ -396,7 +432,7 @@ DELETE FROM Lecture WHERE PersNo = 12;
 
 Deletes all records where PersNo has the value 12.
 
-## SQL Data Types
+### SQL Data Types
 
 - **INTEGER:**
   - Integer (positive or negative), with names like `SMALINT`, `TINYINT`, or `BIGINT` used depending on the number of bits used.
@@ -427,7 +463,7 @@ Deletes all records where PersNo has the value 12.
 - **CLOB(n) or CHARACTER LARGE OBJECT(n):**
   - Character string of up to n characters in length.
 
-[^1]: https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)#Normalformen
-[^2]: https://info-wsf.de/Normalformen/
-[^3]: https://www.datenbanken-verstehen.de/datenmodellierung/beziehungen-datenbanken/
-[^4]: https://de.wikipedia.org/wiki/SQL
+[^1]: <https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)#Normalformen>
+[^2]: <https://info-wsf.de/Normalformen/>
+[^3]: <https://www.datenbanken-verstehen.de/datenmodellierung/beziehungen-datenbanken/>
+[^4]: <https://de.wikipedia.org/wiki/SQL>

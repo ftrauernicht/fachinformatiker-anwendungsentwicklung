@@ -1,9 +1,11 @@
-# Table of Content
-- [Table of Content](#table-of-content)
+# IT protection and security
+
+## Table of contents
+
 - [Data Protection](#data-protection)
   - [Art. 32 of the GDPR - Security and Processing](#art-32-of-the-gdpr---security-and-processing)
   - [3 Aspects of IT Security](#3-aspects-of-it-security)
-  - [Authentication, Authorization, Authorization](#authentication-authorization-authorization)
+  - [Authentication, verification, authorization](#authentication-verification-authorization)
   - [ISMS (Information Security Management System)](#isms-information-security-management-system)
 - [Protection Needs Analysis](#protection-needs-analysis)
   - [Identification of Data to be Protected](#identification-of-data-to-be-protected)
@@ -23,8 +25,8 @@
   - [Disadvantages](#disadvantages-1)
 - [2FA - Two-Factor Authentication](#2fa---two-factor-authentication)
   - [Examples of 2FA](#examples-of-2fa)
-  - [Authenticating](#authenticating)
-  - [Authenticating](#authenticating-1)
+  - [Authenticating (the user proves who they are)](#authenticating-the-user-proves-who-they-are)
+  - [Verifying (the service checks the proof)](#verifying-the-service-checks-the-proof)
   - [Authorizing](#authorizing)
   - [Types of Authentication](#types-of-authentication)
     - [Knowledge](#knowledge)
@@ -34,15 +36,15 @@
     - [Physical Characteristics / Biometrics](#physical-characteristics--biometrics)
       - [Examples of Authentication by Biometrics](#examples-of-authentication-by-biometrics)
 
----
-<br>
+## Data Protection
 
-# Data Protection
 - GDPR - General Data Protection Regulation
 - BDSG - Federal Data Protection Act
 
-## Art. 32 of the GDPR - Security and Processing
+### Art. 32 of the GDPR - Security and Processing
+
 [^1]
+
 1. Pseudonymization and encryption of personal data
 2. the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services
 3. the ability to restore the availability of and access to personal data in a timely manner in the event of a physical or technical incident
@@ -50,35 +52,41 @@
 
 In addition, compliance and assessment of these requirements must take into account the risks associated with processing.
 
-## 3 Aspects of IT Security
+### 3 Aspects of IT Security
+
 - Confidentiality
 - Integrity
 - Availability
 
-## Authentication, Authorization, Authorization
+### Authentication, verification, authorization
+
 [^2]
+
 - Authentication = Verification of the provided data
 - Authorization = When information is correct, the other party grants access
 
-## ISMS (Information Security Management System)
+### ISMS (Information Security Management System)
+
 [^3]
 The establishment of procedures and rules within an organization aimed at defining, controlling, monitoring, maintaining and continually improving information security.
 
 <br>
 
-# Protection Needs Analysis
+## Protection Needs Analysis
+
 [^4] [^5]
 Protection needs analysis evaluates the appropriateness of data protection based on the information technology used and the information processed. The value of data and functions is typically many times higher than the value of IT devices themselves. Therefore, appropriate security measures must be derived from the security requirements of IT procedures.
 
 <br>
 
 <a href="https://tetfolio.fu-berlin.de/web/ii_555094:9">
-  <img src="https://tetfolio.fu-berlin.de/IMPAL/659400.gif" width="500" title="Structure of a protection needs analysis">
+  <img src="https://tetfolio.fu-berlin.de/IMPAL/659400.gif" width="500" title="Structure of a protection needs analysis" alt="Structure of a protection needs analysis">
 </a>
 
 <br>
 
-The protection need is determined by estimating the worst possible consequences of the loss of __confidentiality__, __integrity__, and __availability__. The assessment must be carried out separately for the following six categories of damage:
+The protection need is determined by estimating the worst possible consequences of the loss of **confidentiality**, **integrity**, and **availability**. The assessment must be carried out separately for the following six categories of damage:
+
 - Impairment of the right to informational self-determination
 - Impairment of personal integrity
 - Impairment of task fulfillment
@@ -92,7 +100,8 @@ For each application and the processed information, the potential damages and th
 
 <br>
 
-__The following steps are applied in the protection needs analysis:__
+**The following steps are applied in the protection needs analysis:**
+
 1. Identification of data to be protected
 2. Summarizing data into data groups (optional)
 3. Determining the worst possible consequences
@@ -100,49 +109,53 @@ __The following steps are applied in the protection needs analysis:__
 
 <br>
 
-## Identification of Data to be Protected
+### Identification of Data to be Protected
+
 The first step is to identify all data processed or stored within the analyzed IT procedure.
-> __Example:__ First name, last name, street, house number, postal code, city, research results, patent application
+> **Example:** First name, last name, street, house number, postal code, city, research results, patent application
 
 <br>
 
-## Summarizing Data into Data Groups
+### Summarizing Data into Data Groups
+
 Often, multiple individual data can be grouped together based on content. Subsequent steps should then be applied to these data groups rather than the individual data they contain.
->__Example:__  
-Contact details 
-(first name, last name, street, house number, postal code, city)<br> 
-Research results<br> 
+>**Example:**  
+Contact details
+(first name, last name, street, house number, postal code, city)<br>
+Research results<br>
 Patent application
 
 <br>
 
-## Determining the Worst Possible Consequences of Loss
-Each data group is evaluated with regard to the six mentioned categories of damage. For each of the six damage categories, it is considered what consequences the impairment of the protection goals __confidentiality__, __integrity__, and __availability__ would have in the worst case.
+### Determining the Worst Possible Consequences of Loss
+
+Each data group is evaluated with regard to the six mentioned categories of damage. For each of the six damage categories, it is considered what consequences the impairment of the protection goals **confidentiality**, **integrity**, and **availability** would have in the worst case.
 
 <br>
 
 >Example Confidentiality:<br>
-__Incident:__ Unauthorized individuals gain knowledge of personnel data.<br>
-__Consequences:__ Interaction with colleagues may be impaired.
+**Incident:** Unauthorized individuals gain knowledge of personnel data.<br>
+**Consequences:** Interaction with colleagues may be impaired.
 
 <br>
 
 >Example Integrity:<br>
-__Incident:__ Research data is altered unauthorizedly.<br>
-__Consequences:__ There is likely to be a loss of regional reputation.
+**Incident:** Research data is altered unauthorizedly.<br>
+**Consequences:** There is likely to be a loss of regional reputation.
 
 <br>
 
 >Example Availability:<br>
-__Incident:__ Personnel data is unavailable.<br>
-__Consequences:__ Delays in salary payments occur.
+**Incident:** Personnel data is unavailable.<br>
+**Consequences:** Delays in salary payments occur.
 
 <br>
 
-## Classification into a Protection Category
+### Classification into a Protection Category
+
 The worst consequences determined in the estimation considerations must be classified into the categories in the assessment table.
 
-__Here's an example of classification for the loss of confidentiality in a table:__
+**Here's an example of classification for the loss of confidentiality in a table:**
 
 <table cellspacing="2" cellpadding="2">
   <tbody>
@@ -204,33 +217,39 @@ __Here's an example of classification for the loss of confidentiality in a table
 
 <br>
 
-## Violation of Laws, Regulations, and Contracts
+### Violation of Laws, Regulations, and Contracts
+
 All regulations relevant to the respective IT procedure must be considered here.
 
 <br>
 
-### Data Protection Laws
->__Example:__<br> 
+#### Data Protection Laws
+>
+>**Example:**<br>
 Information Processing Act (IVG)<br>
 Federal Data Protection Act (BDSG)<br>
 General Data Protection Regulation (GDPR)
 
 <br>
 
-### Co-Determination Regulations
->__Example:__ IT basic service agreement
+#### Co-Determination Regulations
+>
+>**Example:** IT basic service agreement
 
 <br>
 
-### Contracts
->__Example:__ Contract for cooperation with an external company
+#### Contracts
+>
+>**Example:** Contract for cooperation with an external company
 
 <br>
 
-# Symmetric Encryption
+## Symmetric Encryption
+
 In Symmetric Encryption, both parties use the same key, which is responsible for both encryption and decryption.
 
-## Methods
+### Methods
+
 - AES
 - DES
 - Triple-DES
@@ -241,69 +260,85 @@ In Symmetric Encryption, both parties use the same key, which is responsible for
 
 These methods are very fast even for large amounts of data.
 
-## Advantages
+### Advantages
+
 - Simple key management since only one key is needed for encryption and decryption.
 - High speed for encryption and decryption.
 
-## Disadvantages
+### Disadvantages
+
 - Only one key for encryption and decryption, key must not fall into unauthorized hands.
 - Key must be transmitted securely.
 - Number of keys grows quadratically with the number of participants.
 
-# Asymmetric Encryption
+## Asymmetric Encryption
+
 Asymmetric Encryption is also known as Public-Key Encryption. Here, there are not only one but two keys, this so-called key pair consists of a private key and a public key. With the private key, data is decrypted or a digital signature is generated. With the public key, data can be encrypted and generated signatures can be verified for their authenticity. This method is very slow and therefore only suitable for small amounts of data.
 
-## Advantages
+### Advantages
+
 - Relatively high security.
 - Not as many keys needed as with symmetric encryption methods, thus less effort in keeping the key secret.
 - No key distribution problem, as public key is accessible to everyone without issues.
 - Possibility of authentication through electronic signatures (digital signatures).
 
-## Disadvantages
+### Disadvantages
+
 - Works very slowly, approximately 10,000 times slower than symmetric encryption.
 - Large required key length.
 - Problems with multiple recipients of an encrypted message, as the message has to be encrypted separately each time.
 - Security risk due to the public key accessible to everyone -> Man in the Middle.
 
-# 2FA - Two-Factor Authentication
+## 2FA - Two-Factor Authentication
+
 [^6]
 Two-Factor Authentication, also known as 2FA, refers to the identity verification of a user using a combination of two different and particularly independent components.
 
-## Examples of 2FA
+### Examples of 2FA
+
 - Bank card + PIN
 - Fingerprint
 - Access cards
 - TAN in online banking
 
-## Authenticating
+### Authenticating (the user proves who they are)
+
 The general "signing in" to a user's service is called authentication.
 The user must authenticate themselves with the service.
 
-## Authenticating
+### Verifying (the service checks the proof)
+
 [^7]
 Once the user has authenticated and the check has been successfully completed, the service or server can authenticate the user successfully.
 
-## Authorizing
+### Authorizing
+
 Once the user has been successfully authenticated and authorized, permissions can be distributed, which is called authorization.
 The same system can also be applied to buildings or similar.
 
-## Types of Authentication
+### Types of Authentication
+
 [^8]
 Authentication can be achieved through several methods.
 
-### Knowledge
+#### Knowledge
+
 Characteristics:
+
 - Can be forgotten
 - Can be duplicated, distributed, passed on, or betrayed
 - Can potentially be guessed
 
-#### Examples of Authentication by Knowledge
+##### Examples of Authentication by Knowledge
+
 - Password
 - PIN
 - Security question
 
-### Possession
+#### Possession
+
 Characteristics:
+
 - Creation of a feature incurs comparatively high costs.
 - Management of the possession is insecure and involves effort (must be carried)
 - Can be lost
@@ -311,7 +346,8 @@ Characteristics:
 - Can be handed over, passed on, duplicated
 - Can be replaced
 
-#### Examples of Authentication by Possession
+##### Examples of Authentication by Possession
+
 - Chip card
 - Magnetic stripe card
 - RFID card/chip
@@ -323,8 +359,10 @@ Characteristics:
 - One Time PIN
 - USB stick with password safe
 
-### Physical Characteristics / Biometrics
+#### Physical Characteristics / Biometrics
+
 Characteristics:
+
 - Always carried by individuals
 - Cannot be passed on to other individuals
 - Requires special equipment for recognition
@@ -332,7 +370,8 @@ Characteristics:
 - Cannot be replaced
 - May raise privacy concerns
 
-#### Examples of Authentication by Biometrics
+##### Examples of Authentication by Biometrics
+
 - Fingerprint
 - Face recognition
 - Typing behavior
@@ -344,11 +383,11 @@ Characteristics:
 - Palm vein pattern
 - Genetic information (DNA)
 
-[^1]: https://gdpr-info.eu/art-32-gdpr/
-[^2]: https://www.protonmail.com/blog/what-is-authentication-authorization-accountability/
-[^3]: https://en.wikipedia.org/wiki/Information_security_management_system
-[^4]: https://en.wikipedia.org/wiki/IT_baseline_protection#Determination_of_protection_requirements
-[^5]: https://tetfolio.fu-berlin.de/web/ii_555094:9
-[^6]: https://en.wikipedia.org/wiki/Multi-factor_authentication
-[^7]: https://en.wikipedia.org/wiki/Authentication
-[^8]: https://en.wikipedia.org/wiki/Authentication#Methods
+[^1]: <https://gdpr-info.eu/art-32-gdpr/>
+[^2]: <https://www.protonmail.com/blog/what-is-authentication-authorization-accountability/>
+[^3]: <https://en.wikipedia.org/wiki/Information_security_management_system>
+[^4]: <https://en.wikipedia.org/wiki/IT_baseline_protection#Determination_of_protection_requirements>
+[^5]: <https://tetfolio.fu-berlin.de/web/ii_555094:9>
+[^6]: <https://en.wikipedia.org/wiki/Multi-factor_authentication>
+[^7]: <https://en.wikipedia.org/wiki/Authentication>
+[^8]: <https://en.wikipedia.org/wiki/Authentication#Methods>

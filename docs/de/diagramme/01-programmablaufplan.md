@@ -1,27 +1,20 @@
-# Table of Content
-- [Table of Content](#table-of-content)
-- [Programmablaufplan (PAP)](#programmablaufplan-pap)
-  - [Elemente](#elemente)
-
 # Programmablaufplan (PAP)
-[^1]
-- Wird auch als Flussdiagramm (Flowchart) oder Programmstrukturplan bezeichnet
-Die Grafische Darstellung eines Algorithmus in einem Programm und beschreibt die
-- Folge von Operationen zur Lösung einer Aufgabe
-- DIN 66001 für Datenflusspläne
 
-## Elemente
+## Inhaltsverzeichnis
+
+- [Elemente](#elemente)
+
+### Elemente
+
 - Kreis; Oval/Rechteck abgerundet: Terminator<br>
-<img title="Start/Stop" src="../../assets/img/flowchart/start-stop.png">
+<img title="Start/Stop" src="../../assets/img/flowchart/start-stop.png" alt="Start/Stop">
 - Pfeil, Linie: Verbindung zum nächsten Element<br>
-<img title="Connection" src="../../assets/img/flowchart/connection.png">
+<img title="Connection" src="../../assets/img/flowchart/connection.png" alt="Connection">
 - Rechteck: Operation (Tätigkeit)<br>
-<img title="Operation" src="../../assets/img/flowchart/operation.png">
+<img title="Operation" src="../../assets/img/flowchart/operation.png" alt="Operation">
 - Rechteck mit doppelten, vertikalen Linien: Unterprogramm ausführen<br>
-<img title="Sub-Program" src="../../assets/img/flowchart/subprogram.png">
+<img title="Sub-Program" src="../../assets/img/flowchart/subprogram.png" alt="Sub-Program">
 - Raute: Verzweigung / Entscheidung<br>
-<img title="Branching" src="../../assets/img/flowchart/branching.png">
+<img title="Branching" src="../../assets/img/flowchart/branching.png" alt="Branching">
 - Parallelogramm: Ein- und Ausgabe<br>
-<img title="In-Out" src="../../assets/img/flowchart/input-output.png">
-
-[^1]: https://de.wikipedia.org/wiki/Programmablaufplan
+<img title="In-Out" src="../../assets/img/flowchart/input-output.png" alt="In-Out">

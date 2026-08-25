@@ -1,5 +1,7 @@
-# Table of Content
-- [Table of Content](#table-of-content)
+# IT-Schutz und IT-Sicherheit
+
+## Inhaltsverzeichnis
+
 - [Datenschutz](#datenschutz)
   - [Art. 32 der DSGVO - Sicherheit und Verarbeitung](#art-32-der-dsgvo---sicherheit-und-verarbeitung)
   - [3 Aspekte der It-Sicherheit](#3-aspekte-der-it-sicherheit)
@@ -34,15 +36,15 @@
     - [Körperliche Merkmale / Biometrie](#körperliche-merkmale--biometrie)
       - [Beispiele zur Authentifikation anhand von Biometrie](#beispiele-zur-authentifikation-anhand-von-biometrie)
 
----
-<br>
+## Datenschutz
 
-# Datenschutz
 - DSGVO - Datenschutz-Grundverordnung
 - BDSG - Bundesdatenschutzgesetz
 
-## Art. 32 der DSGVO - Sicherheit und Verarbeitung
+### Art. 32 der DSGVO - Sicherheit und Verarbeitung
+
 [^1]
+
 1. Pseudonymisierung und Verschlüsselung personenbezogener Daten
 2. die Fähigkeit, die Vertraulichkeit, die Integrität und Belastbarkeit der Systeme und Dienste im Zusammenhang mit der Verarbeitung auf Dauer sicherzustellen
 3. die Fähigkeit, die Verfügbarkeit der personenbezogenen Daten und den Zugang zu ihnen bei einem physischen oder technischen Zwischenfall rasch wiederherzustellen
@@ -50,36 +52,42 @@
 
 Zusätzlich muss man bei der Einhaltung und Beurteilung dieser Vorgaben an die Risiken denken und einhalten, die mit der Verarbeitung verbunden sind.
 
-## 3 Aspekte der It-Sicherheit
+### 3 Aspekte der It-Sicherheit
+
 - Vertraulichkeit
 - Integrität
 - Verfügbarkeit
 
-## Authentifizierung, Authentisierung, Autorisierung
+### Authentifizierung, Authentisierung, Autorisierung
+
 [^2]
+
 - Authentifizierung = Prüfung der angegebenen Daten
 - Authentisierung = Eine Person legt Informationen vor um sich zu identifizieren
 - Autorisierung = Wenn Informationen richtig sind gibt Gegenseite Zugang frei
 
-## ISMS (Informationssicherheitsmanagementsystem)
+### ISMS (Informationssicherheitsmanagementsystem)
+
 [^3]
 Die Aufstellung von Verfahren und Regeln innerhalb einer Organisation, die dazu dienen, die Informationssicherheit dauerhaft zu definieren, zu steuern, zu kontrollieren, aufrechtzuerhalten und fortlaufend zu verbessern
 
 <br>
 
-# Schutzbedarfsanalyse
+## Schutzbedarfsanalyse
+
 [^4] [^5]
 Bei der Schutzbedarfsanalyse wird anhand der eingesetzten Informationstechnik und der Informationen, deren Schutz bewertet je nach dem wie angemessen dies ist. Der Wert der Daten und Funktionen ist in der Regel um ein Vielfaches höher als der Wert von den IT Geräten selbst. Daher sind angemessene Sicherheitsmaßnahmen aus den Sicherheitsanforderungen der IT-Verfahren abzuleiten.
 
 <br>
 
 <a href="https://tetfolio.fu-berlin.de/web/ii_555094:9">
-  <img src="https://tetfolio.fu-berlin.de/IMPAL/659400.gif" width="500" title="Struktur eine Schutzbedarfanalyse">
+  <img src="https://tetfolio.fu-berlin.de/IMPAL/659400.gif" width="500" title="Struktur eine Schutzbedarfanalyse" alt="Struktur eine Schutzbedarfanalyse">
 </a>
 
 <br>
 
-Der Schutzbedarf wird über die Abschätzung der schlimmsten denkbaren Folgen des Verlustes von __Vertraulichkeit__, __Integrität__ und __Verfügbarkeit__ ermittelt. Die Abschätzung hat gesondert für folgende sechs Schadenskategorien zu erfolgen:
+Der Schutzbedarf wird über die Abschätzung der schlimmsten denkbaren Folgen des Verlustes von **Vertraulichkeit**, **Integrität** und **Verfügbarkeit** ermittelt. Die Abschätzung hat gesondert für folgende sechs Schadenskategorien zu erfolgen:
+
 - Beeinträchtigung des informationellen Selbstbestimmungsrechts
 - Beeinträchtigung der persönlichen Unversehrtheit
 - Beeinträchtigung der Aufgabenerfüllung
@@ -93,7 +101,8 @@ Hierzu betrachtet man jede Anwendung und die verarbeiteten Informationen und wel
 
 <br>
 
-__Bei der Schutzbedarfsanalyse werden folgende Schritte angewendet:__
+**Bei der Schutzbedarfsanalyse werden folgende Schritte angewendet:**
+
 1. Identifikation der zu schützenden Daten
 2. Zusammenfassung der Daten zu Datengruppen (optional)
 3. Bestimmen der schlimmsten möglichen Folgen
@@ -101,49 +110,53 @@ __Bei der Schutzbedarfsanalyse werden folgende Schritte angewendet:__
 
 <br>
 
-## Identifikation der zu schützenden Daten
+### Identifikation der zu schützenden Daten
+
 An erster Stelle steht die Identifikation aller Daten, die innerhalb des analysierten IT-Verfahrens verarbeitet bzw. gespeichert werden.
-> __Beispiel:__ Vorname, Nachname, Straße, Hausnummer, Postleitzahl und Ort, Forschungsergebnisse, Patentanmeldung
+> **Beispiel:** Vorname, Nachname, Straße, Hausnummer, Postleitzahl und Ort, Forschungsergebnisse, Patentanmeldung
 
 <br>
 
-## Zusammenfassung der Daten zu Datengruppen
+### Zusammenfassung der Daten zu Datengruppen
+
 Häufig lassen sich mehrere Einzeldaten inhaltlich zu Datengruppen zusammenfassen. Die weiteren Schritte sind dann stets auf diese Datengruppen anzuwenden und nicht mehr auf die dort enthaltenen Einzeldaten.
->__Beispiel:__  
-Kontaktdaten 
-(Vorname, Nachname, Strasse, Hausnummer, PLZ und Ort)<br> 
-Forschungsergebnisse<br> 
+>**Beispiel:**  
+Kontaktdaten
+(Vorname, Nachname, Strasse, Hausnummer, PLZ und Ort)<br>
+Forschungsergebnisse<br>
 Patentanmeldung
 
 <br>
 
-## Bestimmen der schlimmsten möglichen Folgen des Verlustes
-Jede Datengruppe ist jeweils bezüglich der genannten sechs Schadenskategorien zu bewerten. Für jede der sechs Schadenskategorien ist zu überlegen, welche Folgen die Beeinträchtigung der Schutzziele __Vertraulichkeit__, __Integrität__, __Verfügbarkeit__ im schlimmsten Fall hätte.
+### Bestimmen der schlimmsten möglichen Folgen des Verlustes
+
+Jede Datengruppe ist jeweils bezüglich der genannten sechs Schadenskategorien zu bewerten. Für jede der sechs Schadenskategorien ist zu überlegen, welche Folgen die Beeinträchtigung der Schutzziele **Vertraulichkeit**, **Integrität**, **Verfügbarkeit** im schlimmsten Fall hätte.
 
 <br>
 
 >Beispiel Vertraulichkeit:<br>
-__Vorfall:__ Unbefugte erlangen Kenntnis von Personaldaten.<br>
-__Folgen:__ Der Umgang mit Kollegen und Kolleginnen kann beeinträchtigt werden.
+**Vorfall:** Unbefugte erlangen Kenntnis von Personaldaten.<br>
+**Folgen:** Der Umgang mit Kollegen und Kolleginnen kann beeinträchtigt werden.
 
 <br>
 
 >Beispiel Integrität:<br>
-__Vorfall:__ Forschungsdaten werden unbefugt verändert.<br>
-__Folgen:__ Es muss von einem überregionalen Ansehensverlust ausgegangen werden.
+**Vorfall:** Forschungsdaten werden unbefugt verändert.<br>
+**Folgen:** Es muss von einem überregionalen Ansehensverlust ausgegangen werden.
 
 <br>
 
 >Beispiel Verfügbarkeit:<br>
-__Vorfall:__ Personaldaten stehen nicht zur Verfügung.<br>
-__Folgen:__ Es kommt zu Verzögerungen bei der Auszahlung der Bezüge.
+**Vorfall:** Personaldaten stehen nicht zur Verfügung.<br>
+**Folgen:** Es kommt zu Verzögerungen bei der Auszahlung der Bezüge.
 
 <br>
 
-## Einordnung in eine Schutzbedarfskategorie
+### Einordnung in eine Schutzbedarfskategorie
+
 Die in den Abschätzungsüberlegungen festgestellten schlimmsten Folgen müssen anhand der Kategorien in der Bewertungstabelle eingestuft werden.
 
-__Hier ist ein Beispiel für die Einstufung beim Verlust von Vertraulichkeit in einer Tabelle:__
+**Hier ist ein Beispiel für die Einstufung beim Verlust von Vertraulichkeit in einer Tabelle:**
 
 <table cellspacing="2" cellpadding="2">
   <tbody>
@@ -205,33 +218,39 @@ __Hier ist ein Beispiel für die Einstufung beim Verlust von Vertraulichkeit in 
 
 <br>
 
-## Verstoß gegen Gesetze, Vorschriften und Verträge
+### Verstoß gegen Gesetze, Vorschriften und Verträge
+
 Hier müssen alle Regelungen betrachtet werden, die für das betreffende IT-Verfahren relevant sind.
 
 <br>
 
-### Datenschutzgesetze
->__Beispiel:__<br> 
+#### Datenschutzgesetze
+>
+>**Beispiel:**<br>
 Informationsverarbeitungsgesetz (IVG)<br>
 Bundesdatenschutzgesetz (BDSG)<br>
 Datenschutz-Grundverordnung (DSGVO)
 
 <br>
 
-### Vorschriften zur Mitbestimmung
->__Beispiel:__ IT-Grundsatzdienstvereinbarung
+#### Vorschriften zur Mitbestimmung
+>
+>**Beispiel:** IT-Grundsatzdienstvereinbarung
 
 <br>
 
-### Verträge
->__Beispiel:__ Vertrag über die Zusammenarbeit mit einer externen Firma
+#### Verträge
+>
+>**Beispiel:** Vertrag über die Zusammenarbeit mit einer externen Firma
 
 <br>
 
-# Symmetrische Verschlüsselung
+## Symmetrische Verschlüsselung
+
 In der Symmetrischen Verschlüsselung verwenden beide Teilnehmer den gleichen Schlüssel, dieser ist für die Verschlüsselung wie auch für die Entschlüsselung Zuständig.
 
-## Verfahren
+### Verfahren
+
 - AES
 - DES
 - Triple-DES
@@ -242,69 +261,85 @@ In der Symmetrischen Verschlüsselung verwenden beide Teilnehmer den gleichen Sc
 
 Diese Verfahren sind auch bei großen Datenmengen sehr schnell.
 
-## Vorteile
+### Vorteile
+
 - Einfaches Schlüsselmanagement da nur ein Schlüssel für Ent- und Verschlüsselung gebraucht wird.
 - Hohe Geschwindigkeit für Ent- und Verschlüsselung.
 
-## Nachteile
+### Nachteile
+
 - Nur ein Schlüssel für Ver- und Entschlüsselung, Schlüssel darf nicht in unbefugte Hände gelangen.
 - Schlüssel muss über einen sicheren Weg übermittelt werden.
 - Anzahl der Schlüssel bezogen auf die Anzahl der Teilnehmer wächst quadratisch.
 
-# Asymmetrische Verschlüsselung
+## Asymmetrische Verschlüsselung
+
 Die Asymmetrische Verschlüsselung wird auch Public-Key-Verfahren genannt. Hier gibt es nicht nur einen Schlüssel sondern gleich zwei, dieses sogenannte Schlüsselpaar setzt sich aus einem privaten Schlüssel (Private Key) und einem öffentlichen Schlüssel (Public Key) zusammen. Mit dem Private Key, werden Daten Entschlüsselt oder eine digitale Signatur erzeugt. Mit dem Public Key kann man Daten verschlüsseln und erzeugte Signaturen auf ihren Authentizität überprüfen. Dieses Verfahren ist sehr langsam und eignet sich daher nur für kleine Datenmengen.
 
-## Vorteile
+### Vorteile
+
 - Relativ hohe Sicherheit.
 - Es werden nicht so viele Schlüssel benötigt, wie bei einem symmetrischen Verschlüsselungsverfahren, somit weniger Aufwand der Geheimhaltung des Schlüssels.
 - Kein Schlüsselverteilungsproblem, da Public Key für jeden ohne Probleme zu erreichen ist.
 - Möglichkeit der Authentifikation durch elektronische Unterschriften (digitale Signaturen).
 
-## Nachteile
+### Nachteile
+
 - Arbeiten sehr langsam ca. 10000 Mal langsamer als symmetrische.
 - Große benötigte Schlüssellänge.
 - Probleme bei mehreren Empfänger einer verschlüsselten Nachricht, da jedes Mal die Nachricht extra verschlüsselt werden muss.
 - Sicherheitsrisiko durch für jeden zugänglichen Public Key -> Man in the Middle.
 
-# 2FA - 2 Faktor Authentifizierung
-[^6]
-Die Zwei-Faktor-Authentisierung auch Authentifizierung genannt, bezeichnet den Identitätsnachweis eines Nutzers mittels einer Kombination zweier unterschiedlicher und insbesondere unabhängiger Komponenten. 
+## 2FA - 2 Faktor Authentifizierung
 
-## Beispiele 2FA
+[^6]
+Die Zwei-Faktor-Authentisierung auch Authentifizierung genannt, bezeichnet den Identitätsnachweis eines Nutzers mittels einer Kombination zweier unterschiedlicher und insbesondere unabhängiger Komponenten.
+
+### Beispiele 2FA
+
 - Bankkarte + PIN
 - Fingerabdruck
 - Zugangskarten
 - TAN beim Online-Banking
 
-## Authentisieren
+### Authentisieren
+
 Das allgemeine "Anmelden" bei einem Dienst des Benutzers nennt man Authentisierung.
 Der Benutzer muss sich beim Dienst Authentisieren.
 
-## Authentifizieren
+### Authentifizieren
+
 [^7]
 Wenn der Benutzer sich Authentisiert hat, und die Kontrolle erfolgreich abgeschlossen ist, kann der Dienst oder Server den Benutzer erfolgreich Authentifizieren.
 
-## Autorisieren
+### Autorisieren
+
 Sobald der Benutzer erfolgreich Authentifiziert ist und der Benutzer authentifiziert ist, können Berechtigungen verteilt werden, was man Autorisieren nennt.
 Das gleiche System lässt sich auch auf Gebäude oder ähnlichem Anwenden.
 
-## Arten der Authentisierung
+### Arten der Authentisierung
+
 [^8]
 Die Authentisierung kann über mehrere Arten erreicht werden.
 
-### Wissen
+#### Wissen
+
 Charakteristika:
+
 - kann vergessen werden
 - kann dupliziert, verteilt, weitergegeben oder verraten werden
 - kann eventuell erraten werden
   
-#### Beispiele zur Authentifikation anhand von Wissen
+##### Beispiele zur Authentifikation anhand von Wissen
+
 - Passwort
 - PIN
 - Sicherheitsfrage
 
-### Besitz
+#### Besitz
+
 Charakteristika:
+
 - Erstellung eines Merkmals unterliegt vergleichsweise hohen Kosten.
 - Verwaltung des Besitzes ist unsicher und mit Aufwand verbunden (muss mitgeführt werden)
 - kann verloren gehen
@@ -312,7 +347,8 @@ Charakteristika:
 - kann übergeben, weitergereicht, dupliziert werden
 - kann ersetzt werden
 
-#### Beispiele zur Authentifikation anhand von Besitz
+##### Beispiele zur Authentifikation anhand von Besitz
+
 - Chipkarte
 - Magnetstreifenkarte
 - RFID-Karte/Chip
@@ -324,8 +360,10 @@ Charakteristika:
 - One Time PIN
 - USB-Stick mit Passworttresor
 
-### Körperliche Merkmale / Biometrie
+#### Körperliche Merkmale / Biometrie
+
 Charakteristika:
+
 - wird durch Personen immer mitgeführt
 - kann nicht an andere Personen weitergegeben werden
 - benötigt zum Erkennen spezielle Vorrichtung
@@ -333,7 +371,8 @@ Charakteristika:
 - kann nicht ersetzt werden
 - kann Probleme beim Datenschutz aufwerfen
 
-#### Beispiele zur Authentifikation anhand von Biometrie
+##### Beispiele zur Authentifikation anhand von Biometrie
+
 - Fingerabdruck
 - Gesichtserkennung
 - Tippverhalten
@@ -345,11 +384,11 @@ Charakteristika:
 - Handlinienstruktur
 - Erbinformationen (DNA)
 
-[^1]: https://dsgvo-gesetz.de/art-32-dsgvo/
-[^2]: https://www.dr-datenschutz.de/authentisierung-authentifizierung-und-autorisierung/
-[^3]: https://de.wikipedia.org/wiki/Information_Security_Management_System
-[^4]: https://de.wikipedia.org/wiki/IT-Grundschutz#Schutzbedarfsfeststellung
-[^5]: https://tetfolio.fu-berlin.de/web/ii_555094:9
-[^6]: https://de.wikipedia.org/wiki/Zwei-Faktor-Authentisierung
-[^7]: https://de.wikipedia.org/wiki/Authentifizierung
-[^8]: https://de.wikipedia.org/wiki/Authentifizierung#Methoden
+[^1]: <https://dsgvo-gesetz.de/art-32-dsgvo/>
+[^2]: <https://www.dr-datenschutz.de/authentisierung-authentifizierung-und-autorisierung/>
+[^3]: <https://de.wikipedia.org/wiki/Information_Security_Management_System>
+[^4]: <https://de.wikipedia.org/wiki/IT-Grundschutz#Schutzbedarfsfeststellung>
+[^5]: <https://tetfolio.fu-berlin.de/web/ii_555094:9>
+[^6]: <https://de.wikipedia.org/wiki/Zwei-Faktor-Authentisierung>
+[^7]: <https://de.wikipedia.org/wiki/Authentifizierung>
+[^8]: <https://de.wikipedia.org/wiki/Authentifizierung#Methoden>

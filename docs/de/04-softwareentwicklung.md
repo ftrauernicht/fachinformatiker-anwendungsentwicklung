@@ -1,36 +1,38 @@
-# Table of Content
-- [Table of Content](#table-of-content)
+# Softwareentwicklung
+
+## Inhaltsverzeichnis
+
 - [Web Entwicklung](#web-entwicklung)
-	- [Auszeichnungssprachen](#auszeichnungssprachen)
-		- [HTML - Hypertext Markup Language](#html---hypertext-markup-language)
-			- [DOM - Document Object Model](#dom---document-object-model)
-	- [Protokolle](#protokolle)
-		- [HTTP/S](#https)
-			- [HTTP-400](#http-400)
-				- [Arten von HTTP-400](#arten-von-http-400)
-			- [HTTP-500](#http-500)
-				- [Arten von HTTP-500](#arten-von-http-500)
+  - [Auszeichnungssprachen](#auszeichnungssprachen)
+    - [HTML - Hypertext Markup Language](#html---hypertext-markup-language)
+      - [DOM - Document Object Model](#dom---document-object-model)
+  - [Protokolle](#protokolle)
+    - [HTTP/S](#https)
+      - [HTTP-400](#http-400)
+      - [HTTP-500](#http-500)
 - [Objektorientierung](#objektorientierung)
-	- [Interfaces](#interfaces)
-		- [Deklaration](#deklaration)
-		- [Beispiel](#beispiel)
-		- [Namenskonventionen](#namenskonventionen)
-	- [Abstraktion](#abstraktion)
-		- [Programmiersprachen](#programmiersprachen)
-		- [Abstraktion in der objektorientierten Programmierung](#abstraktion-in-der-objektorientierten-programmierung)
+  - [Interfaces](#interfaces)
+    - [Deklaration](#deklaration)
+    - [Beispiel](#beispiel)
+    - [Namenskonventionen](#namenskonventionen)
+  - [Abstraktion](#abstraktion)
+    - [Programmiersprachen](#programmiersprachen)
+    - [Abstraktion in der objektorientierten Programmierung](#abstraktion-in-der-objektorientierten-programmierung)
 
-# Web Entwicklung
+## Web Entwicklung
 
-## Auszeichnungssprachen
+### Auszeichnungssprachen
 
-### HTML - Hypertext Markup Language
+#### HTML - Hypertext Markup Language
+
 [^3]
-HTML ist eine textbasierte Auszeichnungssprache zur Strukturierung elektronischer Dokumente wie Texte mit Hyperlinks, Bilder und anderen Inhalten. HTML-Dokumente sind die Grundlage des WWW (World-Wide-Web) und werden von Webbrowsern dargestellt. 
+HTML ist eine textbasierte Auszeichnungssprache zur Strukturierung elektronischer Dokumente wie Texte mit Hyperlinks, Bilder und anderen Inhalten. HTML-Dokumente sind die Grundlage des WWW (World-Wide-Web) und werden von Webbrowsern dargestellt.
 
 Anders als einige Leute behaupten ist HTML **KEINE** Programmiersprache.
 HTML kann Merkmale einer Programmiersprache wie **Variablen** und **Kontrollstrukturen** nicht ausweisen.
 
-#### DOM - Document Object Model
+##### DOM - Document Object Model
+
 [^4]
 Document Object Model
 
@@ -38,49 +40,59 @@ Document Object Model
 - kann aber auch XML oder XHTML sein
 - Das DOM stellt eine Baumstruktur dar, in der jedes Element des Dokumentes als Knoten im Baum repräsentiert wird.
 
-## Protokolle
+### Protokolle
 
-### HTTP/S
+#### HTTP/S
+
 [^1] [^2]
+
 - Hyper Text Transport Protocol
 - Secure Hyper Text Transport Protocol
 
-#### HTTP-400
+##### HTTP-400
+
 HTTP Response Code 400 bezieht sich auf Client Fehler
 
-##### Arten von HTTP-400
-- 400 Bad Request
-    - Der Server kann oder will die Anfrage nicht bearbeiten wegen eines vermeidlichen Client Errors (Request falsch, Syntax falsch, Inhalt zu groß etc.)
-- 403 Forbidden
-    - Die Anfrage hat Daten enthalten die vom Server zwar verstanden wurde aber nicht verarbeitet wird (Eintrag doppelt)
-- 404 Not Found
-    - Die Angefragte Resource konnte nicht gefunden werden
+###### Arten von HTTP-400
 
-#### HTTP-500
+- 400 Bad Request
+  - Der Server kann oder will die Anfrage nicht bearbeiten wegen eines vermeidlichen Client Errors (Request falsch, Syntax falsch, Inhalt zu groß etc.)
+- 403 Forbidden
+  - Die Anfrage hat Daten enthalten die vom Server zwar verstanden wurde aber nicht verarbeitet wird (Eintrag doppelt)
+- 404 Not Found
+  - Die Angefragte Resource konnte nicht gefunden werden
+
+##### HTTP-500
+
 HTTP Response Code 500 bezieht sich auf Server Fehler
 
-##### Arten von HTTP-500
+###### Arten von HTTP-500
+
 - 500 Internal Server Error
-    - Eine generische Fehlermeldung welche gegeben wird wenn etwas unerwartetes passiert ist
+  - Eine generische Fehlermeldung welche gegeben wird wenn etwas unerwartetes passiert ist
 - 502 Bad Gateway
-    - Der Server fungierte als Gateway oder Proxy und erhielt eine ungültige Antwort
+  - Der Server fungierte als Gateway oder Proxy und erhielt eine ungültige Antwort
 - 503 Service Unavailable
-    - Der Server kann die Anfrage nicht verarbeiten (zu viele Anfragen, down for maintenance)
+  - Der Server kann die Anfrage nicht verarbeiten (zu viele Anfragen, down for maintenance)
 
-# Objektorientierung
+## Objektorientierung
 
-## Interfaces
+### Interfaces
+
 Ein Interface oder auch Schnittstelle definiert in der objektorientierte Programmierung, welche Methoden in den unterschiedlichen Klassen u. Ä vorhanden sind oder sein müssen.  
 Eine Schnittstelle gibt an, welche Methoden vorhanden sind oder vorhanden sein müssen.  
 Schnittstellen stellen eine Garantie über die in einer Klasse vorhandenen Methoden dar. Sie geben an, dass alle Objekte, die diese Schnittstellen besitzen, gleich behandelt werden können.
 
 In Programmiersprachen die keine Mehrfachvererbung unterstützen wie z.B. Java, können Schnittstellen verwendet werden, um Kompatibilitäten zwischen Klassen zu definieren, die nicht voneinander erben.
 
-### Deklaration
+#### Deklaration
+
 Andere Programmiersprachen, die Mehrfachvererbung unterstützen, zum Beispiel C++, kennen zwar das Konzept von Schnittstellen, behandeln diese aber wie gewöhnliche Klassen. Man spricht dann auch von abstrakten Klassen. Manchmal wird auch eine eigene Sprache (eine sogenannte Schnittstellenbeschreibungssprache, IDL) zur Deklaration der Schnittstelle verwendet – meist ist das bei Middleware-Systemen wie CORBA oder DCOM der Fall. Objektbasierte Sprachen ohne strenge Typisierung kennen meist keine Schnittstellen.
 
-### Beispiel
+#### Beispiel
+
 **C#**
+
 ```c#
 public interface IFace
 {
@@ -157,25 +169,28 @@ public void Move(float x, float y)
 }
 ```
 
-### Namenskonventionen
+#### Namenskonventionen
+
 In einigen Programmiersprachen ist es üblich, Schnittstellen durch besondere Präfixe oder Suffixe erkennbar zu machen. So wird häufig ein "I" oder ein "IF" angehängt.  
 Im oben aufgeführtem Beispiel wäre dies ein "I" für "IFace". Dies wird normalerweise bei C# angewandt.
 
-## Abstraktion
+### Abstraktion
+
 [^6]
 Der Begriff Abstraktion wird in der Informatik häufig eingesetzt und beschreibt die Trennung zwischen **Konzept** und **Umsetzung**.  
 
-### Programmiersprachen
+#### Programmiersprachen
+
 Unterschiedliche Programmiersprachen bieten unterschiedliche Möglichkeiten von Abstraktion, wie zum Beispiel:
+
 - In Objektorientierten Sprachen wie C++, Object Pascal oder Java, wurde das Konzept der Abstraktion in Form einer eigenen deklarativen Anweisung umgesetzt. Nach einer derartigen Deklaration ist es die Aufgabe des Programmierers, eine Klasse zu implementieren, um eine Instanz eines Objektes davon erzeugen zu können.
 
-### Abstraktion in der objektorientierten Programmierung
+#### Abstraktion in der objektorientierten Programmierung
+
 Benötigt Ausarbeitung
 
-
-[^1]: https://de.wikipedia.org/wiki/HTTP-Statuscode
-[^2]: https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-[^3]: https://de.wikipedia.org/wiki/Hypertext_Markup_Language
-[^4]: https://de.wikipedia.org/wiki/Document_Object_Model
-[^5]: https://de.wikipedia.org/wiki/Schnittstelle_(Objektorientierung)
-[^6]: https://de.wikipedia.org/wiki/Abstraktion_(Informatik)
+[^1]: <https://de.wikipedia.org/wiki/HTTP-Statuscode>
+[^2]: <https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol>
+[^3]: <https://de.wikipedia.org/wiki/Hypertext_Markup_Language>
+[^4]: <https://de.wikipedia.org/wiki/Document_Object_Model>
+[^6]: <https://de.wikipedia.org/wiki/Abstraktion_(Informatik)>

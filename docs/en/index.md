@@ -6,7 +6,7 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 > **Not an official document.** This is a private collection with no warranty as to
 > completeness or correctness. What actually comes up in your exam is something to clarify
 > with your trainers and your local chamber of commerce (IHK).
-
+>
 > **Machine-assisted translation.** The English pages were translated from the German
 > originals with AI assistance and are proofread only in part. The
 > [German version](../de/index.md) is the source of truth. Some images and sources remain

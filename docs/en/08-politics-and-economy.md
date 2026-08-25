@@ -1,21 +1,23 @@
-# Table of Content
-- [Table of Content](#table-of-content)
+# Politics and economy
+
+## Table of contents
+
 - [Work and Business Processes](#work-and-business-processes)
   - [Company Goals/Interests](#company-goalsinterests)
   - [Contracts](#contracts)
 - [Amortization](#amortization)
   - [How are Development Costs Composed?](#how-are-development-costs-composed)
 
-# Work and Business Processes
+## Work and Business Processes
 
-## Company Goals/Interests
+### Company Goals/Interests
 
 - Ecological Goal
 - Economic Goal
 - Mission/Vision
 - Social Goal
 
-## Contracts
+### Contracts
 
 - Work Contract
 - Service Contract
@@ -23,9 +25,9 @@
 - Lease Contract
 - Loan Contract
 
-# Amortization
+## Amortization
 
-## How are Development Costs Composed?
+### How are Development Costs Composed?
 
 - Development costs consist of salaries, etc., of the employees and overhead costs.
 - Overhead costs include everything a employee needs to work and more. These include:

@@ -1,1 +1,24 @@
+# MkDocs build output
+/site/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Node (link checker, markdown tooling)
+node_modules/
+
+# Tool caches
+.cache/
+.lycheecache
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Vorgängerstände, die bewusst lokal bleiben
 .old/

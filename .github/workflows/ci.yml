@@ -49,6 +49,9 @@ jobs:
       - name: Inhaltsverzeichnisse aktuell?
         run: python tools/build_toc.py --check
 
+      - name: Stichwortverzeichnis aktuell?
+        run: python tools/build_glossary.py --check
+
       - name: Links, Anker, Fußnoten, Bilder, Sprachparität
         run: python tools/check_content.py --format github
 

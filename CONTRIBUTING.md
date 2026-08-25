@@ -46,11 +46,13 @@ Das ist derselbe Satz Prüfungen, den die CI fährt:
 | `npm run lint:md` | Markdown-Formatierung; `npm run lint:md:fix` repariert das meiste selbst |
 | `npm run lint:spell` | Rechtschreibung gegen ein deutsches und ein englisches Wörterbuch |
 | `npm run check:toc` | ob die Inhaltsverzeichnisse noch zu den Überschriften passen |
+| `npm run check:glossary` | ob das Stichwortverzeichnis im Glossar noch stimmt |
 | `npm run check:content` | Links, Anker, Fußnoten, ungenutzte Bilder, Sprachparität |
 | `npm run docs:build` | ob die Website ohne kaputten Link baut |
 
-Wenn `check:toc` meckert, hilft `npm run build:toc` — das Inhaltsverzeichnis wird aus den
-Überschriften neu erzeugt und muss nicht von Hand gepflegt werden.
+Wenn `check:toc` oder `check:glossary` meckern, helfen `npm run build:toc` und
+`npm run build:glossary` — beide Verzeichnisse werden aus den Überschriften neu erzeugt und
+müssen nicht von Hand gepflegt werden.
 
 ## Was beim Schreiben zu beachten ist
 

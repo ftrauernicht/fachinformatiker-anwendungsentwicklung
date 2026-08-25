@@ -5,6 +5,7 @@
   "ignores": [
     "node_modules/**",
     "site/**",
+    ".github/pull_request_template.md",
     ".venv/**",
     "venv/**",
     ".github/ISSUE_TEMPLATE/**"

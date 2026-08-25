@@ -170,3 +170,7 @@ lychee
 cspell
 markdownlint
 pymdownx
+Paritätsprüfung
+Jinoyoko
+Fusunshi
+GodDevourer

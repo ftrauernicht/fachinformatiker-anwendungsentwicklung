@@ -62,6 +62,9 @@ theme:
         icon: material/weather-sunny
         name: Zu heller Darstellung wechseln
 
+extra_css:
+  - assets/stylesheets/extra.css
+
 plugins:
   - search:
       lang:

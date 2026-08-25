@@ -13,10 +13,20 @@ repo_name: ftrauernicht/fachinformatiker-anwendungsentwicklung
 edit_uri: edit/main/docs/
 
 docs_dir: docs
-# Die Dateinamen tragen Nummern, damit die Reihenfolge auch beim Blättern auf
-# github.com stimmt. In den URLs haben sie nichts verloren, deshalb setzt die
-# Navigation unten sprechende Titel.
-use_directory_urls: true
+
+# Absichtlich false, und das ist keine Kleinigkeit:
+#
+# MkDocs schreibt relative Pfade in Markdown-Links um, in rohem HTML aber nicht.
+# Die Sammlung bindet rund hundert Bilder als <img src="../assets/…"> ein, weil
+# sie eine feste Breite brauchen. Mit sprechenden Verzeichnis-Adressen liegt
+# eine Kapitelseite unter /de/01-netzwerktechnik/index.html, und aus
+# ../assets/img/… wird /de/assets/img/… — also nichts. Die Seite baut trotzdem
+# ohne Warnung durch, weil --strict rohes HTML nicht prüft.
+#
+# Mit false entspricht der Adressbaum der Website exakt dem Dateibaum des
+# Repositories. Damit stimmt jeder relative Pfad an beiden Orten, und die
+# gebaute Website lässt sich zusätzlich vom Dateisystem aus öffnen.
+use_directory_urls: false
 
 theme:
   name: material

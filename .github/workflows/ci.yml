@@ -67,3 +67,18 @@ jobs:
 
       # --strict bricht ab, sobald ein interner Link oder Anker ins Leere zeigt.
       - run: mkdocs build --strict
+
+      # --strict prüft nur Markdown-Links. Rohes HTML sieht es nicht, und genau
+      # dort lauert der Fehler, den man beim Bauen nicht bemerkt: MkDocs
+      # schreibt relative Pfade in <img src="…"> nicht um. Deshalb wird die
+      # fertige Website noch einmal offline durchgesehen — jede Datei, auf die
+      # eine Seite zeigt, muss auch dort liegen.
+      - name: Verweise in der gebauten Website
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline
+            --no-progress
+            --include-fragments
+            "site/**/*.html"
+          fail: true

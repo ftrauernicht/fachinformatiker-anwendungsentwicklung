@@ -141,6 +141,17 @@ nav:
           - Aktivitätsdiagramm: de/diagramme/07-aktivitaetsdiagramm.md
           - Sequenzdiagramm: de/diagramme/08-sequenzdiagramm.md
           - Objektdiagramm: de/diagramme/09-objektdiagramm.md
+      - Prüfungsfragen:
+          - Übersicht: de/pruefungsfragen/index.md
+          - Netzwerktechnik: de/pruefungsfragen/01-netzwerktechnik.md
+          - Virtualisierung: de/pruefungsfragen/02-virtualisierung.md
+          - Datenbanken: de/pruefungsfragen/03-datenbanken.md
+          - Softwareentwicklung: de/pruefungsfragen/04-softwareentwicklung.md
+          - IT-Sicherheit: de/pruefungsfragen/05-it-sicherheit.md
+          - IT-Service-Management: de/pruefungsfragen/06-it-service-management.md
+          - Projektmanagement: de/pruefungsfragen/07-projektmanagement.md
+          - Politik und Wirtschaft: de/pruefungsfragen/08-politik-und-wirtschaft.md
+          - Cloud Computing: de/pruefungsfragen/09-cloud-computing.md
       - Glossar: de/glossar.md
   - English:
       - Overview: en/index.md

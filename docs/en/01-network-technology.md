@@ -309,9 +309,9 @@ aside from the public address space for private use.
   - Class B -> 16 private networks with 65,536 addresses each (172.16.0.0/16 to 172.31.0.0/16)
   - Class C -> 256 private networks with 256 addresses each (192.168.0.0/24 to 192.168.255.0/24)
 - Number of addresses:
-  - $2^{24} = 16{,}777{,}216$
-  - $2^{20} = 1{,}048{,}576$
-  - $2^{16} = 65{,}536$
+  - 2²⁴ = 16,777,216
+  - 2²⁰ = 1,048,576
+  - 2¹⁶ = 65,536
 
 This avoids pointless administrative overhead when maintaining local networks.
 

@@ -279,9 +279,9 @@ Folgende Adressbereiche wurden aus dem öffentlichen Adressraum ausgespart für 
   - Klasse B -> 16 private Netze mit jeweils 65.536 Adressen (172.16.0.0/16 bis 172.31.0.0/16)
   - Klasse C -> 256 private Netze mit jeweils 256 Adressen (192.168.0.0/24 bis 192.168.255.0/24)
 - Anzahl Adressen:
-  - $2^{24} = 16.777.216$
-  - $2^{20} = 1.048.576$
-  - $2^{16} = 65.536$
+  - 2²⁴ = 16.777.216
+  - 2²⁰ = 1.048.576
+  - 2¹⁶ = 65.536
 
 Somit hat man keinen unnützen administrativen Mehraufwand bei der Pflege lokaler Netzwerke.
 

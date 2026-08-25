@@ -29,8 +29,10 @@
     // auf. Verboten bleibt nur, dass zwei Geschwister gleich heißen.
     "MD024": { "siblings_only": true },
 
-    // Ein Doppelpunkt am Ende einer Überschrift ist hier gewollt.
-    "MD026": { "punctuation": ".,;!。，；！" },
+    // Die Überschriften in den Prüfungsfragen sind Aufgabenstellungen und enden
+    // deshalb auf Punkt oder Fragezeichen. Ein Doppelpunkt am Ende einer
+    // Kapitelüberschrift ist ebenfalls gewollt.
+    "MD026": false,
 
     // Nummerierte Listen dürfen durchzählen oder überall 1. schreiben.
     "MD029": { "style": "one_or_ordered" },

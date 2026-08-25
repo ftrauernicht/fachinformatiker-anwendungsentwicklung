@@ -35,6 +35,11 @@ Die in der Prüfung relevanten Notationen liegen in [`diagramme/`](diagramme/ind
 - [Sequenzdiagramm](diagramme/08-sequenzdiagramm.md)
 - [Objektdiagramm](diagramme/09-objektdiagramm.md)
 
+## Üben
+
+- [Prüfungsfragen](pruefungsfragen/index.md) — 86 Fragen zum Selbsttest, thematisch
+  sortiert, mit eingeklappten Antworten
+
 ## Nachschlagen
 
 - [Glossar](glossar.md) — Begriffe und Abkürzungen, die sich keinem Kapitel eindeutig zuordnen lassen

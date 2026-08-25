@@ -19,7 +19,7 @@
 <img title="Operation" src="../../assets/img/flowchart/operation.png">
 - Rectangle with double, vertical lines: Execute subprogram<br>
 <img title="Sub-Program" src="../../assets/img/flowchart/subprogram.png">
-- Diamond: Branching / Decision</br>
+- Diamond: Branching / Decision<br>
 <img title="Branching" src="../../assets/img/flowchart/branching.png">
 - Parallelogram: Input and Output<br>
 <img title="In-Out" src="../../assets/img/flowchart/input-output.png">

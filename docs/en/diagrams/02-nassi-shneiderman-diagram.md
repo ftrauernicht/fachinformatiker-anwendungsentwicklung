@@ -1,6 +1,6 @@
 # Table of Content
 - [Table of Content](#table-of-content)
-- [Nassi-Shneidermann / Structogram](#nassi-shneidermann--structogram)
+- [Nassi-Shneiderman / Structogram](#nassi-shneiderman--structogram)
   - [Explanation](#explanation)
   - [Diagram Blocks](#diagram-blocks)
     - [Process Symbol](#process-symbol)
@@ -12,12 +12,12 @@
     - [Loops](#loops)
       - [Iteration Symbol](#iteration-symbol)
 
-# Nassi-Shneidermann / Structogram
+# Nassi-Shneiderman / Structogram
 [^1]
 ## Explanation
-A Nassi-Shneidermann diagram is a diagram type used to represent program designs within the method of Structured Programming.
+A Nassi-Shneiderman diagram is a diagram type used to represent program designs within the method of Structured Programming.
 
-Since Nassi-Shneidermann diagrams represent program structures and control structures, they are also referred to as __Structograms__.
+Since Nassi-Shneiderman diagrams represent program structures and control structures, they are also referred to as __Structograms__.
 
 ## Diagram Blocks
 Most of the following structure blocks can be nested within each other. The structogram composed of different structure blocks is rectangular as a whole, just as wide as its widest structure block.

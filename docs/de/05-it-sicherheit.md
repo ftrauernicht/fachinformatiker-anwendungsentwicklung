@@ -43,7 +43,7 @@
 
 ## Art. 32 der DSGVO - Sicherheit und Verarbeitung
 [^1]
-1. Pseudonymisierung und Verschlüsselung personbezogener Daten
+1. Pseudonymisierung und Verschlüsselung personenbezogener Daten
 2. die Fähigkeit, die Vertraulichkeit, die Integrität und Belastbarkeit der Systeme und Dienste im Zusammenhang mit der Verarbeitung auf Dauer sicherzustellen
 3. die Fähigkeit, die Verfügbarkeit der personenbezogenen Daten und den Zugang zu ihnen bei einem physischen oder technischen Zwischenfall rasch wiederherzustellen
 4. ein Verfahren zur regelmäßigen Überprüfung, Bewertung und Evaluierung der Wirksamkeit der technischen und organisatorischen Maßnahmen zur Gewährleistung der Sicherheit der Verarbeitung
@@ -256,7 +256,7 @@ Die Asymmetrische Verschlüsselung wird auch Public-Key-Verfahren genannt. Hier 
 
 ## Vorteile
 - Relativ hohe Sicherheit.
-- Es werden nicht so viele Schlüssel benötigt, wie bei einem symmetrischen Verschüsselungsverfahren, somit weniger Aufwand der Geheimhaltung des Schlüssels.
+- Es werden nicht so viele Schlüssel benötigt, wie bei einem symmetrischen Verschlüsselungsverfahren, somit weniger Aufwand der Geheimhaltung des Schlüssels.
 - Kein Schlüsselverteilungsproblem, da Public Key für jeden ohne Probleme zu erreichen ist.
 - Möglichkeit der Authentifikation durch elektronische Unterschriften (digitale Signaturen).
 
@@ -326,7 +326,7 @@ Charakteristika:
 
 ### Körperliche Merkmale / Biometrie
 Charakteristika:
-- wird duch Personen immer mitgeführt
+- wird durch Personen immer mitgeführt
 - kann nicht an andere Personen weitergegeben werden
 - benötigt zum Erkennen spezielle Vorrichtung
 - ist im Laufe der Zeit oder durch Unfälle veränderlich

@@ -61,7 +61,7 @@ Es besitzt immer ein definiertes Ende und auch einen definierten Startpunkt. Es 
 &nbsp;
 
 [^4]
-Ein Prozess muss und kann auch nicht das gewünschte Endresult erbringen.
+Ein Prozess muss und kann auch nicht das gewünschte Endresultat erbringen.
 Somit können sich mehrere zusammengehängte Prozesse ergeben, welche das letzte Ergebnis eines Prozesses als Eingabe für das nächste weiterbringt bis zum Ende.
 Eine Reihung an Prozessen wird Prozesskette bezeichnet.
 
@@ -131,11 +131,11 @@ __Die Meldungen unterteilen sich in weitere folgende Kategorien:__
 &nbsp;
 
 ## Kundenanfrage
-Eine formale Anfrage eines Kundens für die Verbesserung oder die Erzeugung eines neuen Services.
+Eine formale Anfrage eines Kunden für die Verbesserung oder die Erzeugung eines neuen Services.
 Wenn Informationen oder Zugriff angefragt wird, handelt es sich um einen Service Request und ist im Service-Katalog meistens hinterlegt. Diese werden über die bestehenden Prozesse durchgeführt.
 
 Wenn Anforderungen gestellt werden zur Aufrüstung der aktuellen Hard- und Software als Beispiel, handelt es sich um einen Request for Change, wo professionell der Aufwand betrieben und koordiniert werden muss.
-Hier werden Änderungen ausgelöst, welche bestehdende Prozesse umstruktuerieren und diese verständlich den anderen zur Verfügung gestellt werden muss.
+Hier werden Änderungen ausgelöst, welche bestehende Prozesse umstrukturieren und diese verständlich den anderen zur Verfügung gestellt werden muss.
 
 &nbsp;
 
@@ -195,7 +195,7 @@ Das Scaled Agile Framework wendet die Agile-Struktur, die von Softwareentwicklun
 # IT Service Managementarten
 
 Beim Anbieten und Verfolgen der Services im Unternehmen gibt es verschiedene spezielle Bereiche diese können unterschiedlich koordiniert werden. Einige von diesen Arten sind:
-- Incident Mangement: Behebungen von eintretenden Zwischenfällen bei laufenden Services
+- Incident Management: Behebungen von eintretenden Zwischenfällen bei laufenden Services
 - Service-Level Management: Bereitstellung und Kontrolle von SLA's
 - Problem Management: Behebungen von schwerwiegenden Zwischenfällen bei laufenden Services
 - Change Management: Vorbereitung und Umsetzung von Änderungen an Arbeitsprozessen im Unternehmen
@@ -238,7 +238,7 @@ Beim Anbieten und Verfolgen der Services im Unternehmen gibt es verschiedene spe
 
 ## Operation:
 - Incident Management
-- Request Fullfillment
+- Request Fulfillment
 - Problem Management
 - Access Management
 
@@ -373,7 +373,7 @@ Alle Schritte werden auf dem Weg protokolliert und in der Known-Error-Database h
 [^2]: https://www.itsmprocesses.com/Wiki/Deutsch/ITIL%20Prozesse.htm
 [^3]: https://qualitaetsmanagement.me/prozessmanagement/prozess/
 [^4]: https://prozessoptimierung-sprung.de/
-[^5]: https://www.hagel-it.de/it-service/was-sind-it-services.htmlwas-sind-prozessketten-welche-prozessarten-gibt-es/
+[^5]: https://www.hagel-it.de/it-service/was-sind-it-services.html
 [^6]: https://www.freshworks.com/de/freshservice/itsm/itsm-framework/
 [^7]: https://de.education-wiki.com/9403688-itil-service-lifecycle
 [^8]: https://www.i-doit.com/blog/imac-r-d-serviceorientiertes-it-lifecycle-management/

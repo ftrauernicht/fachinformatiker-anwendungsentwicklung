@@ -48,7 +48,7 @@ Docker vereinfacht die Bereitstellung von Anwendungen, weil sich Container, die 
 Docker basiert auf Linux-Techniken wie __Cgroups__ und __Namespaces__, um Container zu realisieren. Während anfänglich noch die LXC-Schnittstelle des Linux-Kernels verwendet wurde, haben die Docker-Entwickler mittlerweile eine eigene Programmierschnittstelle namens __libcontainer__ entwickelt, die auch anderen Projekten zur Verfügung steht.
 <br>
 
-Normalerweise sind Docker auf die Virtualisierung mit Linux ausgerichtet, können aber auch mittels __HyperV__ oder __Virtualbox__  auf Windows oder mit __HyperKit__ oder __VirtualBox__ auf macOs verwendet werden.
+Normalerweise sind Docker auf die Virtualisierung mit Linux ausgerichtet, können aber auch mittels __HyperV__ oder __VirtualBox__  auf Windows oder mit __HyperKit__ oder __VirtualBox__ auf macOs verwendet werden.
 
 ## Begriffe
 ### Image
@@ -121,10 +121,10 @@ Eine Registry, wie zum Beispiel __Docker Hub__ oder __Artifactory__, dient der V
 [^5]
 Hypervisor oder auch Virtual-Machine-Monitor (VMM) ist die Bezeichnung für eine Klasse von Systemen der praktischen Informatik, die als abstrahierende Schicht zwischen tatsächlich vorhandener Hardware und weiteren zu installierenden Betriebssystemen dient.
 
-Ein Hypervisor erlaubt den simultianen Betrieb von mehreren Gastsystemen auf einem Hostsystem. Der Hypervisor verwaltet die Ressourcenzuteilung für einzelne Gastsysteme.
+Ein Hypervisor erlaubt den simultanen Betrieb von mehreren Gastsystemen auf einem Hostsystem. Der Hypervisor verwaltet die Ressourcenzuteilung für einzelne Gastsysteme.
 
 [^5]: https://de.wikipedia.org/wiki/Hypervisor
 [^6]: https://de.wikipedia.org/wiki/Docker_(Software)
 [^7]: https://docs.docker.com/engine/install/ubuntu/
-[^8]: https://docs.docker.com/assets/images/architecture.svg
+[^8]: https://docs.docker.com/get-started/docker-overview/
 [^9]: https://docs.docker.com/get-started/overview/

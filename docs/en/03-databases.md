@@ -272,7 +272,7 @@ lists the names of all students whose name begins with `F`. `LIKE` can be used w
 SELECT firstName, lastName, streetNumber, zipCode, city FROM Student WHERE zipCode = '20095' ORDER BY name;
 ```
 
-ists the `firstName`, `name`, `streetNumber`, `zipCode` and `city` of all students from the specified zip code area in ascending order by `name`.
+ist the `firstName`, `name`, `streetNumber`, `zipCode` and `city` of all students from the specified zip code area in ascending order by `name`.
 
 ### Query with joined tables (, and INNER JOIN)
 

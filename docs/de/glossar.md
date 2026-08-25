@@ -51,11 +51,11 @@
 ## REST (Representational State Transfer)
 - Paradigma für die Softwarearchitektur
 - Der Schwerpunkt von REST liegt hauptsächlich auf Maschine zu Maschine Kommunikation.
-- Rest stellt eine einfache Alternative zu SOAP und WSDL und dem verwantem RPC dar.
+- Rest stellt eine einfache Alternative zu SOAP und WSDL und dem verwandtem RPC dar.
 - Die Bezeichnung „Representational State Transfer“ soll den Übergang vom aktuellen Zustand zum nächsten Zustand (state) einer Applikation verbildlichen. Dieser Zustandsübergang erfolgt durch den Transfer der Daten, die den nächsten Zustand repräsentieren
 
 ## API (Application Programming Interface)
-- Schafft die Möglichkeit dass zwei oder mehrere Computer Pogramme miteinander Kommunizieren können.
+- Schafft die Möglichkeit dass zwei oder mehrere Computer Programme miteinander Kommunizieren können.
 <br>
 
 # Protokolle
@@ -63,7 +63,7 @@
 ## SOAP (Simple Object Access Protocol)
 [^2]<br>
 - Netzwerkprotokoll
-- SOAP ist ein industrieller Standart des World Wide Web Consortiums (W3C)
+- SOAP ist ein industrieller Standard des World Wide Web Consortiums (W3C)
 - SOAP stützt sich auf XML zur Repräsentation der Daten und auf Internet-Protokolle der Transport- und Anwendungsschicht (vgl. TCP/IP-Referenzmodell) zur Übertragung der Nachrichten.
 - Gängigste Kombination ist SOAP über HTTP und TCP
 <br>
@@ -118,7 +118,7 @@ Die objektorientierte Programmierung ist ein auf dem Konzept der Objektorientier
 
 # Herangehensweisen
 ## CI (Continuos Integration)
-Continous Integration bezieht sich auf den Prozess bei dem Entwickler regelmäßig ihre Codeänderungen in ein gemeinsames Repository hochladen. Jedes Mal, wenn Code in das Repository eingecheckt wird, wird eine automatische Build und Testpipeline ausgelöst. Der Zweck darin besteht Probleme frühzeitig zu erkennen, Konflikte zwischen Entwicklern zu vermeiden und die Qualität des Codes kontinuirlich zu verbessern.
+Continuous Integration bezieht sich auf den Prozess bei dem Entwickler regelmäßig ihre Codeänderungen in ein gemeinsames Repository hochladen. Jedes Mal, wenn Code in das Repository eingecheckt wird, wird eine automatische Build und Testpipeline ausgelöst. Der Zweck darin besteht Probleme frühzeitig zu erkennen, Konflikte zwischen Entwicklern zu vermeiden und die Qualität des Codes kontinuierlich zu verbessern.
 
 ## CD (Continuos Delivery / Deployment)
 CD baut auf CI auf und beinhaltet die automatische Bereitstellung und Auslieferung der Anwendung nach erfolgreichem Abschluss der CI-Phase. Bei Continuous Delivery wird die Software automatisch in eine Umgebung (z.B. Staging oder Testumgebung) bereitgestellt, in der weitere Tests und Überprüfungen durchgeführt werden können. Bei Continuous Deployment wird die Software automatisch in die Produktionsumgebung bereitgestellt und ist für Benutzer verfügbar.
@@ -169,13 +169,13 @@ Das Web Proxy Auto-Discovery Protocol ist ein Protokoll, mit dem Web-Clients zu 
 
 ## DNS (Domain Name System)
 [^8]<br>
-Das Domain Name System, ist ein hierarchisches unterteiltes Bezeichnungssystem in einem meist IP-basierten Netz zur Beantwortung von Anfragen zu Domain-Namen (Namenauflösung)
+Das Domain Name System, ist ein hierarchisches unterteiltes Bezeichnungssystem in einem meist IP-basierten Netz zur Beantwortung von Anfragen zu Domain-Namen (Namensauflösung)
 
 # Virtualisierung
 Siehe [Virtualisierung](02-virtualisierung.md)
 
 # Turing-Test
-Mit dem Turing Test lässt sich definieren ob eine Maschine ein gleichwertiges Denkvermögen eines Menschen hätte. Beim Testen soll ein Mensch mit zwei Parteien kommunizieren wobei eine Partei ein anderer Mensch ist und eine Partei eine Maschine. Lässt sich nach intensiven Befragen nicht feststellen welcher der beiden Partein die Maschine ist, hat die Maschine den Turing-Test bestanden.
+Mit dem Turing Test lässt sich definieren ob eine Maschine ein gleichwertiges Denkvermögen eines Menschen hätte. Beim Testen soll ein Mensch mit zwei Parteien kommunizieren wobei eine Partei ein anderer Mensch ist und eine Partei eine Maschine. Lässt sich nach intensiven Befragen nicht feststellen welcher der beiden Parteien die Maschine ist, hat die Maschine den Turing-Test bestanden.
 
 # OSI/ISO Schichten Modell
 Siehe [OSI](01-netzwerktechnik.md#osi-schichten-modell)

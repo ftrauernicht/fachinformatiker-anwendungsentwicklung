@@ -23,7 +23,7 @@
     - [RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)](#raid-10-verbundsraid-raid-0-über-mehrere-raid-1)
 - [Speichersysteme](#speichersysteme)
   - [SAN (Storage Area Network)](#san-storage-area-network)
-  - [NAS (Network Attached Storaged)](#nas-network-attached-storaged)
+  - [NAS (Network Attached Storage)](#nas-network-attached-storage)
 - [Ethernet und MAC-Adressen](#ethernet-und-mac-adressen)
   - [Ethernet-Frame (In Reihenfolge links rechts)](#ethernet-frame-in-reihenfolge-links-rechts)
   - [MAC-Adressen](#mac-adressen)
@@ -50,7 +50,7 @@
   - [Einsatzbereiche](#einsatzbereiche)
 - [Firewall](#firewall)
 - [VPN (Virtual Private Network)](#vpn-virtual-private-network)
-  - [Eigentschaften von VPN](#eigentschaften-von-vpn)
+  - [Eigenschaften von VPN](#eigenschaften-von-vpn)
   - [OSI-Layer, auf dem die Kommunikation des VPN realisiert ist](#osi-layer-auf-dem-die-kommunikation-des-vpn-realisiert-ist)
   - [Anwendungsbereiche für VPN](#anwendungsbereiche-für-vpn)
   - [Ist ein VPN sicher? Nein! Welche Maßnahmen können den VPN-Tunnel sicher machen?](#ist-ein-vpn-sicher-nein-welche-maßnahmen-können-den-vpn-tunnel-sicher-machen)
@@ -98,7 +98,7 @@ Man spricht von Host-RAID, da die RAID-Funktionen von der Firmware bzw. den Trei
 [^2]
 ### RAID 0: Striping - Beschleunigung ohne Redundanz
 Die Null in RAID 0 steht für die Null-Daten-Redundanz. Daher gehört RAID 0 eigentlich nicht zu den RAID-Systemen, da es eher ein schnelles Array of Independent Disks ist. Hier bei werden zwei oder mehrere Platten zu einem großen logischen Laufwerk zusammengeschaltet. Hier werden die Daten meist in Blöcke der Größe 64 oder 128 kB (Stripe = Streifen) unterteilt, daher kommt auch die Bezeichnung Striping.
-Bei RAID 0 empfielt es sich zwei gleich große Platten zu verwenden, da sich die Gesamtgröße des RAID nach der kleinsten Platte mal Anzahl der Platten richtet.
+Bei RAID 0 empfiehlt es sich zwei gleich große Platten zu verwenden, da sich die Gesamtgröße des RAID nach der kleinsten Platte mal Anzahl der Platten richtet.
 
 #### Vorteile
 - Steigerung des Datendurchsatzes, da die Platten-Zugriffe in höherem Maße parallel ablaufen.
@@ -174,7 +174,7 @@ Darstellung RAID 01<br>
 </a>
 
 ### RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)
-RAID 10 ist eine kombination aus RAID 1 und 0. Hier sind mindestens 4 Platten erforderlich. Es werden die Daten vom RAID-Controller zuerst gespiegelt und danach auf zwei RAID 1 gespeichert. Diese werden dann auf ein RAID 0 zusammengefasst. Das erhöht die Sicherheit der Daten (höher als bei RAID 01) und die Sicherheit des Datendurchsatzes.
+RAID 10 ist eine Kombination aus RAID 1 und 0. Hier sind mindestens 4 Platten erforderlich. Es werden die Daten vom RAID-Controller zuerst gespiegelt und danach auf zwei RAID 1 gespeichert. Diese werden dann auf ein RAID 0 zusammengefasst. Das erhöht die Sicherheit der Daten (höher als bei RAID 01) und die Sicherheit des Datendurchsatzes.
 RAID 10 ist besonders geeignet um größere Datenmengen redundant zu speichern.
 
 Darstellung RAID 10:<br>
@@ -187,7 +187,7 @@ Darstellung RAID 10:<br>
 ## SAN (Storage Area Network)
 - Ein SAN ist ein Netzwerkspeicher mit dem man über mehrere Clients zugreifen kann
 
-## NAS (Network Attached Storaged)
+## NAS (Network Attached Storage)
 - Ein NAS ist ein Speichermedium welches im Lokalen Netzwerk liegt und man mit berechtigten Geräten Daten über das Lokale Netzwerk legen kann.
 
 ---
@@ -216,7 +216,7 @@ Im Falle von Ethernet-Netzen besteht die MAC-Adresse aus 48 Bit bzw. sechs Bytes
 [^5]<br>
 IP-Adressen können in dezimal, binär, oktal und hexadezimal sowohl in der Punkt-, als auch in der Nichtpunktnotation dargestellt werden
 
-IPv4 benutzt 32-Bit-Adressen. IPv4-Adressen werden üblicherweise dezimal in vier Blöcken geschrieben, zum Beispiel 207.142.131.235. Ein Block darf nicht mit einer 0 führen. Jedes Oktett representiert 8 Bit und somit ist eine Reichweite von 0 bis 255 möglich.
+IPv4 benutzt 32-Bit-Adressen. IPv4-Adressen werden üblicherweise dezimal in vier Blöcken geschrieben, zum Beispiel 207.142.131.235. Ein Block darf nicht mit einer 0 führen. Jedes Oktett repräsentiert 8 Bit und somit ist eine Reichweite von 0 bis 255 möglich.
 
 ### Adressformat
 IP-Adressen bestehen aus einem Netzanteil und einem Hostanteil. Der Netzteil definiert ein Teilnetz, der Hostteil definiert ein Gerät (Host) innerhalb eines Teilnetzes.
@@ -281,7 +281,7 @@ WLAN basiert auf dem Standard IEEE 802.11 und verwendet Funkwellen, um Daten zwi
 # DHCP
 [^10]<br>
 Das Dynamic Host Protocol (DHCP) ist ein Kommunikationsprotokoll. Durch einen Server können Clients die richtige Netzwerkkonfiguration erhalten.
-DHCP ist eine Erweiterung des Bootstrap-Protokols (BOOTP)
+DHCP ist eine Erweiterung des Bootstrap-Protokolls (BOOTP)
 
 Die Länge eines DHCP-Pakets beträgt 32 Bit.
 
@@ -303,7 +303,7 @@ In diesem Modi lassen sich IP-Adressen einer bestimmten MAC-Adresse zuordnen. Di
 Eine statische Zuordnung kann dann von Vorteil sein, wenn Netzwerkdienste über eine bestimmte Adresse erreichbar sein sollen. Auch Portfreigaben von einem Router zu einem Client benötigen in der Regel eine feste IP-Adresse.
 
 #### Nachteil
-Dabei kann das Problem aufteten, dass keine weiteren Clients dem Netzwerk zugeteilt werden können, da alle Adressen fest vergeben sind. Das kann unter manchen Sicherheitsaspekten problematisch sein.
+Dabei kann das Problem auftreten, dass keine weiteren Clients dem Netzwerk zugeteilt werden können, da alle Adressen fest vergeben sind. Das kann unter manchen Sicherheitsaspekten problematisch sein.
 
 ### Automatische Zuordnung
 Bei der Automatischen Zuordnung werden am DHCP-Server Bereiche von IP-Adressen (range) definiert. Neue Clients erhalten dabei IP-Adressen welche den MAC-Adressen zugeordnet werden, das wird in einer Tabelle festgehalten. Im Unterschied zur dynamischen Zuordnung werden automatische Adressen fest vergeben und nicht entfernt. 
@@ -377,18 +377,18 @@ Manche Konfigurationen vergeben IP-Adressen abhängig von der MAC-Adresse, das h
 <br>
 
 # VPN (Virtual Private Network)
-VPNs sind Punkt-zu-Punkt verbindungen über ein privates oder ein öffentliches Netzwerk, z.B. über das Internet. Dabei werden die Verbindungen durch einen öffentlichen ISP (Internet Service Provider) bereitgestellt. Zur Übertragung im Internet wird ein sogenannter Tunnel erzeugt. Um einen virtuellen Anruf bei einem virtuellen Port auf einem VPN-Server zu tätigen, werden spezielle TCP/IP-basierte Protokolle, so genannte Tunnelprodukte verwendet.
+VPNs sind Punkt-zu-Punkt Verbindungen über ein privates oder ein öffentliches Netzwerk, z.B. über das Internet. Dabei werden die Verbindungen durch einen öffentlichen ISP (Internet Service Provider) bereitgestellt. Zur Übertragung im Internet wird ein sogenannter Tunnel erzeugt. Um einen virtuellen Anruf bei einem virtuellen Port auf einem VPN-Server zu tätigen, werden spezielle TCP/IP-basierte Protokolle, so genannte Tunnelprodukte verwendet.
 
-## Eigentschaften von VPN
-- Hohe flexibilität
+## Eigenschaften von VPN
+- Hohe Flexibilität
 - Niedrige Kosten für die Übertragung
 - Kapselung
 - Reines Softwareprodukt
 
 ## OSI-Layer, auf dem die Kommunikation des VPN realisiert ist
 - VPN Tunneling kann man auf OSI-Schicht 2 oder OSI-Schicht 3 realisieren.
-  - OSI-Schicht 2 (Sicherrungsschicht, Data Link Layer)
-    - Vertreter des Layer-2-Tunneling sind die Protokolle PPTP (Point to Pont Tunneling Protocoll), L2F (Layer 2 Forwarding) und L2TP (Layer 2 Tunneling Protocol)
+  - OSI-Schicht 2 (Sicherungsschicht, Data Link Layer)
+    - Vertreter des Layer-2-Tunneling sind die Protokolle PPTP (Point to Pont Tunneling Protokoll), L2F (Layer 2 Forwarding) und L2TP (Layer 2 Tunneling Protocol)
   - OSI-Schicht 3 (Vermittlungsschicht, Network Layer)
     - IPSec
 

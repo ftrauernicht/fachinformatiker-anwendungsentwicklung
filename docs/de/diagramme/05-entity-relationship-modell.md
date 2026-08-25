@@ -4,10 +4,10 @@
 - [Notationsformen](#notationsformen)
 
 [^1]<br>
-Das Entity-Relationship-Modell - kurz ER-Modell oder ERM, dient dazu im Rahmen der semeantischen Datenmodellierung den in einem gegeben Kontext relevanten Ausschnitt der realen Welt zu bestimmen und darzustellen.
+Das Entity-Relationship-Modell - kurz ER-Modell oder ERM, dient dazu im Rahmen der semantischen Datenmodellierung den in einem gegeben Kontext relevanten Ausschnitt der realen Welt zu bestimmen und darzustellen.
 
 # Grundlegende Komponenten
-- Entität (Entitiy): Typisierung gleichartiger Entitäten.
+- Entität (Entity): Typisierung gleichartiger Entitäten.
   - BSP: Angestellter
   - <img title="Entität" src="../../assets/img/erm/entity.png" height="40px">
 - Beziehung (Relationship): Verknüpfung / Zusammenhang zwischen zwei oder mehreren Entitäten.

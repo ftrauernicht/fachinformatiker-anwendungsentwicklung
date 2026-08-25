@@ -48,7 +48,7 @@
 
 # Arten von Datenbanken
 ## Relationale Datenbanken
-Relationale Datenbanken bestehen aus Tabellen, jede Tabelle hat Spalten und Reihen. In solch einer Datenbank lassen sich beziehungen per Primary- und Foreign Key bilden.
+Relationale Datenbanken bestehen aus Tabellen, jede Tabelle hat Spalten und Reihen. In solch einer Datenbank lassen sich Beziehungen per Primary- und Foreign Key bilden.
 
 ## Dokumentenorientierte Datenbanken
 In einer Dokumentenorientierten Datenbank werden die Daten nicht wie bei der Relationalen Datenbank in Tabellen gespeichert sondern in Dokumenten. Solch ein Dokument ist eine strukturierte Datenquelle, die in einem bestimmten Format vorliegt, häufig als JSON (Javascript Object Notation) oder als XML (eXtensible Markup Language).
@@ -76,7 +76,7 @@ __0. Normalform__
 </a>
 <br>
 Im oberen Beispiel werden mehrere Daten in einem Datenfeld gespeichert. Dies wird auch die 0. Normalform oder NF² (Non-First-Normal-Form) genannt.<br>
-Datensätze aus dieser Tabelle können hier nicht einzelnd entnommen werden. Möchte man z.B. PrüfFachNr von Meier bekommen, bekommt man "10", "12" und "16".
+Datensätze aus dieser Tabelle können hier nicht einzeln entnommen werden. Möchte man z.B. PrüfFachNr von Meier bekommen, bekommt man "10", "12" und "16".
 In der Definition heißt es: "...maximal einen Wert...", was einem in der 1. Normalform erlaubt Null-Werte einzutragen, wenn man z.B. noch nicht vergeben Punkte in einem Kurs.
 <br>
 
@@ -106,11 +106,11 @@ Das Ergebnis könnte so aussehen:
 
 ## 2. Normalform
 ### Erläuterung
-Eine Relation ist dann in der zweiten Normalform wenn die erste Normalform erreicht wurde und kein Nichtprimärattribut funktionial von einer echten Teilmenge eines Schlüsselkandidaten abhängt.
+Eine Relation ist dann in der zweiten Normalform wenn die erste Normalform erreicht wurde und kein Nichtprimärattribut funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt.
 
 ### Beispiel
-Wir müssen die Tabelle aus dem Beispiel der ersten Normalform aufteilen, da weder der Name des Studenten noch die Bezeichnung des Prüfungsfachs voll vom Primärschlüssel abhängig sind. Das Attribut Note ist voll vom Primäschlüssel abhängig und bleibt in der Relation.<br>
-So ergibt sich folgende Realtionen in der zweiten Normalform.
+Wir müssen die Tabelle aus dem Beispiel der ersten Normalform aufteilen, da weder der Name des Studenten noch die Bezeichnung des Prüfungsfachs voll vom Primärschlüssel abhängig sind. Das Attribut Note ist voll vom Primärschlüssel abhängig und bleibt in der Relation.<br>
+So ergibt sich folgende Relationen in der zweiten Normalform.
 
 <br>
 <a href="https://info-wsf.de/Normalformen/">
@@ -167,7 +167,7 @@ SQL-Befehle lassen sich in fünf Kategorien unterteilen.
 - Data Query Language (DQL):
   - Befehle zur Abfrage und Aufbereitung der gesuchten Informationen, wird auch als Untermenge der DML Klassifiziert.
 - Data Manipulation Language (DML):
-  - Befehle zur Datenmanipulation (Ändern, Einfügen, Löschen von Datensätzen) und ledendem Zugriff.
+  - Befehle zur Datenmanipulation (Ändern, Einfügen, Löschen von Datensätzen) und lesendem Zugriff.
 - Data Definition Language (DDL):
   - Befehle zur Definition des Datenbankschemas (Erzeugen, Ändern, Löschen von Datenbanktabellen, Definition vom Schlüsseln).
 - Data Control Language (DCL):
@@ -260,7 +260,7 @@ listet `VorlNr` und `Titel` aller derjenigen Zeilen der Tabelle auf, deren Titel
 ```sql
 SELECT Name FROM Student WHERE Name LIKE 'F%';
 ```
-ERgebnis:
+Ergebnis:
 
 |Name|
 |---|
@@ -367,7 +367,7 @@ Bemerkung: `COUNT(Professor.PersNr)` oder `COUNT(*)` wären falsch (`NULL`-Werte
 
 - **UNION:**
   - Vereinigt die Ergebnismengen. In einigen Implementierungen werden mehrfach vorkommende Ergebnistupel wie bei `DISTINCT` entfernt, ohne dass `UNION DISTINCT` geschrieben werden muss beziehungsweise darf.
-- **UNTION ALL:**
+- **UNION ALL:**
   - Vereinigt die Ergebnismengen. Mehrfach vorkommende Ergebnistupel bleiben erhalten. Einige Implementierungen interpretieren aber `UNION` wie `UNION ALL` und verstehen das `ALL` möglicherweise nicht und geben eine Fehlermeldung aus.
 - **EXCEPT:**
   - Liefert die Tupel, die in einer ersten, jedoch nicht in einer zweiten Ergebnismenge enthalten sind. Mehrfach vorkommende Ergebnistupel werden entfernt.
@@ -412,7 +412,7 @@ löscht alle Datensätze, für die PersNr den Wert 12 hat.
 - **DOUBLE oder DOUBLE PRECISION:**
   - Gleitkommazahl (positiv oder negativ). Die Genauigkeit ist jeweils vom Datenbanksystem definiert.
 - **FLOAT UND DOUBLE:**
-  - Sind für technisch-wissenschaftliche Werte geeignet und umfassen auch die Exponentialdarstellung. Wegen der Speicherung im Binärformat sind sie aber für Geldbeträge nicht geeignet, weil sich beispielsweise der Wert 0,10€ (entrspricht 10 Cent) nicht exakt abbilden lässt.
+  - Sind für technisch-wissenschaftliche Werte geeignet und umfassen auch die Exponentialdarstellung. Wegen der Speicherung im Binärformat sind sie aber für Geldbeträge nicht geeignet, weil sich beispielsweise der Wert 0,10€ (entspricht 10 Cent) nicht exakt abbilden lässt.
 - **CHARACTER (n) oder CHAR (n):**
   - Zeichenkette Text mit n Zeichen.
 - **TEXT:**
@@ -424,7 +424,7 @@ löscht alle Datensätze, für die PersNr den Wert 12 hat.
 - **TIMESTAMP:**
   - Zeitstempel (umfasst Datum und Uhrzeit; evtl. inklusive Zeitzone), meistens mit Millisekundenauflösung, teilweise auch mikrosekundengenau.
 - **Boolean:**
-  - Boolsche Variable (kann die Werte true oder false oder NULL annehmen). Dieser Datentyp ist laut SQL:2003 optional und nicht alle DBMS stellen diesen Datentypen bereit.
+  - Boolesche Variable (kann die Werte true oder false oder NULL annehmen). Dieser Datentyp ist laut SQL:2003 optional und nicht alle DBMS stellen diesen Datentypen bereit.
 - **BLOB (n) oder BINARY LARGE OBJECT (n):**
   - Binärdaten von maximal n Bytes Länge.
 - **CLOB (n) oder CHARACTER LARGE OBJECT (n):**

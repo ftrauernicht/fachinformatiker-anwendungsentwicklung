@@ -1,7 +1,5 @@
 # Table of Content
-# Table of Content
 - [Table of Content](#table-of-content)
-- [Table of Content](#table-of-content-1)
 - [Usage of ITSM](#usage-of-itsm)
 - [Importance of a Process](#importance-of-a-process)
 - [Differentiation of Process Chains](#differentiation-of-process-chains)
@@ -346,7 +344,7 @@ When a solution is found at the current level, a report is made to the previous 
 [^2]: https://www.itsmprocesses.com/Wiki/Deutsch/ITIL%20Prozesse.htm
 [^3]: https://qualitaetsmanagement.me/prozessmanagement/prozess/
 [^4]: https://prozessoptimierung-sprung.de/
-[^5]: https://www.hagel-it.de/it-service/was-sind-it-services.htmlwas-sind-prozessketten-welche-prozessarten-gibt-es/
+[^5]: https://www.hagel-it.de/it-service/was-sind-it-services.html
 [^6]: https://www.freshworks.com/de/freshservice/itsm/itsm-framework/
 [^7]: https://de.education-wiki.com/9403688-itil-service-lifecycle
 [^8]: https://www.i-doit.com/blog/imac-r-d-serviceorientiertes-it-lifecycle-management/

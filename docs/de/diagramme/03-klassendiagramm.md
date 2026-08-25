@@ -43,7 +43,7 @@ Ein Klassendiagramm ist ein UML-Diagrammtyp, der ein System beschreibt, indem er
     - Zweigassoziation
     - Einwegassoziation
     - Selbstassoziation
-    - Merfachnummernassoziation
+    - Mehrfachnummernassoziation
 
 __BSP:__<br>
 Autos und Fahrer, ein Auto entspricht einem bestimmten Fahrer und ein Fahrer kann mehrere Autos fahren.
@@ -51,7 +51,7 @@ Autos und Fahrer, ein Auto entspricht einem bestimmten Fahrer und ein Fahrer kan
 <img title="Assoziation" src="../../assets/img/uml-class-diagram/relations/association.png" >
 <br>
 - In UML-Diagrammen können bidirektionale Assoziationen zwei Pfeile oder keine Pfeile haben und unidirektionale Assoziationen oder Selbstassoziationen haben einen Pfeil.
-- In einer Multiplizitätsbeziehung können Sie der zugehörigen Zeile direkt eine Zahl hinzufügen, um die Anzahl der Objekte in der entpsrechenden Klasse anzugeben
+- In einer Multiplizitätsbeziehung können Sie der zugehörigen Zeile direkt eine Zahl hinzufügen, um die Anzahl der Objekte in der entsprechenden Klasse anzugeben
     - 1..1: Nur eine
     - 0..*: Null oder eine
     - 1..*: ein oder mehr
@@ -81,7 +81,7 @@ Autos und Schiffe sind Fahrzeuge, und das Fahrzeug ist nur ein abstraktes Konzep
 ### Abhängigkeit - Dependency
 - Nehmen Sie an, dass eine Änderung in Klasse A eine Änderung in Klasse B verursacht, und sagen Sie dann, dass Klasse B von Klasse A abhängt.
 In den meisten Fällen spiegeln sich Abhängigkeiten in Methoden einer Klasse wieder, die das Objekt einer anderen Klasse als Parameter verwenden. 
-- Eine Abhängigkeitsbeziehung ist eine "Nutzung"-Beziehung. Eine Änderung an einem bestimmten Ding kann sich auf andere Dinge auswirken, die es verwenden, und eine Abhängigkeit verwenden, wenn angegeben werden muss, dass ein Ding ein anderers verwendet. <br>
+- Eine Abhängigkeitsbeziehung ist eine "Nutzung"-Beziehung. Eine Änderung an einem bestimmten Ding kann sich auf andere Dinge auswirken, die es verwenden, und eine Abhängigkeit verwenden, wenn angegeben werden muss, dass ein Ding ein anderes verwendet. <br>
 
 __BSP:__<br>
 Das Auto ist auf Benzin angewiesen. Wenn kein Benzin vorhanden ist, kann das Auto nicht fahren.
@@ -101,8 +101,8 @@ Busfahrer und Arbeitskleidung sind Teil der Gesamtbeziehung, aber sie können au
 <br>
 
 ### Komposition - Composition
-- Die Beziehung zwischem dem Ganzen und einem Teil kann __nicht__ getrennt werden.
-- Die Kombinationsbeziehung stellt die Beziehung zwischen dem Ganzen und einem Teil der Klase dar, und das Ganze und der Teil haben eine konsistente Lebensdauer. Sobald das Gesamtobjekt nicht mehr existiert, werden einiger der Objekte auch nicht mehr existieren.
+- Die Beziehung zwischen dem Ganzen und einem Teil kann __nicht__ getrennt werden.
+- Die Kombinationsbeziehung stellt die Beziehung zwischen dem Ganzen und einem Teil der Klasse dar, und das Ganze und der Teil haben eine konsistente Lebensdauer. Sobald das Gesamtobjekt nicht mehr existiert, werden einiger der Objekte auch nicht mehr existieren.
 
 __BSP:__<br>
 Eine Person besteht aus einem Kopf und einem Körper. Beide sind unzertrennlich und koexistieren.

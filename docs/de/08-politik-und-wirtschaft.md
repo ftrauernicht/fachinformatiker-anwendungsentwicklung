@@ -3,7 +3,7 @@
 - [Arbeits- und Geschäftsprozesse](#arbeits--und-geschäftsprozesse)
   - [Unternehmensziele/Interessen](#unternehmenszieleinteressen)
   - [Verträge](#verträge)
-- [Armotisation](#armotisation)
+- [Amortisation](#amortisation)
   - [Wie setzen sich Entwicklungskosten zusammen?](#wie-setzen-sich-entwicklungskosten-zusammen)
 
 # Arbeits- und Geschäftsprozesse
@@ -24,7 +24,7 @@
 - Leihvertrag
 - Darlehensvertrag
 
-# Armotisation
+# Amortisation
 ## Wie setzen sich Entwicklungskosten zusammen?
 - Die Entwicklungskosten setzen sich aus den Gehältern etc. aus den Mitarbeitern und den Gemeinkosten zusammen.
 - Gemeinkosten umfassen alles was ein Mitarbeiter zum arbeiten benötigt und noch mehr. Darunter zählen:
@@ -35,6 +35,6 @@
     - etc.
   - Stromkosten
   - Heiz/Kühlkosten
-  - Kaffe
+  - Kaffee
   - Essen
   - etc.

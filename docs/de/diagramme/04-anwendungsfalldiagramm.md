@@ -8,7 +8,7 @@
     - [Anwendungsfall](#anwendungsfall)
     - [Beziehungen](#beziehungen)
       - [Assoziation/Kommunikation](#assoziationkommunikation)
-      - [Mulizplizität](#mulizplizität)
+      - [Multiplizität](#multiplizität)
       - [Generalisierung von Anwendungsfällen](#generalisierung-von-anwendungsfällen)
       - [Generalisierung von Akteuren](#generalisierung-von-akteuren)
       - [Include-Beziehung](#include-beziehung)
@@ -20,7 +20,7 @@
 
 [^1]
 
-Das Use-Case DIagramm wird auch Anwendungsfalldiagramm bezeichnet und ist eine der Diagrammarten der Unified Modelling Language (UML). Es stellt Anwendungsfälle und Akteure mit ihren jeweiligen Abhängigkeiten und Beziehungen dar.
+Das Use-Case Diagramm wird auch Anwendungsfalldiagramm bezeichnet und ist eine der Diagrammarten der Unified Modelling Language (UML). Es stellt Anwendungsfälle und Akteure mit ihren jeweiligen Abhängigkeiten und Beziehungen dar.
 
 ## Keywords
 
@@ -37,7 +37,7 @@ Das Use-Case DIagramm wird auch Anwendungsfalldiagramm bezeichnet und ist eine d
 ### Systemkontext
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Uml-UseCase-Systemkontext.svg/800px-Uml-UseCase-Systemkontext.svg.png" width="200px">
 
-Der Systemkontext wurd durch Systemgrenzen in Form von Rechtecken gekennzeichnet.
+Der Systemkontext wurde durch Systemgrenzen in Form von Rechtecken gekennzeichnet.
 
 ### Akteur
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Uml-UseCase-Akteur.svg/800px-Uml-UseCase-Akteur.svg.png" width="120px">
@@ -58,7 +58,7 @@ Anwendungsfälle werden in Ellipsen dargestellt. Sie müssen (z.B. in einem Komm
 
 Assoziation / Kommunikation von Akteur und Anwendungsfall
 
-#### Mulizplizität
+#### Multiplizität
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Uml-UseCase-Multiplizitaet.svg/1920px-Uml-UseCase-Multiplizitaet.svg.png" width="300">
 

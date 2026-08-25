@@ -15,7 +15,7 @@
 		- [Deklaration](#deklaration)
 		- [Beispiel](#beispiel)
 		- [Namenskonventionen](#namenskonventionen)
-	- [abstraktion](#abstraktion)
+	- [Abstraktion](#abstraktion)
 		- [Programmiersprachen](#programmiersprachen)
 		- [Abstraktion in der objektorientierten Programmierung](#abstraktion-in-der-objektorientierten-programmierung)
 
@@ -27,8 +27,8 @@
 [^3]
 HTML ist eine textbasierte Auszeichnungssprache zur Strukturierung elektronischer Dokumente wie Texte mit Hyperlinks, Bilder und anderen Inhalten. HTML-Dokumente sind die Grundlage des WWW (World-Wide-Web) und werden von Webbrowsern dargestellt. 
 
-Anders als einige Leute behaupten ist HTML **KEINE** Programmmiersprache.
-HTML kann Merkmale einer Programmiersprache wie **Variablen** und **Kontrollstukturen** nicht ausweisen.
+Anders als einige Leute behaupten ist HTML **KEINE** Programmiersprache.
+HTML kann Merkmale einer Programmiersprache wie **Variablen** und **Kontrollstrukturen** nicht ausweisen.
 
 #### DOM - Document Object Model
 [^4]
@@ -46,7 +46,7 @@ Document Object Model
 - Secure Hyper Text Transport Protocol
 
 #### HTTP-400
-HTTP Response Code 400 bezieht sich auf Client fehler
+HTTP Response Code 400 bezieht sich auf Client Fehler
 
 ##### Arten von HTTP-400
 - 400 Bad Request
@@ -57,7 +57,7 @@ HTTP Response Code 400 bezieht sich auf Client fehler
     - Die Angefragte Resource konnte nicht gefunden werden
 
 #### HTTP-500
-HTTP Response Code 500 bezieht sich auf Server fehler
+HTTP Response Code 500 bezieht sich auf Server Fehler
 
 ##### Arten von HTTP-500
 - 500 Internal Server Error
@@ -65,7 +65,7 @@ HTTP Response Code 500 bezieht sich auf Server fehler
 - 502 Bad Gateway
     - Der Server fungierte als Gateway oder Proxy und erhielt eine ungültige Antwort
 - 503 Service Unavailable
-    - Der Server kann die Anfrage nicht verarbeiten (zu viele Anfragen, down for maintanance)
+    - Der Server kann die Anfrage nicht verarbeiten (zu viele Anfragen, down for maintenance)
 
 # Objektorientierung
 
@@ -74,7 +74,7 @@ Ein Interface oder auch Schnittstelle definiert in der objektorientierte Program
 Eine Schnittstelle gibt an, welche Methoden vorhanden sind oder vorhanden sein müssen.  
 Schnittstellen stellen eine Garantie über die in einer Klasse vorhandenen Methoden dar. Sie geben an, dass alle Objekte, die diese Schnittstellen besitzen, gleich behandelt werden können.
 
-In Programmiersprachen die keine Mehrfachvererbung untestützen wie z.B. Java, können Schnittstellen verwendet werden, um Kompatibilitäten zwischen Klassen zu definieren, die nicht voneinander erben.
+In Programmiersprachen die keine Mehrfachvererbung unterstützen wie z.B. Java, können Schnittstellen verwendet werden, um Kompatibilitäten zwischen Klassen zu definieren, die nicht voneinander erben.
 
 ### Deklaration
 Andere Programmiersprachen, die Mehrfachvererbung unterstützen, zum Beispiel C++, kennen zwar das Konzept von Schnittstellen, behandeln diese aber wie gewöhnliche Klassen. Man spricht dann auch von abstrakten Klassen. Manchmal wird auch eine eigene Sprache (eine sogenannte Schnittstellenbeschreibungssprache, IDL) zur Deklaration der Schnittstelle verwendet – meist ist das bei Middleware-Systemen wie CORBA oder DCOM der Fall. Objektbasierte Sprachen ohne strenge Typisierung kennen meist keine Schnittstellen.
@@ -161,7 +161,7 @@ public void Move(float x, float y)
 In einigen Programmiersprachen ist es üblich, Schnittstellen durch besondere Präfixe oder Suffixe erkennbar zu machen. So wird häufig ein "I" oder ein "IF" angehängt.  
 Im oben aufgeführtem Beispiel wäre dies ein "I" für "IFace". Dies wird normalerweise bei C# angewandt.
 
-## abstraktion
+## Abstraktion
 [^6]
 Der Begriff Abstraktion wird in der Informatik häufig eingesetzt und beschreibt die Trennung zwischen **Konzept** und **Umsetzung**.  
 
@@ -170,7 +170,7 @@ Unterschiedliche Programmiersprachen bieten unterschiedliche Möglichkeiten von 
 - In Objektorientierten Sprachen wie C++, Object Pascal oder Java, wurde das Konzept der Abstraktion in Form einer eigenen deklarativen Anweisung umgesetzt. Nach einer derartigen Deklaration ist es die Aufgabe des Programmierers, eine Klasse zu implementieren, um eine Instanz eines Objektes davon erzeugen zu können.
 
 ### Abstraktion in der objektorientierten Programmierung
-Benötigt ausarbeitung
+Benötigt Ausarbeitung
 
 
 [^1]: https://de.wikipedia.org/wiki/HTTP-Statuscode

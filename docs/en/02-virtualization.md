@@ -48,7 +48,7 @@ Docker simplifies the deployment of applications because containers containing a
 Docker is based on Linux techniques such as __Cgroups__ and __Namespaces__ to realize containers. While initially the LXC interface of the Linux kernel was used, the Docker developers have since developed their own programming interface called __libcontainer__, which is also available to other projects.
 <br>
 
-Normally, Docker is oriented towards virtualization with Linux, but it can also be used on Windows or macOS using __HyperV__, __Virtualbox__, __HyperKit__, or __VirtualBox__.
+Normally, Docker is oriented towards virtualization with Linux, but it can also be used on Windows or macOS using __HyperV__, __VirtualBox__, __HyperKit__, or __VirtualBox__.
 
 ## Terms
 ### Image
@@ -125,5 +125,5 @@ A hypervisor allows the simultaneous operation of multiple guest systems on a ho
 [^5]: https://en.wikipedia.org/wiki/Hypervisor
 [^6]: https://en.wikipedia.org/wiki/Docker_(software)
 [^7]: https://docs.docker.com/engine/install/ubuntu/
-[^8]: https://docs.docker.com/assets/images/architecture.svg
+[^8]: https://docs.docker.com/get-started/docker-overview/
 [^9]: https://docs.docker.com/get-started/overview/

@@ -128,7 +128,7 @@ Bei RAID 0 empfiehlt es sich zwei gleich große Platten zu verwenden, da sich di
 
 Darstellung Raid 0:<br>
 <a href="https://de.wikipedia.org/wiki/RAID">
-  <img title="RAID 0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/RAID_0.svg/220px-RAID_0.svg.png" width="200" alt="RAID 0">
+  <img src="../assets/img/raid/raid-0.svg" alt="RAID 0: Daten wechselweise auf zwei Platten verteilt" width="200">
 </a>
 
 #### RAID 1: Mirroring - Spiegelung
@@ -155,7 +155,7 @@ Die Platten müssen paarweise vorhanden sein und die Kapazität richtet sich auc
 
 Darstellung RAID 1:<br>
 <a href="https://de.wikipedia.org/wiki/RAID">
-  <img title="RAID 1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/RAID_1.svg/220px-RAID_1.svg.png" width="200" alt="RAID 1">
+  <img src="../assets/img/raid/raid-1.svg" alt="RAID 1: identische Daten auf zwei Platten gespiegelt" width="200">
 </a>
 
 #### RAID 5: Leistung + Parität, Block-Level Striping mit verteilter Paritätsinformation
@@ -182,7 +182,7 @@ RAID 5 anders als bei RAID 4 speichert die Parity-Bits und die Teil-Infos auf al
 
 Darstellung RAID 5:<br>
 <a href="https://de.wikipedia.org/wiki/RAID">
-  <img title="RAID 5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/RAID_5.svg/220px-RAID_5.svg.png" width="200" alt="RAID 5">
+  <img src="../assets/img/raid/raid-5.svg" alt="RAID 5: Daten und Paritätsinformation über drei Platten verteilt" width="200">
 </a>
 
 #### RAID 01: Verbundsraid (Raid 1 über mehrere Raid 0)
@@ -191,7 +191,7 @@ RAID 01 ist eine Kombination aus RAID 0 und 1, also Striping und Mirroring. Es s
 
 Darstellung RAID 01<br>
 <a href="https://de.wikipedia.org/wiki/RAID">
-  <img title="RAOD 01" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RAID_01.svg/220px-RAID_01.svg.png" width="200" alt="RAOD 01">
+  <img src="../assets/img/raid/raid-01.svg" alt="RAID 01: zwei gestreifte Plattenpaare, die gespiegelt werden" width="200">
 </a>
 
 #### RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)
@@ -201,7 +201,7 @@ RAID 10 ist besonders geeignet um größere Datenmengen redundant zu speichern.
 
 Darstellung RAID 10:<br>
 <a href="https://de.wikipedia.org/wiki/RAID">
-  <img title="RAID 10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/RAID_10.svg/170px-RAID_10.svg.png" width="200" alt="RAID 10">
+  <img src="../assets/img/raid/raid-10.svg" alt="RAID 10: zwei gespiegelte Plattenpaare, über die gestreift wird" width="200">
 </a>
 
 ---

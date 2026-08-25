@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380" height="140">
+  <circle cx="45" cy="25" r="15" style="fill:none;stroke:black;stroke-width:2;" />
+  <line x1="45" y1="40" x2="45" y2="80" style="stroke:black;stroke-width:2;" />
+  <line x1="15" y1="55" x2="75" y2="55" style="stroke:black;stroke-width:2;" />
+  <line x1="45" y1="80" x2="15" y2="110" style="stroke:black;stroke-width:2;" />
+  <line x1="45" y1="80" x2="75" y2="110" style="stroke:black;stroke-width:2;" />
+  <text x="45" y="130" font-size="13px" font-family="Arial,sans-serif" text-anchor="middle">Akteur / Actor</text>
+  <line x1="90" y1="70" x2="190" y2="70"  style="stroke:black;stroke-width:1;" />
+  <ellipse cx="280" cy="70" rx="90" ry="40" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="280" y="76" font-size="13px" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall / Use Case</text>
+</svg>

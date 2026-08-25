@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="100">
+  <ellipse cx="85" cy="50" rx="75" ry="25" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="85" y="56" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall A</text>
+  <ellipse cx="365" cy="50" rx="75" ry="25" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="365" y="56" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall B</text>
+  <line x1="160" y1="50" x2="290" y2="50" stroke-dasharray="7,3" style="fill:white;stroke:black;stroke-width:1;" />
+  <polyline points="290,50 280,55 285,50 280,45 290,50" style="fill:black;stroke:none;" />
+  <text x="225" y="40" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">&lt;&lt;include&gt;&gt;</text>
+</svg>

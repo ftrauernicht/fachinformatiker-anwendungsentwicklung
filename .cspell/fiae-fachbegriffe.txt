@@ -135,3 +135,23 @@ Taleo
 weclapp
 structogram
 structograms
+
+# --- Bildnachweise: Urheber und Dateinamen von Wikimedia Commons ----------
+Advisera
+Ausw
+Cburnett
+Einf
+Mehrf
+Renzsorf
+Roeing
+Stkl
+Wheart
+Zweif
+
+# --- eigene Ergänzungen --------------------------------------------------
+Kapiteldateien
+Konnektor
+Rückwärtsrechnung
+Vorwärtsrechnung
+Licence
+licence

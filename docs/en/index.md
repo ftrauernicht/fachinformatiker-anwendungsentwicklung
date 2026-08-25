@@ -37,3 +37,4 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 ## Sources
 
 Sources are referenced per section as footnotes at the end of each file.
+Origin and licence of every image are listed in the [image credits](../bildnachweise.md).

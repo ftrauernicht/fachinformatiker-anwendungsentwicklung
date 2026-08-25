@@ -29,7 +29,7 @@ The elements of relationships can be classified into various notation forms:
 - UML Standard
 
 <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">
-  <img title="Notations" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/ERD_Darstellungen.png/300px-ERD_Darstellungen.png" alt="Notations">
+  <img src="../../assets/img/erm/notations.png" alt="Comparison of ERM notations by Chen, Bachman, Martin and UML">
 </a>
 
 The most important three are:

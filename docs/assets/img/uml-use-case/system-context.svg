@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170" height="200">
+  <rect x="10" y="10" width="150" height="180" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="85" y="45" font-size="18px" font-family="Arial,sans-serif" text-anchor="middle">Systemkontext</text>
+</svg>

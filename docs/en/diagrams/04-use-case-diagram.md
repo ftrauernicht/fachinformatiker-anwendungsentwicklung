@@ -15,7 +15,7 @@
     - [Include Relationship](#include-relationship)
     - [Extend Relationship](#extend-relationship)
     - [Extend Relationship with Extension Point](#extend-relationship-with-extension-point)
-    - [Use Case](#use-case-1)
+    - [Use case with an extension point](#use-case-with-an-extension-point)
 
 ### Keywords
 
@@ -31,19 +31,19 @@
 
 #### System Context
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Uml-UseCase-Systemkontext.svg/800px-Uml-UseCase-Systemkontext.svg.png" width="200px">
+<img src="../../assets/img/uml-use-case/system-context.svg" alt="System boundary drawn as a rectangle around two use cases" width="200px">
 
 The system context is marked by system boundaries in the form of rectangles.
 
 #### Actor
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Uml-UseCase-Akteur.svg/800px-Uml-UseCase-Akteur.svg.png" width="120px">
+<img src="../../assets/img/uml-use-case/actor.svg" alt="Actor drawn as a stick figure" width="120px">
 
 Actors are represented as "stick figures," which can represent both people like customers or administrators and a system.
 
 #### Use Case
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Uml-UseCase-Anwendungsfall.svg/1920px-Uml-UseCase-Anwendungsfall.svg.png" width="200px">
+<img src="../../assets/img/uml-use-case/use-case.svg" alt="Use case drawn as a labelled ellipse" width="200px">
 
 Use cases are represented in ellipses. They must be described (e.g., in a comment or a separate file).
 
@@ -51,44 +51,44 @@ Use cases are represented in ellipses. They must be described (e.g., in a commen
 
 ##### Association/Communication
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Uml-UseCase-Assoziation.svg/1920px-Uml-UseCase-Assoziation.svg.png" width="300px">
+<img src="../../assets/img/uml-use-case/association.svg" alt="Line connecting an actor and a use case" width="300px">
 
 Association/Communication between actor and use case.
 
 ##### Multiplicity
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Uml-UseCase-Multiplizitaet.svg/1920px-Uml-UseCase-Multiplizitaet.svg.png" width="300">
+<img src="../../assets/img/uml-use-case/multiplicity.svg" alt="Association annotated with multiplicities at both ends" width="300">
 
 Multiplicity between actor and use case, where the default of the actor is 1.
 
 ##### Generalization of Use Cases
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Uml-UseCase-Generalisierung.svg/1920px-Uml-UseCase-Generalisierung.svg.png" width="300">
+<img src="../../assets/img/uml-use-case/generalisation.svg" alt="Generalisation arrow between two use cases" width="300">
 
 ##### Generalization of Actors
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Uml-UseCase-Generalisierung2.svg/800px-Uml-UseCase-Generalisierung2.svg.png" width="300">
+<img src="../../assets/img/uml-use-case/generalisation-actor.svg" alt="Generalisation arrow between two actors" width="300">
 
 ##### Include Relationship
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Uml-UseCase-Include.svg/1920px-Uml-UseCase-Include.svg.png" width="300">
+<img src="../../assets/img/uml-use-case/include.svg" alt="Dashed arrow stereotyped include, pointing from use case A to B" width="300">
 
 Include relationships in the use-case diagram, where use case A includes use case B.
 
 ##### Extend Relationship
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Uml-UseCase-Extend.svg/1920px-Uml-UseCase-Extend.svg.png" width="300">
+<img src="../../assets/img/uml-use-case/extend.svg" alt="Dashed arrow stereotyped extend, pointing from use case A to B" width="300">
 
 Extend relationships in the use-case diagram, where use case A extends use case B.
 
 ##### Extend Relationship with Extension Point
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Uml-UseCase-Extend2.svg/1920px-Uml-UseCase-Extend2.svg.png" width="300">
+<img src="../../assets/img/uml-use-case/extend-condition.svg" alt="Extend relationship with a condition at the extension point" width="300">
 
 Extend relationship with extension point, where use case A extends use case B under the specified condition.
 
-##### Use Case
+##### Use case with an extension point
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Uml-UseCase-Anwendungsfall2.svg/1920px-Uml-UseCase-Anwendungsfall2.svg.png" width="150">
+<img src="../../assets/img/uml-use-case/use-case-detail.svg" alt="Use case with an extension point listed inside" width="150">
 
 Use case with extension point.

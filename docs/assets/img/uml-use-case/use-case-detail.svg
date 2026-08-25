@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="130">
+  <ellipse cx="100" cy="65" rx="90" ry="55" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="100" y="45" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall</text>
+  <line x1="10" y1="65" x2="190" y2="65" stroke-dasharray="7,3" style="stroke:black;stroke-width:1;" />
+  <text x="100" y="88" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">extension points:</text>
+  <text x="100" y="102" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Erweiterungsstelle</text>
+</svg>

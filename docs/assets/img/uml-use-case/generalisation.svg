@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="200">
+  <ellipse cx="85" cy="100" rx="75" ry="25" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="85" y="97" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">genereller</text>
+  <text x="85" y="111" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall</text>
+  <ellipse cx="315" cy="35" rx="75" ry="25" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="315" y="32" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">spezieller</text>
+  <text x="315" y="46" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall A</text>
+  <ellipse cx="315" cy="165" rx="75" ry="25" style="fill:white;stroke:black;stroke-width:1;" />
+  <text x="315" y="162" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">spezieller</text>
+  <text x="315" y="176" font-size="13" font-family="Arial,sans-serif" text-anchor="middle">Anwendungsfall B</text>
+  <polyline points="240,35 200,35 200,165 240,165" style="fill:none;stroke:black;stroke-width:1;" />
+  <polyline points="200,100 175,100 175,107 160,100 175,93 175,100" style="fill:none;stroke:black;stroke-width:1;" />
+</svg>

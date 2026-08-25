@@ -38,3 +38,4 @@ Die in der Prüfung relevanten Notationen liegen in [`diagramme/`](diagramme/ind
 ## Quellen
 
 Quellen sind je Abschnitt als Fußnote referenziert und stehen am Ende der jeweiligen Datei.
+Die Herkunft und Lizenz aller Grafiken steht in den [Bildnachweisen](../bildnachweise.md).

@@ -100,7 +100,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-242 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+251 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -137,6 +137,8 @@ Grundbuchstaben.
 - **Anwendungsbereiche für VPN** — [Netzwerktechnik](01-netzwerktechnik.md#anwendungsbereiche-für-vpn)
 - **Anwendungsfall** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#anwendungsfall)
 - **Arbeits- und Geschäftsprozesse** — [Politik und Wirtschaft](08-politik-und-wirtschaft.md#arbeits--und-geschäftsprozesse)
+- **Architektur- und Entwurfsmuster** — [Softwareentwicklung](04-softwareentwicklung.md#architektur--und-entwurfsmuster)
+- **Architekturmuster** — [Softwareentwicklung](04-softwareentwicklung.md#architekturmuster)
 - **Art. 32 der DSGVO - Sicherheit und Verarbeitung** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#art-32-der-dsgvo---sicherheit-und-verarbeitung)
 - **Arten der Authentisierung** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#arten-der-authentisierung)
 - **Assoziation - Association** — [Klassendiagramm](diagramme/03-klassendiagramm.md#assoziation---association)
@@ -166,6 +168,7 @@ Grundbuchstaben.
 - **Besitz** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#besitz)
 - **Beziehungen** — [Datenbanken](03-datenbanken.md#beziehungen), [Klassendiagramm](diagramme/03-klassendiagramm.md#beziehungen), [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#beziehungen)
 - **Binäre Suche** — [Algorithmen](10-algorithmen.md#binäre-suche)
+- **Black-Box- und White-Box-Test** — [Softwareentwicklung](04-softwareentwicklung.md#black-box--und-white-box-test)
 - **Bubblesort** — [Algorithmen](10-algorithmen.md#bubblesort)
 
 ### C
@@ -204,6 +207,7 @@ Grundbuchstaben.
 - **Einsatz von ITSM Frameworks** — [IT-Service-Management](06-it-service-management.md#einsatz-von-itsm-frameworks)
 - **Entwicklungsmethode** — [Projektmanagement](07-projektmanagement.md#entwicklungsmethode)
 - **Entwicklungsphilosophie** — [Projektmanagement](07-projektmanagement.md#entwicklungsphilosophie)
+- **Entwurfsmuster** — [Softwareentwicklung](04-softwareentwicklung.md#entwurfsmuster)
 - **Erklärung** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#erklärung)
 - **Ethernet und MAC-Adressen** — [Netzwerktechnik](01-netzwerktechnik.md#ethernet-und-mac-adressen)
 - **Extend-Beziehung** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#extend-beziehung)
@@ -267,6 +271,7 @@ Grundbuchstaben.
 ### L
 
 - **LAN (Local Area Network)** — [Netzwerktechnik](01-netzwerktechnik.md#lan-local-area-network)
+- **Last- und Performancetest** — [Softwareentwicklung](04-softwareentwicklung.md#last--und-performancetest)
 - **Laufzeit abschätzen** — [Algorithmen](10-algorithmen.md#laufzeit-abschätzen)
 - **Layer** — [Virtualisierung](02-virtualisierung.md#layer)
 - **Lineare Suche** — [Algorithmen](10-algorithmen.md#lineare-suche)
@@ -352,6 +357,7 @@ Grundbuchstaben.
 - **SLA Qualität** — [IT-Service-Management](06-it-service-management.md#sla-qualität)
 - **Software Raid Nachteile** — [Netzwerktechnik](01-netzwerktechnik.md#software-raid-nachteile)
 - **Software Raid Vorteile** — [Netzwerktechnik](01-netzwerktechnik.md#software-raid-vorteile)
+- **Softwarequalität** — [Softwareentwicklung](04-softwareentwicklung.md#softwarequalität)
 - **Sortierverfahren** — [Algorithmen](10-algorithmen.md#sortierverfahren)
 - **Speichersysteme** — [Netzwerktechnik](01-netzwerktechnik.md#speichersysteme)
 - **Sprachelemente** — [Datenbanken](03-datenbanken.md#sprachelemente)
@@ -369,6 +375,9 @@ Grundbuchstaben.
 
 ### T
 
+- **Testen** — [Softwareentwicklung](04-softwareentwicklung.md#testen)
+- **Testgetriebene Entwicklung** — [Softwareentwicklung](04-softwareentwicklung.md#testgetriebene-entwicklung)
+- **Teststufen** — [Softwareentwicklung](04-softwareentwicklung.md#teststufen)
 - **Traditionelle Software-Lizenzmodell** — [Cloud Computing](09-cloud-computing.md#traditionelle-software-lizenzmodell)
 - **Transition** — [IT-Service-Management](06-it-service-management.md#transition)
 

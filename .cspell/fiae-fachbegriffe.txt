@@ -257,6 +257,7 @@ Insertionsort
 Katalogstand
 Mergesort
 Merkvariable
+Performancetest
 Performancetests
 Selectionsort
 Timsort

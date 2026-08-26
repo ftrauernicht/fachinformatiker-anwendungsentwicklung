@@ -1,5 +1,7 @@
 # Nassi-Shneiderman diagram (structogram)
 
+> **No longer part of the examination since the 2025 catalogue.** Pseudocode and the [activity diagram](07-activity-diagram.md) take its place; answering a pseudocode task with a structogram no longer earns marks. The notation stays in this collection because it still appears in vocational school and shows nesting particularly well. Details in [The final examination at a glance](../00-exam.md), the replacement in [Algorithms](../10-algorithms.md).
+
 ## Table of contents
 
 - [Nassi-Shneiderman / Structogram](#nassi-shneiderman--structogram)

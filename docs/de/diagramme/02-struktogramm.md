@@ -1,5 +1,7 @@
 # Struktogramm (Nassi-Shneiderman)
 
+> **Seit dem Prüfungskatalog 2025 nicht mehr Bestandteil der Abschlussprüfung.** An seine Stelle treten Pseudocode und das [Aktivitätsdiagramm](07-aktivitaetsdiagramm.md); wer eine Pseudocode-Aufgabe mit einem Struktogramm beantwortet, bekommt dafür keine Punkte mehr. Die Notation bleibt in dieser Sammlung, weil sie im Berufsschulunterricht weiter vorkommt und Schachtelung daran besonders anschaulich ist. Einzelheiten in [Die Abschlussprüfung im Überblick](../00-pruefung.md), der Ersatz in [Algorithmen](../10-algorithmen.md).
+
 ## Inhaltsverzeichnis
 
 - [Nassi-Shneiderman / Struktogramm](#nassi-shneiderman--struktogramm)

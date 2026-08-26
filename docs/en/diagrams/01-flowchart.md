@@ -1,5 +1,7 @@
 # Flowchart
 
+> **No longer part of the examination since the 2025 catalogue.** Control structures are now asked for in pseudocode or as an [activity diagram](07-activity-diagram.md), and a pseudocode task may no longer be answered with a flowchart. The notation stays in this collection because it still appears in vocational school and explains control flow well. Details in [The final examination at a glance](../00-exam.md), the replacement in [Algorithms](../10-algorithms.md).
+
 ## Table of contents
 
 - [Program Flowchart (PAP)](#program-flowchart-pap)

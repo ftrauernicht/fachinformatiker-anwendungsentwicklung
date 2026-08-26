@@ -1,5 +1,7 @@
 # Programmablaufplan (PAP)
 
+> **Seit dem Prüfungskatalog 2025 nicht mehr Bestandteil der Abschlussprüfung.** Kontrollstrukturen werden jetzt in Pseudocode oder als [Aktivitätsdiagramm](07-aktivitaetsdiagramm.md) abgefragt, und eine Pseudocode-Aufgabe darf nicht mehr durch einen Programmablaufplan beantwortet werden. Die Notation bleibt in dieser Sammlung, weil sie im Berufsschulunterricht weiter vorkommt und sich Kontrollflüsse damit gut erklären lassen. Einzelheiten in [Die Abschlussprüfung im Überblick](../00-pruefung.md), der Ersatz in [Algorithmen](../10-algorithmen.md).
+
 ## Inhaltsverzeichnis
 
 - [Elemente](#elemente)

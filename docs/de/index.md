@@ -20,7 +20,7 @@ Wie die Prüfung aufgebaut ist, wie die Bereiche gewichtet sind und gegen welche
 | 05 | [IT-Schutz und -Sicherheit](05-it-sicherheit.md) | DSGVO, Schutzbedarf, Verschlüsselung, ISMS |
 | 06 | [IT-Service-Management](06-it-service-management.md) | ITIL, Prozesse, Incident, SLA |
 | 07 | [Projektmanagement](07-projektmanagement.md) | Netzplan, Magisches Dreieck, Vorgehensmodelle |
-| 08 | [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | Rechtsformen, Amortisation, Marktformen |
+| 08 | [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | Rechtsformen, Marktformen, Amortisation, E-Rechnung |
 | 09 | [Cloud Computing](09-cloud-computing.md) | Servicemodelle, Bereitstellungsmodelle |
 | 10 | [Algorithmen](10-algorithmen.md) | Pseudocode, Suchen, Sortieren, O-Notation |
 

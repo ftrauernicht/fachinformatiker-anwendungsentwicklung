@@ -18,6 +18,7 @@
   - [G](#g)
   - [H](#h)
   - [I](#i)
+  - [J](#j)
   - [K](#k)
   - [L](#l)
   - [M](#m)
@@ -100,7 +101,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-265 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+268 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -208,6 +209,7 @@ Grundbuchstaben.
 - **Einfache Abfrage** — [Datenbanken](03-datenbanken.md#einfache-abfrage)
 - **Einfüge-Anomalie** — [Datenbanken](03-datenbanken.md#einfüge-anomalie)
 - **Einsatz von ITSM Frameworks** — [IT-Service-Management](06-it-service-management.md#einsatz-von-itsm-frameworks)
+- **Elektronische Rechnung** — [Politik und Wirtschaft](08-politik-und-wirtschaft.md#elektronische-rechnung)
 - **Entwicklungsmethode** — [Projektmanagement](07-projektmanagement.md#entwicklungsmethode)
 - **Entwicklungsphilosophie** — [Projektmanagement](07-projektmanagement.md#entwicklungsphilosophie)
 - **Entwurfsmuster** — [Softwareentwicklung](04-softwareentwicklung.md#entwurfsmuster)
@@ -294,6 +296,7 @@ Grundbuchstaben.
 - **Man-in-the-Middle** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#man-in-the-middle)
 - **Managementbereiche** — [Projektmanagement](07-projektmanagement.md#managementbereiche)
 - **Managementprozesse** — [IT-Service-Management](06-it-service-management.md#managementprozesse)
+- **Marktformen** — [Politik und Wirtschaft](08-politik-und-wirtschaft.md#marktformen)
 - **Mögliche Zuweisung / Einstellung die ein DHCP dem Client zuweisen kann** — [Netzwerktechnik](01-netzwerktechnik.md#mögliche-zuweisung--einstellung-die-ein-dhcp-dem-client-zuweisen-kann)
 - **Monitoring** — [Netzwerktechnik](01-netzwerktechnik.md#monitoring)
 - **Move** — [IT-Service-Management](06-it-service-management.md#move)
@@ -344,6 +347,7 @@ Grundbuchstaben.
 - **RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)** — [Netzwerktechnik](01-netzwerktechnik.md#raid-10-verbundsraid-raid-0-über-mehrere-raid-1)
 - **RAID 1: Mirroring - Spiegelung** — [Netzwerktechnik](01-netzwerktechnik.md#raid-1-mirroring---spiegelung)
 - **RAID 5: Leistung + Parität, Block-Level Striping mit verteilter Paritätsinformation** — [Netzwerktechnik](01-netzwerktechnik.md#raid-5-leistung--parität-block-level-striping-mit-verteilter-paritätsinformation)
+- **Rechtsformen** — [Politik und Wirtschaft](08-politik-und-wirtschaft.md#rechtsformen)
 - **Rechtsrahmen seit 2024** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#rechtsrahmen-seit-2024)
 - **Registry** — [Virtualisierung](02-virtualisierung.md#registry)
 - **Rekursion** — [Algorithmen](10-algorithmen.md#rekursion)

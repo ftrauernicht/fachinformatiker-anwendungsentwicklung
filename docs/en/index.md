@@ -25,7 +25,7 @@ How the examination is structured, how the areas are weighted and which catalogu
 | 05 | [IT security](05-it-security.md) | GDPR, protection needs, encryption, ISMS |
 | 06 | [IT service management](06-it-service-management.md) | ITIL, processes, incidents, SLA |
 | 07 | [Project management](07-project-management.md) | Network diagram, triangle, process models |
-| 08 | [Politics and economy](08-politics-and-economy.md) | Legal forms, amortisation, market forms |
+| 08 | [Politics and economy](08-politics-and-economy.md) | Legal forms, market structures, amortisation, e-invoicing |
 | 09 | [Cloud computing](09-cloud-computing.md) | Service models, deployment models |
 | 10 | [Algorithms](10-algorithms.md) | Pseudocode, searching, sorting, big O |
 

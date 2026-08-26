@@ -276,3 +276,11 @@ herstellerneutrale
 Skriptcode
 Zertifikatsanheftung
 kontextgerecht
+
+# --- Rechtsformen, Marktformen, E-Rechnung -------------------------------
+Nachfrageoligopol
+Preisstarre
+monopsony
+oligopsony
+polypoly
+revisionssicher

@@ -95,6 +95,13 @@ flowchart LR
 Erst prüfen, dann in `.cspell/fiae-fachbegriffe.txt` eintragen. Ein Wort dort schaltet die
 Prüfung dafür im ganzen Repository ab.
 
+**Rechtsstand und Katalogstand gehören mit Datum in den Text.** „Seit dem 28. Juni 2025"
+ist eine Aussage, die sich prüfen lässt; „seit Kurzem" ist keine. Ändert sich etwas an
+einer solchen Aussage, gehört die Stand-Tabelle in
+[`docs/de/00-pruefung.md`](docs/de/00-pruefung.md) und ihrem englischen Gegenstück
+mit fortgeschrieben. Einmal im Jahr erinnert der Workflow `stand.yml` mit einem Issue
+daran, beides nachzusehen.
+
 **Zeilen im Fließtext nicht umbrechen.** Ein Absatz steht in einer Zeile. Wer mitten im
 Satz umbricht, macht jeden späteren Diff unlesbar, weil sich der ganze Absatz verschiebt.
 

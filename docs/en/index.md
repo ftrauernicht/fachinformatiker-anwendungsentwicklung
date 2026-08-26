@@ -12,6 +12,8 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 > [German version](../de/index.md) is the source of truth. Some images and sources remain
 > German-only.
 
+How the examination is structured, how the areas are weighted and which catalogue this collection is written against is described in [The final examination at a glance](00-exam.md).
+
 ## Topics
 
 | # | Topic | Keywords |

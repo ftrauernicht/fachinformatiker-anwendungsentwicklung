@@ -7,6 +7,8 @@ Fachinformatiker/-in für Anwendungsentwicklung.
 > Vollständigkeit oder Richtigkeit. Was in deiner Prüfung tatsächlich drankommt, klärst du
 > mit deinen Ausbildern und der zuständigen IHK.
 
+Wie die Prüfung aufgebaut ist, wie die Bereiche gewichtet sind und gegen welchen Katalogstand diese Sammlung geschrieben ist, steht in [Die Abschlussprüfung im Überblick](00-pruefung.md).
+
 ## Themen
 
 | # | Thema | Inhalt in Stichworten |

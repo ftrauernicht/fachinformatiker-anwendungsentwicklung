@@ -121,6 +121,7 @@ nav:
   - Start: index.md
   - Deutsch:
       - Übersicht: de/index.md
+      - Die Prüfung: de/00-pruefung.md
       - Netzwerktechnik: de/01-netzwerktechnik.md
       - Virtualisierung: de/02-virtualisierung.md
       - Datenbanken: de/03-datenbanken.md
@@ -163,6 +164,7 @@ nav:
       - Glossar: de/glossar.md
   - English:
       - Overview: en/index.md
+      - The examination: en/00-exam.md
       - Network technology: en/01-network-technology.md
       - Virtualization: en/02-virtualization.md
       - Databases: en/03-databases.md

@@ -12,6 +12,8 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 > [German version](../de/index.md) is the source of truth. Some images and sources remain
 > German-only.
 
+How the examination is structured, how the areas are weighted and which catalogue this collection is written against is described in [The final examination at a glance](00-exam.md).
+
 ## Topics
 
 | # | Topic | Keywords |
@@ -23,8 +25,9 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 | 05 | [IT security](05-it-security.md) | GDPR, protection needs, encryption, ISMS |
 | 06 | [IT service management](06-it-service-management.md) | ITIL, processes, incidents, SLA |
 | 07 | [Project management](07-project-management.md) | Network diagram, triangle, process models |
-| 08 | [Politics and economy](08-politics-and-economy.md) | Legal forms, amortisation, market forms |
+| 08 | [Politics and economy](08-politics-and-economy.md) | Legal forms, market structures, amortisation, e-invoicing |
 | 09 | [Cloud computing](09-cloud-computing.md) | Service models, deployment models |
+| 10 | [Algorithms](10-algorithms.md) | Pseudocode, searching, sorting, big O |
 
 ## Diagrams
 

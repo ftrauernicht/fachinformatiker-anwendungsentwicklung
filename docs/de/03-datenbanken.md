@@ -44,6 +44,10 @@
   - [Ändern von Datensätzen (UPDATE)](#ändern-von-datensätzen-update)
   - [Löschen von Datensätzen (DELETE)](#löschen-von-datensätzen-delete)
   - [SQL-Datentypen](#sql-datentypen)
+- [Zugriff aus einer Anwendung](#zugriff-aus-einer-anwendung)
+  - [ODBC](#odbc)
+  - [JDBC](#jdbc)
+  - [Vorbereitete Anweisungen](#vorbereitete-anweisungen)
 
 ## Arten von Datenbanken
 
@@ -466,7 +470,33 @@ löscht alle Datensätze, für die PersNr den Wert 12 hat.
 - **CLOB (n) oder CHARACTER LARGE OBJECT (n):**
   - Zeichenkette mit maximal n Zeichen Länge.
 
+## Zugriff aus einer Anwendung
+
+Anwendungen sprechen nicht direkt mit einer Datenbank, sondern über einen Treiber. Die beiden verbreiteten Schnittstellen unterscheiden sich vor allem darin, für wen sie gedacht sind.
+
+### ODBC
+
+**Open Database Connectivity** ist eine sprachunabhängige, herstellerneutrale Schnittstelle. Die Anwendung spricht immer mit demselben Treibermanager; welcher Treiber dahinter steckt, entscheidet die konfigurierte Datenquelle. Ein Wechsel des Datenbanksystems ändert im Idealfall nur diese Konfiguration und nicht den Programmcode.[^5]
+
+Verbreitet ist ODBC überall dort, wo fremde Werkzeuge an eine Datenbank angebunden werden — Tabellenkalkulationen, Berichtsgeneratoren, Datenübernahmen.
+
+### JDBC
+
+**Java Database Connectivity** erfüllt denselben Zweck für Java. Der Treiber wird als Bibliothek eingebunden, die Verbindung über eine Adresse der Form `jdbc:postgresql://host:5432/datenbank` aufgebaut.[^6]
+
+### Vorbereitete Anweisungen
+
+Beide Schnittstellen kennen **vorbereitete Anweisungen**: Die SQL-Anweisung wird mit Platzhaltern an den Server geschickt, die Werte folgen getrennt davon.
+
+```sql
+SELECT * FROM Kunde WHERE Nachname = ?;
+```
+
+Das ist nicht nur schneller, wenn dieselbe Anweisung oft mit unterschiedlichen Werten läuft — der Server kann den Ausführungsplan wiederverwenden. Es ist zugleich die wirksame Gegenmaßnahme gegen [SQL-Injection](05-it-sicherheit.md): Der Server kennt die Struktur der Anweisung, bevor er die Werte sieht, und ein Wert kann sie deshalb nicht mehr verändern.
+
 [^1]: <https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)#Normalformen>
 [^2]: <https://info-wsf.de/Normalformen/>
 [^3]: <https://www.datenbanken-verstehen.de/datenmodellierung/beziehungen-datenbanken/>
 [^4]: <https://de.wikipedia.org/wiki/SQL>
+[^5]: <https://de.wikipedia.org/wiki/Open_Database_Connectivity>
+[^6]: <https://de.wikipedia.org/wiki/Java_Database_Connectivity>

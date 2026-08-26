@@ -35,6 +35,7 @@ PARITY_EXEMPT = ("pruefungsfragen/", "spickzettel/", "glossar.md")
 # sonst meldet die Paritätsprüfung sie als nicht zugeordnet.
 PAGE_MAP = {
     "index.md": "index.md",
+    "00-pruefung.md": "00-exam.md",
     "01-netzwerktechnik.md": "01-network-technology.md",
     "02-virtualisierung.md": "02-virtualization.md",
     "03-datenbanken.md": "03-databases.md",
@@ -44,6 +45,7 @@ PAGE_MAP = {
     "07-projektmanagement.md": "07-project-management.md",
     "08-politik-und-wirtschaft.md": "08-politics-and-economy.md",
     "09-cloud-computing.md": "09-cloud-computing.md",
+    "10-algorithmen.md": "10-algorithms.md",
     "diagramme/index.md": "diagrams/index.md",
     "diagramme/01-programmablaufplan.md": "diagrams/01-flowchart.md",
     "diagramme/02-struktogramm.md": "diagrams/02-nassi-shneiderman-diagram.md",

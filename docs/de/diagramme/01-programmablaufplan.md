@@ -1,5 +1,7 @@
 # Programmablaufplan (PAP)
 
+> **Für die AP2 offenbar nicht mehr gefordert.** Einer öffentlichen Durchsicht des Prüfungskatalogs von 2025 zufolge ist der Programmablaufplan daraus entfernt worden; erwartet werden stattdessen Pseudocode und das [Aktivitätsdiagramm](07-aktivitaetsdiagramm.md). Woher diese Angabe stammt und wie belastbar sie ist, steht in [Die Abschlussprüfung im Überblick](../00-pruefung.md); der Ersatz in [Algorithmen](../10-algorithmen.md). Die Notation bleibt hier, weil sie im Berufsschulunterricht weiter vorkommt und sich Kontrollflüsse damit gut erklären lassen.
+
 ## Inhaltsverzeichnis
 
 - [Elemente](#elemente)

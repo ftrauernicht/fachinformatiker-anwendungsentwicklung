@@ -121,6 +121,7 @@ nav:
   - Start: index.md
   - Deutsch:
       - Übersicht: de/index.md
+      - Die Prüfung: de/00-pruefung.md
       - Netzwerktechnik: de/01-netzwerktechnik.md
       - Virtualisierung: de/02-virtualisierung.md
       - Datenbanken: de/03-datenbanken.md
@@ -130,6 +131,7 @@ nav:
       - Projektmanagement: de/07-projektmanagement.md
       - Politik und Wirtschaft: de/08-politik-und-wirtschaft.md
       - Cloud Computing: de/09-cloud-computing.md
+      - Algorithmen: de/10-algorithmen.md
       - Diagramme:
           - Übersicht: de/diagramme/index.md
           - Programmablaufplan: de/diagramme/01-programmablaufplan.md
@@ -152,6 +154,7 @@ nav:
           - Projektmanagement: de/pruefungsfragen/07-projektmanagement.md
           - Politik und Wirtschaft: de/pruefungsfragen/08-politik-und-wirtschaft.md
           - Cloud Computing: de/pruefungsfragen/09-cloud-computing.md
+          - Algorithmen: de/pruefungsfragen/10-algorithmen.md
       - Spickzettel:
           - Übersicht: de/spickzettel/index.md
           - Subnetting: de/spickzettel/01-subnetting.md
@@ -159,9 +162,11 @@ nav:
           - UML-Notation: de/spickzettel/03-uml-notation.md
           - Formeln: de/spickzettel/04-formeln.md
           - Tabellenkalkulation: de/spickzettel/05-excel.md
+          - Algorithmen: de/spickzettel/06-algorithmen.md
       - Glossar: de/glossar.md
   - English:
       - Overview: en/index.md
+      - The examination: en/00-exam.md
       - Network technology: en/01-network-technology.md
       - Virtualization: en/02-virtualization.md
       - Databases: en/03-databases.md
@@ -171,6 +176,7 @@ nav:
       - Project management: en/07-project-management.md
       - Politics and economy: en/08-politics-and-economy.md
       - Cloud computing: en/09-cloud-computing.md
+      - Algorithms: en/10-algorithms.md
       - Diagrams:
           - Overview: en/diagrams/index.md
           - Flowchart: en/diagrams/01-flowchart.md

@@ -7,6 +7,8 @@ Fachinformatiker/-in für Anwendungsentwicklung.
 > Vollständigkeit oder Richtigkeit. Was in deiner Prüfung tatsächlich drankommt, klärst du
 > mit deinen Ausbildern und der zuständigen IHK.
 
+Wie die Prüfung aufgebaut ist, wie die Bereiche gewichtet sind und gegen welchen Katalogstand diese Sammlung geschrieben ist, steht in [Die Abschlussprüfung im Überblick](00-pruefung.md).
+
 ## Themen
 
 | # | Thema | Inhalt in Stichworten |
@@ -18,8 +20,9 @@ Fachinformatiker/-in für Anwendungsentwicklung.
 | 05 | [IT-Schutz und -Sicherheit](05-it-sicherheit.md) | DSGVO, Schutzbedarf, Verschlüsselung, ISMS |
 | 06 | [IT-Service-Management](06-it-service-management.md) | ITIL, Prozesse, Incident, SLA |
 | 07 | [Projektmanagement](07-projektmanagement.md) | Netzplan, Magisches Dreieck, Vorgehensmodelle |
-| 08 | [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | Rechtsformen, Amortisation, Marktformen |
+| 08 | [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | Rechtsformen, Marktformen, Amortisation, E-Rechnung |
 | 09 | [Cloud Computing](09-cloud-computing.md) | Servicemodelle, Bereitstellungsmodelle |
+| 10 | [Algorithmen](10-algorithmen.md) | Pseudocode, Suchen, Sortieren, O-Notation |
 
 ## Diagramme
 
@@ -37,13 +40,13 @@ Die in der Prüfung relevanten Notationen liegen in [`diagramme/`](diagramme/ind
 
 ## Üben
 
-- [Prüfungsfragen](pruefungsfragen/index.md) — 86 Fragen zum Selbsttest, thematisch
+- [Prüfungsfragen](pruefungsfragen/index.md) — 117 Fragen zum Selbsttest, thematisch
   sortiert, mit eingeklappten Antworten
 
 ## Nachschlagen
 
-- [Spickzettel](spickzettel/index.md) — Präfixtabelle, SQL-Klauseln, UML-Symbole, Formeln
-  und Excel-Funktionen, dicht auf fünf Seiten
+- [Spickzettel](spickzettel/index.md) — Präfixtabelle, SQL-Klauseln, UML-Symbole, Formeln,
+  Excel-Funktionen und Sortierverfahren, dicht auf sechs Seiten
 - [Glossar](glossar.md) — Begriffe und Abkürzungen, die sich keinem Kapitel eindeutig zuordnen lassen
 
 ## Quellen

@@ -35,6 +35,18 @@
       - [Beispiele zur Authentifikation anhand von Besitz](#beispiele-zur-authentifikation-anhand-von-besitz)
     - [Körperliche Merkmale / Biometrie](#körperliche-merkmale--biometrie)
       - [Beispiele zur Authentifikation anhand von Biometrie](#beispiele-zur-authentifikation-anhand-von-biometrie)
+- [Angriffe und Gegenmaßnahmen](#angriffe-und-gegenmaßnahmen)
+  - [Man-in-the-Middle](#man-in-the-middle)
+  - [SQL-Injection](#sql-injection)
+  - [Cross-Site-Scripting](#cross-site-scripting)
+  - [Cross-Site-Request-Forgery](#cross-site-request-forgery)
+  - [Denial of Service und DDoS](#denial-of-service-und-ddos)
+  - [Social Engineering und Phishing](#social-engineering-und-phishing)
+  - [Die Angriffe im Überblick](#die-angriffe-im-überblick)
+- [Kerberos](#kerberos)
+- [Rechtsrahmen seit 2024](#rechtsrahmen-seit-2024)
+  - [NIS-2-Umsetzungsgesetz](#nis-2-umsetzungsgesetz)
+  - [EU-Verordnung über künstliche Intelligenz](#eu-verordnung-über-künstliche-intelligenz)
 
 ## Datenschutz
 
@@ -393,6 +405,127 @@ Charakteristika:
 - Handlinienstruktur
 - Erbinformationen (DNA)
 
+## Angriffe und Gegenmaßnahmen
+
+Die folgenden sechs Angriffe decken die Muster ab, auf die sich die meisten Angriffe auf Webanwendungen zurückführen lassen. Als vollständigeres Nachschlagewerk dient die Liste der OWASP Top Ten.[^9]
+
+### Man-in-the-Middle
+
+Der Angreifer klinkt sich in die Verbindung zwischen zwei Partnern ein und gibt sich gegenüber jedem als der jeweils andere aus. Er kann mitlesen und verändern, ohne dass einer der beiden es bemerkt.[^10]
+
+Typische Wege dorthin sind ein gefälschter WLAN-Zugangspunkt, ARP-Spoofing im lokalen Netz oder ein manipulierter DNS-Eintrag.
+
+Gegenmaßnahmen: durchgängige Verschlüsselung mit TLS, Prüfung des Zertifikats gegen eine vertrauenswürdige Stelle, HSTS, Zertifikatsanheftung. Entscheidend ist nicht die Verschlüsselung allein, sondern die **Authentizität des Gegenübers** — eine verschlüsselte Verbindung zum Angreifer nützt nichts.
+
+### SQL-Injection
+
+Eingaben eines Nutzers landen ungeprüft in einer SQL-Anweisung und ändern deren Struktur. Aus einer Abfrage nach einem Benutzernamen wird so eine Abfrage, die alle Datensätze liefert oder eine Tabelle löscht.[^11]
+
+```sql
+-- Anfällig: die Eingabe wird in den Text der Anweisung eingesetzt
+SELECT * FROM Benutzer WHERE Name = 'EINGABE';
+
+-- Eingabe: ' OR '1'='1
+SELECT * FROM Benutzer WHERE Name = '' OR '1'='1';
+```
+
+Gegenmaßnahmen, in dieser Reihenfolge:
+
+1. **Vorbereitete Anweisungen mit Platzhaltern** (Prepared Statements). Der Datenbankserver kennt die Struktur der Anweisung, bevor er die Daten sieht — eine Eingabe kann sie danach nicht mehr verändern.
+2. Eingaben gegen eine Positivliste prüfen, nicht gegen eine Liste verbotener Zeichen.
+3. Für die Anwendung ein Datenbankkonto mit möglichst wenigen Rechten verwenden.
+4. Fehlermeldungen der Datenbank nicht an den Nutzer durchreichen.
+
+Maskieren von Sonderzeichen allein genügt nicht: Es ist eine Notlösung und je nach Zeichensatz und Datenbanksystem umgehbar.
+
+### Cross-Site-Scripting
+
+Der Angreifer bringt fremden Skriptcode in eine Seite, die andere Nutzer aufrufen. Das Skript läuft dann im Browser des Opfers mit den Rechten der angegriffenen Seite und kann etwa das Sitzungsmerkmal auslesen.[^12]
+
+Unterschieden werden die gespeicherte Variante — der Code steht dauerhaft in der Datenbank, etwa in einem Kommentar — und die reflektierte, bei der er über einen präparierten Link in die Antwort gelangt.
+
+Gegenmaßnahmen: Ausgaben kontextgerecht maskieren, eine Content Security Policy setzen, Sitzungsmerkmale mit dem Kennzeichen `HttpOnly` versehen.
+
+### Cross-Site-Request-Forgery
+
+Das Opfer ist bei einer Anwendung angemeldet und ruft nebenbei eine fremde Seite auf. Diese schickt in seinem Namen eine Anfrage an die Anwendung — der Browser hängt das gültige Sitzungsmerkmal automatisch an.[^13]
+
+Gegenmaßnahmen: ein zufälliges Merkmal je Formular, das der Server wiedererkennt, das Kennzeichen `SameSite` am Sitzungsmerkmal, und für ändernde Vorgänge grundsätzlich POST statt GET.
+
+### Denial of Service und DDoS
+
+Ein Dienst wird mit Anfragen überlastet, bis er für reguläre Nutzer nicht mehr erreichbar ist. Angegriffen wird das Schutzziel **Verfügbarkeit**.[^14]
+
+Beim verteilten Angriff (DDoS) kommen die Anfragen von vielen übernommenen Rechnern gleichzeitig; sie sind dadurch nicht mehr über eine einzelne Adresse zu sperren. Verbreitet ist zusätzlich die Verstärkung: Der Angreifer schickt kleine Anfragen mit gefälschter Absenderadresse an fremde Dienste, deren große Antworten dann beim Opfer landen.
+
+Gegenmaßnahmen: Begrenzung der Anfragerate, Filter beim Netzbetreiber, Auslieferung über ein verteiltes Netz, und für den Ernstfall ein Notfallplan mit Ansprechpartnern.
+
+### Social Engineering und Phishing
+
+Der Angriff richtet sich nicht gegen die Technik, sondern gegen den Menschen: eine gefälschte Nachricht der Geschäftsführung, ein angeblicher Anruf der IT-Abteilung, ein Besucher mit Paket und freundlichem Lächeln.[^15]
+
+Gegenmaßnahmen sind entsprechend organisatorisch: Schulung, ein festgelegter Rückrufweg bei Zahlungsanweisungen, das Vier-Augen-Prinzip — und technisch die Zwei-Faktor-Authentifizierung, die ein erbeutetes Kennwort allein wertlos macht.
+
+### Die Angriffe im Überblick
+
+| Angriff | Verletztes Schutzziel | Wichtigste Gegenmaßnahme |
+|---|---|---|
+| Man-in-the-Middle | Vertraulichkeit, Integrität | TLS mit geprüftem Zertifikat |
+| SQL-Injection | alle drei | vorbereitete Anweisungen |
+| Cross-Site-Scripting | Vertraulichkeit, Integrität | Ausgabe maskieren, CSP |
+| Cross-Site-Request-Forgery | Integrität | Formularmerkmal, `SameSite` |
+| DDoS | Verfügbarkeit | Ratenbegrenzung, Filter beim Betreiber |
+| Social Engineering | alle drei | Schulung, Zwei-Faktor-Authentifizierung |
+
+## Kerberos
+
+Kerberos ist ein Netzwerkprotokoll zur Authentifizierung in unsicheren Netzen und die Grundlage der Anmeldung in Windows-Domänen.[^16]
+
+Der Kern ist ein vertrauenswürdiger Dritter, das **Key Distribution Center**. Es besteht aus einem Authentifizierungsdienst und einem Ticket-Dienst.
+
+1. Der Nutzer meldet sich einmal beim Authentifizierungsdienst an und erhält ein **Ticket Granting Ticket**.
+2. Mit diesem Ticket fordert er beim Ticket-Dienst ein Ticket für einen bestimmten Dienst an.
+3. Dieses Dienst-Ticket legt er dem Dienst vor. Der prüft es, ohne beim KDC nachzufragen.
+
+Zwei Eigenschaften sind dabei wesentlich. Das **Kennwort wird nie über das Netz übertragen** — es dient nur zur Entschlüsselung der Antwort des KDC. Und Tickets sind zeitlich begrenzt, weshalb die Uhren aller Beteiligten übereinstimmen müssen; eine Abweichung von wenigen Minuten lässt die Anmeldung scheitern.
+
+Der Vorteil ist die einmalige Anmeldung für viele Dienste, der Nachteil die zentrale Abhängigkeit: Fällt das KDC aus, meldet sich niemand mehr an.
+
+## Rechtsrahmen seit 2024
+
+Zwei Regelwerke sind nach der letzten großen Überarbeitung dieser Sammlung in Kraft getreten und betreffen die IT-Sicherheit unmittelbar.
+
+### NIS-2-Umsetzungsgesetz
+
+Zur Umsetzung der europäischen NIS-2-Richtlinie ist das BSIG neu gefasst worden. Erfasst sind seitdem nicht nur Betreiber kritischer Anlagen, sondern auch besonders wichtige und wichtige Einrichtungen ab bestimmten Größen; welche Sektoren dazugehören, zählen die Anlagen 1 und 2 des Gesetzes auf.[^17]
+
+Die Risikomanagementmaßnahmen stehen in § 30 BSIG. Der Katalog nennt zehn Bereiche, darunter Sicherheit der Lieferkette, Bewältigung von Sicherheitsvorfällen, kryptografische Verfahren und Multi-Faktor-Authentifizierung.[^18]
+
+Dazu kommt eine gestufte Meldepflicht bei erheblichen Sicherheitsvorfällen nach § 32 BSIG:[^19]
+
+| Frist ab Kenntnis | Was zu melden ist |
+|---|---|
+| 24 Stunden | Erstmeldung |
+| 72 Stunden | Folgemeldung mit Bewertung |
+| 1 Monat nach der Meldung | Abschlussmeldung |
+
+§ 38 BSIG nimmt außerdem die Geschäftsleitung persönlich in die Pflicht: Sie muss die Maßnahmen nach § 30 umsetzen und ihre Umsetzung überwachen, haftet bei schuldhafter Verletzung dieser Pflicht nach den Regeln ihrer Rechtsform und muss regelmäßig an Schulungen teilnehmen.[^20]
+
+### EU-Verordnung über künstliche Intelligenz
+
+Die KI-Verordnung ist am 1. August 2024 in Kraft getreten und gilt gestaffelt. Verbotene Praktiken und die Pflicht zur KI-Kompetenz gelten seit dem 2. Februar 2025, die Regeln für Modelle mit allgemeinem Verwendungszweck seit dem 2. August 2025, der überwiegende Teil ab dem 2. August 2026.[^21]
+
+Sie folgt einem risikobasierten Ansatz mit vier Stufen:
+
+| Stufe | Beispiele | Folge |
+|---|---|---|
+| **Unannehmbares Risiko** | soziale Bewertung von Menschen, Emotionserkennung am Arbeitsplatz | verboten |
+| **Hohes Risiko** | Auswahl von Bewerbern, Kreditwürdigkeit, Medizinprodukte | umfangreiche Pflichten, Konformitätsbewertung |
+| **Begrenztes Risiko** | Chatbots, erzeugte Bilder und Texte | Transparenzpflicht: erkennbar machen, dass eine KI im Spiel ist |
+| **Minimales Risiko** | Spamfilter, Empfehlungen im Warenkorb | keine besonderen Pflichten |
+
+Für die Ausbildung wichtig ist Artikel 4: Wer KI-Systeme betreibt oder anbietet, muss dafür sorgen, dass die damit befassten Beschäftigten über ausreichende KI-Kompetenz verfügen. Das gilt seit Februar 2025 und ist keine Frage der Unternehmensgröße.
+
 [^1]: <https://dsgvo-gesetz.de/art-32-dsgvo/>
 [^2]: <https://www.dr-datenschutz.de/authentisierung-authentifizierung-und-autorisierung/>
 [^3]: <https://de.wikipedia.org/wiki/Information_Security_Management_System>
@@ -401,3 +534,16 @@ Charakteristika:
 [^6]: <https://de.wikipedia.org/wiki/Zwei-Faktor-Authentisierung>
 [^7]: <https://de.wikipedia.org/wiki/Authentifizierung>
 [^8]: <https://de.wikipedia.org/wiki/Authentifizierung#Methoden>
+[^9]: <https://owasp.org/www-project-top-ten/>
+[^10]: <https://de.wikipedia.org/wiki/Man-in-the-Middle-Angriff>
+[^11]: <https://de.wikipedia.org/wiki/SQL-Injection>
+[^12]: <https://de.wikipedia.org/wiki/Cross-Site-Scripting>
+[^13]: <https://de.wikipedia.org/wiki/Cross-Site-Request-Forgery>
+[^14]: <https://de.wikipedia.org/wiki/Denial_of_Service>
+[^15]: <https://de.wikipedia.org/wiki/Social_Engineering_(Sicherheit)>
+[^16]: <https://de.wikipedia.org/wiki/Kerberos_(Informatik)>
+[^17]: <https://www.gesetze-im-internet.de/bsig_2025/>
+[^18]: <https://www.gesetze-im-internet.de/bsig_2025/__30.html>
+[^19]: <https://www.gesetze-im-internet.de/bsig_2025/__32.html>
+[^20]: <https://www.gesetze-im-internet.de/bsig_2025/__38.html>
+[^21]: <https://digital-strategy.ec.europa.eu/de/policies/regulatory-framework-ai>

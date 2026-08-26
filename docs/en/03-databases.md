@@ -44,6 +44,10 @@
   - [Updating records (UPDATE)](#updating-records-update)
   - [Deleting records (DELETE)](#deleting-records-delete)
   - [SQL Data Types](#sql-data-types)
+- [Access from an application](#access-from-an-application)
+  - [ODBC](#odbc)
+  - [JDBC](#jdbc)
+  - [Prepared statements](#prepared-statements)
 
 ## Types of Databases
 
@@ -463,7 +467,33 @@ Deletes all records where PersNo has the value 12.
 - **CLOB(n) or CHARACTER LARGE OBJECT(n):**
   - Character string of up to n characters in length.
 
+## Access from an application
+
+Applications do not talk to a database directly but through a driver. The two widespread interfaces differ mainly in who they are meant for.
+
+### ODBC
+
+**Open Database Connectivity** is a language-independent, vendor-neutral interface. The application always talks to the same driver manager; which driver sits behind it is decided by the configured data source. Changing the database system ideally changes only that configuration and not the program code.[^5]
+
+ODBC is widespread wherever third-party tools are attached to a database — spreadsheets, report generators, data migrations.
+
+### JDBC
+
+**Java Database Connectivity** serves the same purpose for Java. The driver is included as a library and the connection is opened through an address of the form `jdbc:postgresql://host:5432/database`.[^6]
+
+### Prepared statements
+
+Both interfaces support **prepared statements**: the SQL statement goes to the server with placeholders, and the values follow separately.
+
+```sql
+SELECT * FROM customer WHERE surname = ?;
+```
+
+That is not only faster when the same statement runs often with different values — the server can reuse the execution plan. It is at the same time the effective countermeasure against [SQL injection](05-it-security.md): the server knows the structure of the statement before it sees the values, so a value can no longer change it.
+
 [^1]: <https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)#Normalformen>
 [^2]: <https://info-wsf.de/Normalformen/>
 [^3]: <https://www.datenbanken-verstehen.de/datenmodellierung/beziehungen-datenbanken/>
 [^4]: <https://de.wikipedia.org/wiki/SQL>
+[^5]: <https://en.wikipedia.org/wiki/Open_Database_Connectivity>
+[^6]: <https://en.wikipedia.org/wiki/Java_Database_Connectivity>

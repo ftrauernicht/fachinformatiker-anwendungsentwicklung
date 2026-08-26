@@ -12,3 +12,17 @@
 
 # Die eigene Website existiert erst nach dem ersten Deploy.
 ^https://ftrauernicht\.github\.io/
+
+# gesetze-im-internet.de antwortet vom GitHub-Runner aus überhaupt nicht.
+# Lokal und aus dem Browser kommt die Antwort in unter 0,2 Sekunden, mit jedem
+# User-Agent und mit HEAD wie mit GET; auf dem Runner laufen alle Adressen des
+# Hosts in einen Timeout — auch mit 45 Sekunden Frist und acht gleichzeitigen
+# Anfragen. Das ist keine Drosselung, sondern sieht nach einer stillen Sperre
+# gegen die Adressbereiche der Runner aus.
+#
+# Die Links sind also nicht tot, sie sind von hier aus nur nicht prüfbar. Sie
+# stehen unter genau den Aussagen, bei denen ein Beleg am meisten zählt —
+# Prüfungsordnung, BFSG, BSIG, UStG. Nachgesehen werden sie deshalb einmal im
+# Jahr von Hand: Der Workflow stand.yml legt dafür ein Issue mit Checkliste an.
+^https://www\.gesetze-im-internet\.de/
+

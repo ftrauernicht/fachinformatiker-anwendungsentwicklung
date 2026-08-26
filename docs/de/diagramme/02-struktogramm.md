@@ -1,5 +1,7 @@
 # Struktogramm (Nassi-Shneiderman)
 
+> **Für die AP2 offenbar nicht mehr gefordert.** Einer öffentlichen Durchsicht des Prüfungskatalogs von 2025 zufolge ist das Struktogramm daraus entfernt worden; an seine Stelle treten Pseudocode und das [Aktivitätsdiagramm](07-aktivitaetsdiagramm.md). Woher diese Angabe stammt und wie belastbar sie ist, steht in [Die Abschlussprüfung im Überblick](../00-pruefung.md); der Ersatz in [Algorithmen](../10-algorithmen.md). Die Notation bleibt hier, weil sie im Berufsschulunterricht weiter vorkommt und Schachtelung daran besonders anschaulich ist.
+
 ## Inhaltsverzeichnis
 
 - [Nassi-Shneiderman / Struktogramm](#nassi-shneiderman--struktogramm)

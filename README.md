@@ -34,12 +34,36 @@ Pfade), 21 interne Links zeigten ins Leere, zwei Quellenangaben waren tot und ü
 Rechtschreibfehler standen im Text — bis hin zu `UNTION ALL` in einem SQL-Beispiel und
 einem doppelten Inhaltsverzeichnis auf einer Seite.
 
-**Es bleibt funktionierend.** Fünf GitHub-Workflows prüfen bei jeder Änderung
+**Sie sagt, wogegen sie geschrieben ist.** Die Sammlung von 2023 folgt der ersten Auflage
+der IHK-Prüfungskataloge von 2021, ohne das irgendwo zu erwähnen. Inzwischen gilt die zweite
+Auflage — erstmals für Teil 1 im Frühjahr 2025 und Teil 2 im Sommer 2025. Der Rahmen aus der
+Ausbildungsverordnung — Prüfungsbereiche, Gewichtung, Prüfungszeiten, Bestehensregel — steht
+deshalb jetzt in [Die Abschlussprüfung im Überblick](docs/de/00-pruefung.md), belegt aus dem
+Gesetzestext, zusammen mit Katalog- und Rechtsstand.
+
+**Über den Kataloginhalt sagt sie nur, was sie belegen kann.** Der Prüfungskatalog selbst ist
+geschütztes Material der IHK und wird hier weder zitiert noch nachgebildet. Welche Themen
+dazugekommen und welche entfallen sein sollen — darunter Programmablaufplan und
+Struktogramm — steht an genau einer Stelle, zusammen mit der Herkunft dieser Angabe und dem
+ausdrücklichen Hinweis, dass sie aus einer öffentlichen Durchsicht stammt und nicht gegen
+das Original abgeglichen ist. Die betroffenen Themen sind trotzdem ergänzt, weil sie
+unabhängig davon zum Berufsbild gehören; die beiden fraglichen Notationen bleiben stehen
+und tragen einen Hinweis.
+
+**Der Rechtsstand stimmt wieder.** Seit 2023 sind das Barrierefreiheitsstärkungsgesetz, die
+Pflicht zur E-Rechnung, das Digitale-Dienste-Gesetz an Stelle des Telemediengesetzes, das
+NIS-2-Umsetzungsgesetz, die EU-KI-Verordnung und die Modernisierung des
+Personengesellschaftsrechts dazugekommen. Alle sechs stehen jetzt mit Datum und Beleg im
+jeweiligen Kapitel.
+
+**Es bleibt funktionierend.** Sechs GitHub-Workflows prüfen bei jeder Änderung
 Formatierung, Rechtschreibung, Links, Anker, Fußnoten, Commit-Nachrichten und ob deutsche
 und englische Fassung noch dieselben Seiten haben. Einmal pro Woche läuft zusätzlich eine
 Prüfung aller externen Links gegen den Hauptzweig — verrottete Quellen fallen so auf,
 bevor jemand danach sucht. Ein weiterer Lauf beobachtet das Original und meldet, wenn es
-dort doch wieder Commits gibt.
+dort doch wieder Commits gibt. Und einmal im Jahr erinnert ein weiterer daran,
+Prüfungskatalog und Rechtsstand nachzusehen — der eine Punkt, an dem eine
+Themensammlung veraltet, ohne dass ein Test fehlschlägt.
 
 **Es ist durchsuchbar.** Die
 [Website](https://ftrauernicht.github.io/fachinformatiker-anwendungsentwicklung/) hat eine
@@ -53,10 +77,11 @@ Kopie im Repository — mit Urheber und Lizenz in den
 [Mermaid](https://mermaid.js.org/)-Diagramme ersetzt, die im Markdown stehen und sich
 korrigieren lassen wie jeder andere Text.
 
-**Etwas zum Üben.** 86 Prüfungsfragen mit eingeklappten Antworten, thematisch sortiert,
-und fünf Spickzettel für die letzten Tage — Subnetting-Tabelle, SQL-Klauseln, sämtliche
-UML-Symbole, die Formeln zu Break-even, Netzplan und Verfügbarkeit, dazu die
-Excel-Funktionen, nach denen 2023 in GA2 gefragt wurde. Das Glossar hat ein
+**Etwas zum Üben.** 117 Prüfungsfragen mit eingeklappten Antworten, thematisch sortiert,
+und sechs Spickzettel für die letzten Tage — Subnetting-Tabelle, SQL-Klauseln, sämtliche
+UML-Symbole, die Formeln zu Break-even, Netzplan und Verfügbarkeit, die
+Excel-Funktionen, nach denen 2023 in GA2 gefragt wurde, und die drei Sortierverfahren
+nebeneinander. Das Glossar hat ein
 Stichwortverzeichnis über alle Kapitel bekommen, erzeugt aus den Überschriften.
 
 **Vier Kapitel mehr, und eins übersetzt.** Zustands-, Aktivitäts-, Sequenz- und
@@ -79,10 +104,11 @@ docs/
 ├── bildnachweise.md      Quelle, Urheber und Lizenz jeder Grafik
 ├── assets/img/           alle Bilder, thematisch sortiert
 ├── de/                   deutsche Fassung (maßgeblich)
-│   ├── 01-netzwerktechnik.md … 09-cloud-computing.md
+│   ├── 00-pruefung.md     Aufbau der Prüfung, Katalog- und Rechtsstand
+│   ├── 01-netzwerktechnik.md … 10-algorithmen.md
 │   ├── diagramme/        neun Notationen von PAP bis Objektdiagramm
-│   ├── pruefungsfragen/  86 Fragen mit eingeklappten Antworten
-│   ├── spickzettel/      Tabellen und Formeln zum Wiederholen
+│   ├── pruefungsfragen/  117 Fragen mit eingeklappten Antworten
+│   ├── spickzettel/      sechs dichte Seiten zum Wiederholen
 │   └── glossar.md        Begriffe ohne festes Kapitel, plus Stichwortverzeichnis
 └── en/                   englische Fassung (maschinell übersetzt)
 
@@ -101,6 +127,7 @@ das MkDocs sonst nicht umschreibt.
 
 | # | Deutsch | English |
 |---|---|---|
+| 00 | [Die Abschlussprüfung im Überblick](docs/de/00-pruefung.md) | [The final examination at a glance](docs/en/00-exam.md) |
 | 01 | [Netzwerktechnik](docs/de/01-netzwerktechnik.md) | [Network technology](docs/en/01-network-technology.md) |
 | 02 | [Virtualisierung](docs/de/02-virtualisierung.md) | [Virtualization](docs/en/02-virtualization.md) |
 | 03 | [Datenbanken](docs/de/03-datenbanken.md) | [Databases](docs/en/03-databases.md) |
@@ -110,6 +137,7 @@ das MkDocs sonst nicht umschreibt.
 | 07 | [Projektmanagement](docs/de/07-projektmanagement.md) | [Project management](docs/en/07-project-management.md) |
 | 08 | [Politik und Wirtschaft](docs/de/08-politik-und-wirtschaft.md) | [Politics and economy](docs/en/08-politics-and-economy.md) |
 | 09 | [Cloud Computing](docs/de/09-cloud-computing.md) | [Cloud computing](docs/en/09-cloud-computing.md) |
+| 10 | [Algorithmen](docs/de/10-algorithmen.md) | [Algorithms](docs/en/10-algorithms.md) |
 | — | [Diagramme](docs/de/diagramme/index.md) | [Diagrams](docs/en/diagrams/index.md) |
 | — | [Prüfungsfragen](docs/de/pruefungsfragen/index.md) | — |
 | — | [Spickzettel](docs/de/spickzettel/index.md) | — |

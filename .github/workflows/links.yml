@@ -48,7 +48,8 @@ jobs:
             --no-progress
             --accept 200,206,429
             --max-retries 3
-            --timeout 30
+            --timeout 45
+            --max-concurrency 8
             --exclude-path node_modules
             --exclude-path site
             --exclude-path .venv

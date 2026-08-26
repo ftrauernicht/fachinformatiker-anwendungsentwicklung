@@ -249,3 +249,50 @@ WENNFEHLER
 Summenbereich
 Prüfbereich
 prüfungstypisch
+
+# --- Algorithmen und Prüfungskatalog 2025 --------------------------------
+Barrierefreiheitsstärkungsgesetz
+Bubblesort
+Insertionsort
+Kataloginhalt
+Katalogstand
+Mergesort
+Merkvariable
+Performancetest
+Performancetests
+Selectionsort
+Timsort
+fußgesteuert
+testgetriebene
+
+# --- Angriffe, Kerberos, NIS-2 und KI-Verordnung -------------------------
+Anfragerate
+BSIG
+Emotionserkennung
+HSTS
+Ratenbegrenzung
+SNMP
+Treibermanager
+herstellerneutrale
+Skriptcode
+Zertifikatsanheftung
+kontextgerecht
+
+# --- Rechtsformen, Marktformen, E-Rechnung -------------------------------
+Nachfrageoligopol
+Preisstarre
+monopsony
+oligopsony
+polypoly
+revisionssicher
+
+# --- Prüfungsfragen zum Katalog 2025 -------------------------------------
+BFSG
+Bestehensregel
+Interaktionsfähigkeit
+Jacopini
+Preissetzungsspielraum
+Skalierbarkeitstest
+WCAG
+fußgesteuerte
+testgetriebenen

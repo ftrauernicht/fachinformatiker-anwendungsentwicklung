@@ -13,6 +13,11 @@
   - [6. Was passiert am Markt, wenn das Angebot steigt und die Nachfrage gleich bleibt?](#6-was-passiert-am-markt-wenn-das-angebot-steigt-und-die-nachfrage-gleich-bleibt)
   - [7. Wann kommt ein Kaufvertrag zustande?](#7-wann-kommt-ein-kaufvertrag-zustande)
   - [8. Nennen Sie die Rechte des Käufers bei einem Sachmangel.](#8-nennen-sie-die-rechte-des-käufers-bei-einem-sachmangel)
+- [Rechtsformen und Rechnungsstellung](#rechtsformen-und-rechnungsstellung)
+  - [9. Nennen Sie drei Rechtsformen mit Haftung und Mindestkapital.](#9-nennen-sie-drei-rechtsformen-mit-haftung-und-mindestkapital)
+  - [10. Was hat sich zum 1. Januar 2024 für die GbR geändert?](#10-was-hat-sich-zum-1-januar-2024-für-die-gbr-geändert)
+  - [11. Seit wann gilt die Pflicht zur E-Rechnung, und ist ein PDF per E-Mail eine E-Rechnung?](#11-seit-wann-gilt-die-pflicht-zur-e-rechnung-und-ist-ein-pdf-per-e-mail-eine-e-rechnung)
+  - [12. Ordnen Sie die Marktformen zu: ein Anbieter und viele Nachfrager, wenige Anbieter und viele Nachfrager, viele auf beiden Seiten.](#12-ordnen-sie-die-marktformen-zu-ein-anbieter-und-viele-nachfrager-wenige-anbieter-und-viele-nachfrager-viele-auf-beiden-seiten)
 
 ## Rechtsformen und Haftung
 
@@ -167,5 +172,74 @@ Die Verjährungsfrist beträgt bei beweglichen Sachen zwei Jahre ab Übergabe.
 
 Abgrenzung: **Gewährleistung** ist gesetzlich vorgeschrieben, **Garantie** ist eine
 freiwillige zusätzliche Zusage des Herstellers oder Verkäufers.
+
+</details>
+
+## Rechtsformen und Rechnungsstellung
+
+### 9. Nennen Sie drei Rechtsformen mit Haftung und Mindestkapital.
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+| Rechtsform | Haftung | Mindestkapital |
+|---|---|---|
+| **Einzelunternehmen** | unbeschränkt, auch privat | keins |
+| **GmbH** | beschränkt auf das Gesellschaftsvermögen | 25.000 €, davon mindestens 12.500 € eingezahlt |
+| **AG** | beschränkt auf das Gesellschaftsvermögen | 50.000 € |
+
+Die entscheidende Trennlinie verläuft zwischen **Personengesellschaften** — Einzelunternehmen, GbR, OHG, KG — mit persönlicher Haftung und **Kapitalgesellschaften** — GmbH, UG, AG — als eigene juristische Personen.
+
+Sonderfall KG: Der Komplementär haftet unbeschränkt, der Kommanditist nur mit seiner Einlage. Die UG ist keine eigene Rechtsform, sondern eine GmbH ab einem Euro Startkapital, die ein Viertel ihres Jahresüberschusses zurücklegen muss.
+
+</details>
+
+### 10. Was hat sich zum 1. Januar 2024 für die GbR geändert?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Das Gesetz zur Modernisierung des Personengesellschaftsrechts ist in Kraft getreten — ohne Übergangsfrist und auch für bestehende Gesellschaften.
+
+Zwei Punkte daraus:
+
+- Die **Rechtsfähigkeit der GbR** steht jetzt ausdrücklich im BGB. Sie kann Verträge schließen, Eigentum halten und klagen; bis dahin ergab sich das nur aus der Rechtsprechung.
+- Es gibt ein **Gesellschaftsregister**. Eine eingetragene GbR führt den Zusatz **eGbR**. Die Eintragung ist freiwillig, aber praktisch unumgänglich, sobald die Gesellschaft Grundstücke oder Gesellschaftsanteile erwerben will.
+
+An der Haftung hat sich nichts geändert: Die Gesellschafter haften weiterhin unbeschränkt und gesamtschuldnerisch.
+
+</details>
+
+### 11. Seit wann gilt die Pflicht zur E-Rechnung, und ist ein PDF per E-Mail eine E-Rechnung?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Ein PDF ist **keine** E-Rechnung. Seit 2025 zählt es als „sonstige Rechnung".
+
+Eine E-Rechnung muss in einem strukturierten elektronischen Format ausgestellt, automatisch verarbeitbar sein und der Norm **EN 16931** entsprechen. Die beiden verbreiteten Formate sind **XRechnung** (reines XML) und **ZUGFeRD ab 2.x** (ein PDF mit eingebetteten XML-Daten).
+
+| Ab | Was gilt |
+|---|---|
+| 1. Januar 2025 | jedes inländische Unternehmen muss E-Rechnungen **empfangen** können |
+| 1. Januar 2027 | Ausstellungspflicht ab 800.000 € Vorjahresumsatz |
+| 1. Januar 2028 | Ausstellungspflicht für alle übrigen |
+
+Die Pflicht betrifft den Geschäftsverkehr zwischen inländischen Unternehmen, nicht Rechnungen an Verbraucher.
+
+</details>
+
+### 12. Ordnen Sie die Marktformen zu: ein Anbieter und viele Nachfrager, wenige Anbieter und viele Nachfrager, viele auf beiden Seiten.
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+- ein Anbieter, viele Nachfrager → **Angebotsmonopol**
+- wenige Anbieter, viele Nachfrager → **Angebotsoligopol**
+- viele auf beiden Seiten → **Polypol**
+
+Spiegelbildlich heißen die Fälle mit einem beziehungsweise wenigen Nachfragern Nachfragemonopol und Nachfrageoligopol.
+
+Wirtschaftlich relevant ist der Preissetzungsspielraum: Im Monopol setzt der Anbieter den Preis, im Oligopol muss er die Reaktion der wenigen Wettbewerber einkalkulieren, im Polypol nimmt er den Marktpreis hin.
 
 </details>

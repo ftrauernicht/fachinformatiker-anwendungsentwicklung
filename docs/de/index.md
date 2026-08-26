@@ -40,7 +40,7 @@ Die in der Prüfung relevanten Notationen liegen in [`diagramme/`](diagramme/ind
 
 ## Üben
 
-- [Prüfungsfragen](pruefungsfragen/index.md) — 86 Fragen zum Selbsttest, thematisch
+- [Prüfungsfragen](pruefungsfragen/index.md) — 117 Fragen zum Selbsttest, thematisch
   sortiert, mit eingeklappten Antworten
 
 ## Nachschlagen

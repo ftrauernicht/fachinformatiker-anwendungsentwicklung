@@ -284,3 +284,13 @@ monopsony
 oligopsony
 polypoly
 revisionssicher
+
+# --- Prüfungsfragen zum Katalog 2025 -------------------------------------
+BFSG
+Interaktionsfähigkeit
+Jacopini
+Preissetzungsspielraum
+Skalierbarkeitstest
+WCAG
+fußgesteuerte
+testgetriebenen

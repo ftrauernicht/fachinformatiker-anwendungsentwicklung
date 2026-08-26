@@ -18,6 +18,10 @@
 - [DHCP](#dhcp)
   - [11. Nennen Sie die vier Nachrichten eines vollständigen DHCP-Ablaufs in der richtigen Reihenfolge.](#11-nennen-sie-die-vier-nachrichten-eines-vollständigen-dhcp-ablaufs-in-der-richtigen-reihenfolge)
   - [12. Der Server lauscht auf UDP-Port 67. Warum kann der Client die Antwort nicht auf demselben Port empfangen?](#12-der-server-lauscht-auf-udp-port-67-warum-kann-der-client-die-antwort-nicht-auf-demselben-port-empfangen)
+- [Speicher im Netz und Überwachung](#speicher-im-netz-und-überwachung)
+  - [13. Worin unterscheiden sich NAS und SAN?](#13-worin-unterscheiden-sich-nas-und-san)
+  - [14. Ein NAS enthält einen RAID-5-Verbund. Ist es damit ein SAN?](#14-ein-nas-enthält-einen-raid-5-verbund-ist-es-damit-ein-san)
+  - [15. Was unterscheidet aktives von passivem Monitoring?](#15-was-unterscheidet-aktives-von-passivem-monitoring)
 
 ## OSI-Modell
 
@@ -209,5 +213,56 @@ würden auch andere DHCP-Server die Antwort auf ihrem Lausch-Port 67 empfangen u
 verarbeiten.
 
 Deshalb: Server lauscht auf **67**, Client empfängt auf **68**.
+
+</details>
+
+## Speicher im Netz und Überwachung
+
+### 13. Worin unterscheiden sich NAS und SAN?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Im Wesentlichen in der Ebene des Zugriffs.
+
+| | NAS | SAN |
+|---|---|---|
+| Zugriffsebene | Datei | Block |
+| Protokolle | SMB, NFS | Fibre Channel, iSCSI |
+| Netz | vorhandenes LAN | eigenes Speichernetz |
+| Der Client sieht | eine Freigabe | eine lokale Festplatte |
+| Einsatz | Dateiablage, Sicherung | Datenbanken, Virtualisierung |
+
+Ein NAS gibt ein Dateisystem frei, das es selbst verwaltet. Ein SAN liefert rohe Blöcke; das Dateisystem legt der zugreifende Server an.
+
+</details>
+
+### 14. Ein NAS enthält einen RAID-5-Verbund. Ist es damit ein SAN?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Nein. RAID und die Netzanbindung sind zwei verschiedene Fragen.
+
+**RAID** beschreibt, wie Daten **innerhalb** eines Speichersystems über mehrere Platten verteilt werden — zur Ausfallsicherheit, zur Geschwindigkeit oder zu beidem.
+
+**NAS und SAN** beschreiben, wie dieses Speichersystem **im Netz** erreichbar ist — über Dateifreigaben oder als Blockgerät.
+
+Beides kommt üblicherweise zusammen vor: Ein NAS enthält fast immer selbst einen RAID-Verbund, bleibt aber ein NAS.
+
+</details>
+
+### 15. Was unterscheidet aktives von passivem Monitoring?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Beim **aktiven** Monitoring fragt der Überwachungsserver die Systeme in festen Abständen ab — per SNMP, mit einem Prüfskript oder durch einen Verbindungsversuch auf den Port.
+
+Beim **passiven** Monitoring melden sich die Systeme selbst, etwa über Syslog oder einen installierten Agenten.
+
+Der praktische Unterschied liegt im Ausfall: Ein aktiver Test merkt, wenn ein System gar nicht mehr antwortet. Eine passive Meldung, die nicht kommt, fällt erst auf, wenn jemand ihr Ausbleiben überwacht.
+
+Zu einer brauchbaren Überwachung gehören außerdem zwei Schwellenwerte — Warnung und kritisch — und ein Verfahren gegen Fehlalarme. Eine Überwachung, die täglich zwanzig Meldungen erzeugt, wird ignoriert.
 
 </details>

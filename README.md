@@ -53,7 +53,7 @@ Kopie im Repository — mit Urheber und Lizenz in den
 [Mermaid](https://mermaid.js.org/)-Diagramme ersetzt, die im Markdown stehen und sich
 korrigieren lassen wie jeder andere Text.
 
-**Etwas zum Üben.** 86 Prüfungsfragen mit eingeklappten Antworten, thematisch sortiert,
+**Etwas zum Üben.** 117 Prüfungsfragen mit eingeklappten Antworten, thematisch sortiert,
 und fünf Spickzettel für die letzten Tage — Subnetting-Tabelle, SQL-Klauseln, sämtliche
 UML-Symbole, die Formeln zu Break-even, Netzplan und Verfügbarkeit, dazu die
 Excel-Funktionen, nach denen 2023 in GA2 gefragt wurde. Das Glossar hat ein
@@ -81,7 +81,7 @@ docs/
 ├── de/                   deutsche Fassung (maßgeblich)
 │   ├── 01-netzwerktechnik.md … 09-cloud-computing.md
 │   ├── diagramme/        neun Notationen von PAP bis Objektdiagramm
-│   ├── pruefungsfragen/  86 Fragen mit eingeklappten Antworten
+│   ├── pruefungsfragen/  117 Fragen mit eingeklappten Antworten
 │   ├── spickzettel/      Tabellen und Formeln zum Wiederholen
 │   └── glossar.md        Begriffe ohne festes Kapitel, plus Stichwortverzeichnis
 └── en/                   englische Fassung (maschinell übersetzt)

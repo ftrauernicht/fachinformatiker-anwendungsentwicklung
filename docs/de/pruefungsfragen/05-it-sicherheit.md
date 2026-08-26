@@ -15,6 +15,15 @@
   - [8. Was ist der Unterschied zwischen Anonymisierung und Pseudonymisierung?](#8-was-ist-der-unterschied-zwischen-anonymisierung-und-pseudonymisierung)
   - [9. Nennen Sie die vier Schritte einer Schutzbedarfsanalyse.](#9-nennen-sie-die-vier-schritte-einer-schutzbedarfsanalyse)
   - [10. Was ist ein ISMS, und wofür steht die zugehörige Norm?](#10-was-ist-ein-isms-und-wofür-steht-die-zugehörige-norm)
+- [Angriffe](#angriffe)
+  - [11. Was ist ein Man-in-the-Middle-Angriff, und was schützt zuverlässig davor?](#11-was-ist-ein-man-in-the-middle-angriff-und-was-schützt-zuverlässig-davor)
+  - [12. Wie funktioniert eine SQL-Injection, und welche Gegenmaßnahme ist die wirksamste?](#12-wie-funktioniert-eine-sql-injection-und-welche-gegenmaßnahme-ist-die-wirksamste)
+  - [13. Unterscheiden Sie Cross-Site-Scripting von Cross-Site-Request-Forgery.](#13-unterscheiden-sie-cross-site-scripting-von-cross-site-request-forgery)
+  - [14. Was unterscheidet DoS von DDoS, und welches Schutzziel wird verletzt?](#14-was-unterscheidet-dos-von-ddos-und-welches-schutzziel-wird-verletzt)
+  - [15. Wie läuft eine Anmeldung mit Kerberos ab, und warum müssen die Uhren stimmen?](#15-wie-läuft-eine-anmeldung-mit-kerberos-ab-und-warum-müssen-die-uhren-stimmen)
+- [Rechtsrahmen](#rechtsrahmen)
+  - [16. Welche Meldefristen sieht das NIS-2-Umsetzungsgesetz bei einem erheblichen Sicherheitsvorfall vor?](#16-welche-meldefristen-sieht-das-nis-2-umsetzungsgesetz-bei-einem-erheblichen-sicherheitsvorfall-vor)
+  - [17. Nennen Sie die vier Risikostufen der EU-KI-Verordnung mit je einem Beispiel.](#17-nennen-sie-die-vier-risikostufen-der-eu-ki-verordnung-mit-je-einem-beispiel)
 
 ## Grundbegriffe
 
@@ -201,5 +210,124 @@ ein Teil davon.
 Maßgebliche Norm ist **ISO/IEC 27001**; in Deutschland verbreitet ist zusätzlich der
 **IT-Grundschutz** des BSI, der sich damit zertifizieren lässt. Die fortlaufende
 Verbesserung folgt dem **PDCA-Zyklus**: Plan, Do, Check, Act.
+
+</details>
+
+## Angriffe
+
+### 11. Was ist ein Man-in-the-Middle-Angriff, und was schützt zuverlässig davor?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Der Angreifer klinkt sich zwischen zwei Kommunikationspartner und gibt sich gegenüber jedem als der jeweils andere aus. Er kann mitlesen und verändern, ohne bemerkt zu werden. Typische Wege: ein gefälschter WLAN-Zugangspunkt, ARP-Spoofing, ein manipulierter DNS-Eintrag.
+
+Schutz bietet TLS — aber nur zusammen mit der **Prüfung des Zertifikats**. Verschlüsselung allein hilft nicht: Eine sauber verschlüsselte Verbindung zum Angreifer ist genauso wertlos wie eine unverschlüsselte.
+
+Verletzt werden Vertraulichkeit und Integrität.
+
+</details>
+
+### 12. Wie funktioniert eine SQL-Injection, und welche Gegenmaßnahme ist die wirksamste?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Eine Eingabe landet ungeprüft im Text einer SQL-Anweisung und verändert deren **Struktur**:
+
+```sql
+SELECT * FROM Benutzer WHERE Name = 'EINGABE';
+-- Eingabe: ' OR '1'='1
+SELECT * FROM Benutzer WHERE Name = '' OR '1'='1';
+```
+
+Wirksamste Gegenmaßnahme sind **vorbereitete Anweisungen mit Platzhaltern**. Der Server kennt die Struktur der Anweisung, bevor er die Werte sieht — ein Wert kann sie danach nicht mehr ändern.
+
+Ergänzend: Eingaben gegen eine Positivliste prüfen, ein Datenbankkonto mit minimalen Rechten verwenden, Datenbankfehler nicht an den Nutzer durchreichen.
+
+Häufige falsche Antwort: „Sonderzeichen maskieren". Das ist eine Notlösung und in mehreren Zeichensätzen umgehbar.
+
+</details>
+
+### 13. Unterscheiden Sie Cross-Site-Scripting von Cross-Site-Request-Forgery.
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+| | XSS | CSRF |
+|---|---|---|
+| Was der Angreifer einbringt | fremden Skriptcode in eine Seite | eine Anfrage im Namen des Opfers |
+| Wem vertraut wird | der Nutzer der Seite | die Seite dem Browser des Nutzers |
+| Ziel | Daten auslesen, Sitzung übernehmen | eine Aktion auslösen |
+| Gegenmaßnahme | Ausgabe maskieren, Content Security Policy | Formularmerkmal je Anfrage, `SameSite` |
+
+Kurz: XSS bringt Code zum Nutzer, CSRF bringt eine Anfrage zum Server. Bei XSS liest der Angreifer mit, bei CSRF handelt er im fremden Namen.
+
+</details>
+
+### 14. Was unterscheidet DoS von DDoS, und welches Schutzziel wird verletzt?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Beide überlasten einen Dienst, bis er für reguläre Nutzer nicht mehr erreichbar ist. Verletzt wird die **Verfügbarkeit**.
+
+Beim **DoS** kommt der Angriff von einer Quelle und lässt sich über deren Adresse sperren. Beim **DDoS** kommen die Anfragen von vielen übernommenen Rechnern gleichzeitig — eine einzelne Sperre hilft nicht mehr.
+
+Verbreitet ist die Verstärkung: Der Angreifer schickt kleine Anfragen mit gefälschter Absenderadresse an fremde Dienste, deren große Antworten beim Opfer landen.
+
+Gegenmaßnahmen: Begrenzung der Anfragerate, Filter beim Netzbetreiber, Auslieferung über ein verteiltes Netz, ein Notfallplan mit Ansprechpartnern.
+
+</details>
+
+### 15. Wie läuft eine Anmeldung mit Kerberos ab, und warum müssen die Uhren stimmen?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+Über einen vertrauenswürdigen Dritten, das Key Distribution Center aus Authentifizierungs- und Ticket-Dienst:
+
+1. Der Nutzer meldet sich einmal an und erhält ein **Ticket Granting Ticket**.
+2. Damit fordert er ein Ticket für einen bestimmten Dienst an.
+3. Dieses legt er dem Dienst vor, der es prüft, ohne beim KDC nachzufragen.
+
+Das **Kennwort wird nie über das Netz übertragen**; es dient nur zum Entschlüsseln der Antwort des KDC.
+
+Die Uhren müssen übereinstimmen, weil Tickets einen Zeitstempel tragen und nur begrenzt gültig sind — das verhindert, dass ein abgefangenes Ticket später wiederverwendet wird. Weichen die Uhren um mehr als die erlaubte Spanne ab, meistens fünf Minuten, schlägt die Anmeldung fehl.
+
+</details>
+
+## Rechtsrahmen
+
+### 16. Welche Meldefristen sieht das NIS-2-Umsetzungsgesetz bei einem erheblichen Sicherheitsvorfall vor?
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+| Frist | Was zu melden ist |
+|---|---|
+| **24 Stunden** | Erstmeldung: liegt ein erheblicher Vorfall vor? |
+| **72 Stunden** | Bewertung mit Schweregrad und Auswirkungen |
+| **1 Monat** | Abschlussmeldung mit Ursache und Gegenmaßnahmen |
+
+Das Gesetz wurde am 6. Dezember 2025 verkündet und gilt ohne Übergangsfrist. Betroffen sind Einrichtungen ab bestimmten Größen in achtzehn Sektoren, nicht mehr nur Betreiber kritischer Anlagen.
+
+Die Pflichten stehen in § 30 BSIG: Risikomanagement in zehn Bereichen, darunter Lieferkettensicherheit, Notfallmanagement, Kryptografie und Mehrfaktor-Authentifizierung. Neu ist die persönliche Verantwortung der Geschäftsleitung, die die Maßnahmen billigen und überwachen muss.
+
+</details>
+
+### 17. Nennen Sie die vier Risikostufen der EU-KI-Verordnung mit je einem Beispiel.
+
+<details markdown="1">
+<summary>Antwort</summary>
+
+| Stufe | Beispiel | Folge |
+|---|---|---|
+| **Unannehmbar** | soziale Bewertung von Menschen | verboten |
+| **Hoch** | Vorauswahl von Bewerbern | Konformitätsbewertung, umfangreiche Pflichten |
+| **Begrenzt** | Chatbot | Transparenzpflicht |
+| **Minimal** | Spamfilter | keine besonderen Pflichten |
+
+Die Verordnung gilt gestaffelt: Verbote und die Pflicht zur KI-Kompetenz seit dem 2. Februar 2025, Modelle mit allgemeinem Verwendungszweck seit dem 2. August 2025, der überwiegende Teil ab dem 2. August 2026.
 
 </details>

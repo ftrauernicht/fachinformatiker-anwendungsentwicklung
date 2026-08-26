@@ -15,15 +15,16 @@ wer eine Antwort nur wiedererkennt, kann sie in der Prüfung nicht aufschreiben.
 
 | Thema | Fragen | Schwerpunkt |
 |---|---|---|
-| [Netzwerktechnik](01-netzwerktechnik.md) | 12 | OSI, Subnetting, RAID, DHCP |
+| [Netzwerktechnik](01-netzwerktechnik.md) | 15 | OSI, Subnetting, RAID, DHCP, NAS und SAN |
 | [Virtualisierung](02-virtualisierung.md) | 8 | Hypervisor, Container, Docker |
 | [Datenbanken](03-datenbanken.md) | 12 | Normalformen, SQL, ERM, Anomalien |
-| [Softwareentwicklung](04-softwareentwicklung.md) | 10 | HTTP, Objektorientierung, Schnittstellen |
-| [IT-Sicherheit](05-it-sicherheit.md) | 10 | DSGVO, Schutzbedarf, Verschlüsselung |
+| [Softwareentwicklung](04-softwareentwicklung.md) | 17 | HTTP, Objektorientierung, Qualität, Test, Muster |
+| [IT-Sicherheit](05-it-sicherheit.md) | 17 | DSGVO, Verschlüsselung, Angriffe, NIS 2, KI-Verordnung |
 | [IT-Service-Management](06-it-service-management.md) | 8 | ITIL, Prozesse, Incident, SLA |
 | [Projektmanagement](07-projektmanagement.md) | 10 | Netzplan, Dreieck, Vorgehensmodelle |
-| [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | 8 | Rechtsformen, Amortisation, Prozesse |
+| [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | 12 | Rechtsformen, Amortisation, Marktformen, E-Rechnung |
 | [Cloud Computing](09-cloud-computing.md) | 8 | Servicemodelle, Bereitstellungsmodelle |
+| [Algorithmen](10-algorithmen.md) | 10 | Pseudocode, O-Notation, Suchen, Sortieren |
 
 ## Wie man damit arbeitet
 

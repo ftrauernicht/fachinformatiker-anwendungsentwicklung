@@ -162,6 +162,7 @@ nav:
           - UML-Notation: de/spickzettel/03-uml-notation.md
           - Formeln: de/spickzettel/04-formeln.md
           - Tabellenkalkulation: de/spickzettel/05-excel.md
+          - Algorithmen: de/spickzettel/06-algorithmen.md
       - Glossar: de/glossar.md
   - English:
       - Overview: en/index.md

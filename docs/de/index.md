@@ -45,8 +45,8 @@ Die in der Prüfung relevanten Notationen liegen in [`diagramme/`](diagramme/ind
 
 ## Nachschlagen
 
-- [Spickzettel](spickzettel/index.md) — Präfixtabelle, SQL-Klauseln, UML-Symbole, Formeln
-  und Excel-Funktionen, dicht auf fünf Seiten
+- [Spickzettel](spickzettel/index.md) — Präfixtabelle, SQL-Klauseln, UML-Symbole, Formeln,
+  Excel-Funktionen und Sortierverfahren, dicht auf sechs Seiten
 - [Glossar](glossar.md) — Begriffe und Abkürzungen, die sich keinem Kapitel eindeutig zuordnen lassen
 
 ## Quellen

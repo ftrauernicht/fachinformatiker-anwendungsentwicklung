@@ -16,6 +16,7 @@ ist — zum Lernen taugen sie nicht, dafür sind die [Kapitel](../index.md) da.
 | [UML-Notation](03-uml-notation.md) | Sichtbarkeiten, Beziehungen, Multiplizitäten, Kardinalitäten, alle Diagrammsymbole |
 | [Formeln](04-formeln.md) | Wirtschaftlichkeit, Netzplan, Verfügbarkeit, Speicher, Zahlensysteme |
 | [Tabellenkalkulation](05-excel.md) | Bezüge, WENN, SVERWEIS, Fehlerwerte |
+| [Algorithmen](06-algorithmen.md) | Pseudocode-Gerüst, Komplexitätsklassen, Suchen, die drei Sortierverfahren |
 
 ## Die fünf Zahlen, die man auswendig braucht
 

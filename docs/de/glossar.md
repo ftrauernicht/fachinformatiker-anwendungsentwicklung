@@ -100,7 +100,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-251 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+260 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -131,6 +131,7 @@ Grundbuchstaben.
 - **Aktivitätsbereiche (Swimlanes)** — [Aktivitätsdiagramm](diagramme/07-aktivitaetsdiagramm.md#aktivitätsbereiche-swimlanes)
 - **Amortisation** — [Politik und Wirtschaft](08-politik-und-wirtschaft.md#amortisation)
 - **Ändern von Datensätzen (UPDATE)** — [Datenbanken](03-datenbanken.md#ändern-von-datensätzen-update)
+- **Angriffe und Gegenmaßnahmen** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#angriffe-und-gegenmaßnahmen)
 - **Anwendung von RAID 0** — [Netzwerktechnik](01-netzwerktechnik.md#anwendung-von-raid-0)
 - **Anwendung von RAID 1** — [Netzwerktechnik](01-netzwerktechnik.md#anwendung-von-raid-1)
 - **Anwendung von RAID 5** — [Netzwerktechnik](01-netzwerktechnik.md#anwendung-von-raid-5)
@@ -177,6 +178,8 @@ Grundbuchstaben.
 - **Change** — [IT-Service-Management](06-it-service-management.md#change)
 - **COBIT** — [IT-Service-Management](06-it-service-management.md#cobit)
 - **Container** — [Virtualisierung](02-virtualisierung.md#container)
+- **Cross-Site-Request-Forgery** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#cross-site-request-forgery)
+- **Cross-Site-Scripting** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#cross-site-scripting)
 
 ### D
 
@@ -210,6 +213,7 @@ Grundbuchstaben.
 - **Entwurfsmuster** — [Softwareentwicklung](04-softwareentwicklung.md#entwurfsmuster)
 - **Erklärung** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#erklärung)
 - **Ethernet und MAC-Adressen** — [Netzwerktechnik](01-netzwerktechnik.md#ethernet-und-mac-adressen)
+- **EU-Verordnung über künstliche Intelligenz** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#eu-verordnung-über-künstliche-intelligenz)
 - **Extend-Beziehung** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#extend-beziehung)
 
 ### F
@@ -259,6 +263,7 @@ Grundbuchstaben.
 
 ### K
 
+- **Kerberos** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#kerberos)
 - **Keywords** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#keywords)
 - **Klasse** — [Klassendiagramm](diagramme/03-klassendiagramm.md#klasse)
 - **Kombinierte Fragmente** — [Sequenzdiagramm](diagramme/08-sequenzdiagramm.md#kombinierte-fragmente)
@@ -282,6 +287,7 @@ Grundbuchstaben.
 ### M
 
 - **MAC-Adressen** — [Netzwerktechnik](01-netzwerktechnik.md#mac-adressen)
+- **Man-in-the-Middle** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#man-in-the-middle)
 - **Managementbereiche** — [Projektmanagement](07-projektmanagement.md#managementbereiche)
 - **Managementprozesse** — [IT-Service-Management](06-it-service-management.md#managementprozesse)
 - **Mögliche Zuweisung / Einstellung die ein DHCP dem Client zuweisen kann** — [Netzwerktechnik](01-netzwerktechnik.md#mögliche-zuweisung--einstellung-die-ein-dhcp-dem-client-zuweisen-kann)
@@ -300,6 +306,7 @@ Grundbuchstaben.
 - **NAS (Network Attached Storage)** — [Netzwerktechnik](01-netzwerktechnik.md#nas-network-attached-storage)
 - **Nassi-Shneiderman / Struktogramm** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#nassi-shneiderman--struktogramm)
 - **Netzplan** — [Projektmanagement](07-projektmanagement.md#netzplan)
+- **NIS-2-Umsetzungsgesetz** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#nis-2-umsetzungsgesetz)
 - **Normalformen** — [Datenbanken](03-datenbanken.md#normalformen)
 - **Notationsformen** — [Entity-Relationship-Modell](diagramme/05-entity-relationship-modell.md#notationsformen)
 
@@ -330,6 +337,7 @@ Grundbuchstaben.
 - **RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)** — [Netzwerktechnik](01-netzwerktechnik.md#raid-10-verbundsraid-raid-0-über-mehrere-raid-1)
 - **RAID 1: Mirroring - Spiegelung** — [Netzwerktechnik](01-netzwerktechnik.md#raid-1-mirroring---spiegelung)
 - **RAID 5: Leistung + Parität, Block-Level Striping mit verteilter Paritätsinformation** — [Netzwerktechnik](01-netzwerktechnik.md#raid-5-leistung--parität-block-level-striping-mit-verteilter-paritätsinformation)
+- **Rechtsrahmen seit 2024** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#rechtsrahmen-seit-2024)
 - **Registry** — [Virtualisierung](02-virtualisierung.md#registry)
 - **Rekursion** — [Algorithmen](10-algorithmen.md#rekursion)
 - **Relationale Datenbanken** — [Datenbanken](03-datenbanken.md#relationale-datenbanken)
@@ -363,6 +371,7 @@ Grundbuchstaben.
 - **Sprachelemente** — [Datenbanken](03-datenbanken.md#sprachelemente)
 - **SQL** — [Datenbanken](03-datenbanken.md#sql)
 - **SQL-Datentypen** — [Datenbanken](03-datenbanken.md#sql-datentypen)
+- **SQL-Injection** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#sql-injection)
 - **Stand dieser Sammlung** — [Die Abschlussprüfung im Überblick](00-pruefung.md#stand-dieser-sammlung)
 - **Statische Zuordnung** — [Netzwerktechnik](01-netzwerktechnik.md#statische-zuordnung)
 - **Statusmeldung** — [IT-Service-Management](06-it-service-management.md#statusmeldung)

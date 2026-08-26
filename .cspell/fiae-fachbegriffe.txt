@@ -263,3 +263,13 @@ Selectionsort
 Timsort
 fußgesteuert
 testgetriebene
+
+# --- Angriffe, Kerberos, NIS-2 und KI-Verordnung -------------------------
+Anfragerate
+BSIG
+Emotionserkennung
+HSTS
+Ratenbegrenzung
+Skriptcode
+Zertifikatsanheftung
+kontextgerecht

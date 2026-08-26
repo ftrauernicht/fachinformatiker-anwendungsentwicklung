@@ -35,6 +35,18 @@
       - [Examples of Authentication by Possession](#examples-of-authentication-by-possession)
     - [Physical Characteristics / Biometrics](#physical-characteristics--biometrics)
       - [Examples of Authentication by Biometrics](#examples-of-authentication-by-biometrics)
+- [Attacks and countermeasures](#attacks-and-countermeasures)
+  - [Man-in-the-middle](#man-in-the-middle)
+  - [SQL injection](#sql-injection)
+  - [Cross-site scripting](#cross-site-scripting)
+  - [Cross-site request forgery](#cross-site-request-forgery)
+  - [Denial of service and DDoS](#denial-of-service-and-ddos)
+  - [Social engineering and phishing](#social-engineering-and-phishing)
+  - [The attacks at a glance](#the-attacks-at-a-glance)
+- [Kerberos](#kerberos)
+- [The legal framework since 2024](#the-legal-framework-since-2024)
+  - [The NIS 2 implementation act](#the-nis-2-implementation-act)
+  - [The EU regulation on artificial intelligence](#the-eu-regulation-on-artificial-intelligence)
 
 ## Data Protection
 
@@ -392,6 +404,125 @@ Characteristics:
 - Palm vein pattern
 - Genetic information (DNA)
 
+## Attacks and countermeasures
+
+Since 2025 the examination catalogue names man-in-the-middle, SQL injection and DDoS explicitly. They are collected here together with the other attacks that regularly appear in tasks. For web applications, the OWASP Top Ten serve as the wider reference.[^9]
+
+### Man-in-the-middle
+
+The attacker inserts themselves into the connection between two parties and pretends to each of them to be the other. They can read and alter traffic without either side noticing.[^10]
+
+Typical routes in are a fake wireless access point, ARP spoofing on the local network, or a manipulated DNS record.
+
+Countermeasures: end-to-end encryption with TLS, checking the certificate against a trusted authority, HSTS, certificate pinning. What matters is not the encryption alone but the **authenticity of the other end** — an encrypted connection to the attacker is worth nothing.
+
+### SQL injection
+
+User input reaches an SQL statement unchecked and changes its structure. A query looking up a user name becomes a query that returns every record, or drops a table.[^11]
+
+```sql
+-- Vulnerable: the input is pasted into the text of the statement
+SELECT * FROM users WHERE name = 'INPUT';
+
+-- Input: ' OR '1'='1
+SELECT * FROM users WHERE name = '' OR '1'='1';
+```
+
+Countermeasures, in this order:
+
+1. **Prepared statements with placeholders.** The database server knows the structure of the statement before it sees the data — input can no longer change it.
+2. Validate input against an allow-list, not against a list of forbidden characters.
+3. Give the application a database account with as few privileges as possible.
+4. Never pass database error messages through to the user.
+
+Escaping special characters alone is not enough — that is the most common wrong answer to this question.
+
+### Cross-site scripting
+
+The attacker gets foreign script code into a page that other users open. The script then runs in the victim's browser with the privileges of the attacked site and can, for instance, read the session cookie.[^12]
+
+A distinction is drawn between the stored variant — the code sits permanently in the database, in a comment for example — and the reflected one, where it arrives in the response through a prepared link.
+
+Countermeasures: escape output according to its context, set a content security policy, mark session cookies `HttpOnly`.
+
+### Cross-site request forgery
+
+The victim is logged in to an application and opens another site on the side. That site sends a request to the application in their name — the browser attaches the valid session cookie automatically.[^13]
+
+Countermeasures: a random token per form that the server recognises, the `SameSite` attribute on the session cookie, and POST rather than GET for anything that changes state.
+
+### Denial of service and DDoS
+
+A service is flooded with requests until legitimate users can no longer reach it. The protection goal under attack is **availability**.[^14]
+
+In the distributed form (DDoS) the requests come from many compromised machines at once and can therefore no longer be blocked by a single address. Amplification is common on top of that: the attacker sends small requests with a forged sender address to third-party services whose large answers then land on the victim.
+
+Countermeasures: rate limiting, filtering at the network provider, delivery through a distributed network, and an incident plan with named contacts for the real thing.
+
+### Social engineering and phishing
+
+This attack does not target the technology but the person: a forged message from management, a supposed call from the IT department, a visitor with a parcel and a friendly smile.[^15]
+
+The countermeasures are correspondingly organisational: training, a fixed call-back procedure for payment instructions, the four-eyes principle — and technically, two-factor authentication, which renders a stolen password useless on its own.
+
+### The attacks at a glance
+
+| Attack | Protection goal violated | Main countermeasure |
+|---|---|---|
+| Man-in-the-middle | confidentiality, integrity | TLS with a verified certificate |
+| SQL injection | all three | prepared statements |
+| Cross-site scripting | confidentiality, integrity | escape output, CSP |
+| Cross-site request forgery | integrity | form token, `SameSite` |
+| DDoS | availability | rate limiting, filtering at the provider |
+| Social engineering | all three | training, two-factor authentication |
+
+## Kerberos
+
+Kerberos is a network protocol for authentication over insecure networks and has been in the examination catalogue since 2025. It is the basis of logging in to a Windows domain.[^16]
+
+At its core is a trusted third party, the **key distribution centre**, made up of an authentication service and a ticket-granting service.
+
+1. The user authenticates once to the authentication service and receives a **ticket-granting ticket**.
+2. With that ticket they request a ticket for a particular service from the ticket-granting service.
+3. They present that service ticket to the service, which verifies it without asking the KDC.
+
+Two properties matter for the examination. The **password is never sent across the network** — it is only used to decrypt the KDC's answer. And tickets are time-limited, which is why the clocks of all parties have to agree; a difference of a few minutes makes the login fail.
+
+The benefit is a single sign-on for many services, the drawback is the central dependency: if the KDC is down, nobody logs in.
+
+## The legal framework since 2024
+
+Two bodies of rules came into force after the last major revision of this collection and bear directly on IT security.
+
+### The NIS 2 implementation act
+
+The German act implementing the European NIS 2 directive was promulgated on 6 December 2025 and has applied since, without a transition period. Around 29,500 companies are affected — far more than before, because it no longer covers operators of critical infrastructure only but entities above certain size thresholds across eighteen sectors.[^17]
+
+The obligations sit in § 30 BSIG: risk management across ten named areas, among them supply chain security, incident handling, cryptography and multi-factor authentication.[^18] On top of that come registration with the federal office and a staged duty to report significant incidents:
+
+| Deadline | What has to be reported |
+|---|---|
+| 24 hours | first notification of whether a significant incident has occurred |
+| 72 hours | assessment with severity and impact |
+| 1 month | final report with cause and countermeasures |
+
+New as well is the personal responsibility of the management: it has to approve and supervise the measures and undergo training itself.
+
+### The EU regulation on artificial intelligence
+
+The AI Act entered into force on 1 August 2024 and applies in stages. Prohibited practices and the duty of AI literacy have applied since 2 February 2025, the rules for general-purpose models since 2 August 2025, and the bulk of the regulation from 2 August 2026.[^19]
+
+It follows a risk-based approach with four levels:
+
+| Level | Examples | Consequence |
+|---|---|---|
+| **Unacceptable risk** | social scoring of people, emotion recognition at the workplace | prohibited |
+| **High risk** | shortlisting applicants, creditworthiness, medical devices | extensive obligations, conformity assessment |
+| **Limited risk** | chatbots, generated images and texts | transparency: make it recognisable that AI is involved |
+| **Minimal risk** | spam filters, recommendations in a shopping basket | no particular obligations |
+
+Article 4 is the one that matters for apprenticeships: anyone operating or providing AI systems has to ensure that the staff dealing with them have sufficient AI literacy. That has applied since February 2025 and does not depend on company size.
+
 [^1]: <https://gdpr-info.eu/art-32-gdpr/>
 [^2]: <https://www.protonmail.com/blog/what-is-authentication-authorization-accountability/>
 [^3]: <https://en.wikipedia.org/wiki/Information_security_management_system>
@@ -400,3 +531,14 @@ Characteristics:
 [^6]: <https://en.wikipedia.org/wiki/Multi-factor_authentication>
 [^7]: <https://en.wikipedia.org/wiki/Authentication>
 [^8]: <https://en.wikipedia.org/wiki/Authentication#Methods>
+[^9]: <https://owasp.org/www-project-top-ten/>
+[^10]: <https://en.wikipedia.org/wiki/Man-in-the-middle_attack>
+[^11]: <https://en.wikipedia.org/wiki/SQL_injection>
+[^12]: <https://en.wikipedia.org/wiki/Cross-site_scripting>
+[^13]: <https://en.wikipedia.org/wiki/Cross-site_request_forgery>
+[^14]: <https://en.wikipedia.org/wiki/Denial-of-service_attack>
+[^15]: <https://en.wikipedia.org/wiki/Social_engineering_(security)>
+[^16]: <https://en.wikipedia.org/wiki/Kerberos_(protocol)>
+[^17]: <https://www.bsi.bund.de/dok/nis-2>
+[^18]: <https://www.gesetze-im-internet.de/bsig_2025/__30.html>
+[^19]: <https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai>

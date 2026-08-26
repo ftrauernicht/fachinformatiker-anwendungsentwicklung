@@ -100,7 +100,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-260 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+262 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -291,6 +291,7 @@ Grundbuchstaben.
 - **Managementbereiche** — [Projektmanagement](07-projektmanagement.md#managementbereiche)
 - **Managementprozesse** — [IT-Service-Management](06-it-service-management.md#managementprozesse)
 - **Mögliche Zuweisung / Einstellung die ein DHCP dem Client zuweisen kann** — [Netzwerktechnik](01-netzwerktechnik.md#mögliche-zuweisung--einstellung-die-ein-dhcp-dem-client-zuweisen-kann)
+- **Monitoring** — [Netzwerktechnik](01-netzwerktechnik.md#monitoring)
 - **Move** — [IT-Service-Management](06-it-service-management.md#move)
 - **Multiplizität** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#multiplizität)
 
@@ -304,6 +305,7 @@ Grundbuchstaben.
 - **Nachteile von SaaS** — [Cloud Computing](09-cloud-computing.md#nachteile-von-saas)
 - **Namenskonventionen** — [Softwareentwicklung](04-softwareentwicklung.md#namenskonventionen)
 - **NAS (Network Attached Storage)** — [Netzwerktechnik](01-netzwerktechnik.md#nas-network-attached-storage)
+- **NAS und SAN im Vergleich** — [Netzwerktechnik](01-netzwerktechnik.md#nas-und-san-im-vergleich)
 - **Nassi-Shneiderman / Struktogramm** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#nassi-shneiderman--struktogramm)
 - **Netzplan** — [Projektmanagement](07-projektmanagement.md#netzplan)
 - **NIS-2-Umsetzungsgesetz** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#nis-2-umsetzungsgesetz)

@@ -270,6 +270,7 @@ BSIG
 Emotionserkennung
 HSTS
 Ratenbegrenzung
+SNMP
 Skriptcode
 Zertifikatsanheftung
 kontextgerecht

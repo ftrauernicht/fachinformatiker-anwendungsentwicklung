@@ -24,8 +24,10 @@
     - [RAID 01: nested RAID (RAID 1 across several RAID 0)](#raid-01-nested-raid-raid-1-across-several-raid-0)
     - [RAID 10: nested RAID (RAID 0 across several RAID 1)](#raid-10-nested-raid-raid-0-across-several-raid-1)
 - [Storage systems](#storage-systems)
-  - [SAN (storage area network)](#san-storage-area-network)
   - [NAS (network attached storage)](#nas-network-attached-storage)
+  - [SAN (storage area network)](#san-storage-area-network)
+  - [NAS and SAN compared](#nas-and-san-compared)
+- [Monitoring](#monitoring)
 - [Ethernet and MAC addresses](#ethernet-and-mac-addresses)
   - [Ethernet frame (in order, left to right)](#ethernet-frame-in-order-left-to-right)
   - [MAC addresses](#mac-addresses)
@@ -217,13 +219,54 @@ RAID 10:<br>
 
 ## Storage systems
 
-### SAN (storage area network)
-
-- A SAN is network storage that several clients can access
+Both have been named explicitly in the examination catalogue since 2025. The difference is not the device but the level at which it is accessed.
 
 ### NAS (network attached storage)
 
-- A NAS is a storage device on the local network; authorised devices can put data on it over that network
+A NAS is a self-contained appliance with disks and an operating system that shares a **file system** on the local network. Access goes through file protocols such as SMB or NFS; the client sees folders and files.[^12]
+
+- attaches to the existing Ethernet network, no separate cabling needed
+- permissions at file and folder level, several systems access it at the same time
+- comparatively cheap; typical for file shares, backups and small environments
+
+### SAN (storage area network)
+
+A SAN is a network of its own that provides servers with **block storage**. The server does not see a folder but a disk, which it formats and puts a file system on itself.[^13]
+
+- a dedicated network, usually over Fibre Channel or iSCSI
+- high speed and low latency, hence suitable for databases and virtual machines
+- expensive to buy and to run, and it needs its own expertise
+
+### NAS and SAN compared
+
+| | NAS | SAN |
+|---|---|---|
+| Level of access | file | block |
+| Protocols | SMB, NFS | Fibre Channel, iSCSI, FCoE |
+| Network | the existing LAN | a dedicated storage network |
+| What the client sees | a share | a local disk |
+| Typical use | file storage, backup | databases, virtualisation |
+| Cost | low | high |
+
+Important for telling this apart from RAID: RAID spreads data across several disks **inside** a storage system. NAS and SAN describe how that storage system is reachable on the network. The two occur together — a NAS almost always contains a RAID array itself.
+
+## Monitoring
+
+In the examination catalogue since 2025. Monitoring is the continuous observation of systems and services with the aim of noticing a fault before the first user calls.[^14]
+
+Observation happens on three levels:
+
+| Level | Example measurements |
+|---|---|
+| **Hardware and operating system** | processor load, memory, disk space, temperature, state of the RAID array |
+| **Services** | is the process running, does the port answer, how long does a request take |
+| **Application and business process** | error rate, orders per hour, length of a queue |
+
+Two approaches are distinguished. In **active** monitoring the monitoring server polls the systems regularly, over SNMP or with a check script. In **passive** monitoring the systems report themselves, through syslog or an agent.
+
+Usable monitoring needs thresholds at two levels — warning and critical —, a defined escalation, and a way of dealing with false alarms. Monitoring that produces twenty alerts a day is ignored after a week, which makes it worse than none.
+
+The link to IT service management: monitoring produces the numbers that make compliance with a [service level agreement](06-it-service-management.md) provable in the first place.
 
 ---
 
@@ -554,3 +597,6 @@ work on 3, 4 or 7.
 [^7]: <https://en.wikipedia.org/wiki/Wireless_LAN>
 [^10]: <https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>
 [^11]: <https://en.wikipedia.org/wiki/OSI_model>
+[^12]: <https://en.wikipedia.org/wiki/Network-attached_storage>
+[^13]: <https://en.wikipedia.org/wiki/Storage_area_network>
+[^14]: <https://en.wikipedia.org/wiki/Network_monitoring>

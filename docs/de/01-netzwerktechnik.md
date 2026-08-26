@@ -24,8 +24,10 @@
     - [RAID 01: Verbundsraid (Raid 1 über mehrere Raid 0)](#raid-01-verbundsraid-raid-1-über-mehrere-raid-0)
     - [RAID 10: Verbundsraid (Raid 0 über mehrere Raid 1)](#raid-10-verbundsraid-raid-0-über-mehrere-raid-1)
 - [Speichersysteme](#speichersysteme)
-  - [SAN (Storage Area Network)](#san-storage-area-network)
   - [NAS (Network Attached Storage)](#nas-network-attached-storage)
+  - [SAN (Storage Area Network)](#san-storage-area-network)
+  - [NAS und SAN im Vergleich](#nas-und-san-im-vergleich)
+- [Monitoring](#monitoring)
 - [Ethernet und MAC-Adressen](#ethernet-und-mac-adressen)
   - [Ethernet-Frame (In Reihenfolge links rechts)](#ethernet-frame-in-reihenfolge-links-rechts)
   - [MAC-Adressen](#mac-adressen)
@@ -201,13 +203,54 @@ Darstellung RAID 10:<br>
 
 ## Speichersysteme
 
-### SAN (Storage Area Network)
-
-- Ein SAN ist ein Netzwerkspeicher mit dem man über mehrere Clients zugreifen kann
+Beide stehen seit 2025 ausdrücklich im Prüfungskatalog. Der Unterschied liegt nicht im Gerät, sondern in der Ebene, auf der zugegriffen wird.
 
 ### NAS (Network Attached Storage)
 
-- Ein NAS ist ein Speichermedium welches im Lokalen Netzwerk liegt und man mit berechtigten Geräten Daten über das Lokale Netzwerk legen kann.
+Ein NAS ist ein eigenständiges Gerät mit Festplatten und Betriebssystem, das im lokalen Netz ein **Dateisystem** freigibt. Zugegriffen wird über Dateiprotokolle wie SMB oder NFS; der Client sieht Ordner und Dateien.[^12]
+
+- Anschluss über das vorhandene Ethernet-Netz, keine eigene Verkabelung nötig
+- Rechteverwaltung auf Datei- und Ordnerebene, mehrere Systeme greifen gleichzeitig zu
+- vergleichsweise günstig, typisch für Dateiablagen, Sicherungen und kleine Umgebungen
+
+### SAN (Storage Area Network)
+
+Ein SAN ist ein eigenes Netz, das Servern **Blockspeicher** zur Verfügung stellt. Der Server sieht keinen Ordner, sondern eine Festplatte, die er selbst formatiert und mit einem Dateisystem versieht.[^13]
+
+- eigenes Netz, meist über Fibre Channel oder iSCSI
+- hohe Geschwindigkeit und niedrige Latenz, deshalb geeignet für Datenbanken und virtuelle Maschinen
+- teuer in Anschaffung und Betrieb, braucht eigenes Wissen
+
+### NAS und SAN im Vergleich
+
+| | NAS | SAN |
+|---|---|---|
+| Zugriffsebene | Datei | Block |
+| Protokolle | SMB, NFS | Fibre Channel, iSCSI, FCoE |
+| Netz | vorhandenes LAN | eigenes Speichernetz |
+| Der Client sieht | eine Freigabe | eine lokale Festplatte |
+| Typischer Einsatz | Dateiablage, Sicherung | Datenbanken, Virtualisierung |
+| Kosten | niedrig | hoch |
+
+Wichtig für die Abgrenzung zu RAID: RAID verteilt Daten **innerhalb** eines Speichersystems auf mehrere Platten. NAS und SAN beschreiben, wie dieses Speichersystem im Netz erreichbar ist. Beides kommt zusammen vor — ein NAS enthält in aller Regel selbst einen RAID-Verbund.
+
+## Monitoring
+
+Seit 2025 im Prüfungskatalog. Monitoring ist die fortlaufende Überwachung von Systemen und Diensten mit dem Ziel, eine Störung zu bemerken, bevor der erste Anwender anruft.[^14]
+
+Überwacht wird auf drei Ebenen:
+
+| Ebene | Beispiele für Messwerte |
+|---|---|
+| **Hardware und Betriebssystem** | Prozessorlast, Arbeitsspeicher, Plattenplatz, Temperatur, Zustand des RAID-Verbunds |
+| **Dienste** | läuft der Prozess, antwortet der Port, wie lange dauert eine Anfrage |
+| **Anwendung und Geschäftsprozess** | Fehlerrate, Anzahl der Bestellungen je Stunde, Länge einer Warteschlange |
+
+Zwei Verfahren sind zu unterscheiden. Beim **aktiven** Monitoring fragt der Überwachungsserver die Systeme regelmäßig ab, etwa per SNMP oder mit einem Prüfskript. Beim **passiven** melden die Systeme selbst, etwa über Syslog oder einen Agenten.
+
+Zu einer brauchbaren Überwachung gehören Schwellenwerte mit zwei Stufen — Warnung und kritisch —, eine festgelegte Eskalation und ein Verfahren gegen Fehlalarme. Eine Überwachung, die täglich zwanzig Meldungen erzeugt, wird nach einer Woche ignoriert; damit ist sie schlechter als keine.
+
+Der Bezug zum IT-Service-Management: Monitoring liefert die Zahlen, mit denen sich die Einhaltung eines [Service Level Agreements](06-it-service-management.md) überhaupt erst nachweisen lässt.
 
 ---
 
@@ -496,3 +539,6 @@ Bauart auf 3, 4 oder 7 arbeiten.
 [^7]: <https://de.wikipedia.org/wiki/Wireless_Local_Area_Network>
 [^10]: <https://de.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>
 [^11]: <https://de.wikipedia.org/wiki/OSI-Modell>
+[^12]: <https://de.wikipedia.org/wiki/Network_Attached_Storage>
+[^13]: <https://de.wikipedia.org/wiki/Storage_Area_Network>
+[^14]: <https://de.wikipedia.org/wiki/Netzwerkmanagement>

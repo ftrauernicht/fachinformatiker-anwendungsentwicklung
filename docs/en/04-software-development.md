@@ -234,8 +234,6 @@ The test levels build on each other, and each belongs to a level of the specific
 | **System test** | the complete system in a production-like environment | functional specification | test or quality assurance |
 | **Acceptance test** | whether the system meets the client's requirements | requirement specification, contract | client |
 
-The 2025 examination catalogue changed the enumeration from "component, function, integration test" to "component, integration, system test".
-
 The later a defect surfaces, the more expensive it is to remove — roughly by a factor of ten per level. That, and not the number in the coverage report, is the real argument for automated component tests.
 
 ### Black-box and white-box testing
@@ -244,11 +242,11 @@ The later a defect surfaces, the more expensive it is to remove — roughly by a
 
 **White box** means the source code is known and the test goes against its structure. The measure is coverage — statement, branch or path coverage.
 
-Boundary value analysis is the classic examination task. For a permitted quantity of 1 to 100, the values tested are 0, 1, 100 and 101, not 50: defects sit at the edges, because that is where the comparison operators are.
+Boundary value analysis is the standard technique for this: for a permitted quantity of 1 to 100, the values checked are 0, 1, 100 and 101, not 50. Defects sit at the edges, because that is where the comparison operators are.
 
 ### Load and performance testing
 
-Both have been named explicitly in the examination catalogue since 2025. These tests do not measure *whether* something works but *how well* it works under load.[^9]
+These tests do not measure *whether* something works but *how well* it works under load.[^9]
 
 | Kind of test | The question behind it |
 |---|---|
@@ -303,7 +301,7 @@ Three of them turn up in tasks particularly often:
 
 ### Telling the two apart
 
-A pattern is neither a library nor finished code but a description. In an examination, recognising one matters more than implementing it: what is asked for is the name, the purpose and an example — rarely the full class diagram.
+A pattern is neither a library nor finished code but a description. Name, purpose and an example are therefore enough to place one; the full class diagram is only needed when implementing it.
 
 ## Legal obligations for web applications
 

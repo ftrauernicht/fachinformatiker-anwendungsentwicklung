@@ -69,7 +69,7 @@ Die UG ist keine eigene Rechtsform, sondern eine GmbH mit geringerem Startkapita
 
 Zum 1. Januar 2024 ist das Gesetz zur Modernisierung des Personengesellschaftsrechts in Kraft getreten — ohne Übergangsfrist und auch für bestehende Gesellschaften.[^2]
 
-Zwei Punkte sind prüfungsrelevant:
+Zwei Punkte daraus sind für die Praxis wesentlich:
 
 - Die **Rechtsfähigkeit der GbR** steht jetzt im Gesetz. Sie kann als solche Verträge schließen, Eigentum halten und klagen; bis dahin folgte das nur aus der Rechtsprechung.
 - Es gibt ein **Gesellschaftsregister**. Trägt sich eine GbR dort ein, führt sie den Zusatz **eGbR**. Die Eintragung ist grundsätzlich freiwillig, wird aber faktisch zur Pflicht, sobald die Gesellschaft Grundstücke oder Anteile erwerben will — ohne Eintragung geht keine Änderung im Grundbuch.

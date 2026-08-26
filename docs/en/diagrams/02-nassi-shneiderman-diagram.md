@@ -1,6 +1,6 @@
 # Nassi-Shneiderman diagram (structogram)
 
-> **No longer part of the examination since the 2025 catalogue.** Pseudocode and the [activity diagram](07-activity-diagram.md) take its place; answering a pseudocode task with a structogram no longer earns marks. The notation stays in this collection because it still appears in vocational school and shows nesting particularly well. Details in [The final examination at a glance](../00-exam.md), the replacement in [Algorithms](../10-algorithms.md).
+> **Apparently no longer required for the AP2.** According to a public walkthrough of the 2025 examination catalogue, the Nassi-Shneiderman diagram has been removed from it; pseudocode and the [activity diagram](07-activity-diagram.md) take its place. Where that statement comes from, and how far it can be relied on, is set out in [The final examination at a glance](../00-exam.md); the replacement is in [Algorithms](../10-algorithms.md). The notation stays here because it still appears in vocational school and shows nesting particularly well.
 
 ## Table of contents
 

@@ -8,7 +8,7 @@
 - [Suchen](#suchen)
 - [Sortieren](#sortieren)
   - [Bubblesort an [5, 2, 9, 1]](#bubblesort-an-5-2-9-1)
-- [Die fünf Fehler, die Punkte kosten](#die-fünf-fehler-die-punkte-kosten)
+- [Die fünf Fehler, die am häufigsten passieren](#die-fünf-fehler-die-am-häufigsten-passieren)
 
 ## Pseudocode in einer Minute
 
@@ -41,7 +41,7 @@ name(parameter1, parameter2)          Funktionskopf
     gib wert zurück
 ```
 
-Syntaxfehler kosten keine Punkte. Falsche Abbruchbedingungen schon.
+Es kommt auf die Logik an, nicht auf die Schreibweise — vor allem auf die Abbruchbedingungen.
 
 ## Kontrollstrukturen
 
@@ -129,7 +129,7 @@ insertionsort(feld)
 
 **Stabil** heißt: gleiche Schlüssel behalten ihre Reihenfolge. Wichtig beim Sortieren nach mehreren Kriterien nacheinander.
 
-## Die fünf Fehler, die Punkte kosten
+## Die fünf Fehler, die am häufigsten passieren
 
 1. **Off by one** — `bis n - 1` statt `bis n - 2`, wenn im Rumpf auf `feld[i + 1]` zugegriffen wird.
 2. **`<` statt `<=`** in der binären Suche — das letzte Element wird nie geprüft.

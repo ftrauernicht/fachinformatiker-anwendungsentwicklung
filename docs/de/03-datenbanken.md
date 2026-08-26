@@ -472,7 +472,7 @@ löscht alle Datensätze, für die PersNr den Wert 12 hat.
 
 ## Zugriff aus einer Anwendung
 
-Anwendungen sprechen nicht direkt mit einer Datenbank, sondern über einen Treiber. Die beiden Schnittstellen, die der Prüfungskatalog seit 2025 nennt, unterscheiden sich vor allem darin, für wen sie gedacht sind.
+Anwendungen sprechen nicht direkt mit einer Datenbank, sondern über einen Treiber. Die beiden verbreiteten Schnittstellen unterscheiden sich vor allem darin, für wen sie gedacht sind.
 
 ### ODBC
 

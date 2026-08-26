@@ -254,6 +254,7 @@ prüfungstypisch
 Barrierefreiheitsstärkungsgesetz
 Bubblesort
 Insertionsort
+Kataloginhalt
 Katalogstand
 Mergesort
 Merkvariable

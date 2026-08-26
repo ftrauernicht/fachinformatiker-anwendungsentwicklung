@@ -2,12 +2,12 @@
 
 Notations that have to be drawn or read in the final examination.
 
-The first two are an exception: flowcharts and Nassi-Shneiderman diagrams dropped out of the examination with the [2025 catalogue](../00-exam.md). They stay here because they still appear in vocational school — but they no longer work as an examination answer. Pseudocode and the activity diagram are expected instead.
+The first two are an exception: flowcharts and Nassi-Shneiderman diagrams have apparently dropped out of the [2025 catalogue](../00-exam.md); pseudocode and the activity diagram are expected instead. They stay here because they still appear in vocational school.
 
 | Diagram | Purpose | Typical exam task |
 |---|---|---|
-| [Flowchart](01-flowchart.md) | Flow of an algorithm, DIN 66001 | no longer examined since 2025 |
-| [Nassi-Shneiderman diagram](02-nassi-shneiderman-diagram.md) | Flow without jumps, DIN 66261 | no longer examined since 2025 |
+| [Flowchart](01-flowchart.md) | Flow of an algorithm, DIN 66001 | apparently dropped in the 2025 catalogue |
+| [Nassi-Shneiderman diagram](02-nassi-shneiderman-diagram.md) | Flow without jumps, DIN 66261 | apparently dropped in the 2025 catalogue |
 | [Class diagram](03-class-diagram.md) | Static structure of an OO system | Derive classes and relations from text |
 | [Use case diagram](04-use-case-diagram.md) | System boundary and actors | Derive use cases from a requirements text |
 | [Entity-relationship model](05-entity-relationship-model.md) | Data model before normalisation | Draw an ERM, determine cardinalities |

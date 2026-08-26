@@ -9,7 +9,7 @@ The last point is SQL and lives in the [Databases](03-databases.md) chapter. Thi
 - [Pseudocode](#pseudocode)
   - [What pseudocode is](#what-pseudocode-is)
   - [Conventions for pseudocode](#conventions-for-pseudocode)
-  - [What the marking looks at](#what-the-marking-looks-at)
+  - [What it comes down to](#what-it-comes-down-to)
 - [The building blocks](#the-building-blocks)
   - [Sequence](#sequence)
   - [Selection](#selection)
@@ -27,15 +27,15 @@ The last point is SQL and lives in the [Databases](03-databases.md) chapter. Thi
 
 ## Pseudocode
 
-Since the 2025 examination catalogue, flowcharts and Nassi-Shneiderman diagrams are no longer part of the examination. Where a Nassi-Shneiderman diagram used to be enough, pseudocode or an [activity diagram](diagrams/07-activity-diagram.md) is now expected — and a pseudocode task can no longer be sidestepped by drawing a diagram instead.[^2]
+According to a public walkthrough of the 2025 examination catalogue, flowcharts and Nassi-Shneiderman diagrams have been removed from it; pseudocode and the [activity diagram](diagrams/07-activity-diagram.md) take their place.[^2] Where that statement comes from, and how far it can be relied on, is set out in [The final examination at a glance](00-exam.md).
 
 ### What pseudocode is
 
-Pseudocode is program code without the constraints of a particular language.[^3] It is neither compiled nor executed; it is meant to be read. The examination catalogue requires the solution to be readable by a third party who does not know the programming language used.
+Pseudocode is program code without the constraints of a particular language.[^3] It is neither compiled nor executed; it is meant to be read. Readability is therefore the yardstick: whoever reads it should understand the flow without knowing the underlying programming language.
 
 ### Conventions for pseudocode
 
-There is no binding standard for pseudocode — neither in general nor for the German chamber examinations. There is, however, an approach that always works: use a language you know well and drop everything that only the compiler needs.
+There is no binding standard for pseudocode. There is, however, an approach that always works: use a language you know well and drop everything that only the compiler needs.
 
 | Drop | Keep |
 |---|---|
@@ -67,11 +67,11 @@ calculateAge(year, month, birthYear, birthMonth)
     return age
 ```
 
-### What the marking looks at
+### What it comes down to
 
-Syntax errors do no harm as long as the flow stays recognisable. What is marked is the logic: are all cases covered? Are the termination conditions right? Are edge cases handled — empty input, a single element, division by zero?
+What counts is the logic, not the spelling: are all cases covered? Are the termination conditions right? Are edge cases handled — empty input, a single element, division by zero?
 
-Most marks are lost not to syntax but to a loop that stops one iteration too early or too late.
+The typical source of error is not the syntax but a loop that stops one iteration too early or too late.
 
 ## The building blocks
 
@@ -193,11 +193,11 @@ binarySearch(array, wanted)
 
 Effort O(log n): 1,000 elements need at most 10 comparisons, a million at most 20.
 
-Two traps that examination tasks like to build in. First the termination condition `left <= right` — with `<`, the last remaining element is never checked. Second `middle + 1` and `middle - 1` when narrowing the range; assigning `middle` instead gives an endless loop.
+Two traps. First the termination condition `left <= right` — with `<`, the last remaining element is never checked. Second `middle + 1` and `middle - 1` when narrowing the range; assigning `middle` instead gives an endless loop.
 
 ## Sorting algorithms
 
-The three elementary methods have been named explicitly in the examination catalogue since 2025.[^2] All three run in O(n²) on average and are unsuitable for large amounts of data — they are examined because loop logic can be followed through on them.[^6]
+The three elementary methods run in O(n²) on average and are unsuitable for large amounts of data. Their value lies elsewhere: loop logic can be followed through on them step by step.[^6]
 
 The array `[5, 2, 9, 1]` serves as the running example.
 

@@ -1,6 +1,6 @@
 # Flowchart
 
-> **No longer part of the examination since the 2025 catalogue.** Control structures are now asked for in pseudocode or as an [activity diagram](07-activity-diagram.md), and a pseudocode task may no longer be answered with a flowchart. The notation stays in this collection because it still appears in vocational school and explains control flow well. Details in [The final examination at a glance](../00-exam.md), the replacement in [Algorithms](../10-algorithms.md).
+> **Apparently no longer required for the AP2.** According to a public walkthrough of the 2025 examination catalogue, the flowchart has been removed from it; pseudocode and the [activity diagram](07-activity-diagram.md) are expected instead. Where that statement comes from, and how far it can be relied on, is set out in [The final examination at a glance](../00-exam.md); the replacement is in [Algorithms](../10-algorithms.md). The notation stays here because it still appears in vocational school and explains control flow well.
 
 ## Table of contents
 

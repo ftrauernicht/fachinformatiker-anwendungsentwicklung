@@ -201,7 +201,7 @@ Sonderfall KG: Der Komplementär haftet unbeschränkt, der Kommanditist nur mit 
 
 Das Gesetz zur Modernisierung des Personengesellschaftsrechts ist in Kraft getreten — ohne Übergangsfrist und auch für bestehende Gesellschaften.
 
-Zwei Punkte:
+Zwei Punkte daraus:
 
 - Die **Rechtsfähigkeit der GbR** steht jetzt ausdrücklich im BGB. Sie kann Verträge schließen, Eigentum halten und klagen; bis dahin ergab sich das nur aus der Rechtsprechung.
 - Es gibt ein **Gesellschaftsregister**. Eine eingetragene GbR führt den Zusatz **eGbR**. Die Eintragung ist freiwillig, aber praktisch unumgänglich, sobald die Gesellschaft Grundstücke oder Gesellschaftsanteile erwerben will.

@@ -469,7 +469,7 @@ Deletes all records where PersNo has the value 12.
 
 ## Access from an application
 
-Applications do not talk to a database directly but through a driver. The two interfaces the examination catalogue has named since 2025 differ mainly in who they are meant for.
+Applications do not talk to a database directly but through a driver. The two widespread interfaces differ mainly in who they are meant for.
 
 ### ODBC
 

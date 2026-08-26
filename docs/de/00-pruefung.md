@@ -9,6 +9,8 @@ Diese Seite hält beides fest und nennt den Stand, gegen den diese Sammlung gesc
 - [Zwei Teile, eine Note](#zwei-teile-eine-note)
 - [Wann die Prüfung bestanden ist](#wann-die-prüfung-bestanden-ist)
 - [Was geprüft wird: die Prüfungskataloge](#was-geprüft-wird-die-prüfungskataloge)
+  - [Woher die Angaben zum Kataloginhalt stammen](#woher-die-angaben-zum-kataloginhalt-stammen)
+  - [Was sich dieser Durchsicht zufolge geändert hat](#was-sich-dieser-durchsicht-zufolge-geändert-hat)
 - [Was diese Sammlung abdeckt](#was-diese-sammlung-abdeckt)
 - [Stand dieser Sammlung](#stand-dieser-sammlung)
 
@@ -45,11 +47,27 @@ Die Verordnung beschreibt die Prüfungsbereiche nur in wenigen Sätzen. Welche F
 
 **Maßgeblich ist die 2. überarbeitete Auflage.** Sie ist erstmals Grundlage für Teil 1 im Frühjahr 2025 und Teil 2 im Sommer 2025. Die IHK nennt als Gründe die Rückmeldungen aus den Prüfungsterminen seit der ersten Auflage von 2021 und die technische Entwicklung; außerdem trennt sie Teil 1 und Teil 2 schärfer — SQL und RAID werden jetzt ausschließlich in Teil 2 geprüft.[^5]
 
-Für die Fachrichtung Anwendungsentwicklung sind unter anderem hinzugekommen: Last- und Performancetests, testgetriebene Entwicklung, Softwarequalitätsmerkmale, Architektur-Pattern, Monitoring, Kerberos, ODBC, cyber-physische Systeme, die elementaren Sortierverfahren sowie Man-in-the-Middle-Angriffe, SQL-Injection und DDoS namentlich.[^6]
+### Woher die Angaben zum Kataloginhalt stammen
 
-> **Programmablaufplan und Struktogramm sind aus dem Katalog entfernt worden.** Kontrollstrukturen werden jetzt über Pseudocode oder ein Aktivitätsdiagramm abgefragt. Eine Pseudocode-Aufgabe darf nicht mehr durch ein Struktogramm beantwortet werden.[^6]
+Der folgende Abschnitt ist der einzige in dieser Sammlung, der etwas über den **Inhalt** des Prüfungskatalogs aussagt. Deshalb steht hier offen, worauf er sich stützt.
 
-Die Verordnung selbst verlangt in § 14 weiterhin, Algorithmen „in eine Programmierlogik zu übertragen und grafisch darzustellen".[^7] Geändert hat sich also nicht die Anforderung, sondern die Notation, in der sie erwartet wird. Beide Notationen bleiben deshalb in dieser Sammlung — als Grundlage und für den Berufsschulunterricht —, aber mit einem Hinweis versehen.
+| | |
+|---|---|
+| Belegt durch die IHK | dass es eine 2. Auflage gibt, ab wann sie gilt, und dass SQL und RAID nur noch in Teil 2 vorkommen[^5] |
+| Belegt durch die Ausbildungsverordnung | Prüfungsbereiche, Gewichtung, Prüfungszeiten, Bestehensregel[^1] [^2] [^3] |
+| **Nicht** aus dem Katalog selbst | die Liste der einzelnen Themen unten. Sie stammt aus einer öffentlichen Durchsicht des Katalogs im IT-Berufe-Podcast[^6] |
+
+Der Katalog ist geschütztes Material der IHK-Prüfungsstellen; er wird hier weder zitiert noch nachgebildet, sondern nur in seinen Themen benannt. Wer sich darauf verlassen muss, sollte ihn beim U-Form-Verlag beziehen — er kostet rund sieben Euro — oder bei der zuständigen IHK nachfragen. **Diese Sammlung ist gegen das Original nicht abgeglichen.**
+
+### Was sich dieser Durchsicht zufolge geändert hat
+
+Hinzugekommen sein sollen für die Fachrichtung Anwendungsentwicklung unter anderem: Last- und Performancetests, testgetriebene Entwicklung, Softwarequalitätsmerkmale, Architektur-Pattern, Monitoring, Kerberos, ODBC, cyber-physische Systeme, die elementaren Sortierverfahren sowie Man-in-the-Middle-Angriffe, SQL-Injection und DDoS namentlich.[^6]
+
+Entfallen sein sollen **Programmablaufplan und Struktogramm**; Kontrollstrukturen werden demnach über Pseudocode oder ein Aktivitätsdiagramm abgefragt.[^6]
+
+Das ist die folgenreichste Angabe in dieser Sammlung, weil sie beeinflusst, was jemand übt. Sie stützt sich auf zwei Folgen desselben Podcasts und passt zu der Ankündigung der IHK, es werde Raum für den Übergang zu neueren Methoden wie UML geschaffen[^5] — bewiesen ist sie damit nicht.
+
+Die Verordnung selbst verlangt in § 14 unverändert, Algorithmen „in eine Programmierlogik zu übertragen und grafisch darzustellen".[^7] Geändert hätte sich also nicht die Anforderung, sondern die Notation, in der sie erwartet wird. Beide Notationen bleiben deshalb in dieser Sammlung — als Grundlage und für den Berufsschulunterricht —, tragen aber einen Hinweis.
 
 ## Was diese Sammlung abdeckt
 

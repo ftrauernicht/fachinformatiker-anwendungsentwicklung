@@ -101,7 +101,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-268 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+269 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -439,6 +439,7 @@ Grundbuchstaben.
 - **Wiederholung** — [Algorithmen](10-algorithmen.md#wiederholung)
 - **Wissen** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#wissen)
 - **WLAN (Wireless Local Area Network)** — [Netzwerktechnik](01-netzwerktechnik.md#wlan-wireless-local-area-network)
+- **Worauf es ankommt** — [Algorithmen](10-algorithmen.md#worauf-es-ankommt)
 
 ### Z
 

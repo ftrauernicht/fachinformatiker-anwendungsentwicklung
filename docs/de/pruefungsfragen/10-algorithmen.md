@@ -3,7 +3,7 @@
 ## Inhaltsverzeichnis
 
 - [Pseudocode und Kontrollstrukturen](#pseudocode-und-kontrollstrukturen)
-  - [1. Eine Aufgabe verlangt einen Algorithmus in Pseudocode. Darf man stattdessen ein Struktogramm zeichnen?](#1-eine-aufgabe-verlangt-einen-algorithmus-in-pseudocode-darf-man-stattdessen-ein-struktogramm-zeichnen)
+  - [1. Warum sollte man eine Pseudocode-Aufgabe nicht durch ein Struktogramm ersetzen?](#1-warum-sollte-man-eine-pseudocode-aufgabe-nicht-durch-ein-struktogramm-ersetzen)
   - [2. Nennen Sie die drei Grundbausteine, aus denen sich jeder Algorithmus zusammensetzen lässt.](#2-nennen-sie-die-drei-grundbausteine-aus-denen-sich-jeder-algorithmus-zusammensetzen-lässt)
   - [3. Worin unterscheiden sich kopfgesteuerte und fußgesteuerte Schleife? Nennen Sie je einen Anwendungsfall.](#3-worin-unterscheiden-sich-kopfgesteuerte-und-fußgesteuerte-schleife-nennen-sie-je-einen-anwendungsfall)
   - [4. Schreiben Sie in Pseudocode eine Funktion, die das größte Element eines Feldes zurückgibt.](#4-schreiben-sie-in-pseudocode-eine-funktion-die-das-größte-element-eines-feldes-zurückgibt)
@@ -18,14 +18,14 @@
 
 ## Pseudocode und Kontrollstrukturen
 
-### 1. Eine Aufgabe verlangt einen Algorithmus in Pseudocode. Darf man stattdessen ein Struktogramm zeichnen?
+### 1. Warum sollte man eine Pseudocode-Aufgabe nicht durch ein Struktogramm ersetzen?
 
 <details markdown="1">
 <summary>Antwort</summary>
 
-Nein. Programmablaufplan und Struktogramm sind mit dem Prüfungskatalog von 2025 aus der Prüfung entfernt worden. Verlangt wird Pseudocode oder eine Lösung in einer Programmiersprache; als grafische Darstellung ist das UML-Aktivitätsdiagramm vorgesehen.
+Weil Programmablaufplan und Struktogramm aus dem Prüfungskatalog von 2025 offenbar entfernt worden sind — an ihre Stelle treten Pseudocode und das UML-Aktivitätsdiagramm. Woher diese Angabe stammt, steht in [Die Abschlussprüfung im Überblick](../00-pruefung.md); gegen das Original geprüft ist sie nicht.
 
-Bis dahin war es üblich, eine Programmieraufgabe durch ein Struktogramm zu ersetzen. Wer sich darauf verlässt, schreibt heute eine Antwort ohne Punkte.
+Unabhängig davon gilt der schlichtere Grund: Wer statt des verlangten Pseudocodes eine andere Darstellung liefert, beantwortet eine andere Frage als die gestellte.
 
 </details>
 
@@ -119,7 +119,7 @@ Zu bedenken ist allerdings, dass das Sortieren selbst Aufwand kostet. Für eine 
 <details markdown="1">
 <summary>Antwort</summary>
 
-Ein Fehler, bei dem eine Schleife oder ein Index um genau eins danebenliegt — der häufigste Fehler in Prüfungsantworten mit Schleifen.
+Ein Fehler, bei dem eine Schleife oder ein Index um genau eins danebenliegt — die klassische Fehlerquelle bei Schleifen.
 
 ```text
 für i von 0 bis länge(feld) - 1

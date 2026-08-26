@@ -407,7 +407,7 @@ Charakteristika:
 
 ## Angriffe und Gegenmaßnahmen
 
-Der Prüfungskatalog nennt seit 2025 Man-in-the-Middle, SQL-Injection und DDoS ausdrücklich. Die drei stehen hier zusammen mit den anderen Angriffen, die in Aufgaben regelmäßig vorkommen. Als Nachschlagewerk für Webanwendungen dient darüber hinaus die Liste der OWASP Top Ten.[^9]
+Die folgenden sechs Angriffe decken die Muster ab, auf die sich die meisten Angriffe auf Webanwendungen zurückführen lassen. Als vollständigeres Nachschlagewerk dient die Liste der OWASP Top Ten.[^9]
 
 ### Man-in-the-Middle
 
@@ -436,7 +436,7 @@ Gegenmaßnahmen, in dieser Reihenfolge:
 3. Für die Anwendung ein Datenbankkonto mit möglichst wenigen Rechten verwenden.
 4. Fehlermeldungen der Datenbank nicht an den Nutzer durchreichen.
 
-Maskieren von Sonderzeichen allein genügt nicht — das ist die häufigste falsche Antwort auf diese Frage.
+Maskieren von Sonderzeichen allein genügt nicht: Es ist eine Notlösung und je nach Zeichensatz und Datenbanksystem umgehbar.
 
 ### Cross-Site-Scripting
 
@@ -479,7 +479,7 @@ Gegenmaßnahmen sind entsprechend organisatorisch: Schulung, ein festgelegter R�
 
 ## Kerberos
 
-Kerberos ist ein Netzwerkprotokoll zur Authentifizierung in unsicheren Netzen und seit 2025 im Prüfungskatalog. Es ist die Grundlage der Anmeldung in Windows-Domänen.[^16]
+Kerberos ist ein Netzwerkprotokoll zur Authentifizierung in unsicheren Netzen und die Grundlage der Anmeldung in Windows-Domänen.[^16]
 
 Der Kern ist ein vertrauenswürdiger Dritter, das **Key Distribution Center**. Es besteht aus einem Authentifizierungsdienst und einem Ticket-Dienst.
 
@@ -487,7 +487,7 @@ Der Kern ist ein vertrauenswürdiger Dritter, das **Key Distribution Center**. E
 2. Mit diesem Ticket fordert er beim Ticket-Dienst ein Ticket für einen bestimmten Dienst an.
 3. Dieses Dienst-Ticket legt er dem Dienst vor. Der prüft es, ohne beim KDC nachzufragen.
 
-Zwei Eigenschaften sind prüfungsrelevant: Das **Kennwort wird nie über das Netz übertragen** — es dient nur zur Entschlüsselung der Antwort des KDC. Und Tickets sind zeitlich begrenzt, weshalb die Uhren aller Beteiligten übereinstimmen müssen; eine Abweichung von wenigen Minuten lässt die Anmeldung scheitern.
+Zwei Eigenschaften sind dabei wesentlich. Das **Kennwort wird nie über das Netz übertragen** — es dient nur zur Entschlüsselung der Antwort des KDC. Und Tickets sind zeitlich begrenzt, weshalb die Uhren aller Beteiligten übereinstimmen müssen; eine Abweichung von wenigen Minuten lässt die Anmeldung scheitern.
 
 Der Vorteil ist die einmalige Anmeldung für viele Dienste, der Nachteil die zentrale Abhängigkeit: Fällt das KDC aus, meldet sich niemand mehr an.
 
@@ -497,21 +497,23 @@ Zwei Regelwerke sind nach der letzten großen Überarbeitung dieser Sammlung in 
 
 ### NIS-2-Umsetzungsgesetz
 
-Das deutsche Umsetzungsgesetz zur europäischen NIS-2-Richtlinie wurde am 6. Dezember 2025 verkündet und gilt seitdem ohne Übergangsfrist. Betroffen sind rund 29.500 Unternehmen — deutlich mehr als zuvor, weil nicht mehr nur Betreiber kritischer Anlagen erfasst sind, sondern Einrichtungen ab bestimmten Größen in achtzehn Sektoren.[^17]
+Zur Umsetzung der europäischen NIS-2-Richtlinie ist das BSIG neu gefasst worden. Erfasst sind seitdem nicht nur Betreiber kritischer Anlagen, sondern auch besonders wichtige und wichtige Einrichtungen ab bestimmten Größen; welche Sektoren dazugehören, zählen die Anlagen 1 und 2 des Gesetzes auf.[^17]
 
-Die Pflichten stehen in § 30 BSIG: Risikomanagement in zehn benannten Bereichen, darunter Sicherheit der Lieferkette, Notfallmanagement, Kryptografie und Mehrfaktor-Authentifizierung.[^18] Dazu kommen die Registrierung beim BSI und eine gestufte Meldepflicht bei erheblichen Sicherheitsvorfällen:
+Die Risikomanagementmaßnahmen stehen in § 30 BSIG. Der Katalog nennt zehn Bereiche, darunter Sicherheit der Lieferkette, Bewältigung von Sicherheitsvorfällen, kryptografische Verfahren und Multi-Faktor-Authentifizierung.[^18]
 
-| Frist | Was zu melden ist |
+Dazu kommt eine gestufte Meldepflicht bei erheblichen Sicherheitsvorfällen nach § 32 BSIG:[^19]
+
+| Frist ab Kenntnis | Was zu melden ist |
 |---|---|
-| 24 Stunden | Erstmeldung, ob ein erheblicher Vorfall vorliegt |
-| 72 Stunden | Bewertung mit Schweregrad und Auswirkungen |
-| 1 Monat | Abschlussmeldung mit Ursache und Gegenmaßnahmen |
+| 24 Stunden | Erstmeldung |
+| 72 Stunden | Folgemeldung mit Bewertung |
+| 1 Monat nach der Meldung | Abschlussmeldung |
 
-Neu ist außerdem die persönliche Verantwortung der Geschäftsleitung: Sie muss die Maßnahmen billigen, überwachen und sich schulen lassen.
+§ 38 BSIG nimmt außerdem die Geschäftsleitung persönlich in die Pflicht: Sie muss die Maßnahmen nach § 30 umsetzen und ihre Umsetzung überwachen, haftet bei schuldhafter Verletzung dieser Pflicht nach den Regeln ihrer Rechtsform und muss regelmäßig an Schulungen teilnehmen.[^20]
 
 ### EU-Verordnung über künstliche Intelligenz
 
-Die KI-Verordnung ist am 1. August 2024 in Kraft getreten und gilt gestaffelt. Verbotene Praktiken und die Pflicht zur KI-Kompetenz gelten seit dem 2. Februar 2025, die Regeln für Modelle mit allgemeinem Verwendungszweck seit dem 2. August 2025, der überwiegende Teil ab dem 2. August 2026.[^19]
+Die KI-Verordnung ist am 1. August 2024 in Kraft getreten und gilt gestaffelt. Verbotene Praktiken und die Pflicht zur KI-Kompetenz gelten seit dem 2. Februar 2025, die Regeln für Modelle mit allgemeinem Verwendungszweck seit dem 2. August 2025, der überwiegende Teil ab dem 2. August 2026.[^21]
 
 Sie folgt einem risikobasierten Ansatz mit vier Stufen:
 
@@ -540,6 +542,8 @@ Für die Ausbildung wichtig ist Artikel 4: Wer KI-Systeme betreibt oder anbietet
 [^14]: <https://de.wikipedia.org/wiki/Denial_of_Service>
 [^15]: <https://de.wikipedia.org/wiki/Social_Engineering_(Sicherheit)>
 [^16]: <https://de.wikipedia.org/wiki/Kerberos_(Informatik)>
-[^17]: <https://www.bsi.bund.de/dok/nis-2>
+[^17]: <https://www.gesetze-im-internet.de/bsig_2025/>
 [^18]: <https://www.gesetze-im-internet.de/bsig_2025/__30.html>
-[^19]: <https://digital-strategy.ec.europa.eu/de/policies/regulatory-framework-ai>
+[^19]: <https://www.gesetze-im-internet.de/bsig_2025/__32.html>
+[^20]: <https://www.gesetze-im-internet.de/bsig_2025/__38.html>
+[^21]: <https://digital-strategy.ec.europa.eu/de/policies/regulatory-framework-ai>

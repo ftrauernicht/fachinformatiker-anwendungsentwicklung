@@ -245,7 +245,7 @@ Wirksamste Gegenmaßnahme sind **vorbereitete Anweisungen mit Platzhaltern**. De
 
 Ergänzend: Eingaben gegen eine Positivliste prüfen, ein Datenbankkonto mit minimalen Rechten verwenden, Datenbankfehler nicht an den Nutzer durchreichen.
 
-Häufige falsche Antwort: „Sonderzeichen maskieren". Das ist eine Notlösung und in mehreren Zeichensätzen umgehbar.
+Nicht ausreichend ist das Maskieren von Sonderzeichen: eine Notlösung, die sich je nach Zeichensatz und Datenbanksystem umgehen lässt.
 
 </details>
 
@@ -306,13 +306,13 @@ Die Uhren müssen übereinstimmen, weil Tickets einen Zeitstempel tragen und nur
 
 | Frist | Was zu melden ist |
 |---|---|
-| **24 Stunden** | Erstmeldung: liegt ein erheblicher Vorfall vor? |
-| **72 Stunden** | Bewertung mit Schweregrad und Auswirkungen |
-| **1 Monat** | Abschlussmeldung mit Ursache und Gegenmaßnahmen |
+| **24 Stunden** | Erstmeldung |
+| **72 Stunden** | Folgemeldung mit Bewertung |
+| **1 Monat** nach der Meldung | Abschlussmeldung |
 
-Das Gesetz wurde am 6. Dezember 2025 verkündet und gilt ohne Übergangsfrist. Betroffen sind Einrichtungen ab bestimmten Größen in achtzehn Sektoren, nicht mehr nur Betreiber kritischer Anlagen.
+Die Fristen stehen in § 32 BSIG und laufen ab dem Zeitpunkt, an dem die Einrichtung von dem Vorfall Kenntnis erlangt.
 
-Die Pflichten stehen in § 30 BSIG: Risikomanagement in zehn Bereichen, darunter Lieferkettensicherheit, Notfallmanagement, Kryptografie und Mehrfaktor-Authentifizierung. Neu ist die persönliche Verantwortung der Geschäftsleitung, die die Maßnahmen billigen und überwachen muss.
+Erfasst sind seit der Neufassung des BSIG nicht mehr nur Betreiber kritischer Anlagen, sondern auch besonders wichtige und wichtige Einrichtungen ab bestimmten Größen. Die Risikomanagementmaßnahmen stehen in § 30 BSIG und nennen zehn Bereiche, darunter Lieferkettensicherheit, Bewältigung von Sicherheitsvorfällen, Kryptografie und Multi-Faktor-Authentifizierung. § 38 nimmt die Geschäftsleitung persönlich in die Pflicht — umsetzen, überwachen, sich schulen lassen.
 
 </details>
 

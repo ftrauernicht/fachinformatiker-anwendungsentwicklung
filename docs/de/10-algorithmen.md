@@ -9,7 +9,7 @@ Der letzte Punkt ist SQL und steht im Kapitel [Datenbanken](03-datenbanken.md). 
 - [Pseudocode](#pseudocode)
   - [Was Pseudocode ist](#was-pseudocode-ist)
   - [Konventionen für Pseudocode](#konventionen-für-pseudocode)
-  - [Was in der Bewertung zählt](#was-in-der-bewertung-zählt)
+  - [Worauf es ankommt](#worauf-es-ankommt)
 - [Die Grundbausteine](#die-grundbausteine)
   - [Sequenz](#sequenz)
   - [Verzweigung](#verzweigung)
@@ -27,15 +27,15 @@ Der letzte Punkt ist SQL und steht im Kapitel [Datenbanken](03-datenbanken.md). 
 
 ## Pseudocode
 
-Seit dem Prüfungskatalog von 2025 sind Programmablaufplan und Struktogramm nicht mehr Bestandteil der Prüfung. Wo früher ein Struktogramm genügte, wird jetzt Pseudocode oder ein [Aktivitätsdiagramm](diagramme/07-aktivitaetsdiagramm.md) erwartet — und eine Pseudocode-Aufgabe lässt sich nicht mehr dadurch umgehen, dass man ein Diagramm zeichnet.[^2]
+Einer öffentlichen Durchsicht des Prüfungskatalogs von 2025 zufolge sind Programmablaufplan und Struktogramm daraus entfernt worden; an ihre Stelle treten Pseudocode und das [Aktivitätsdiagramm](diagramme/07-aktivitaetsdiagramm.md).[^2] Woher diese Angabe stammt und wie belastbar sie ist, steht in [Die Abschlussprüfung im Überblick](00-pruefung.md).
 
 ### Was Pseudocode ist
 
-Pseudocode ist Programmcode ohne die Zwänge einer bestimmten Sprache.[^3] Er wird nicht übersetzt und nicht ausgeführt; er soll gelesen werden. Der Prüfungskatalog verlangt, dass die Lösung für Dritte auch ohne Kenntnis der verwendeten Programmiersprache lesbar ist.
+Pseudocode ist Programmcode ohne die Zwänge einer bestimmten Sprache.[^3] Er wird nicht übersetzt und nicht ausgeführt; er soll gelesen werden. Der Maßstab ist entsprechend die Lesbarkeit: Wer ihn liest, soll den Ablauf verstehen, ohne die zugrunde liegende Programmiersprache zu kennen.
 
 ### Konventionen für Pseudocode
 
-Eine verbindliche Norm für Pseudocode gibt es nicht — weder allgemein noch für die IHK-Prüfung. Es gibt aber ein Verfahren, das sicher funktioniert: eine Sprache verwenden, die man beherrscht, und alles weglassen, was nur der Übersetzer braucht.
+Eine verbindliche Norm für Pseudocode gibt es nicht. Es gibt aber ein Verfahren, das sicher funktioniert: eine Sprache verwenden, die man beherrscht, und alles weglassen, was nur der Übersetzer braucht.
 
 | Weglassen | Behalten |
 |---|---|
@@ -69,11 +69,11 @@ berechneAlter(jahr, monat, geburtsjahr, geburtsmonat)
 
 Deutsche und englische Schlüsselwörter sind beide zulässig, gemischt werden sollten sie nicht.
 
-### Was in der Bewertung zählt
+### Worauf es ankommt
 
-Syntaxfehler sind unschädlich, solange der Ablauf erkennbar bleibt. Bewertet wird die Logik: Sind alle Fälle abgedeckt? Stimmen die Abbruchbedingungen? Werden Randfälle behandelt — leere Eingabe, ein einzelnes Element, Division durch null?
+Entscheidend ist die Logik, nicht die Schreibweise: Sind alle Fälle abgedeckt? Stimmen die Abbruchbedingungen? Werden Randfälle behandelt — leere Eingabe, ein einzelnes Element, Division durch null?
 
-Der häufigste Punktverlust entsteht nicht an der Syntax, sondern an einer Schleife, die einen Durchlauf zu früh oder zu spät endet.
+Die typische Fehlerquelle ist dabei nicht die Syntax, sondern eine Schleife, die einen Durchlauf zu früh oder zu spät endet.
 
 ## Die Grundbausteine
 
@@ -195,11 +195,11 @@ binäreSuche(feld, gesucht)
 
 Aufwand O(log n): Bei 1.000 Elementen sind höchstens 10 Vergleiche nötig, bei einer Million höchstens 20.
 
-Zwei Stolperstellen, die in Prüfungsaufgaben gern eingebaut werden. Erstens die Abbruchbedingung `links <= rechts` — mit `<` wird das letzte verbleibende Element nicht mehr geprüft. Zweitens `mitte + 1` beziehungsweise `mitte - 1` beim Verkleinern des Bereichs; wer stattdessen `mitte` zuweist, bekommt eine Endlosschleife.
+Zwei Stolperstellen. Erstens die Abbruchbedingung `links <= rechts` — mit `<` wird das letzte verbleibende Element nicht mehr geprüft. Zweitens `mitte + 1` beziehungsweise `mitte - 1` beim Verkleinern des Bereichs; wer stattdessen `mitte` zuweist, bekommt eine Endlosschleife.
 
 ## Sortierverfahren
 
-Die drei elementaren Verfahren stehen seit 2025 ausdrücklich im Prüfungskatalog.[^2] Alle drei haben im Mittel eine Laufzeit von O(n²) und sind für große Datenmengen ungeeignet — geprüft werden sie, weil sich an ihnen Schleifenlogik nachvollziehen lässt.[^6]
+Die drei elementaren Verfahren haben im Mittel eine Laufzeit von O(n²) und sind für große Datenmengen ungeeignet. Ihr Wert liegt woanders: An ihnen lässt sich Schleifenlogik Schritt für Schritt nachvollziehen.[^6]
 
 Als durchgehendes Beispiel dient das Feld `[5, 2, 9, 1]`.
 

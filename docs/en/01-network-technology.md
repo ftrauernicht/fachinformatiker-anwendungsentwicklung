@@ -219,7 +219,7 @@ RAID 10:<br>
 
 ## Storage systems
 
-Both have been named explicitly in the examination catalogue since 2025. The difference is not the device but the level at which it is accessed.
+The difference between the two is not the device but the level at which it is accessed.
 
 ### NAS (network attached storage)
 
@@ -252,7 +252,7 @@ Important for telling this apart from RAID: RAID spreads data across several dis
 
 ## Monitoring
 
-In the examination catalogue since 2025. Monitoring is the continuous observation of systems and services with the aim of noticing a fault before the first user calls.[^14]
+Monitoring is the continuous observation of systems and services with the aim of noticing a fault before the first user calls.[^14]
 
 Observation happens on three levels:
 

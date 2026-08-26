@@ -406,7 +406,7 @@ Characteristics:
 
 ## Attacks and countermeasures
 
-Since 2025 the examination catalogue names man-in-the-middle, SQL injection and DDoS explicitly. They are collected here together with the other attacks that regularly appear in tasks. For web applications, the OWASP Top Ten serve as the wider reference.[^9]
+The six attacks below cover the patterns that most attacks on web applications come down to. The OWASP Top Ten serve as the fuller reference.[^9]
 
 ### Man-in-the-middle
 
@@ -435,7 +435,7 @@ Countermeasures, in this order:
 3. Give the application a database account with as few privileges as possible.
 4. Never pass database error messages through to the user.
 
-Escaping special characters alone is not enough — that is the most common wrong answer to this question.
+Escaping special characters alone is not enough: it is a stopgap and can be circumvented depending on the character set and database system.
 
 ### Cross-site scripting
 
@@ -478,7 +478,7 @@ The countermeasures are correspondingly organisational: training, a fixed call-b
 
 ## Kerberos
 
-Kerberos is a network protocol for authentication over insecure networks and has been in the examination catalogue since 2025. It is the basis of logging in to a Windows domain.[^16]
+Kerberos is a network protocol for authentication over insecure networks and the basis of logging in to a Windows domain.[^16]
 
 At its core is a trusted third party, the **key distribution centre**, made up of an authentication service and a ticket-granting service.
 
@@ -486,7 +486,7 @@ At its core is a trusted third party, the **key distribution centre**, made up o
 2. With that ticket they request a ticket for a particular service from the ticket-granting service.
 3. They present that service ticket to the service, which verifies it without asking the KDC.
 
-Two properties matter for the examination. The **password is never sent across the network** — it is only used to decrypt the KDC's answer. And tickets are time-limited, which is why the clocks of all parties have to agree; a difference of a few minutes makes the login fail.
+Two properties are essential here. The **password is never sent across the network** — it is only used to decrypt the KDC's answer. And tickets are time-limited, which is why the clocks of all parties have to agree; a difference of a few minutes makes the login fail.
 
 The benefit is a single sign-on for many services, the drawback is the central dependency: if the KDC is down, nobody logs in.
 
@@ -496,21 +496,23 @@ Two bodies of rules came into force after the last major revision of this collec
 
 ### The NIS 2 implementation act
 
-The German act implementing the European NIS 2 directive was promulgated on 6 December 2025 and has applied since, without a transition period. Around 29,500 companies are affected — far more than before, because it no longer covers operators of critical infrastructure only but entities above certain size thresholds across eighteen sectors.[^17]
+To implement the European NIS 2 directive, the German BSIG has been recast. It now covers not only operators of critical infrastructure but also essential and important entities above certain size thresholds; which sectors those are is listed in annexes 1 and 2 of the act.[^17]
 
-The obligations sit in § 30 BSIG: risk management across ten named areas, among them supply chain security, incident handling, cryptography and multi-factor authentication.[^18] On top of that come registration with the federal office and a staged duty to report significant incidents:
+The risk management measures sit in § 30 BSIG. The catalogue names ten areas, among them supply chain security, incident handling, cryptographic methods and multi-factor authentication.[^18]
 
-| Deadline | What has to be reported |
+On top of that comes a staged duty to report significant incidents under § 32 BSIG:[^19]
+
+| Deadline from becoming aware | What has to be reported |
 |---|---|
-| 24 hours | first notification of whether a significant incident has occurred |
-| 72 hours | assessment with severity and impact |
-| 1 month | final report with cause and countermeasures |
+| 24 hours | initial notification |
+| 72 hours | follow-up notification with an assessment |
+| 1 month after the notification | final report |
 
-New as well is the personal responsibility of the management: it has to approve and supervise the measures and undergo training itself.
+§ 38 BSIG also puts the management personally on the hook: it has to implement the measures under § 30 and supervise their implementation, is liable for culpable breaches under the rules of its legal form, and has to attend training regularly.[^20]
 
 ### The EU regulation on artificial intelligence
 
-The AI Act entered into force on 1 August 2024 and applies in stages. Prohibited practices and the duty of AI literacy have applied since 2 February 2025, the rules for general-purpose models since 2 August 2025, and the bulk of the regulation from 2 August 2026.[^19]
+The AI Act entered into force on 1 August 2024 and applies in stages. Prohibited practices and the duty of AI literacy have applied since 2 February 2025, the rules for general-purpose models since 2 August 2025, and the bulk of the regulation from 2 August 2026.[^21]
 
 It follows a risk-based approach with four levels:
 
@@ -539,6 +541,8 @@ Article 4 is the one that matters for apprenticeships: anyone operating or provi
 [^14]: <https://en.wikipedia.org/wiki/Denial-of-service_attack>
 [^15]: <https://en.wikipedia.org/wiki/Social_engineering_(security)>
 [^16]: <https://en.wikipedia.org/wiki/Kerberos_(protocol)>
-[^17]: <https://www.bsi.bund.de/dok/nis-2>
+[^17]: <https://www.gesetze-im-internet.de/bsig_2025/>
 [^18]: <https://www.gesetze-im-internet.de/bsig_2025/__30.html>
-[^19]: <https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai>
+[^19]: <https://www.gesetze-im-internet.de/bsig_2025/__32.html>
+[^20]: <https://www.gesetze-im-internet.de/bsig_2025/__38.html>
+[^21]: <https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai>

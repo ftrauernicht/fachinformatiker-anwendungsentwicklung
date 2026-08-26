@@ -68,7 +68,7 @@ The UG is not a legal form of its own but a GmbH with a smaller starting capital
 
 On 1 January 2024 the act modernising German partnership law came into force — without a transition period and for existing partnerships as well.[^2]
 
-Two points matter for the examination:
+Two points from it matter in practice:
 
 - The **legal capacity of the GbR** is now written into the law. It can enter into contracts, hold property and sue in its own name; until then this followed only from case law.
 - There is a **partnership register**. A GbR that registers carries the suffix **eGbR**. Registration is voluntary in principle but becomes a practical necessity as soon as the partnership wants to acquire land or shares — without it, nothing changes in the land register.

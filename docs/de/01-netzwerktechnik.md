@@ -203,7 +203,7 @@ Darstellung RAID 10:<br>
 
 ## Speichersysteme
 
-Beide stehen seit 2025 ausdrücklich im Prüfungskatalog. Der Unterschied liegt nicht im Gerät, sondern in der Ebene, auf der zugegriffen wird.
+Der Unterschied zwischen beiden liegt nicht im Gerät, sondern in der Ebene, auf der zugegriffen wird.
 
 ### NAS (Network Attached Storage)
 
@@ -236,7 +236,7 @@ Wichtig für die Abgrenzung zu RAID: RAID verteilt Daten **innerhalb** eines Spe
 
 ## Monitoring
 
-Seit 2025 im Prüfungskatalog. Monitoring ist die fortlaufende Überwachung von Systemen und Diensten mit dem Ziel, eine Störung zu bemerken, bevor der erste Anwender anruft.[^14]
+Monitoring ist die fortlaufende Überwachung von Systemen und Diensten mit dem Ziel, eine Störung zu bemerken, bevor der erste Anwender anruft.[^14]
 
 Überwacht wird auf drei Ebenen:
 

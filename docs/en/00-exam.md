@@ -9,6 +9,8 @@ This page records both, and names the state this collection is written against.
 - [Two parts, one grade](#two-parts-one-grade)
 - [When the examination is passed](#when-the-examination-is-passed)
 - [What gets examined: the examination catalogues](#what-gets-examined-the-examination-catalogues)
+  - [Where the statements about the catalogue come from](#where-the-statements-about-the-catalogue-come-from)
+  - [What that walkthrough reports as changed](#what-that-walkthrough-reports-as-changed)
 - [What this collection covers](#what-this-collection-covers)
 - [The state of this collection](#the-state-of-this-collection)
 
@@ -45,11 +47,27 @@ The regulation describes the examination areas in a few sentences only. Which su
 
 **The authoritative version is the 2nd revised edition.** It is the basis for Part 1 in spring 2025 and Part 2 in summer 2025 for the first time. The chamber gives two reasons: feedback from the examination dates since the first edition of 2021, and technical developments. It also separates Part 1 and Part 2 more sharply — SQL and RAID are now examined exclusively in Part 2.[^5]
 
-For the application development specialisation, the additions include load and performance testing, test-driven development, software quality characteristics, architectural patterns, monitoring, Kerberos, ODBC, cyber-physical systems, the elementary sorting algorithms, and man-in-the-middle attacks, SQL injection and DDoS by name.[^6]
+### Where the statements about the catalogue come from
 
-> **Flowcharts and Nassi-Shneiderman diagrams have been removed from the catalogue.** Control structures are now asked for in pseudocode or as an activity diagram. A pseudocode task may no longer be answered with a Nassi-Shneiderman diagram.[^6]
+The following section is the only one in this collection that says anything about the **contents** of the examination catalogue. What it rests on is therefore stated openly here.
 
-The regulation itself still requires in § 14 that algorithms be "transferred into program logic and represented graphically".[^7] What changed is therefore not the requirement but the notation expected for it. Both notations stay in this collection — as groundwork and for vocational school — but carry a note.
+| | |
+|---|---|
+| Evidenced by the chamber | that a 2nd edition exists, from when it applies, and that SQL and RAID now appear in Part 2 only[^5] |
+| Evidenced by the training regulation | examination areas, weighting, durations, pass rule[^1] [^2] [^3] |
+| **Not** from the catalogue itself | the list of individual topics below. It comes from a public walkthrough of the catalogue on the IT-Berufe podcast[^6] |
+
+The catalogue is protected material of the chambers' examination bodies; it is neither quoted nor reproduced here, only named by topic. Anyone who has to rely on it should obtain it from U-Form Verlag — it costs around seven euros — or ask their own chamber of commerce. **This collection has not been reconciled against the original.**
+
+### What that walkthrough reports as changed
+
+Reportedly added for the application development specialisation, among others: load and performance testing, test-driven development, software quality characteristics, architectural patterns, monitoring, Kerberos, ODBC, cyber-physical systems, the elementary sorting algorithms, and man-in-the-middle attacks, SQL injection and DDoS by name.[^6]
+
+Reportedly removed: **flowcharts and Nassi-Shneiderman diagrams**; control structures are said to be asked for in pseudocode or as an activity diagram instead.[^6]
+
+That is the most consequential statement in this collection, because it shapes what someone practises. It rests on two episodes of the same podcast and fits the chamber's announcement that room was made for the transition to newer methods such as UML[^5] — which does not make it proven.
+
+The regulation itself still requires in § 14 that algorithms be "transferred into program logic and represented graphically".[^7] What would have changed is therefore not the requirement but the notation expected for it. Both notations stay in this collection — as groundwork and for vocational school — but carry a note.
 
 ## What this collection covers
 

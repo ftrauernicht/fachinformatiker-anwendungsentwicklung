@@ -234,8 +234,6 @@ Die Teststufen bauen aufeinander auf, und jede gehört zu einer Stufe der Spezif
 | **Systemtest** | das vollständige System in einer produktionsnahen Umgebung | Pflichtenheft | Test oder Qualitätssicherung |
 | **Abnahmetest** | ob das System die Anforderungen des Auftraggebers erfüllt | Lastenheft, Vertrag | Auftraggeber |
 
-Der Prüfungskatalog von 2025 hat die Aufzählung dabei von „Komponenten-, Funktions-, Integrationstest" auf „Komponenten-, Integrations-, Systemtest" umgestellt.
-
 Je später ein Fehler auffällt, desto teurer wird seine Beseitigung — je Stufe grob um den Faktor zehn. Das ist das eigentliche Argument für automatisierte Komponententests, nicht die Zahl in der Überdeckungsstatistik.
 
 ### Black-Box- und White-Box-Test
@@ -244,11 +242,11 @@ Je später ein Fehler auffällt, desto teurer wird seine Beseitigung — je Stuf
 
 **White Box** heißt: der Quelltext ist bekannt, getestet wird gegen seine Struktur. Maß ist die Überdeckung — Anweisungs-, Zweig- oder Pfadüberdeckung.
 
-Die Grenzwertanalyse ist der Klassiker in Prüfungsaufgaben. Bei einer erlaubten Menge von 1 bis 100 werden 0, 1, 100 und 101 getestet, nicht 50: Fehler sitzen an den Rändern, weil dort die Vergleichsoperatoren stehen.
+Die Grenzwertanalyse ist dabei das Standardverfahren: Bei einer erlaubten Menge von 1 bis 100 werden 0, 1, 100 und 101 geprüft, nicht 50. Fehler sitzen an den Rändern, weil dort die Vergleichsoperatoren stehen.
 
 ### Last- und Performancetest
 
-Seit 2025 steht beides ausdrücklich im Prüfungskatalog. Diese Tests messen nicht, *ob* etwas funktioniert, sondern *wie gut* unter Belastung.[^9]
+Diese Tests messen nicht, *ob* etwas funktioniert, sondern *wie gut* unter Belastung.[^9]
 
 | Testart | Frage dahinter |
 |---|---|
@@ -303,7 +301,7 @@ Drei tauchen in Aufgaben besonders häufig auf:
 
 ### Abgrenzung der beiden Begriffe
 
-Ein Muster ist weder Bibliothek noch fertiger Code, sondern eine Beschreibung. In der Prüfung ist das Erkennen wichtiger als das Implementieren: Gefragt werden Name, Zweck und ein Beispiel — selten das vollständige Klassendiagramm.
+Ein Muster ist weder Bibliothek noch fertiger Code, sondern eine Beschreibung. Zum Einordnen genügen deshalb Name, Zweck und ein Beispiel; das vollständige Klassendiagramm braucht man erst beim Implementieren.
 
 ## Rechtliche Pflichten bei Webanwendungen
 

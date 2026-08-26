@@ -34,16 +34,21 @@ Pfade), 21 interne Links zeigten ins Leere, zwei Quellenangaben waren tot und ü
 Rechtschreibfehler standen im Text — bis hin zu `UNTION ALL` in einem SQL-Beispiel und
 einem doppelten Inhaltsverzeichnis auf einer Seite.
 
-**Es folgt dem Prüfungskatalog von 2025.** Die Sammlung von 2023 ist gegen die erste
-Auflage der IHK-Prüfungskataloge von 2021 geschrieben. Inzwischen gilt die zweite Auflage —
-erstmals für Teil 1 im Frühjahr 2025 und Teil 2 im Sommer 2025. Sie hat Programmablaufplan
-und Struktogramm aus der Prüfung genommen und dafür unter anderem Sortierverfahren,
-Softwarequalitätsmerkmale, Last- und Performancetests, Architektur-Pattern, Monitoring,
-Kerberos, ODBC sowie NAS und SAN aufgenommen. Was davon fehlte, ist ergänzt; die beiden
-ausgemusterten Notationen bleiben stehen, aber mit einem Hinweis. Der Rahmen aus der
-Ausbildungsverordnung — Prüfungsbereiche, Gewichtung, Bestehensregel — steht jetzt in
-[Die Abschlussprüfung im Überblick](docs/de/00-pruefung.md), zusammen mit dem Katalog- und
-Rechtsstand, gegen den geschrieben wurde.
+**Sie sagt, wogegen sie geschrieben ist.** Die Sammlung von 2023 folgt der ersten Auflage
+der IHK-Prüfungskataloge von 2021, ohne das irgendwo zu erwähnen. Inzwischen gilt die zweite
+Auflage — erstmals für Teil 1 im Frühjahr 2025 und Teil 2 im Sommer 2025. Der Rahmen aus der
+Ausbildungsverordnung — Prüfungsbereiche, Gewichtung, Prüfungszeiten, Bestehensregel — steht
+deshalb jetzt in [Die Abschlussprüfung im Überblick](docs/de/00-pruefung.md), belegt aus dem
+Gesetzestext, zusammen mit Katalog- und Rechtsstand.
+
+**Über den Kataloginhalt sagt sie nur, was sie belegen kann.** Der Prüfungskatalog selbst ist
+geschütztes Material der IHK und wird hier weder zitiert noch nachgebildet. Welche Themen
+dazugekommen und welche entfallen sein sollen — darunter Programmablaufplan und
+Struktogramm — steht an genau einer Stelle, zusammen mit der Herkunft dieser Angabe und dem
+ausdrücklichen Hinweis, dass sie aus einer öffentlichen Durchsicht stammt und nicht gegen
+das Original abgeglichen ist. Die betroffenen Themen sind trotzdem ergänzt, weil sie
+unabhängig davon zum Berufsbild gehören; die beiden fraglichen Notationen bleiben stehen
+und tragen einen Hinweis.
 
 **Der Rechtsstand stimmt wieder.** Seit 2023 sind das Barrierefreiheitsstärkungsgesetz, die
 Pflicht zur E-Rechnung, das Digitale-Dienste-Gesetz an Stelle des Telemediengesetzes, das

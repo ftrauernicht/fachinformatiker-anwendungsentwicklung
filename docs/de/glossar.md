@@ -100,7 +100,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-225 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+242 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -165,6 +165,8 @@ Grundbuchstaben.
 - **Beschriftung einer Transition** — [Zustandsdiagramm](diagramme/06-zustandsdiagramm.md#beschriftung-einer-transition)
 - **Besitz** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#besitz)
 - **Beziehungen** — [Datenbanken](03-datenbanken.md#beziehungen), [Klassendiagramm](diagramme/03-klassendiagramm.md#beziehungen), [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#beziehungen)
+- **Binäre Suche** — [Algorithmen](10-algorithmen.md#binäre-suche)
+- **Bubblesort** — [Algorithmen](10-algorithmen.md#bubblesort)
 
 ### C
 
@@ -185,6 +187,7 @@ Grundbuchstaben.
 - **DHCP-Nachrichten** — [Netzwerktechnik](01-netzwerktechnik.md#dhcp-nachrichten)
 - **DHCP-Server** — [Netzwerktechnik](01-netzwerktechnik.md#dhcp-server)
 - **Diagrammblöcke** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#diagrammblöcke)
+- **Die Grundbausteine** — [Algorithmen](10-algorithmen.md#die-grundbausteine)
 - **Dispose** — [IT-Service-Management](06-it-service-management.md#dispose)
 - **Docker** — [Virtualisierung](02-virtualisierung.md#docker)
 - **Docker vs VM** — [Virtualisierung](02-virtualisierung.md#docker-vs-vm)
@@ -239,6 +242,7 @@ Grundbuchstaben.
 - **Incident Management** — [IT-Service-Management](06-it-service-management.md#incident-management)
 - **Include-Beziehung** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#include-beziehung)
 - **INSERT-Abfragen (Einfügen von Datensätzen)** — [Datenbanken](03-datenbanken.md#insert-abfragen-einfügen-von-datensätzen)
+- **Insertionsort** — [Algorithmen](10-algorithmen.md#insertionsort)
 - **Install** — [IT-Service-Management](06-it-service-management.md#install)
 - **Interfaces** — [Softwareentwicklung](04-softwareentwicklung.md#interfaces)
 - **IPv4** — [Netzwerktechnik](01-netzwerktechnik.md#ipv4)
@@ -256,13 +260,16 @@ Grundbuchstaben.
 - **Kombinierte Fragmente** — [Sequenzdiagramm](diagramme/08-sequenzdiagramm.md#kombinierte-fragmente)
 - **Komposition - Composition** — [Klassendiagramm](diagramme/03-klassendiagramm.md#komposition---composition)
 - **Konventionelle (sequenzielle) Vorgehensweise** — [Projektmanagement](07-projektmanagement.md#konventionelle-sequenzielle-vorgehensweise)
+- **Konventionen für Pseudocode** — [Algorithmen](10-algorithmen.md#konventionen-für-pseudocode)
 - **Kundenanfrage** — [IT-Service-Management](06-it-service-management.md#kundenanfrage)
 - **Kurz erklärt** — [Virtualisierung](02-virtualisierung.md#kurz-erklärt)
 
 ### L
 
 - **LAN (Local Area Network)** — [Netzwerktechnik](01-netzwerktechnik.md#lan-local-area-network)
+- **Laufzeit abschätzen** — [Algorithmen](10-algorithmen.md#laufzeit-abschätzen)
 - **Layer** — [Virtualisierung](02-virtualisierung.md#layer)
+- **Lineare Suche** — [Algorithmen](10-algorithmen.md#lineare-suche)
 - **Linker äußerer Verbund (LEFT OUTER JOIN)** — [Datenbanken](03-datenbanken.md#linker-äußerer-verbund-left-outer-join)
 - **Lösch-Anomalie** — [Datenbanken](03-datenbanken.md#lösch-anomalie)
 - **Löschen von Datensätzen (DELETE)** — [Datenbanken](03-datenbanken.md#löschen-von-datensätzen-delete)
@@ -308,6 +315,7 @@ Grundbuchstaben.
 - **Process Symbol** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#process-symbol)
 - **Programmiersprachen** — [Softwareentwicklung](04-softwareentwicklung.md#programmiersprachen)
 - **Protokolle** — [Softwareentwicklung](04-softwareentwicklung.md#protokolle)
+- **Pseudocode** — [Algorithmen](10-algorithmen.md#pseudocode)
 - **Public Cloud** — [Cloud Computing](09-cloud-computing.md#public-cloud)
 
 ### R
@@ -318,6 +326,7 @@ Grundbuchstaben.
 - **RAID 1: Mirroring - Spiegelung** — [Netzwerktechnik](01-netzwerktechnik.md#raid-1-mirroring---spiegelung)
 - **RAID 5: Leistung + Parität, Block-Level Striping mit verteilter Paritätsinformation** — [Netzwerktechnik](01-netzwerktechnik.md#raid-5-leistung--parität-block-level-striping-mit-verteilter-paritätsinformation)
 - **Registry** — [Virtualisierung](02-virtualisierung.md#registry)
+- **Rekursion** — [Algorithmen](10-algorithmen.md#rekursion)
 - **Relationale Datenbanken** — [Datenbanken](03-datenbanken.md#relationale-datenbanken)
 - **Remove** — [IT-Service-Management](06-it-service-management.md#remove)
 - **Repository** — [Virtualisierung](02-virtualisierung.md#repository)
@@ -333,6 +342,8 @@ Grundbuchstaben.
 - **Schnittstelle** — [Klassendiagramm](diagramme/03-klassendiagramm.md#schnittstelle)
 - **Schutzbedarfsanalyse** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#schutzbedarfsanalyse)
 - **SELECT-Abfragen** — [Datenbanken](03-datenbanken.md#select-abfragen)
+- **Selectionsort** — [Algorithmen](10-algorithmen.md#selectionsort)
+- **Sequenz** — [Algorithmen](10-algorithmen.md#sequenz)
 - **Service Lebenszyklus nach IMAC/R/D** — [IT-Service-Management](06-it-service-management.md#service-lebenszyklus-nach-imacrd)
 - **Service-Lebenszyklus nach ITIL v3** — [IT-Service-Management](06-it-service-management.md#service-lebenszyklus-nach-itil-v3)
 - **Setup vom Repository** — [Virtualisierung](02-virtualisierung.md#setup-vom-repository)
@@ -341,14 +352,17 @@ Grundbuchstaben.
 - **SLA Qualität** — [IT-Service-Management](06-it-service-management.md#sla-qualität)
 - **Software Raid Nachteile** — [Netzwerktechnik](01-netzwerktechnik.md#software-raid-nachteile)
 - **Software Raid Vorteile** — [Netzwerktechnik](01-netzwerktechnik.md#software-raid-vorteile)
+- **Sortierverfahren** — [Algorithmen](10-algorithmen.md#sortierverfahren)
 - **Speichersysteme** — [Netzwerktechnik](01-netzwerktechnik.md#speichersysteme)
 - **Sprachelemente** — [Datenbanken](03-datenbanken.md#sprachelemente)
 - **SQL** — [Datenbanken](03-datenbanken.md#sql)
 - **SQL-Datentypen** — [Datenbanken](03-datenbanken.md#sql-datentypen)
+- **Stand dieser Sammlung** — [Die Abschlussprüfung im Überblick](00-pruefung.md#stand-dieser-sammlung)
 - **Statische Zuordnung** — [Netzwerktechnik](01-netzwerktechnik.md#statische-zuordnung)
 - **Statusmeldung** — [IT-Service-Management](06-it-service-management.md#statusmeldung)
 - **Störungsfall** — [IT-Service-Management](06-it-service-management.md#störungsfall)
 - **Strategy** — [IT-Service-Management](06-it-service-management.md#strategy)
+- **Suchverfahren** — [Algorithmen](10-algorithmen.md#suchverfahren)
 - **Supportprozesse** — [IT-Service-Management](06-it-service-management.md#supportprozesse)
 - **Symmetrische Verschlüsselung** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#symmetrische-verschlüsselung)
 - **Systemkontext** — [Anwendungsfalldiagramm (Use Case)](diagramme/04-anwendungsfalldiagramm.md#systemkontext)
@@ -373,6 +387,7 @@ Grundbuchstaben.
 - **Verschiedene Raid Stufen** — [Netzwerktechnik](01-netzwerktechnik.md#verschiedene-raid-stufen)
 - **Verträge** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#verträge), [Politik und Wirtschaft](08-politik-und-wirtschaft.md#verträge)
 - **Verwendung des ITSM's** — [IT-Service-Management](06-it-service-management.md#verwendung-des-itsms)
+- **Verzweigung** — [Algorithmen](10-algorithmen.md#verzweigung)
 - **Virtual Machine** — [Virtualisierung](02-virtualisierung.md#virtual-machine)
 - **Vorgehensweisen** — [Projektmanagement](07-projektmanagement.md#vorgehensweisen)
 - **Vorschriften zur Mitbestimmung** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#vorschriften-zur-mitbestimmung)
@@ -386,10 +401,12 @@ Grundbuchstaben.
 
 ### W
 
+- **Was Pseudocode ist** — [Algorithmen](10-algorithmen.md#was-pseudocode-ist)
 - **Web Entwicklung** — [Softwareentwicklung](04-softwareentwicklung.md#web-entwicklung)
 - **Weiteres zu Docker** — [Virtualisierung](02-virtualisierung.md#weiteres-zu-docker)
 - **Wertschöpfungsprozesse** — [IT-Service-Management](06-it-service-management.md#wertschöpfungsprozesse)
 - **Wesentliche Eigenschaften (NIST - National Institute of Standards and Technology)** — [Cloud Computing](09-cloud-computing.md#wesentliche-eigenschaften-nist---national-institute-of-standards-and-technology)
+- **Wiederholung** — [Algorithmen](10-algorithmen.md#wiederholung)
 - **Wissen** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#wissen)
 - **WLAN (Wireless Local Area Network)** — [Netzwerktechnik](01-netzwerktechnik.md#wlan-wireless-local-area-network)
 

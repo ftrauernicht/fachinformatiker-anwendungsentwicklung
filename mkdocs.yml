@@ -130,6 +130,7 @@ nav:
       - Projektmanagement: de/07-projektmanagement.md
       - Politik und Wirtschaft: de/08-politik-und-wirtschaft.md
       - Cloud Computing: de/09-cloud-computing.md
+      - Algorithmen: de/10-algorithmen.md
       - Diagramme:
           - Übersicht: de/diagramme/index.md
           - Programmablaufplan: de/diagramme/01-programmablaufplan.md
@@ -171,6 +172,7 @@ nav:
       - Project management: en/07-project-management.md
       - Politics and economy: en/08-politics-and-economy.md
       - Cloud computing: en/09-cloud-computing.md
+      - Algorithms: en/10-algorithms.md
       - Diagrams:
           - Overview: en/diagrams/index.md
           - Flowchart: en/diagrams/01-flowchart.md

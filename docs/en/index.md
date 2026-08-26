@@ -25,6 +25,7 @@ Topic collection for the final examination (part 2) of the German apprenticeship
 | 07 | [Project management](07-project-management.md) | Network diagram, triangle, process models |
 | 08 | [Politics and economy](08-politics-and-economy.md) | Legal forms, amortisation, market forms |
 | 09 | [Cloud computing](09-cloud-computing.md) | Service models, deployment models |
+| 10 | [Algorithms](10-algorithms.md) | Pseudocode, searching, sorting, big O |
 
 ## Diagrams
 

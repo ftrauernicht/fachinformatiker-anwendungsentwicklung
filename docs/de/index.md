@@ -20,6 +20,7 @@ Fachinformatiker/-in für Anwendungsentwicklung.
 | 07 | [Projektmanagement](07-projektmanagement.md) | Netzplan, Magisches Dreieck, Vorgehensmodelle |
 | 08 | [Politik und Wirtschaft](08-politik-und-wirtschaft.md) | Rechtsformen, Amortisation, Marktformen |
 | 09 | [Cloud Computing](09-cloud-computing.md) | Servicemodelle, Bereitstellungsmodelle |
+| 10 | [Algorithmen](10-algorithmen.md) | Pseudocode, Suchen, Sortieren, O-Notation |
 
 ## Diagramme
 

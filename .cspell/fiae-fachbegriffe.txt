@@ -249,3 +249,15 @@ WENNFEHLER
 Summenbereich
 Prüfbereich
 prüfungstypisch
+
+# --- Algorithmen und Prüfungskatalog 2025 --------------------------------
+Barrierefreiheitsstärkungsgesetz
+Bubblesort
+Insertionsort
+Mergesort
+Merkvariable
+Performancetests
+Selectionsort
+Timsort
+fußgesteuert
+testgetriebene

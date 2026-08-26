@@ -100,7 +100,7 @@ lässt es einmal neu laufen.
 
 <!-- Erzeugt von tools/build_glossary.py — nicht von Hand ändern. -->
 
-262 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
+265 Begriffe aus allen Kapiteln, alphabetisch. Umlaute stehen beim
 Grundbuchstaben.
 
 ### 0–9
@@ -261,6 +261,10 @@ Grundbuchstaben.
 - **Iteration Symbol** — [Struktogramm (Nassi-Shneiderman)](diagramme/02-struktogramm.md#iteration-symbol)
 - **ITIL** — [IT-Service-Management](06-it-service-management.md#itil)
 
+### J
+
+- **JDBC** — [Datenbanken](03-datenbanken.md#jdbc)
+
 ### K
 
 - **Kerberos** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#kerberos)
@@ -315,6 +319,7 @@ Grundbuchstaben.
 ### O
 
 - **Objektorientierung** — [Softwareentwicklung](04-softwareentwicklung.md#objektorientierung)
+- **ODBC** — [Datenbanken](03-datenbanken.md#odbc)
 - **Operation** — [IT-Service-Management](06-it-service-management.md#operation)
 - **Organisationsformen der Cloud** — [Cloud Computing](09-cloud-computing.md#organisationsformen-der-cloud)
 - **OSI Schichten Modell** — [Netzwerktechnik](01-netzwerktechnik.md#osi-schichten-modell)
@@ -409,6 +414,7 @@ Grundbuchstaben.
 - **Verwendung des ITSM's** — [IT-Service-Management](06-it-service-management.md#verwendung-des-itsms)
 - **Verzweigung** — [Algorithmen](10-algorithmen.md#verzweigung)
 - **Virtual Machine** — [Virtualisierung](02-virtualisierung.md#virtual-machine)
+- **Vorbereitete Anweisungen** — [Datenbanken](03-datenbanken.md#vorbereitete-anweisungen)
 - **Vorgehensweisen** — [Projektmanagement](07-projektmanagement.md#vorgehensweisen)
 - **Vorschriften zur Mitbestimmung** — [IT-Schutz und IT-Sicherheit](05-it-sicherheit.md#vorschriften-zur-mitbestimmung)
 - **Vorteile von IaaS** — [Cloud Computing](09-cloud-computing.md#vorteile-von-iaas)

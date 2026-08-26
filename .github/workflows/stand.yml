@@ -1,0 +1,69 @@
+name: Stand prüfen
+
+# Zwei Dinge in dieser Sammlung veralten, ohne dass es jemand merkt: der
+# Prüfungskatalog der IHK und der Rechtsstand. Die 2023er Fassung, aus der
+# dieser Fork hervorgegangen ist, war in beidem zwei Jahre hinterher — nicht
+# aus Nachlässigkeit, sondern weil niemandem ein Anlass begegnet ist,
+# nachzusehen.
+#
+# Dieser Job schafft den Anlass. Er prüft nichts selbst; er legt einmal im Jahr
+# ein Issue mit einer Liste an, die man abarbeiten kann.
+on:
+  schedule:
+    - cron: "0 6 15 1 *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  remind:
+    name: Erinnerung anlegen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Aktuellen Stand aus der Sammlung lesen
+        id: state
+        run: |
+          set -euo pipefail
+          page=docs/de/00-pruefung.md
+          {
+            echo "In [\`$page\`]($page) steht aktuell:"
+            echo
+            grep -E '^\| (Prüfungskatalog|Rechtsstand) \|' "$page" || echo "_Die Stand-Tabelle wurde nicht gefunden — bitte die Seite prüfen._"
+            echo
+            echo "Bitte einmal durchgehen und die Tabelle danach fortschreiben."
+            echo
+            echo "## Prüfungskatalog"
+            echo
+            echo "- [ ] Gibt es eine neuere Auflage der Prüfungskataloge der IT-Berufe?"
+            echo "      [IHK Hannover](https://www.ihk.de/hannover/hauptnavigation/ausbildung-und-weiterbildung/ausbildung/ausbildung-a-z/neuordnungen/pruefungskataloge-it-berufe-6438900),"
+            echo "      [U-Form-Verlag](https://www.u-form-shop.de/ihk-pruefungen/pruefungskataloge-abschlusspruefung/fachinformatiker-fachinformatikerin-anwendungsentwicklung-pruefungskatalog-fuer-die-ihk-abschlusspruefung-1)"
+            echo "- [ ] Hat sich die [Fachinformatiker-Ausbildungsverordnung](https://www.gesetze-im-internet.de/fiausbv/) geändert?"
+            echo "      Gewichtung, Prüfungszeiten und Bestehensregel stehen in \`00-pruefung.md\` und müssten dann mitwandern."
+            echo
+            echo "## Rechtsstand"
+            echo
+            echo "- [ ] Barrierefreiheitsstärkungsgesetz — Fristen, betroffene Angebote (\`04\`)"
+            echo "- [ ] E-Rechnung — die Übergangsfristen laufen 2027 und 2028 aus (\`08\`)"
+            echo "- [ ] NIS-2-Umsetzungsgesetz und BSIG — Schwellenwerte, Meldefristen (\`05\`)"
+            echo "- [ ] EU-KI-Verordnung — die Stufen gelten gestaffelt bis 2027 (\`05\`)"
+            echo "- [ ] Digitale-Dienste-Gesetz und TDDDG — Bezeichnungen und Paragraphen (\`04\`, \`05\`)"
+            echo "- [ ] Personengesellschaftsrecht, Rechtsformen (\`08\`)"
+            echo
+            echo "## Danach"
+            echo
+            echo "- [ ] \`Stand\`-Tabelle in \`docs/de/00-pruefung.md\` und \`docs/en/00-exam.md\` fortschreiben"
+            echo "- [ ] \`npm run check\` und \`npm run docs:build\` laufen lassen"
+          } > stand-report.md
+
+      - name: Issue anlegen oder fortschreiben
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Prüfungskatalog und Rechtsstand prüfen
+          content-filepath: stand-report.md
+          labels: |
+            wartung
+            inhalt

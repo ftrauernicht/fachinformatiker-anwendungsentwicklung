@@ -53,6 +53,13 @@ jobs:
             echo "- [ ] Digitale-Dienste-Gesetz und TDDDG — Bezeichnungen und Paragraphen (\`04\`, \`05\`)"
             echo "- [ ] Personengesellschaftsrecht, Rechtsformen (\`08\`)"
             echo
+            echo "## Von Hand nachsehen"
+            echo
+            echo "- [ ] Die Adressen auf gesetze-im-internet.de öffnen und prüfen, ob sie noch stimmen."
+            echo "      Der Host ist in \`.lycheeignore\` ausgenommen, weil er vom Runner aus nicht"
+            echo "      erreichbar ist — die wöchentliche Linkprüfung sieht diese Quellen also nicht:"
+            echo "      \`grep -rho 'https://www.gesetze-im-internet.de[^>]*' docs/ | sort -u\`"
+            echo
             echo "## Danach"
             echo
             echo "- [ ] \`Stand\`-Tabelle in \`docs/de/00-pruefung.md\` und \`docs/en/00-exam.md\` fortschreiben"

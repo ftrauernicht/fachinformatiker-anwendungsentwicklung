@@ -286,7 +286,7 @@ Insertionsort ist bei fast sortierten Daten das schnellste der drei Verfahren: D
 In der Praxis kommt keines der drei Verfahren zum Einsatz. Die Standardbibliotheken sortieren mit O(n log n)-Verfahren — Quicksort, Mergesort oder Mischformen daraus wie Timsort.
 
 [^1]: <https://www.gesetze-im-internet.de/fiausbv/__14.html>
-[^2]: <https://it-berufe-podcast.de/neuer-pruefungskatalog-für-die-ap2-als-fachinformatiker-anwendungsentwicklung-ab-2025-it-berufe-podcast-191/>
+[^2]: <https://it-berufe-podcast.de/neuer-pruefungskatalog-fuer-die-ap2-als-fachinformatiker-anwendungsentwicklung-ab-2025-it-berufe-podcast-191/>
 [^3]: <https://de.wikipedia.org/wiki/Pseudocode>
 [^4]: <https://de.wikipedia.org/wiki/Landau-Symbole>
 [^5]: <https://de.wikipedia.org/wiki/Bin%C3%A4re_Suche>

@@ -139,12 +139,11 @@ warum eine Aussage geändert wurde.
 ## Herkunft und Lizenz
 
 Diese Sammlung ist ein Fork von
-[LakayFTW/exam-prep-fiae-2023](https://github.com/LakayFTW/exam-prep-fiae-2023). Das
-ursprüngliche Repository hat **keine Lizenzdatei**, womit die Inhalte formal beim
-jeweiligen Urheber liegen und nicht ohne Weiteres weiterverwendet werden dürfen. Solange
-das so ist, kann auch dieser Fork keine Lizenz vergeben.
+[LakayFTW/exam-prep-fiae-2023](https://github.com/LakayFTW/exam-prep-fiae-2023) und steht
+unter [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de) — siehe
+[LICENSE](LICENSE). Wer hier beiträgt, gibt seinen Beitrag damit ebenfalls unter dieser
+Lizenz frei.
 
-Wer hier beiträgt, tut das unter denselben Voraussetzungen. Bitte reich nichts ein, was du
-nicht selbst geschrieben hast oder was nicht unter einer freien Lizenz steht — kopierte
-Absätze aus Lehrbüchern oder von Firmenwebsites gehören nicht hinein. Ein Link in einer
-Fußnote leistet dasselbe und ist unproblematisch.
+Bitte reich nichts ein, was du nicht selbst geschrieben hast oder was nicht unter einer
+freien Lizenz steht — kopierte Absätze aus Lehrbüchern oder von Firmenwebsites gehören
+nicht hinein. Ein Link in einer Fußnote leistet dasselbe und ist unproblematisch.

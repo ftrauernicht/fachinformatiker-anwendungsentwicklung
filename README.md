@@ -160,15 +160,15 @@ npm install && npm run check
 
 ## Lizenz
 
-Das ursprüngliche Repository hat **keine Lizenzdatei**. Damit liegen die Rechte an den
-Inhalten beim jeweiligen Urheber, und dieser Fork kann keine Lizenz vergeben, die es dort
-nicht gibt. Für private Prüfungsvorbereitung ist das unproblematisch; wer die Inhalte
-weiterverbreiten oder in eigene Materialien übernehmen will, sollte
-[LakayFTW](https://github.com/LakayFTW) fragen.
+Diese Sammlung steht unter [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+— siehe [LICENSE](LICENSE). Das ursprüngliche Repository hatte lange keine Lizenzdatei; auf
+[Nachfrage](https://github.com/LakayFTW/exam-prep-fiae-2023/issues/19) hat
+[LakayFTW](https://github.com/LakayFTW) im August 2026 CC BY-SA 4.0 für das Original vergeben.
+Als Bearbeitung steht dieser Fork kraft der Share-Alike-Bedingung unter derselben Lizenz.
 
 Die Grafiken sind davon ausgenommen: ihre Lizenzen stehen einzeln in den
 [Bildnachweisen](docs/bildnachweise.md). Die Mermaid-Diagramme und die Werkzeuge unter
-`tools/` sind in diesem Fork entstanden.
+`tools/` sind in diesem Fork entstanden und ebenfalls CC BY-SA 4.0.
 
 ## Ursprüngliche Mitwirkende
 
